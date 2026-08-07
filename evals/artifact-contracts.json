@@ -1,0 +1,492 @@
+{
+  "version": 1,
+  "contracts": [
+    {
+      "skill": "audit-compare",
+      "output_root": "agent-work/{slug}/audit-compare/",
+      "files": [
+        {"path":"AUDIT.md","required":true,"headings":["Product context","Scope","Prioritized findings","Verified strengths","Adoption fit","Product outcome"]},
+        {"path":"COMPARE.md","required":true,"headings":["Comparison dimensions","Adoption fit"]},
+        {"path":"REFERENCE-ID.md","required":true,"headings":["Reference identity","Revision","Audit date"]},
+        {"path":"GOALPRO-INPUT.md","required":false,"condition":"Only after the user selects and approves findings for direct Goalpro implementation.","headings":["Goal and product outcome","Approval provenance","Implementation slices","Acceptance criteria","Quality applicability","Project gates","Readiness"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when decisions, links, or sanitized scratch notes add durable context.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "audit-plan",
+      "output_root": "agent-work/{slug}/audit-plan/",
+      "files": [
+        {"path":"PROPOSAL.md","required":true,"headings":["Users and problem","V1 outcome","Guardrails","Scope","User or operator journey","Quality attributes","Architecture","Delivery and operating model","Trade-offs","Validation","Open questions"]},
+        {"path":"SYNTHESIS.md","required":true,"headings":["Synthesis matrix","Target recommendations"]},
+        {"path":"ARCHITECTURE.md","required":true,"headings":["Modules","Data representations","Target-stack trade-offs"]},
+        {"path":"PLANPRO-INPUT.md","required":true,"headings":["Product context","V1 outcome","Guardrails","Acceptance criteria","Quality attributes","Delivery constraints","Architecture decisions","Unknowns"]},
+        {"path":"REFERENCE-IDS.md","required":true,"headings":["References"]},
+        {"path":"refs/{ref-slug}-AUDIT.md","required":true,"headings":["Reference audit","Findings"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when decisions or research links need separate durable notes.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "brainstormpro",
+      "output_root": "agent-work/{slug}/brainstormpro/",
+      "files": [
+        {"path":"AUDIT.md","required":true,"headings":["Users and problem","Outcome","Success signal","Guardrail","Findings"]},
+        {"path":"IDEAS.md","required":true,"headings":["Ideas","Evidence","Validation experiments","Trade-offs and failure modes"]},
+        {"path":"PROPOSAL.md","required":true,"headings":["Goal and user outcome","Evidence","What changes","Why this idea","Risks and failure modes","Validation experiment","Success signal and guardrail","Abandonment evidence","Success criteria","Open questions"]},
+        {"path":"GOALPRO-INPUT.md","required":false,"condition":"Only when an approved proposal is complete enough for direct Goalpro execution.","headings":["Goal and product outcome","Approval provenance","Implementation slices","Acceptance criteria","Quality applicability","Project gates","Readiness"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when decisions or research links need separate durable notes.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "documentation-audit",
+      "output_root": "agent-work/{slug}/documentation-audit/",
+      "files": [
+        {"path":"RESEARCH.md","required":true,"headings":["Repository and workspace topology","Documentation tooling","Authority sources","Audiences","Publication constraints","Exclusions and unknowns"]},
+        {"path":"INVENTORY.json","required":true,"headings":["root"]},
+        {"path":"DOCUMENTATION-CATALOG.md","required":true,"headings":["Catalog","Classification summary"]},
+        {"path":"DRIFT-REPORT.md","required":true,"headings":["Scope","Prioritized findings","Verified strengths","Unverified checks"]},
+        {"path":"INFORMATION-ARCHITECTURE.md","required":true,"headings":["Current structure","Target structure","Publication boundary","Archive and redirects","Validation"]},
+        {"path":"GOVERNANCE.md","required":true,"headings":["Ownership","Lifecycle","Review triggers","Automated enforcement","Agent rules"]},
+        {"path":"PLAN.md","required":true,"headings":["Product outcome","Phases","Verification","Rollback","Final acceptance"]},
+        {"path":"GOALPRO-INPUT.md","required":true,"headings":["Goal and product outcome","Approval provenance","Implementation slices","Acceptance criteria","Quality applicability","Project gates","Readiness"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized evidence or unresolved decisions need separate notes.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "compact-history",
+      "output_root": "agent-work/• compact-history/",
+      "files": [
+        {"path":"changelog/{project-key}.md","required":true,"headings":["Implementation history"]},
+        {"path":"in-progress/{project-key}.md","required":true,"headings":["In-progress initiatives"]},
+        {"path":"todo/{project-key}.md","required":true,"headings":["Future planning prompts"]},
+        {"path":"runs/{run-id}/INVENTORY.json","required":true,"headings":["initiatives"]},
+        {"path":"runs/{run-id}/PREVIEW.md","required":true,"headings":["Scope","Classifications","Planned writes","Planned moves","Verification","Confirmation"]},
+        {"path":"runs/{run-id}/MANIFEST.json","required":true,"headings":["operations"]},
+        {"path":"runs/{run-id}/ROLLBACK.json","required":true,"headings":["operations"]},
+        {"path":"runs/{run-id}/RESULT.md","required":false,"condition":"Only after the exact preview is confirmed and execution begins.","headings":["Result","Applied operations","Verification","Recovery"]},
+        {"path":"archive/{project-key}/{slug}/","required":false,"condition":"Only for independently verified completed initiatives after exact confirmation.","headings":["WORK.md"]}
+      ]
+    },
+    {
+      "skill": "designpro",
+      "output_root": "agent-work/{slug}/designpro/",
+      "files": [
+        {"path":"RESEARCH.md","required":true,"headings":["Stack","Product context","User journey","Design intent","Quality attributes","Delivery constraints","Alternatives","Risks and unknowns"]},
+        {"path":"DESIGN-AUDIT.md","required":true,"headings":["Product intent","Scope","Methodology","Evidence coverage","Verified strengths","Contradictions","Prioritized findings","Unverified checks"]},
+        {"path":"CRAFT-MATRIX.md","required":true,"headings":["Design read","Preservation and change budget","Hierarchy and composition","Typography and content","Imagery and materiality","Interaction feedback","Coherence","Responsive and localization behavior","Anti-default findings","System landing points","Runtime evidence","Unverified checks"]},
+        {"path":"VISUAL-DIRECTION.md","required":false,"condition":"When direction is absent, contradictory, or materially changing.","headings":["Selected direction","Approval provenance","Rejected alternatives","Identity qualities","Preservation rules","Semantic system mapping","Prohibited shortcuts","Validation criteria"]},
+        {"path":"TOKEN-INVENTORY.md","required":true,"headings":["Source locations","Token architecture","Normalized inventory","Alias graph","Raw and arbitrary values","Semantic gaps","Theme readiness"]},
+        {"path":"COMPONENT-MATRIX.md","required":true,"headings":["Inventory and ownership","Size and variant matrix","State matrix","Contextual spacing","Typography and geometry","Responsive behavior","Theme parity","Accessibility","Drift"]},
+        {"path":"ACCESSIBILITY-MATRIX.md","required":true,"headings":["Conformance target","Sampled journeys","Contrast","Keyboard and focus","Semantics","Targets","Zoom and reflow","Motion","Automated evidence","Manual evidence","Unverified gaps"]},
+        {"path":"ENFORCEMENT-STRATEGY.md","required":true,"headings":["Current tools","Rule catalog","Rule-to-layer mapping","Proposed configuration","Custom tool contracts","Exception governance","Baseline and rollout","CI gates","Ownership"]},
+        {"path":"STYLE-GUIDE-SPEC.md","required":true,"headings":["Current guide disposition","Product philosophy","Required sections","Rules and examples","Source of truth","Prohibited patterns","Verification commands","Exception process","Done criteria"]},
+        {"path":"MULTI-THEME-SPEC.md","required":false,"condition":"When multiple themes are requested, already present, required by product evidence, or presumed applicable for a Gremlin Labs app unless the user opts out.","headings":["Applicability and product intent","Theme catalog","Semantic token contract","Theme mappings","Surface and elevation matrices","Component and state parity","Contrast matrix","Selection and persistence","SSR and hydration","Theme switcher","Testing matrix","Enforcement","Rollout and fallback","Acceptance criteria"]},
+        {"path":"PLAN.md","required":true,"headings":["Feature","Product outcome","Quality attributes and delivery constraints","Phases","Open questions","Final acceptance"]},
+        {"path":"GOALPRO-INPUT.md","required":true,"headings":["Goal and product outcome","Source artifacts and evidence","Approval provenance","Implementation slices","Acceptance criteria","Non-goals and boundaries","Quality applicability","Project gates","Delivery requirements","Manual and external actions","Unverified assumptions","Sensitive-data constraints","Readiness"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized research, decisions, or command output add durable context.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "design-direction",
+      "output_root": "agent-work/{slug}/design-direction/",
+      "files": [
+        {"path":"RESEARCH.md","required":true,"headings":["Users and product outcome","Intent sources","Current or proposed journey","Representative component and state inventory","Quality attributes","Delivery constraints","Alternatives","Risks and unknowns"]},
+        {"path":"DIRECTION-OPTIONS.md","required":true,"headings":["Design read","Option comparison","Direction options","Recommendation","Experiments","Preview revisions","Selected preview revision","User decision","Approval provenance"]},
+        {"path":"DIRECTION-PREVIEW.html","required":false,"condition":"Required for every non-trivial direction decision; omitted only when the user explicitly declines or the work is too small to benefit.","headings":["direction-summary","typography","palette","surfaces","components","states","responsive","motion","tradeoffs"]},
+        {"path":"PALETTE-SHORTLIST.md","required":false,"condition":"When palette families or multi-theme behavior materially influence the decision.","headings":["Palette shortlist","Interpretation mode","Palette DNA","Preserve evolve add avoid","Derived system hypotheses","Theme parity","Rejected families"]},
+        {"path":"VISUAL-LANGUAGE.md","required":true,"headings":["Selected direction","Product outcome","Identity qualities","Preservation and change budget","Hierarchy and composition","Typography and content","Imagery and materiality","Interaction and motion","Accessibility","Responsive and localization posture","Anti-default rationale"]},
+        {"path":"SYSTEM-MAP.md","required":true,"headings":["Source of truth","Token layers","Semantic roles","Component recipes","Themes","Assets and content","Motion","Prohibited patterns","Exception process","Enforcement targets","Validation"]},
+        {"path":"EXPERIENCE-MATRIX.md","required":true,"headings":["Surfaces and goals","States","Viewports","Inputs","Themes","Accessibility","Localization and content extremes","Intended behavior"]},
+        {"path":"PLAN.md","required":false,"condition":"When implementation can be planned without unresolved architecture.","headings":["Feature","Product outcome","Quality attributes and delivery constraints","Phases","Open questions","Final acceptance"]},
+        {"path":"GOALPRO-INPUT.md","required":false,"condition":"Only when selected direction and implementation scope are approved and concrete.","headings":["Goal and product outcome","Approval provenance","Implementation slices","Acceptance criteria","Non-goals and boundaries","Quality applicability","Project gates","Readiness"]},
+        {"path":"REFERENCE-BOARD-SPEC.md","required":false,"condition":"When generated reference imagery would reduce material uncertainty.","headings":["Purpose","Frames","Design constraints","Accessibility and content","Evaluation criteria"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized decisions or sources add durable context.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "gamepro",
+      "output_root": "agent-work/{slug}/gamepro/",
+      "files": [
+        {"path":"GAME.md","required":true,"headings":["Intent","Mode and target","Run the game","Milestones","Content and quality boundary","Decisions and non-goals","Conditional lenses","Next playable slice"]},
+        {"path":"PROGRESS.md","required":true,"headings":["Progress"]},
+        {"path":"QUALITY-REPORT.md","required":true,"headings":["Target and integrated result","Quality dimensions","Milestone evidence","Final integrated verification"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized links or scratch decisions add durable context.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "landing-page",
+      "output_root": "agent-work/{slug}/landing-page/",
+      "files": [
+        {"path":"RESEARCH.md","required":true,"headings":["Product and visitors","Arrival intent and journey","Evidence sources","Product truth","Brand and implementation inventory","Existing page","Constraints","Alternatives","Unknowns"]},
+        {"path":"MESSAGE-MAP.md","required":true,"headings":["Audience and arrival intent","Problem and desired outcome","Unique approach and differentiation","Product callouts","Feature to benefit framing","Claims and proof ledger","Objections and risk reversal","CTA ladder","Voice and prohibited language","Approval provenance","Unknowns"]},
+        {"path":"COPY-DECK.md","required":true,"headings":["Voice","Headline hierarchy","Product highlights","Proof and objections","CTA and microcopy","Humanization record","Final approved copy"]},
+        {"path":"SEO-PLAN.md","required":true,"headings":["Disposition","Upstream SEO Stack contract","Traffic and query intent","Ownership and protected winners","Information architecture","Metadata","Canonical crawl and links","Entities and structured data","Performance","Measurement","Unknowns"]},
+        {"path":"PAGE-DIRECTIONS.md","required":true,"headings":["Adaptive mode","Shared approved message","Directions","Recommendation","Trade-offs and experiments","Revision history","Approval"]},
+        {"path":"LANDING-PAGE-PREVIEW.html","required":true,"headings":["message","cta","product","proof","objections","responsive","motion","seo","tradeoffs"]},
+        {"path":"previews/LANDING-PAGE-PREVIEW-R{n}.html","required":true,"headings":["message","cta","product","proof","objections","responsive","motion","seo","tradeoffs"]},
+        {"path":"IMPLEMENTATION-PLAN.md","required":false,"condition":"Required after a preview revision is approved for implementation.","headings":["Approved outcome","Source targets","Content and assets","Components and responsive behavior","SEO","TurbulenceJS target map","Implementation slices","Project gates","Browser scenarios","Rollout and rollback","Boundaries"]},
+        {"path":"PROGRESS.md","required":true,"headings":["Progress"]},
+        {"path":"QUALITY-REPORT.md","required":true,"headings":["Quality report","Approved preview and message","Project gates","Rendered and runtime evidence","SEO","Copy and claims","Motion","Deviations and waivers","Final integrated verification","Final status"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized research or decisions add durable context.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "prose-humanizer",
+      "output_root": "agent-work/{slug}/prose-humanizer/",
+      "files": [
+        {"path":"SCOPE.md","required":true,"headings":["Invocation","Audience and purpose","Source authority","Voice evidence","Eligible prose","Protected structures","Risk and approval","Project gates","Boundaries"]},
+        {"path":"PROGRESS.md","required":true,"headings":["Progress"]},
+        {"path":"REWRITE-REPORT.md","required":true,"headings":["Scope","Voice baseline","Pattern clusters","Intentional traits preserved","Representative decisions","Factual and claim fidelity","Structural protections","Changed files or sections","Unchanged or skipped","Remaining concerns"]},
+        {"path":"QUALITY-REPORT.md","required":true,"headings":["Quality report","Fidelity evidence","Structural and project evidence","Rendered or reader-flow evidence","Deviations and waivers","Final integrated verification","Final status"]},
+        {"path":"HUMANIZED.md","required":false,"condition":"For pasted-text output or a review-before-write candidate; direct bounded file edits do not duplicate final source prose here.","headings":["Humanized prose"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized source or decisions add durable context.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "theme-library",
+      "output_root": "agent-work/{slug}/theme-library/",
+      "files": [
+        {"path":"THEME-SELECTION.md","required":true,"headings":["Product context","Selection","Interpretation mode","Palette DNA","Preserve evolve add avoid","Derived system hypotheses","Accessibility and parity","Validation","Decision status","Handoff"]},
+        {"path":"GOALPRO-INPUT.md","required":false,"condition":"Only when the interpretation and implementation scope are approved, concrete, and satisfy Goalpro's direct handoff contract.","headings":["Goal and product outcome","Approval provenance","Implementation slices","Acceptance criteria","Non-goals and boundaries","Quality applicability","Project gates","Readiness"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized palette evidence, calculations, or decisions add durable context.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "design-review",
+      "output_root": "agent-work/{slug}/design-review/",
+      "files": [
+        {"path":"DESIGN-REVIEW.md","required":true,"headings":["Scope and revision","Governing intent and system sources","Evidence coverage","Verified strengths","Findings","Unverified checks","Verdict","Correction routing","Re-review conditions","Self-judgment"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized evidence or decisions add durable context.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "motion-audit",
+      "output_root": "agent-work/{slug}/motion-audit/",
+      "files": [
+        {"path":"RESEARCH.md","required":true,"headings":["Product and motion intent","Users and journey","Stack and versions","Interaction frequency","Quality attributes","Delivery constraints","Alternatives","Risks and unknowns"]},
+        {"path":"MOTION-AUDIT.md","required":true,"headings":["Product intent","Scope","Methodology","Runtime coverage","Verified strengths","Prioritized findings","Additive opportunities","Restraint decisions","Unverified checks"]},
+        {"path":"MOTION-INVENTORY.md","required":true,"headings":["Libraries and versions","Source locations","Motion tokens","Transitions and keyframes","Programmatic motion","Gestures","Reduced motion and inputs","Consumers","Candidate disposition"]},
+        {"path":"INTERACTION-MATRIX.md","required":true,"headings":["Components and routes","Triggers and purpose","Frequency and response","Origin and path","Interruption and cancellation","Gestures","States and content extremes","Themes and inputs","Evidence"]},
+        {"path":"PERFORMANCE-MATRIX.md","required":true,"headings":["Scenarios","Implementation","Rendering and main-thread risks","Representative load","Measurement","Results","Confidence and follow-up"]},
+        {"path":"ACCESSIBILITY-MATRIX.md","required":true,"headings":["Reduced motion","Keyboard and focus","Pointer and touch","Zoom and assistive technology","Vestibular risk","Evidence","Unverified checks"]},
+        {"path":"MOTION-SYSTEM-SPEC.md","required":true,"headings":["Product posture","Purpose roles","Value mappings","Component recipes","Gesture rules","Reduced-motion alternatives","Input rules","Performance budgets","Prohibited patterns","Exceptions","Verification"]},
+        {"path":"ENFORCEMENT-STRATEGY.md","required":true,"headings":["Current tools","Rule catalog","Rule-to-layer mapping","Custom checks","Exception governance","Rollout","CI gates","Ownership"]},
+        {"path":"PLAN.md","required":true,"headings":["Feature","Product outcome","Quality attributes and delivery constraints","Phases","Open questions","Final acceptance"]},
+        {"path":"GOALPRO-INPUT.md","required":false,"condition":"When approved findings or validation work require implementation; omit for a verified restraint-only terminal result.","headings":["Goal and product outcome","Approval provenance","Implementation slices","Acceptance criteria","Non-goals and boundaries","Quality applicability","Project gates","Delivery requirements","Manual and external actions","Unverified assumptions","Sensitive-data constraints","Readiness"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized evidence, measurements, or decisions add durable context.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "motion-direction",
+      "output_root": "agent-work/{slug}/motion-direction/",
+      "files": [
+        {"path":"RESEARCH.md","required":true,"headings":["Product and emotional intent","Users and journey","Current visual direction","Stack and public versions","Representative page, component, and state inventory","Interaction frequency","Accessibility and performance","Delivery constraints","Preservation rules","Alternatives and unknowns"]},
+        {"path":"DIRECTION-OPTIONS.md","required":true,"headings":["Motion read","Option comparison","Detailed options","Recommendation","Preview revisions","User decision"]},
+        {"path":"MOTION-DIRECTION-PREVIEW.html","required":true,"headings":["page-route","navigation","menu-sidebar","overlay","form-feedback","data-update","loading-progress","state-recovery","notification","signature-delight"]},
+        {"path":"MOTION-LANGUAGE.md","required":true,"headings":["Selected direction","Spatial model","Rhythm and choreography","Turbulence vocabulary","Delight posture","Preservation and change budget","Accessibility, input, and reduced motion","Performance, resources, and lifecycle","Approval evidence"]},
+        {"path":"ANIMATION-POLICY.md","required":true,"headings":["Principles and emotional intent","Spatial model and rhythm","Delight tiers","Semantic roles and tokens","Page and component recipes","Interruption and lifecycle","Reduced motion and input","Performance and resource budgets","Prohibited patterns","Exceptions","New-component decision tree","Agent and contributor guidance","Enforcement and verification","Rollout and rollback","Approval"]},
+        {"path":"COMPONENT-MOTION-MATRIX.md","required":true,"headings":["Category dispositions","Components and states","Pages and routes","Loading and progress","Feedback and recovery","Delight and celebration","Capability and ownership","Evidence and status"]},
+        {"path":"ENFORCEMENT-STRATEGY.md","required":true,"headings":["Policy sources","Rule catalog","Semantic APIs and recipes","Static and type checks","Component and browser tests","Runtime and perceptual fixture","Performance and lifecycle gates","Exception governance","Rollout"]},
+        {"path":"PLAN.md","required":true,"headings":["Feature","Product outcome","Approved direction and evidence","Quality attributes and delivery constraints","Implementation architecture","Phases","Open questions","Final acceptance"]},
+        {"path":"CAPABILITY-GAPS.md","required":false,"condition":"Only when approved user-visible intent exceeds verified installed or documented public TurbulenceJS capabilities.","headings":["Scope and verification","Gaps","Prohibited content check"]},
+        {"path":"GOALPRO-INPUT.md","required":false,"condition":"Only after explicit Studio approval when scope, public capabilities or approved fallbacks, criteria, gates, rollout, and rollback are concrete.","headings":["Goal and product outcome","Approval provenance","Implementation slices","Acceptance criteria","Non-goals and boundaries","Quality applicability","Project gates","Delivery requirements","Manual and external actions","Unverified assumptions","Sensitive-data constraints","Readiness"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized evidence or decisions add durable context.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "workspacepro",
+      "output_root": "agent-work/{slug}/workspacepro/",
+      "files": [
+        {"path":"RESEARCH.md","required":true,"headings":["Users and operator outcome","Current topology","Intent sources","Operator journey","Quality attributes","Delivery constraints","Alternatives","External guidance","Risks and unknowns"]},
+        {"path":"WORKSPACE-AUDIT.md","required":true,"headings":["Scope","Methodology","Evidence coverage","Verified strengths","Contradictions","Prioritized findings","Safety risks","Unverified checks"]},
+        {"path":"REPO-INVENTORY.md","required":true,"headings":["Workspace root","Project matrix","Git and worktree matrix","Shared paths","References","Toolchains and tasks","Documentation and instructions","Manifest and lock status","Unknowns"]},
+        {"path":"DEPENDENCY-MAP.md","required":true,"headings":["Owned project graph","Reference relationships","Dependency kinds","Compatibility boundaries","Groups","Task order","Cycles","Integration slices"]},
+        {"path":"INFORMATION-ARCHITECTURE.md","required":true,"headings":["Document classes","Current map","Target map","Authoritative index","Ownership","Shared resources","Supersession and archive policy","Validation"]},
+        {"path":"MANIFEST-SPEC.md","required":true,"headings":["Format selection","Desired manifest","Lock state","Local overrides","Schema and invariants","Canonical digest","Examples","Lifecycle operations","Migration"]},
+        {"path":"AGENT-OPERATING-MODEL.md","required":true,"headings":["Instruction hierarchy","Scope switching","Git boundaries","References and vendors","Search and discovery","Cross-repository changesets","Verification","Reporting","Conflict handling"]},
+        {"path":"TOOLING-SPEC.md","required":true,"headings":["Current tools","Selected approach","Command contracts","Safety and trust","Profiles","Output schemas","Fixtures","CI","Rollout","Ownership"]},
+        {"path":"GOVERNANCE.md","required":true,"headings":["Roles and ownership","Lifecycle","Changesets","Exceptions","Documentation policy","Lock policy","External authority","Review conditions"]},
+        {"path":"PLAN.md","required":true,"headings":["Feature","Product outcome","Quality attributes and delivery constraints","Phases","Open questions","Final acceptance"]},
+        {"path":"GOALPRO-INPUT.md","required":true,"headings":["Goal and product outcome","Source artifacts and evidence","Approval provenance","Implementation slices","Acceptance criteria","Non-goals and boundaries","Quality applicability","Project gates","Delivery requirements","Manual and external actions","Unverified assumptions","Sensitive-data constraints","Readiness"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized evidence, research, or decisions add durable context.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "feature-clone",
+      "output_root": "agent-work/{slug}/feature-clone/",
+      "files": [
+        {"path":"SPEC.md","required":true,"headings":["Feature","Users and product outcome","Acceptance criteria","Behavior","Journey and states","Data shapes","State transitions","Quality attributes","Essential platform constraints","Edge cases and errors","Out of scope"]},
+        {"path":"COMPONENTS.md","required":true,"headings":["Responsibilities","Interfaces","Data flow"]},
+        {"path":"TESTS.md","required":true,"headings":["Acceptance tests","Edge cases"]},
+        {"path":"REFERENCE.md","required":true,"headings":["Reference implementation","Notable patterns","Gotchas"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when decisions, sources, or unresolved context require separate notes.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "feature-goal",
+      "output_root": "agent-work/{slug}/feature-goal/",
+      "files": [
+        {"path":"CRITERIA.md","required":true,"headings":["Goal","Functional criteria","Implementation criteria","Out of scope"]},
+        {"path":"PROGRESS.md","required":true,"headings":["Progress"]},
+        {"path":"QUALITY-REPORT.md","required":true,"headings":["Quality report","Final integrated verification"]},
+        {"path":"spec-link.md","required":true,"headings":["Implements"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when implementation decisions or external links need durable notes.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "goalpro",
+      "output_root": "agent-work/{slug}/goalpro/",
+      "files": [
+        {"path":"CRITERIA.md","required":true,"headings":["Goal","Acceptance criteria","Out of scope"]},
+        {"path":"PROGRESS.md","required":true,"headings":["Progress"]},
+        {"path":"QUALITY-REPORT.md","required":true,"headings":["Quality report","Final integrated verification"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when decisions, research, or external links need durable notes.","headings":["Notes"]},
+        {"path":"plan.md","required":false,"condition":"Only when a supplied plan is copied into the goal folder.","headings":["Plan"]}
+      ]
+    },
+    {
+      "skill": "migratepro",
+      "output_root": "agent-work/{slug}/migratepro/",
+      "files": [
+        {"path":"MAP.md","required":true,"headings":["Dependency graph","Modules","Risks"]},
+        {"path":"CRITERIA.md","required":true,"headings":["Goal","Acceptance criteria","Out of scope"]},
+        {"path":"PLAN.md","required":true,"headings":["Migration order","Cutover strategies","Verification"]},
+        {"path":"PROGRESS.md","required":true,"headings":["Progress"]},
+        {"path":"QUALITY-REPORT.md","required":true,"headings":["Quality report","Final integrated verification"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when migration decisions, mappings, or benchmarks need durable notes.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "planpro",
+      "output_root": "agent-work/{slug}/planpro/",
+      "files": [
+        {"path":"PLAN.md","required":true,"headings":["Feature","Phases","Product outcome","Quality attributes","Delivery constraints","Open questions","Final acceptance"]},
+        {"path":"RESEARCH.md","required":true,"headings":["Stack","Where the feature fits","Conventions","Product context","User journey","Quality attributes","Delivery constraints","Alternatives","Risks and unknowns","NOT APPLICABLE"]},
+        {"path":"GOALPRO-INPUT.md","required":true,"headings":["Goal and product outcome","Approval provenance","Implementation slices","Acceptance criteria","Quality applicability","Project gates","Readiness"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when open questions, links, or scratch need a separate durable record.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "releasepro",
+      "output_root": "agent-work/release-v{version-slug}/releasepro/",
+      "files": [
+        {"path":"RELEASE.md","required":true,"headings":["Version","Rationale","Changes","Source","Preflight verification","Prepared state","Exact refs","Publication boundary"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when release decisions or external links need durable notes.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "restructure",
+      "output_root": "agent-work/{slug}/restructure/",
+      "files": [
+        {"path":"AUDIT.md","required":true,"headings":["Detected conventions","Inconsistencies","Best practices","Refactor candidates"]},
+        {"path":"RULES.md","required":true,"headings":["Directory layout","Naming rules","Colocation rules","Module boundaries","Exceptions"]},
+        {"path":"PLAN.md","required":true,"headings":["Ordered moves","Verification"]},
+        {"path":"PROGRESS.md","required":true,"headings":["Progress"]},
+        {"path":"QUALITY-REPORT.md","required":true,"headings":["Quality report","Final integrated verification"]},
+        {"path":"REFACTOR-CANDIDATES.md","required":false,"condition":"Only when a surfaced refactor is too large for the approved move.","headings":["Candidates"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when decisions or links need separate durable notes.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "stripe-audit",
+      "output_root": "agent-work/{slug}/stripe-audit/",
+      "files": [
+        {"path":"AUDIT.md","required":true,"headings":["Product and billing policy","Scope","Architecture","Prioritized findings","Verified strengths"]},
+        {"path":"INVARIANTS.md","required":true,"headings":["Billing","Entitlements","Application usage credits"]},
+        {"path":"EVENT-MATRIX.md","required":true,"headings":["Events","Transitions","Idempotency","Compensation"]},
+        {"path":"TEST-SCENARIOS.md","required":true,"headings":["Lifecycle","Failure","Replay and concurrency","Abuse"]},
+        {"path":"GOALPRO-INPUT.md","required":true,"headings":["Goal and product outcome","Approval provenance","Implementation slices","Acceptance criteria","Quality applicability","Project gates","Manual and external actions","Readiness"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized research links or decisions need separate durable notes.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "testpro",
+      "output_root": "agent-work/{slug}/testpro/",
+      "files": [
+        {"path":"AUDIT.md","required":true,"headings":["Scope","Baseline coverage","Test inventory","Weak tests"]},
+        {"path":"GAPS.md","required":true,"headings":["Critical","High","Medium","Low"]},
+        {"path":"EXECUTION-PLAN.md","required":true,"headings":["Mode","Coverage target","Prioritized gaps","Acceptance criteria","Approval"]},
+        {"path":"PROGRESS.md","required":false,"condition":"Only after IMPROVE mode is explicitly requested or the execution plan is approved.","headings":["Progress"]},
+        {"path":"QUALITY-REPORT.md","required":false,"condition":"Only after approved IMPROVE execution begins.","headings":["Quality report","Final integrated verification"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when harness, fixture, or flake decisions need durable notes.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "turbulencejs-integration",
+      "output_root": "agent-work/{slug}/turbulencejs-integration/",
+      "files": [
+        {"path":"DECISIONS.md","required":true,"headings":["Project context","Runtime surfaces","Entrypoints","Motion style","Intensity","Accessibility","Approval"]},
+        {"path":"INTEGRATION-PLAN.md","required":true,"headings":["Outcome","Scope","Package selection","Target map","Implementation slices","Verification","Rollback"]},
+        {"path":"PROGRESS.md","required":false,"condition":"Only when implementation is authorized and begins.","headings":["Progress"]},
+        {"path":"QUALITY-REPORT.md","required":false,"condition":"Only when implementation is authorized and performed.","headings":["Implemented","Files","Quality report","Verification","Accessibility and lifecycle","Deviations","Final integrated verification","Final status"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized research or measurements add durable context.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "seo-setup",
+      "output_root": "agent-work/{slug}/seo-setup/",
+      "files": [
+        {"path":"AUDIT.md","required":true,"headings":["Product and privacy context","Production identity","Crawl and index foundation","Provider prerequisites","Gap summary"]},
+        {"path":"SETUP-PLAN.md","required":false,"condition":"Required when any source or external-provider mutation is proposed.","headings":["Revision and scope","Proposed source changes","Proposed external-provider changes","User-only actions","Verification matrix","Rollback","Approval provenance"]},
+        {"path":"SEO-SETUP-STATUS.json","required":true,"headings":["schema_version","overall_status","requirements"]},
+        {"path":"PROGRESS.md","required":false,"condition":"Required when approved source or provider execution begins.","headings":["Progress"]},
+        {"path":"QUALITY-REPORT.md","required":true,"headings":["Quality report","Final integrated verification"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized provider research or decisions need separate durable notes.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "seo-foundation",
+      "output_root": "agent-work/{slug}/seo-foundation/",
+      "files": [
+        {"path":"FOUNDATION-BRIEF.md","required":true,"headings":["Product and outcome","Market and language","Research scope","Source contract","Approval"]},
+        {"path":"SITE-BASELINE.md","required":true,"headings":["Current pages","First-party queries","Conversions","Protected winners"]},
+        {"path":"COMPETITORS.md","required":true,"headings":["Candidate competitors","Confirmed set","Excluded candidates","Iteration history"]},
+        {"path":"COMPETITOR-ANALYSIS.md","required":true,"headings":["Page evidence","Repeated terms and phrases","Page roles","Limitations"]},
+        {"path":"SERP-SNAPSHOTS.md","required":true,"headings":["Scope","Google","Bing","New competitor discoveries"]},
+        {"path":"KEYWORD-DEMAND.csv","required":true,"headings":["source_provider","query","metric_name","metric_value","metric_precision"]},
+        {"path":"KEYWORD-DEMAND.md","required":true,"headings":["Source dictionary","Scope compatibility","Precision","Limitations"]},
+        {"path":"KEYWORD-CLUSTERS.md","required":true,"headings":["Cluster definitions","Intent boundaries","Evidence","Exclusions"]},
+        {"path":"PAGE-OWNERSHIP.md","required":true,"headings":["Current owners","Proposed owners","Support and bridge roles","Protected winners","Cannibalization"]},
+        {"path":"SEO-FOUNDATION.md","required":true,"headings":["Approval and freshness","Competitor map","Ranked keyword opportunities","Keyword clusters","Page ownership and protected winners","Downstream contract for SEO Strategy"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized research notes need separate durable storage.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "seo-strategy",
+      "output_root": "agent-work/{slug}/seo-strategy/",
+      "files": [
+        {"path":"STRATEGY-BRIEF.md","required":true,"headings":["Product and search outcomes","Prerequisite evidence","Constraints","Delivery model","Approval"]},
+        {"path":"CONTENT-PORTFOLIO.csv","required":true,"headings":["owner","cluster","action","priority","state"]},
+        {"path":"LANDING-PAGE-BRIEFS.md","required":true,"headings":["Decision and ownership","User and product outcome","Evidence and differentiation","Content and experience","Search and distribution","Delivery and verification"]},
+        {"path":"EDITORIAL-BRIEFS.md","required":true,"headings":["Decision and ownership","User and product outcome","Evidence and differentiation","Content and experience","Search and distribution","Delivery and verification"]},
+        {"path":"INTERNAL-LINK-MAP.md","required":true,"headings":["Source","Destination","Anchor guidance","User reason","Authority flow"]},
+        {"path":"MEASUREMENT-PLAN.md","required":true,"headings":["Baselines","Source windows","Leading signals","Outcome signals","Guardrails","Rollback triggers"]},
+        {"path":"SEO-ROADMAP.md","required":true,"headings":["Priorities","Dependencies","Reversible slices","Rollout","Rollback"]},
+        {"path":"SEO-STRATEGY.md","required":true,"headings":["Approval, revision, and scope","Portfolio decisions and protected assets","Landing-page plan","Editorial plan","Internal-link and technical plan","Prioritized roadmap","Measurement, rollout, and rollback"]},
+        {"path":"GOALPRO-INPUT.md","required":false,"condition":"Only when the user explicitly approves direct implementation scope.","headings":["Goal and product outcome","Approval provenance","Implementation slices","Acceptance criteria","Quality applicability","Project gates","Manual and external actions","Readiness"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized research or decisions need separate durable notes.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "seo-content",
+      "output_root": "agent-work/{slug}/seo-content/",
+      "files": [
+        {"path":"BRIEF-VALIDATION.md","required":true,"headings":["Prerequisite paths and freshness","Owner, intent, and protected winners","Brief consistency","Route decision"]},
+        {"path":"CONTENT-PLAN.md","required":true,"headings":["Brief, revision, and approval","Owner, intent, and protected winners","Target and authority","Source and claim plan","Implementation","Verification gates","Publish or deployment path","Rollout and rollback"]},
+        {"path":"SOURCE-LEDGER.md","required":true,"headings":["Sources","Claims supported","Limitations","Citation destinations"]},
+        {"path":"CLAIM-LEDGER.md","required":true,"headings":["Verified","User-approved","Attributed","Unknown","Rejected"]},
+        {"path":"CONTENT-DRAFT.md","required":false,"condition":"Required when exact copy review is needed or the project does not own the final content source.","headings":["Content draft"]},
+        {"path":"PROGRESS.md","required":true,"headings":["Progress"]},
+        {"path":"CONTENT-RECEIPT.md","required":true,"headings":["Brief and approval provenance","Final target and status","Owner, cluster, intent, and action","Changed files or records","Claims, sources, and rejected claims","Search and internal-link posture","Published-target evidence","Indexing handoff","Baseline and monitor windows","Rollback"]},
+        {"path":"QUALITY-REPORT.md","required":true,"headings":["Quality report","Final integrated verification"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized research or decisions need separate durable notes.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "seo-indexing",
+      "output_root": "agent-work/{slug}/seo-indexing/",
+      "files": [
+        {"path":"INDEXING-BRIEF.md","required":true,"headings":["Objective and scope","Property, origins, and environment","Candidate sources","Mode, cap, and cadence","Eligibility and priority","Credentials, failures, and disable path","Approval"]},
+        {"path":"INDEXING-STATUS.md","required":true,"headings":["Current state","Last run","Queue","Automation","Blocks","Next action"]},
+        {"path":"URL-QUEUE.csv","required":true,"headings":["url","canonical_url","property","discovery_source","eligibility","next_action"]},
+        {"path":"SUBMISSION-HISTORY.md","required":true,"headings":["Submission history"]},
+        {"path":"PROGRESS.md","required":false,"condition":"Required when approved submission or automation mutation begins.","headings":["Progress"]},
+        {"path":"runs/{run-id}/DISCOVERY.md","required":true,"headings":["Sources and cursors","Discovered URLs","Normalization","Exclusions"]},
+        {"path":"runs/{run-id}/URL-VERIFICATION.csv","required":true,"headings":["url","http_status","robots_allowed","indexing_allowed","user_canonical","eligibility","reason"]},
+        {"path":"runs/{run-id}/SUBMISSION-PLAN.md","required":false,"condition":"Required before any individual indexing request is attempted.","headings":["Exact batch","Verification evidence","Provider path","Quota and stop behavior","Approval"]},
+        {"path":"runs/{run-id}/RUN-REPORT.md","required":true,"headings":["Scope and mode","Discovery and eligibility","Requests and provider evidence","Skipped and blocked URLs","Automation state","Handoff and next observation"]},
+        {"path":"AUTOMATION-PLAN.md","required":false,"condition":"Only when a reminder or recurring indexing job is explicitly requested.","headings":["Objective and prompt","Target and schedule","Property, origins, mode, and cap","Sources and credentials","Eligibility and stop policy","Artifacts and notifications","Disable path","Approval"]},
+        {"path":"AUTOMATION-RECEIPT.md","required":false,"condition":"Only after the approved indexing automation is actually created.","headings":["Created automation","Schedule and target","Operating policy","Credential posture","First-run status","Disable path"]},
+        {"path":"QUALITY-REPORT.md","required":false,"condition":"Required after submission or automation creation.","headings":["Quality report","Final integrated verification"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized provider research or decisions need separate durable notes.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "seo-monitor",
+      "output_root": "agent-work/{slug}/seo-monitor/",
+      "files": [
+        {"path":"MONITOR-BRIEF.md","required":true,"headings":["Decision and scope","Owners and protected winners","Sources and windows","Maturity rule","Privacy and retention","Cadence and approval"]},
+        {"path":"SEO-MONITOR.md","required":true,"headings":["Current status","Latest run","Baseline","Comparable runs","Open actions","Next observation"]},
+        {"path":"MONITOR-HISTORY.md","required":true,"headings":["Monitor history"]},
+        {"path":"ACTION-QUEUE.md","required":true,"headings":["Open","Waiting","Resolved","Rejected or superseded"]},
+        {"path":"runs/{run-id}/DATA-INVENTORY.md","required":true,"headings":["Sources, properties, and freshness","Scope and windows","Completeness","Limitations","Redactions"]},
+        {"path":"runs/{run-id}/SNAPSHOT.csv","required":true,"headings":["source_provider","window_start","window_end","metric_name","metric_value","metric_precision"]},
+        {"path":"runs/{run-id}/MONITOR-REPORT.md","required":true,"headings":["Decision and scope","Baseline and comparison compatibility","Maturity judgment","Protected winners and guardrails","Findings and competing explanations","Recommendations, confidence, and routes","Next observation"]},
+        {"path":"AUTOMATION-PLAN.md","required":false,"condition":"Only when recurring automation is explicitly requested.","headings":["Objective and prompt","Target and schedule","Sources and credentials","Artifacts and notifications","Failure policy","Disable path","Approval"]},
+        {"path":"AUTOMATION-RECEIPT.md","required":false,"condition":"Only after the approved automation is actually created.","headings":["Created automation","Schedule and target","Credential posture","First-run status","Disable path"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized research or decisions need separate durable notes.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "email-lifecycle-audit",
+      "output_root": "agent-work/{slug}/email-lifecycle-audit/",
+      "files": [
+        {"path":"RESEARCH.md","required":true,"headings":["Scope and eligibility","Product outcomes and lifecycle model","Sources and access limits","Provider and architecture evidence","Consent and legal-review boundary","Quality attributes","Contradictions","Unknowns"]},
+        {"path":"CURRENT-SYSTEM.md","required":true,"headings":["Architecture and ownership","Events and lifecycle states","Message classification and streams","Consent preferences and suppression","Orchestration and conflict resolution","Rendering and accessibility","Operations and recovery","Measurement and experimentation","Unverified behavior"]},
+        {"path":"CAMPAIGN-INVENTORY.md","required":true,"headings":["Campaign coverage","Campaign inventory","Cross-campaign conflicts","Content and rendering states","Measurement coverage","Ownership and exclusions"]},
+        {"path":"AUDIT-REPORT.md","required":true,"headings":["Executive read","Verified strengths","Prioritized findings","Systemic patterns","Risk and legal-review boundaries","Measurement gaps","Experiment shortlist","Refactor boundary"]},
+        {"path":"STRATEGY-INPUT.md","required":true,"headings":["Source audit","Product promise and lifecycle outcomes","Segments and maturity states","Current system","Strengths to preserve","Prioritized findings","Campaign and orchestration constraints","Consent deliverability and operational guardrails","Measurement and evidence gaps","Required strategy outcomes","Unknowns and experiments","Handoff authority","Handoff state"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized evidence or decisions need separate durable notes.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "email-lifecycle-strategy",
+      "output_root": "agent-work/{slug}/email-lifecycle-strategy/",
+      "files": [
+        {"path":"RESEARCH.md","required":true,"headings":["Sources","Product promise users and jobs","Audit input or current evidence","Lifecycle outcome brief","Segments and maturity states","Events data and deep links","Consent deliverability and operations","Voice sender and visual evidence","Measurement and experiments","Alternatives","Contradictions and unknowns"]},
+        {"path":"STRATEGY-OPTIONS.md","required":true,"headings":["Strategy read","Shared comparison basis","Option comparison","Detailed options","Recommendation","Audit traceability","Experiments","Preview revisions","Selected preview revision","User decision","Approval provenance"]},
+        {"path":"MESSAGE-SAMPLES.md","required":true,"headings":["Voice sources","Protected facts classifications and terms","Sample coverage","Representative messages","Dynamic fields and fallbacks","Rendering and accessibility","Humanization record","Fidelity comparison","Unresolved ambiguity","Final approved samples"]},
+        {"path":"EMAIL-LIFECYCLE-PREVIEW.html","required":true,"headings":["strategy-summary","lifecycle-map","decision-simulation","campaign-system","message-preview","trust-and-delivery","measurement","tradeoffs"]},
+        {"path":"previews/EMAIL-LIFECYCLE-PREVIEW-R{n}.html","required":true,"headings":["strategy-summary","lifecycle-map","decision-simulation","campaign-system","message-preview","trust-and-delivery","measurement","tradeoffs"]},
+        {"path":"LIFECYCLE-STRATEGY.md","required":true,"headings":["Selected strategy","Product outcomes","Lifecycle stages and segments","Channel fit and sender model","Campaign portfolio","Cadence frequency and arbitration","Activation repetition and expansion","Inactivity re-engagement and sunset","Preserved strengths and resolved findings","Rollout and learning","Risks assumptions and prohibited shortcuts","Verification targets"]},
+        {"path":"CAMPAIGN-MAP.md","required":true,"headings":["Portfolio scope","Campaign map","Entry branch and exit logic","Priority suppression and frequency","Sender content and destination","Ownership and dependencies","Readiness and exclusions"]},
+        {"path":"STATE-AND-DECISION-MODEL.md","required":true,"headings":["Identity and account scope","Product events","Derived lifecycle states","Meaningful activity and lapse","Decision and conflict model","Timing ordering and idempotency","Pseudocode","Edge cases and recovery","Test scenarios"]},
+        {"path":"MESSAGE-BRIEFS.md","required":true,"headings":["Portfolio and brief status","Shared voice and trust contract","Shared data and fallback contract","Initial program briefs","Later lifecycle briefs","Transactional and channel coordination","Approval and unresolved evidence"]},
+        {"path":"COPY-DECK.md","required":true,"headings":["Voice sources","Protected facts classifications and terms","Approved initial program","Subjects previews and senders","Message bodies and calls to action","Plain text images off and accessibility","Dynamic fields and fallbacks","Humanization record","Fidelity comparison","Unresolved ambiguity"]},
+        {"path":"DELIVERABILITY-AND-CONSENT-GUARDRAILS.md","required":true,"headings":["Message classification","Eligibility consent and preferences","Unsubscribe suppression and deletion","Sender domains streams and authentication","Reputation volume and monitoring","Accessibility rendering and localization","Privacy and data minimization","Ownership incidents and recovery","External actions and qualified review","Unverified requirements"]},
+        {"path":"MEASUREMENT-PLAN.md","required":true,"headings":["Product outcome hypotheses","Event meanings and eligibility","Attribution windows","Holdouts and cohorts","Diagnostics and guardrails","Reporting limits and privacy","Experiment sequence","Rollout learning and rollback","Abandonment evidence"]},
+        {"path":"GOALPRO-INPUT.md","required":false,"condition":"Only when the named preview revision and implementation scope are explicitly approved and the canonical direct handoff is READY.","headings":["Goal and product outcome","Approval provenance","Implementation slices","Acceptance criteria","Non-goals and boundaries","Quality applicability","Project gates","Delivery requirements","Manual and external actions","Unverified assumptions","Sensitive-data constraints","Readiness"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized evidence or decisions need separate durable notes.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "onboarding-audit",
+      "output_root": "agent-work/{slug}/onboarding-audit/",
+      "files": [
+        {"path":"RESEARCH.md","required":true,"headings":["Scope and platforms","Product promise and users","Activation evidence","Sources","Constraints and guardrails","Quality attributes","Contradictions","Unknowns"]},
+        {"path":"CURRENT-JOURNEY.md","required":true,"headings":["Segments and entry points","Journey inventory","States and recovery","Platform behavior","Accessibility and localization","Measurement coverage","Exclusions"]},
+        {"path":"AUDIT-REPORT.md","required":true,"headings":["Executive read","Verified strengths","Prioritized findings","Systemic patterns","Measurement gaps","Experiment shortlist","Improvement boundary"]},
+        {"path":"DIRECTION-INPUT.md","required":true,"headings":["Source audit","Product promise and activation","Platforms and segments","Current journey","Strengths to preserve","Prioritized findings","Constraints and non-goals","Measurement and evidence gaps","Required direction outcomes","Unknowns and experiments","Handoff state"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized evidence or decisions need separate durable notes.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "onboarding-direction",
+      "output_root": "agent-work/{slug}/onboarding-direction/",
+      "files": [
+        {"path":"RESEARCH.md","required":true,"headings":["Sources","Product promise and users","Current journey or audit input","Activation brief","Guardrails","Platforms","Voice and visual evidence","Measurement","Alternatives","Contradictions","Unknowns and experiments"]},
+        {"path":"DIRECTION-OPTIONS.md","required":true,"headings":["Design read","Shared comparison basis","Option comparison","Detailed options","Recommendation","Audit traceability","Experiments","Preview revisions","Selected preview revision","User decision","Approval provenance"]},
+        {"path":"ONBOARDING-PREVIEW.html","required":true,"headings":["direction-summary","activation-path","screens","states","copy","accessibility","measurement","tradeoffs"]},
+        {"path":"previews/ONBOARDING-PREVIEW-R{n}.html","required":true,"headings":["direction-summary","activation-path","screens","states","copy","accessibility","measurement","tradeoffs"]},
+        {"path":"ONBOARDING-BLUEPRINT.md","required":true,"headings":["Selected direction","Activation definition","Platform and segment flow","Step purposes","Commitment and permission timing","Starter state and learning","Interruption and recovery","Success and continuation","Preserved strengths","Resolved findings","Constraints and prohibited shortcuts","Verification targets"]},
+        {"path":"EXPERIENCE-MATRIX.md","required":true,"headings":["Platforms and segments","Entries and viewports","Inputs and states","Permissions and connectivity","Accessibility","Localization and content extremes","Exit and re-entry","Expected behavior"]},
+        {"path":"COPY-DECK.md","required":true,"headings":["Voice sources","Protected claims and terms","Representative strings","Platform differences","Humanization record","Fidelity comparison","Unresolved ambiguity","Final approved copy"]},
+        {"path":"MEASUREMENT-PLAN.md","required":true,"headings":["Activation hypothesis","Event meanings","Funnel and cohort questions","Guardrails","Instrumentation gaps","Experiment sequence","Rollout learning","Privacy","Abandonment evidence"]},
+        {"path":"PLAN.md","required":false,"condition":"Only when current implementation architecture is concrete enough to outline responsibly without Planpro rediscovery.","headings":["Feature","Product outcome","Approved direction and evidence","Quality attributes and delivery constraints","Phases","Open questions","Final acceptance"]},
+        {"path":"GOALPRO-INPUT.md","required":false,"condition":"Only when the selected preview revision and concrete implementation scope are explicitly approved and the direct handoff is READY.","headings":["Goal and product outcome","Approval provenance","Implementation slices","Acceptance criteria","Non-goals and boundaries","Quality applicability","Project gates","Delivery requirements","Manual and external actions","Unverified assumptions","Sensitive-data constraints","Readiness"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized evidence or decisions need separate durable notes.","headings":["Notes"]}
+      ]
+    },
+    {
+      "skill": "turbulencejs-presentation",
+      "output_root": "agent-work/{slug}/turbulencejs-presentation/",
+      "files": [
+        {"path":"DECK-BRIEF.md","required":true,"headings":["Purpose and desired response","Audience mix and context","Content and source truth","Scope and duration","Visual and animation intent","Brand, assets, and provenance","Aspect, controls, and export","Accessibility and sensitivity","Assumptions and open decisions","Approval"]},
+        {"path":"STORYBOARD.md","required":true,"headings":["Narrative arc","Density and intensity curve","Slides","Content budgets","Asset and citation map","Representative sample","Approval"]},
+        {"path":"STYLE-CONTRACT.md","required":true,"headings":["Design soul","Influences","Conflict resolution","Visual system","Motion system","Dual-aspect rules","Accessibility guardrails","Approval"]},
+        {"path":"BUILD-PLAN.md","required":true,"headings":["Outcome","Scope and exclusions","Target architecture","Implementation slices","Approval gates","Verification","Dependencies and risks","Rollback"]},
+        {"path":"PROGRESS.md","required":true,"headings":["Progress"]},
+        {"path":"QUALITY-REPORT.md","required":true,"headings":["Quality report","Scope and approved direction","Structural and machine evidence","Full-size visual inspection","Assets, sources, and privacy","Performance and lifecycle","Deviations and residual risks","Final integrated verification","Final status"]}
+      ]
+    }
+  ]
+}

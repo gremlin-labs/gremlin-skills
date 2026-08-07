@@ -1,0 +1,10 @@
+/dist/
+/agent-work/
+/references/
+/research/
+/node_modules/
+__pycache__/
+*.py[cod]
+*.bundle
+.DS_Store
+/.trufflehog-exclude-paths.txt

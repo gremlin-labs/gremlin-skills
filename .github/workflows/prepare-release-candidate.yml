@@ -1,0 +1,45 @@
+name: Prepare release candidate
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: "3.12"
+      - name: Set up Node
+        uses: actions/setup-node@1e60f620b9541d0c243d9bb5a8b564e8a9f7c8ab # v4.0.4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install versioning tools
+        run: npm ci --ignore-scripts
+      - name: Validate exact release-candidate tree
+        run: python3 scripts/run_validation.py --receipt dist/validation/validation-receipt.json
+      - name: Require licensed clean public snapshot
+        run: python3 scripts/prepare_public_snapshot.py --require-license --receipt dist/validation/public-snapshot-receipt.json
+      - name: Verify synchronized versions
+        run: node scripts/sync-plugin-version.mjs --check
+      - name: Upload immutable candidate artifacts
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: gremlin-skills-candidate-${{ github.sha }}
+          path: |
+            dist/claude-code-skills/*.zip
+            dist/claude-code-skills/manifest.json
+            dist/plugins/
+            dist/validation/*.json
+          if-no-files-found: error
+          retention-days: 14

@@ -1,0 +1,28 @@
+{
+  "artifacts": [],
+  "case_id": "stripe-audit--routing-positive",
+  "context_sources": [
+    "fixture-repository",
+    "installed-skill",
+    "user-prompt"
+  ],
+  "evidence": [
+    "invocation=implicit",
+    "selected_skill=stripe-audit",
+    "response_sha256=269ac724c2e256e86deec9cac8f32593afd87e1ec1df5b1de2c76a6d64a5de28",
+    "process_exit_code=0",
+    "payload_sha256=3499e4f6850b9b52191a24f90ca14f2c10c84a03589450ecbb8f34701a799dcc",
+    "plan_sha256=dc487a6d5aef436dca56a08420e9b01bd537c11fa459bb066367567f49dccbb3",
+    "harness_sha256=9a06970430fc59bfdb3485ac37de590bc5668c1f864813a246bacdb6cd004068"
+  ],
+  "fresh_context": true,
+  "host": "codex-cli 0.146.0",
+  "model": "gpt-5.6-terra",
+  "notes": "",
+  "result": "PASS",
+  "reviewed_by": "forward-routing-harness-v1",
+  "run_id": "65ad9324-121d-4712-ad2c-8b0b81aac805",
+  "schema_version": 1,
+  "skill": "stripe-audit",
+  "started_at": "2026-08-07T01:18:02Z"
+}

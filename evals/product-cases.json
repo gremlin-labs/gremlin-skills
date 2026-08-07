@@ -1,0 +1,325 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "product-documentation-audit-publication-boundary",
+      "skill": "documentation-audit",
+      "prompt": "Audit a workspace where child repos contain internal plans and the parent contains public build instructions.",
+      "relevant_dimensions": ["Reader audiences", "Authority", "Freshness", "Implementation state", "Publication boundary", "Delivery"],
+      "not_applicable_dimensions": ["End-user visual accessibility"],
+      "expected_outputs": ["Every document has an independent classification", "Child-required workflows remain self-contained", "Internal work moves to the parent plan", "Unknown implementation state remains UNVERIFIED"],
+      "material_question": "Which repositories are intended to be independently open sourced when workspace policy cannot establish it?",
+      "failure_if": ["Private planning material remains in public children", "Child build instructions become dependent on private parent docs"]
+    },
+    {
+      "id": "product-ui-missing-states",
+      "skill": "planpro",
+      "prompt": "Plan a new account-switcher interface.",
+      "relevant_dimensions": ["User and problem", "Current journey", "Desired outcome", "Accessibility", "Security and authorization", "Delivery"],
+      "not_applicable_dimensions": ["Data backfill"],
+      "expected_outputs": ["Loading, empty, permission, error, and recovery states", "Keyboard and focus behavior", "Cross-tenant guardrail", "User-observable acceptance"],
+      "material_question": "What should a user see when an account becomes unavailable during switching?",
+      "failure_if": ["The plan covers only the happy-path component", "Accessibility is silently omitted"]
+    },
+    {
+      "id": "product-landing-page-unverified-framing",
+      "skill": "landing-page",
+      "prompt": "Create a landing page for a technical product whose repository proves several features but does not establish the target buyer, primary benefit framing, search intent, or desired CTA commitment.",
+      "relevant_dimensions": ["Audience and arrival intent", "Desired outcome", "Product truth", "Feature to benefit framing", "Claims and proof", "CTA commitment", "SEO disposition", "Visual direction", "Delivery"],
+      "not_applicable_dimensions": ["Production data migration"],
+      "expected_outputs": ["Verified capabilities remain separate from unapproved benefit framing", "One focused user question resolves the material audience and CTA decision", "Message-map approval precedes the HTML preview", "Adaptive preview mode follows available visual-direction evidence", "SEO index posture is explicit", "Implementation waits for a named preview revision"],
+      "material_question": "Which buyer and immediate outcome should the page prioritize, and what commitment should the primary CTA request?",
+      "failure_if": ["The agent invents a buyer or business outcome from technical features", "A fashionable page is implemented before message and preview approval", "SEO keywords override the product's verified language"]
+    },
+    {
+      "id": "product-designpro-conflicting-guide-and-implementation",
+      "skill": "designpro",
+      "prompt": "Audit an app whose approved guide specifies sharp compact controls while most recent screens use large rounded cards, and add multiple themes.",
+      "relevant_dimensions": ["User and problem", "Design intent", "Current journey", "Accessibility", "Theme architecture", "Delivery", "Alternatives"],
+      "not_applicable_dimensions": ["Billing data migration"],
+      "expected_outputs": ["The approved guide and implementation contradiction is explicit", "Theme readiness is separated from visual-style choice", "A multi-theme specification covers semantic parity and accessible switching", "Safe enforcement work is separated from the unresolved aesthetic decision"],
+      "material_question": "Should the approved sharp compact language remain authoritative, or is the rounded direction an intentional product change?",
+      "failure_if": ["The dominant implementation silently overrides approved intent", "Another product's theme values are copied without evidence"]
+    },
+    {
+      "id": "product-workspacepro-independent-release-boundary",
+      "skill": "workspacepro",
+      "prompt": "Create a master workspace for related apps and libraries that must remain independently releasable while sharing knowledge and integration tests.",
+      "relevant_dimensions": ["Developer and agent users", "Current operator journey", "Desired outcome", "Compatibility", "Ownership", "Delivery", "Alternatives"],
+      "not_applicable_dimensions": ["End-user visual accessibility"],
+      "expected_outputs": ["Independent release ownership remains a guardrail", "Root orchestration does not absorb product source", "Cross-repository compatibility and partial delivery are explicit", "Manifest, lock, agent, and documentation contracts support discovery without erasing child autonomy"],
+      "material_question": "Which cross-project changes must be released together, if any, when compatibility cannot be inferred from current contracts?",
+      "failure_if": ["The projects are converted into a monorepo without an approved topology change", "A sophisticated meta-tool is selected without adoption-fit evidence"]
+    },
+    {
+      "id": "product-backend-migration-observability",
+      "skill": "planpro",
+      "prompt": "Plan replacement of the customer-record storage layer.",
+      "relevant_dimensions": ["User and problem", "Data integrity", "Compatibility", "Observability", "Rollout and rollback"],
+      "not_applicable_dimensions": ["User interface accessibility"],
+      "expected_outputs": ["Mixed-version behavior", "Backfill strategy", "Drift signal", "Rollback boundary"],
+      "material_question": "What consistency window, if any, is acceptable during cutover?",
+      "failure_if": ["The plan specifies modules but no migration or operating model"]
+    },
+    {
+      "id": "cosmetic-variants",
+      "skill": "brainstormpro",
+      "prompt": "Brainstorm ways to reduce API cost.",
+      "relevant_dimensions": ["User and problem", "Desired outcome", "Guardrail", "Alternatives", "Validation experiments"],
+      "not_applicable_dimensions": ["User interface accessibility"],
+      "expected_outputs": ["Mechanistically distinct ideas", "Evidence", "Cost guardrail", "Cheapest useful experiment"],
+      "material_question": "Which cost or reliability outcome matters most if the repository cannot establish it?",
+      "failure_if": ["Three cosmetic batching variants are presented as distinct ideas"]
+    },
+    {
+      "id": "evidence-grounded-ideas",
+      "skill": "brainstormpro",
+      "prompt": "Propose ways to make onboarding clearer.",
+      "relevant_dimensions": ["User and problem", "Current journey", "Desired outcome", "Alternatives", "Validation experiments"],
+      "not_applicable_dimensions": ["Data migration"],
+      "expected_outputs": ["One or more distinct evidence-grounded ideas", "Success and failure signals", "Abandonment evidence"],
+      "material_question": "Which onboarding population is in scope when evidence cannot resolve it?",
+      "failure_if": ["Idea count is padded", "Novelty outranks user evidence"]
+    },
+    {
+      "id": "product-reference-conflicts-simplicity",
+      "skill": "audit-compare",
+      "prompt": "Compare a sophisticated distributed scheduler with our intentionally simple single-node tool.",
+      "relevant_dimensions": ["Product intent", "Adoption fit", "Alternatives", "Operating model"],
+      "not_applicable_dimensions": ["User interface accessibility"],
+      "expected_outputs": ["The simplicity decision is treated as evidence", "Sophisticated patterns are rejected unless outcome-justified"],
+      "material_question": "Is distributed operation an approved future requirement?",
+      "failure_if": ["Reference sophistication is treated as an automatic improvement"]
+    },
+    {
+      "id": "product-greenfield-operating-model",
+      "skill": "audit-plan",
+      "prompt": "Propose a new service from two reference projects.",
+      "relevant_dimensions": ["Target users", "V1 outcome", "Quality attributes", "Delivery", "Operating model", "Alternatives"],
+      "not_applicable_dimensions": ["Migration from an existing target"],
+      "expected_outputs": ["User and operator journey", "Deployment and support model", "Success signal", "Simplest fitting architecture"],
+      "material_question": "Who operates the service and what availability is required?",
+      "failure_if": ["Architecture is synthesized before users and operating constraints"]
+    },
+    {
+      "id": "product-feature-platform-constraint",
+      "skill": "feature-clone",
+      "prompt": "Extract an offline-capable mobile sharing feature for reuse.",
+      "relevant_dimensions": ["Users and problem", "Current journey", "Essential platform constraints", "Reliability", "Delivery"],
+      "not_applicable_dimensions": ["Server-side HTML rendering"],
+      "expected_outputs": ["Offline and recovery behavior remains in the portable spec", "Incidental source libraries remain in the reference file"],
+      "material_question": "Which conflict-resolution behavior is product policy when the source is ambiguous?",
+      "failure_if": ["Stack agnosticism erases intrinsic offline behavior"]
+    },
+    {
+      "id": "product-stripe-rollover-unknown",
+      "skill": "stripe-audit",
+      "prompt": "Audit renewable image-generation credits when rollover policy is undocumented.",
+      "relevant_dimensions": ["Users and paid outcome", "Billing policy", "Credit semantics", "Abuse tolerance", "Customer recovery"],
+      "not_applicable_dimensions": ["Physical fulfillment"],
+      "expected_outputs": ["Rollover is recorded UNKNOWN", "Code findings are separated from product-policy decisions", "The handoff asks one focused policy question"],
+      "material_question": "Should unused subscription credits roll over, expire, or be replaced at renewal?",
+      "failure_if": ["The agent guesses reset or rollover semantics from current code"]
+    },
+    {
+      "id": "product-cli-proportionality",
+      "skill": "planpro",
+      "prompt": "Plan a new noninteractive CLI export flag.",
+      "relevant_dimensions": ["Developer user", "Desired outcome", "Compatibility", "Error and help output"],
+      "not_applicable_dimensions": ["Visual responsive layout", "Browser accessibility"],
+      "expected_outputs": ["CLI user and compatibility behavior", "Concise not-applicable classifications"],
+      "material_question": "Must existing scripts preserve byte-for-byte output?",
+      "failure_if": ["The plan adds irrelevant UI ceremony", "Backward compatibility is omitted"]
+    },
+    {
+      "id": "product-design-direction-credible-finance",
+      "skill": "design-direction",
+      "prompt": "Define a distinctive direction for a new consumer finance app whose users need calm credibility, dense comparisons, localization, and accessible themes.",
+      "relevant_dimensions": ["Users and trust", "Visual identity", "Information density", "Accessibility", "Localization", "Theme readiness", "Delivery"],
+      "not_applicable_dimensions": ["Existing component drift"],
+      "expected_outputs": ["Distinct options with trust and density tradeoffs", "A self-contained HTML preview compares the same realistic finance slice across every direction", "The user may refine one option or reject the set before approval", "Selected qualities map to semantic roles", "Familiar finance patterns are preserved when they improve comprehension"],
+      "material_question": "Which trust posture and brand qualities are approved when evidence supports more than one direction?",
+      "failure_if": ["The skill chooses a fashionable aesthetic without approval", "The final system map is written before a preview revision is approved", "Direction becomes raw component colors instead of system roles"]
+    },
+    {
+      "id": "product-theme-library-interpretive-dashboard",
+      "skill": "theme-library",
+      "prompt": "Choose and adapt a playful palette family for a high-density operations dashboard without forcing the catalog's original surface and border assignments.",
+      "relevant_dimensions": ["Users and trust", "Palette identity", "Information density", "Accessibility", "Theme parity", "Creative freedom", "Delivery"],
+      "not_applicable_dimensions": ["Complete layout and typography direction", "Existing implementation drift"],
+      "expected_outputs": ["Shortlist grounded in operational context", "Default interpretive mode", "Palette DNA separated from derived product colors", "Purposeful complementary or contrasting additions", "Accessibility and representative-preview hypotheses", "Route broader art direction or implementation without expanding silently"],
+      "material_question": "Has the user requested exact fidelity, or should the family be treated as recognizable creative source material?",
+      "failure_if": ["The family becomes a fixed cookie-cutter token recipe", "Creative additions are rejected categorically", "A full Design Direction exercise is required despite settled visual language"]
+    },
+    {
+      "id": "product-motion-audit-static-site",
+      "skill": "motion-audit",
+      "prompt": "Audit a static documentation site with no animation and decide whether any state changes need motion.",
+      "relevant_dimensions": ["User journey", "Purpose and frequency", "Accessibility", "Performance", "Restraint"],
+      "not_applicable_dimensions": ["Gesture physics when no gestures exist"],
+      "expected_outputs": ["Every additive suggestion states a user purpose", "No-motion is retained when transitions add no clarity", "Reduced-motion and performance remain classified"],
+      "material_question": "Is delight a stated product goal or should motion be limited to explanatory feedback?",
+      "failure_if": ["Motion is added merely because the site has none", "The audit treats no animation as an automatic defect"]
+    },
+    {
+      "id": "product-motion-direction-joyful-operations",
+      "skill": "motion-direction",
+      "prompt": "Create a playful but trustworthy animation strategy for an operations app and show how the same pages feel under distinct TurbulenceJS motion languages.",
+      "relevant_dimensions": ["Users and trust", "Product emotion", "Interaction frequency", "Spatial continuity", "Accessibility", "Performance", "Lifecycle", "Delivery"],
+      "not_applicable_dimensions": ["Diagnosis of a known implemented defect"],
+      "expected_outputs": ["Target-informed surface inventory", "Two or three coherent whole-product directions", "Interactive synthetic Studio with refine, new-set, and approve outcomes", "Rare Signature delight plus restrained frequent feedback", "Approved direction mapped to semantic policy and component matrix", "Concrete Planpro or Goalpro routing"],
+      "material_question": "Which motion language and preview revision best balances operational trust with memorable product character?",
+      "failure_if": ["Options use different content and cannot be compared", "The policy is finalized before approval", "Joy is reduced to arbitrary particles everywhere", "Unsupported Turbulence behavior includes internal library-change instructions"]
+    },
+    {
+      "id": "product-design-review-missing-authority",
+      "skill": "design-review",
+      "prompt": "Review a redesigned checkout diff when the style guide and approved mockup contradict each other.",
+      "relevant_dimensions": ["Product intent", "Design authority", "Accessibility", "User journey", "Release decision"],
+      "not_applicable_dimensions": ["Repository-wide token migration"],
+      "expected_outputs": ["The contradiction is reported", "The reviewer does not invent a preferred aesthetic", "Verdict remains UNVERIFIED until authority is resolved"],
+      "material_question": "Which approved source governs the checkout's visual direction?",
+      "failure_if": ["The reviewer silently picks the prettier source", "Preference-only findings block release"]
+    },
+    {
+      "id": "product-gamepro-playable-first-mvp",
+      "skill": "gamepro",
+      "prompt": "Build a tiny browser tactics game to MVP from this mostly empty repository.",
+      "relevant_dimensions": ["Player fantasy", "Core verb and feedback", "Complete playable loop", "Runtime evidence", "Accessibility", "Scope"],
+      "not_applicable_dimensions": ["Store publication before it is requested"],
+      "expected_outputs": ["First Playable before broad content or project-management documents", "Exact launch path", "Observed verb-to-feedback evidence", "Visible First Playable to MVP status", "Minimal start-play-resolution-restart loop"],
+      "material_question": "Which platform or input constraint materially changes the core verb when repository evidence cannot resolve it?",
+      "failure_if": ["A comprehensive design backlog precedes executable gameplay", "Compilation is presented as gameplay proof", "Distance to MVP is hidden"]
+    },
+    {
+      "id": "product-gamepro-resume-v1",
+      "skill": "gamepro",
+      "prompt": "Resume an interrupted V1 after another session changed the source and some placeholders remain.",
+      "relevant_dimensions": ["Resume and drift", "Approved content boundary", "Placeholder debt", "Runtime evidence", "Next playable slice"],
+      "not_applicable_dimensions": ["New engine selection when the project already has one"],
+      "expected_outputs": ["Artifacts and current source are reconciled", "Recorded launch path is rechecked", "Work continues at the first unmet criterion", "Placeholder debt has an owner milestone", "Material drift is surfaced"],
+      "material_question": "Did the source change intentionally redefine the approved V1 boundary?",
+      "failure_if": ["Settled decisions are asked again", "Progress resets to First Playable without evidence", "Placeholders silently count as final"]
+    },
+    {
+      "id": "product-gamepro-playtest-pivot",
+      "skill": "gamepro",
+      "prompt": "The First Playable works, but playtesting shows the core mechanic is confusing and not fun.",
+      "relevant_dimensions": ["Player outcome", "Playtest evidence", "Hypothesis", "Scope cut", "Recovery"],
+      "not_applicable_dimensions": ["Release packaging"],
+      "expected_outputs": ["Best and worst moments are recorded", "Failed hypothesis is stated", "Smallest pivot or scope cut becomes the next slice", "Previously observed evidence remains distinguished from the new product failure"],
+      "material_question": "Which part of the intended fantasy must survive the pivot when multiple cuts are viable?",
+      "failure_if": ["The skill defends sunk work", "The failed hypothesis is treated as a machine defect", "A new document phase replaces playable iteration"]
+    },
+    {
+      "id": "product-seo-setup-consent-and-ownership",
+      "skill": "seo-setup",
+      "prompt": "Set up analytics and search consoles for a production site whose consent policy and Google account owner are not yet decided.",
+      "relevant_dimensions": ["Site users and conversions","Privacy and consent","Provider ownership","Production scope","Recovery","Verification"],
+      "not_applicable_dimensions": ["Competitor research before prerequisites are verified"],
+      "expected_outputs": ["One consolidated setup plan","Explicit consent and ownership decisions","User-only action pauses","No duplicate properties or streams","Observed test-event and provider evidence","Sanitized durable setup documentation"],
+      "material_question": "Who is authorized to own the production properties and what consent behavior is approved?",
+      "failure_if": ["The agent invents an owner or consent policy","Configuration presence is called verification","Terms or sign-in are simulated","A campaign is created for Keyword Planner access"]
+    },
+    {
+      "id": "product-seo-foundation-two-sided-market",
+      "skill": "seo-foundation",
+      "prompt": "Research SEO opportunities for a marketplace whose buyers and sellers use different terms in the US and UK.",
+      "relevant_dimensions": ["User segments","Market and language scope","Search intent","Competitor taxonomy","Demand source compatibility","Page ownership"],
+      "not_applicable_dimensions": ["Source implementation"],
+      "expected_outputs": ["Separate user and market scopes","Business and organic competitor distinctions","Engine and locale labelled SERP evidence","Source-window-preserving demand","Distinct intent clusters","One owner per material cluster"],
+      "material_question": "Which user segment and market is the initial strategic priority when the product evidence does not decide it?",
+      "failure_if": ["US and UK demand are silently merged","Paid competition becomes organic difficulty","Competitor copying replaces product fit","Two pages own the same cluster without a bridge rule"]
+    },
+    {
+      "id": "product-seo-strategy-protected-winner",
+      "skill": "seo-strategy",
+      "prompt": "Plan new comparison and use-case pages when an existing guide already ranks and converts for part of the same cluster.",
+      "relevant_dimensions": ["Protected winners","Search intent","Product value","Cannibalization","Portfolio action","Measurement and rollback"],
+      "not_applicable_dimensions": ["Unapproved implementation"],
+      "expected_outputs": ["Current winner baseline","One explicit action per owner or gap","Distinct intent and product value for any new URL","Internal-link authority plan","Staged rollout and rollback trigger","Approved consumption index"],
+      "material_question": "Does the proposed page serve a distinct user job that the current winner should not own?",
+      "failure_if": ["A new URL is recommended from volume alone","The existing winner loses ownership without evidence","Rankings are promised","Strategy mutates source before approval"]
+    },
+    {
+      "id": "product-seo-content-unsupported-claim",
+      "skill": "seo-content",
+      "prompt": "Implement an approved comparison article whose brief includes one product advantage that repository and primary-source evidence do not support.",
+      "relevant_dimensions": ["Approved owner and intent","Product truth","Primary sources","Claim status","Information gain","Publication target","Rollback"],
+      "not_applicable_dimensions": ["New competitor or keyword strategy"],
+      "expected_outputs": ["Brief validation","Source and claim ledgers","Unsupported claim rejected, narrowed, attributed, or returned for evidence","One asset only","Humanized factual copy","Rendered and authorized-target verification","Monitor receipt"],
+      "material_question": "Can the claim be removed or narrowed without materially changing the approved brief?",
+      "failure_if": ["Polished language hides missing evidence","A competitor page becomes proof","The skill invents firsthand testing","The entire cluster is generated","A build is called publication"]
+    },
+    {
+      "id": "product-seo-indexing-mixed-daily-queue",
+      "skill": "seo-indexing",
+      "prompt": "Run a daily indexing queue for a site that publishes articles and landing pages, where some URLs redirect, some are noindex, some are already indexed, and the browser session may expire.",
+      "relevant_dimensions": ["Production ownership","Publication evidence","Canonical page ownership","Crawl and index readiness","Provider capability","Approval and automation","Failure recovery","Truthful status"],
+      "not_applicable_dimensions": ["New keyword strategy","Automatic source repair"],
+      "expected_outputs": ["Approved property, origins, mode, cap, sources, schedule, timezone, and stop policy","Live per-URL verification and normalized canonical queue","Already indexed, redirect-conflicted, noindex, duplicate, unchanged, and unsupported URLs skipped or routed","Ordinary pages submitted only through authorized Search Console computer use","Immutable request and no-work receipts","Authentication and quota fail closed","Monitor receives requested URLs and observation timing","Automation remains awaiting first run until observed"],
+      "material_question": "Which property, canonical origins, operating mode, per-run cap, and browser-authentication fallback are approved for the standing policy?",
+      "failure_if": ["The queue submits every discovered URL","A redirect source or noindex page is requested","The agent uses the general Indexing API","Ten is treated as an entitlement","Expired authentication is bypassed","A request receipt is called indexing success","The workflow edits source instead of routing the defect"]
+    },
+    {
+      "id": "product-seo-monitor-immature-window",
+      "skill": "seo-monitor",
+      "prompt": "Judge a new article after seven calendar days when Search Console is incomplete, Bing covers a different window, and the protected winner fluctuated for one query.",
+      "relevant_dimensions": ["Data maturity","Provider scope","Compatible windows","Protected winners","Competing explanations","No-change option","Next observation"],
+      "not_applicable_dimensions": ["Immediate source mutation"],
+      "expected_outputs": ["Separate provider snapshots","Data-available-through dates","Compatibility and maturity judgment","Protected-winner guardrail check","Wait or no-change when warranted","Exact next observation time","No invented causal claim"],
+      "material_question": "Is any requested decision mature enough to make without risking the protected winner?",
+      "failure_if": ["Google and Bing windows are merged","Missing rows become zero","One rank fluctuation triggers a rewrite","Seven days automatically means mature","Monitoring silently edits content"]
+    },
+    {
+      "id": "product-turbulencejs-presentation-mixed-audience",
+      "skill": "turbulencejs-presentation",
+      "prompt": "Turn a repository's technical architecture notes into a product-launch talk for a mixed executive and developer audience, with 16:9 live delivery and 9:16 social clips, when the desired audience action and claim priorities are unresolved.",
+      "relevant_dimensions": ["Purpose and desired response","Audience mix and prior knowledge","Source truth and claim priority","Narrative arc","Information density","Visual and motion character","Aspect and export delivery","Accessibility and sensitivity"],
+      "not_applicable_dimensions": ["Production data migration"],
+      "expected_outputs": ["Repository facts remain separate from unresolved narrative choices","One material interview resolves the desired response and claim priority","Smallest coherent slide range","Explicit source and asset provenance","One composed style contract rather than audience modes","Distinct landscape and portrait recipes","Direction approval before production","Representative dual-aspect proof approval before the full deck"],
+      "material_question": "What should this mixed audience believe or do at the end, and which verified claim is the story's primary proof?",
+      "failure_if": ["Technical inventory becomes the narrative without an audience outcome","Executive and developer audiences receive disconnected style modes","The deck invents business impact or evidence","Portrait delivery is deferred until after construction","The full presentation is built before the required approvals"]
+    },
+    {
+      "id": "product-email-lifecycle-audit-incomplete-evidence",
+      "skill": "email-lifecycle-audit",
+      "prompt": "Audit an implemented onboarding and win-back email program whose team reports opens but has no reliable first-value event, whose provider is unavailable, and whose imported-team-member consent mapping is undocumented.",
+      "relevant_dimensions": ["Product promise","First and second value","Lifecycle states","Campaign entry and exit","Event integrity","Consent and preferences","Deliverability","Copy and deep links","Accessibility and rendering","Operations","Measurement and holdouts"],
+      "not_applicable_dimensions": ["Immediate source or provider mutation","New visual identity"],
+      "expected_outputs": ["Opens remain secondary and unreliable evidence","Activation and retained-value candidates stay hypotheses","Provider behavior remains UNVERIFIED","Imported-member eligibility is a qualified-review boundary","Campaign and current-system inventories distinguish fact from intent","STRATEGY-INPUT.md is honestly PARTIAL or BLOCKED","No campaign send, toggle, recipient creation, or configuration change"],
+      "material_question": "Which product outcome and imported-member eligibility decision must strategy treat as authoritative when current product and consent evidence cannot resolve them?",
+      "failure_if": ["An open is declared activation","Missing provider evidence is described as observed behavior","Signup or import is assumed to authorize marketing","The audit rewrites campaigns or changes provider state","A checklist score hides evidence confidence"]
+    },
+    {
+      "id": "product-email-lifecycle-strategy-trust-boundary",
+      "skill": "email-lifecycle-strategy",
+      "prompt": "Design a greenfield post-signup lifecycle email program for a collaborative SaaS product when first value could be individual output or teammate review, imported-user consent is unresolved, and only some replies can reach a staffed support team.",
+      "relevant_dimensions": ["Product promise users and jobs","First and second value","Lifecycle maturity","Identity and account scope","Campaign and channel fit","Sender and reply model","Consent preferences and geography","Deliverability and operations","Copy and trust","Accessibility and rendering","Measurement holdouts and approval"],
+      "not_applicable_dimensions": ["Immediate implementation or sending","Pre-signup outbound nurture"],
+      "expected_outputs": ["One focused question resolves the material activation and eligibility boundary","Options expose rather than hide individual-versus-team value","Imported users remain excluded or explicitly conditional until reviewed","Sender and reply promises match actual staffing","Campaigns include entry exit priority suppression and frequency","Humanized messages preserve factual and consent qualifiers","A named validated preview revision precedes final strategy","Planpro remains the default implementation route"],
+      "material_question": "Which event defines first value for each account role, and are imported team members eligible for lifecycle marketing before an affirmative preference is recorded?",
+      "failure_if": ["A generic SaaS cadence substitutes for product-state evidence","Imported users are enrolled by convention","A founder-style sender implies replies are monitored when they are not","Opens become the primary success metric","Preview approval is treated as authority to send or configure campaigns"]
+    },
+    {
+      "id": "product-onboarding-audit-unknown-activation",
+      "skill": "onboarding-audit",
+      "prompt": "Audit an existing cross-platform onboarding whose team tracks completion but has not established whether the final setup screen predicts retained value, and whose mobile runtime is currently unavailable.",
+      "relevant_dimensions": ["Product promise","User segments","Current journey","Activation evidence","Time-to-value","Platform states","Accessibility","Trust and permissions","Measurement","Experimentability"],
+      "not_applicable_dimensions": ["Source implementation","New visual identity"],
+      "expected_outputs": ["Completion remains separate from activation","Static and measured claims are evidence-labelled","Mobile perceptual behavior remains UNVERIFIED","Strengths and friction are traced by platform and segment","DIRECTION-INPUT.md names the activation uncertainty and cheapest experiment","No application or analytics mutation"],
+      "material_question": "Which user outcome should direction optimize if current evidence cannot distinguish the activation candidates?",
+      "failure_if": ["The last setup screen is declared activation by convention","An under-one-minute rule becomes a universal score","Unavailable mobile runtime is described as observed","The audit silently redesigns or implements the flow"]
+    },
+    {
+      "id": "product-onboarding-direction-trust-boundary",
+      "skill": "onboarding-direction",
+      "prompt": "Design onboarding for a web and mobile AI product when the fastest value path could run before signup, but authorization, generation cost, training-data disclosure, and save behavior are not yet settled.",
+      "relevant_dimensions": ["Product promise","Users and activation","Time-to-value","Authentication and authorization","Cost and abuse","Privacy and data use","Platform differences","Copy and trust","Accessibility","Measurement and experiments","Approval"],
+      "not_applicable_dimensions": ["Immediate source mutation","Whole-product visual redesign"],
+      "expected_outputs": ["One focused question resolves the material trust boundary","Options expose rather than hide commitment and data differences","Generated value includes loading failure cancellation and fallback","Web and mobile share activation meaning without forced screen parity","Humanized copy preserves factual qualifiers","A named validated preview revision precedes the final blueprint","Implementation routes to Planpro unless the handoff becomes concrete"],
+      "material_question": "What anonymous generation and data-use boundary is approved before the product asks the user to create an account?",
+      "failure_if": ["The skill delays signup by generic best practice despite unresolved authorization","AI output quality or latency is invented","Privacy language becomes smoother but less accurate","Preview approval is treated as implementation authority"]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gremlin.skills/schemas/seo-provider-evidence.schema.json",
+  "title": "SEO provider evidence envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "provider", "retrieved_at", "requested_scope", "actual_scope", "status", "checks", "warnings", "redactions_applied"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "provider": {"type": "string", "enum": ["ga4", "google_search_console", "google_ads", "bing_webmaster", "live_site"]},
+    "retrieved_at": {"type": "string", "format": "date-time"},
+    "requested_scope": {"type": "object"},
+    "actual_scope": {"type": "object"},
+    "status": {"type": "string", "enum": ["VERIFIED", "INCOMPLETE", "UNAVAILABLE", "UNAUTHORIZED", "FAILED"]},
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "status", "summary", "evidence"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]+$"},
+          "status": {"type": "string", "enum": ["VERIFIED", "EMPTY", "UNAVAILABLE", "UNAUTHORIZED", "FAILED"]},
+          "summary": {"type": "string", "minLength": 1},
+          "evidence": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "warnings": {"type": "array", "items": {"type": "string"}},
+    "redactions_applied": {"const": true},
+    "data": {"type": "object"}
+  }
+}

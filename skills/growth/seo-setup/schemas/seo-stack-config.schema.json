@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gremlin.skills/schemas/seo-stack-config.schema.json",
+  "title": "SEO Stack secret-free configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "canonical_origin", "providers"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "canonical_origin": {"type": "string", "format": "uri", "pattern": "^https://"},
+    "providers": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ga4": {"$ref": "#/$defs/ga4"},
+        "search_console": {"$ref": "#/$defs/search_console"},
+        "google_ads": {"$ref": "#/$defs/google_ads"},
+        "bing": {"$ref": "#/$defs/bing"}
+      }
+    }
+  },
+  "$defs": {
+    "credential_source": {
+      "type": "string",
+      "enum": ["application_default_credentials", "oauth", "named_environment", "computer_use"]
+    },
+    "environment_name": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]*$"},
+    "ga4": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["property_id", "web_stream_id", "credential_source"],
+      "properties": {
+        "property_id": {"type": "string", "pattern": "^[0-9]+$"},
+        "web_stream_id": {"type": "string", "pattern": "^[0-9]+$"},
+        "measurement_id": {"type": "string", "pattern": "^G-[A-Z0-9]+$"},
+        "credential_source": {"$ref": "#/$defs/credential_source"},
+        "access_token_env": {"$ref": "#/$defs/environment_name"}
+      }
+    },
+    "search_console": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["site_url", "credential_source"],
+      "properties": {
+        "site_url": {"type": "string", "minLength": 1},
+        "credential_source": {"$ref": "#/$defs/credential_source"},
+        "access_token_env": {"$ref": "#/$defs/environment_name"}
+      }
+    },
+    "google_ads": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["customer_id", "credential_source"],
+      "properties": {
+        "customer_id": {"type": "string", "pattern": "^[0-9]{10}$"},
+        "login_customer_id": {"type": ["string", "null"], "pattern": "^[0-9]{10}$"},
+        "credential_source": {"$ref": "#/$defs/credential_source"},
+        "access_token_env": {"$ref": "#/$defs/environment_name"},
+        "developer_token_env": {"$ref": "#/$defs/environment_name"},
+        "api_version": {"type": "string", "pattern": "^v[0-9]+(?:\\.[0-9]+)?$", "default": "v25"}
+      }
+    },
+    "bing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["site_url", "credential_source"],
+      "properties": {
+        "site_url": {"type": "string", "format": "uri"},
+        "credential_source": {"$ref": "#/$defs/credential_source"},
+        "access_token_env": {"$ref": "#/$defs/environment_name"},
+        "api_key_env": {"$ref": "#/$defs/environment_name"}
+      }
+    }
+  }
+}

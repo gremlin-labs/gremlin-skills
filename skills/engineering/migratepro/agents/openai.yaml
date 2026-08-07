@@ -1,0 +1,6 @@
+interface:
+  display_name: "Migratepro"
+  short_description: "Rewrite an existing codebase in a new stack one module at a time"
+  default_prompt: "Use $migratepro to apply the Migratepro workflow to this request."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,35 @@
+name: Validate skills
+
+on:
+  pull_request:
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: "3.12"
+      - name: Run complete deterministic gate
+        run: python3 scripts/run_validation.py --receipt dist/validation/validation-receipt.json
+      - name: Upload validation receipt and package manifest
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: gremlin-validation-${{ github.run_id }}
+          path: |
+            dist/validation/*.json
+            dist/claude-code-skills/manifest.json
+            dist/plugins/manifest.json
+          if-no-files-found: warn
+          retention-days: 14

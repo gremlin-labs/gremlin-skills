@@ -1,0 +1,28 @@
+{
+  "artifacts": [],
+  "case_id": "restructure--routing-near-miss",
+  "context_sources": [
+    "fixture-repository",
+    "installed-skill",
+    "user-prompt"
+  ],
+  "evidence": [
+    "invocation=explicit",
+    "selected_skill=migratepro",
+    "response_sha256=eef6e38a0ee00c034a8e66ab9ec23546fd8192ae8b4dba65d7211ffa298eae08",
+    "process_exit_code=0",
+    "payload_sha256=3499e4f6850b9b52191a24f90ca14f2c10c84a03589450ecbb8f34701a799dcc",
+    "plan_sha256=dc487a6d5aef436dca56a08420e9b01bd537c11fa459bb066367567f49dccbb3",
+    "harness_sha256=9a06970430fc59bfdb3485ac37de590bc5668c1f864813a246bacdb6cd004068"
+  ],
+  "fresh_context": true,
+  "host": "codex-cli 0.146.0",
+  "model": "gpt-5.6-terra",
+  "notes": "",
+  "result": "PASS",
+  "reviewed_by": "forward-routing-harness-v1",
+  "run_id": "a5221066-944c-4382-b75d-0e456047b9b6",
+  "schema_version": 1,
+  "skill": "restructure",
+  "started_at": "2026-08-07T01:17:42Z"
+}

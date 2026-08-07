@@ -1,0 +1,6 @@
+interface:
+  display_name: "Brainstormpro"
+  short_description: "Audit a codebase through the lens of a user's outcome"
+  default_prompt: "Use $brainstormpro to apply the Brainstormpro workflow to this request."
+policy:
+  allow_implicit_invocation: true

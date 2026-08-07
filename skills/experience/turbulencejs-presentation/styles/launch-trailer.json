@@ -1,0 +1,43 @@
+{
+  "id": "launch-trailer",
+  "name": "Launch Trailer",
+  "bestFor": ["product reveals", "vision stories", "short memorable announcements"],
+  "communicationTraits": ["economical", "escalating", "emotionally clear", "claim-first"],
+  "mood": ["anticipatory", "bold", "controlled"],
+  "designSoul": "Earn one unforgettable reveal through disciplined restraint everywhere else.",
+  "narrative": {
+    "suggestedSlideRange": [6, 10],
+    "densityCurve": ["very sparse opening", "measured escalation", "single high-energy proof", "clean release"],
+    "arc": ["create tension", "withhold the mechanism", "reveal the product truth", "land on one action"]
+  },
+  "visual": {
+    "paletteRoles": { "canvas": "deep neutral", "surface": "tonal field", "foreground": "bright neutral", "muted": "smoky secondary", "accent": "brand electric", "climax": "one rare saturated signal" },
+    "typography": ["oversized display claims", "minimal supporting copy", "compact labels only when they add credibility"],
+    "layoutAffinities": ["single dominant focal point", "cinematic negative space", "progressive reveal of one system"],
+    "decorationDNA": ["soft fields, sparse glints, one recurring launch signal"],
+    "assetTreatment": ["hero assets need explicit focal points and truthful orientation-specific crops"],
+    "codeTreatment": ["show only the decisive fragment; keep it real and selectable"]
+  },
+  "motion": {
+    "preferredEntrypoints": ["turbulencejs", "turbulencejs/cinematic", "turbulencejs/effects", "turbulencejs/surfaces"],
+    "intensityRange": [1, 3],
+    "signatureMove": "A quiet field gathers into one crisp reveal, then immediately settles.",
+    "forbiddenMotion": ["multiple competing climaxes", "constant parallax", "level-4 effects by default"],
+    "interruption": "Any reveal can be skipped without losing the final product state.",
+    "cleanup": "Exceptional canvases and workers are bounded, removed, and followed by zero owned work.",
+    "reducedEndpoint": "The reveal resolves instantly to the same focal hierarchy with a short opacity change at most."
+  },
+  "aspects": {
+    "landscape": ["use width as dramatic negative space", "place the focal reveal off-center when it strengthens tension"],
+    "portrait": ["reserve a strong upper claim region", "move the reveal to the center-lower stage", "keep social UI safe areas clear"],
+    "stacking": ["claim, reveal, proof label", "never bury the final action below decorative content"],
+    "safeAreas": { "landscape": "7% on all edges", "portrait": "9% horizontal, 8% vertical plus delivery overlays" },
+    "focalPoint": ["declare one focal point per hero asset", "use an alternate crop or asset when aspect changes"],
+    "prohibitedBehavior": ["center-cropping by default", "turning a wide hero into a tiny portrait thumbnail", "decorative copy repetition"]
+  },
+  "guardrails": {
+    "required": ["one earned climax", "explicit intensity ceiling", "truthful source-backed launch claims"],
+    "forbidden": ["hype unsupported by evidence", "flashing or unavoidable vestibular motion"],
+    "qa": ["review timing at normal speed", "inspect the climax cleanup", "compare focal hierarchy in both aspects"]
+  }
+}

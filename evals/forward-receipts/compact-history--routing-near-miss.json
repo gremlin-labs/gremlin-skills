@@ -1,0 +1,28 @@
+{
+  "artifacts": [],
+  "case_id": "compact-history--routing-near-miss",
+  "context_sources": [
+    "fixture-repository",
+    "installed-skill",
+    "user-prompt"
+  ],
+  "evidence": [
+    "invocation=implicit",
+    "selected_skill=documentation-audit",
+    "response_sha256=1b7e4f92d4fd931340c32e44ac3032a1863340bff4ddc18d42b8443b1f32fe76",
+    "process_exit_code=0",
+    "payload_sha256=3499e4f6850b9b52191a24f90ca14f2c10c84a03589450ecbb8f34701a799dcc",
+    "plan_sha256=dc487a6d5aef436dca56a08420e9b01bd537c11fa459bb066367567f49dccbb3",
+    "harness_sha256=9a06970430fc59bfdb3485ac37de590bc5668c1f864813a246bacdb6cd004068"
+  ],
+  "fresh_context": true,
+  "host": "codex-cli 0.146.0",
+  "model": "gpt-5.6-terra",
+  "notes": "",
+  "result": "PASS",
+  "reviewed_by": "forward-routing-harness-v1",
+  "run_id": "a1c26e53-f666-4da7-9043-f02e74d2cf9e",
+  "schema_version": 1,
+  "skill": "compact-history",
+  "started_at": "2026-08-07T01:16:30Z"
+}

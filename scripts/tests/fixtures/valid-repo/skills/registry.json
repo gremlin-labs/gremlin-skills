@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "category_model": {
+    "status": "proposed",
+    "values": [
+      "engineering"
+    ]
+  },
+  "invocation_policy": {
+    "status": "pending-owner-review",
+    "allowed_modes": [
+      "model-visible",
+      "user-only"
+    ]
+  },
+  "skills": [
+    {
+      "name": "sample-skill",
+      "aliases": [],
+      "category": "engineering",
+      "maturity": "promoted",
+      "path": "skills/sample-skill",
+      "public_docs": {
+        "path": "docs/skills/sample-skill.md",
+        "status": "planned"
+      },
+      "invocation": {
+        "mode": "pending-owner-review",
+        "claude": "pending-owner-review",
+        "codex": "pending-owner-review"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/sample-skill/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": false,
+        "product_research": false
+      },
+      "contracts": [
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": []
+      },
+      "evals": [
+        "trigger",
+        "artifact"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    }
+  ]
+}

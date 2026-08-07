@@ -1,0 +1,43 @@
+{
+  "id": "technical-workshop",
+  "name": "Technical Workshop",
+  "bestFor": ["teaching sessions", "guided implementation", "stateful product walkthroughs"],
+  "communicationTraits": ["teachable", "explicit", "progressive", "reassuring"],
+  "mood": ["practical", "calm", "collaborative"],
+  "designSoul": "Let every step reveal enough state that the audience can predict what comes next.",
+  "narrative": {
+    "suggestedSlideRange": [10, 20],
+    "densityCurve": ["clear objective", "moderate concepts", "dense guided practice", "spacious recap"],
+    "arc": ["state the outcome", "build a shared model", "practice through visible state", "recap and extend"]
+  },
+  "visual": {
+    "paletteRoles": { "canvas": "comfortable low-glare base", "surface": "separated work area", "foreground": "readable neutral", "muted": "secondary label", "accent": "active step", "support": "verified state" },
+    "typography": ["plain-language titles", "generous body leading", "monospace with readable sizing and line numbers only when referenced"],
+    "layoutAffinities": ["step plus current state", "before/after comparison", "progressive annotated diagram"],
+    "decorationDNA": ["step markers, state chips, restrained connector paths"],
+    "assetTreatment": ["annotate only the region being discussed and retain surrounding context"],
+    "codeTreatment": ["show one teachable change at a time and keep previous state distinguishable without color alone"]
+  },
+  "motion": {
+    "preferredEntrypoints": ["turbulencejs", "turbulencejs/subtle"],
+    "intensityRange": [0, 2],
+    "signatureMove": "The current step advances while the resulting state settles beside it.",
+    "forbiddenMotion": ["automatic progression", "motion that hides prior state", "large decorative 3D travel"],
+    "interruption": "Input immediately lands on the requested stable teaching state.",
+    "cleanup": "Repeated next/back navigation never accumulates controllers, listeners, or timers.",
+    "reducedEndpoint": "Step and resulting state change together with a visible label and no travel."
+  },
+  "aspects": {
+    "landscape": ["pair instruction and state side by side", "keep progress visible without dominating"],
+    "portrait": ["place the step objective above the state", "use discrete cards instead of an overlong column", "keep the active state in the first viewport"],
+    "stacking": ["objective, action, result, optional explanation", "repeat critical labels near the state they describe"],
+    "safeAreas": { "landscape": "5% horizontal, 6% vertical", "portrait": "7% horizontal and vertical" },
+    "focalPoint": ["the active state is always the focal point", "move annotations rather than crossing unrelated regions"],
+    "prohibitedBehavior": ["scaling a full desktop capture into portrait", "hiding a required step below the fold", "using color as the only state indicator"]
+  },
+  "guardrails": {
+    "required": ["visible learning objective", "stable next/back state", "readable code and labels"],
+    "forbidden": ["unexplained jumps", "auto-advance that removes learner control"],
+    "qa": ["exercise repeated navigation", "read every code sample at full portrait size", "verify reduced state equivalence"]
+  }
+}

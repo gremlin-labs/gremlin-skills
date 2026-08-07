@@ -1,0 +1,28 @@
+{
+  "artifacts": [],
+  "case_id": "audit-plan--routing-positive",
+  "context_sources": [
+    "fixture-repository",
+    "installed-skill",
+    "user-prompt"
+  ],
+  "evidence": [
+    "invocation=implicit",
+    "selected_skill=audit-plan",
+    "response_sha256=df168a7c9c2daee3523c0d80828f31edc9c4f78694f952c294fbe611ed753747",
+    "process_exit_code=0",
+    "payload_sha256=3499e4f6850b9b52191a24f90ca14f2c10c84a03589450ecbb8f34701a799dcc",
+    "plan_sha256=dc487a6d5aef436dca56a08420e9b01bd537c11fa459bb066367567f49dccbb3",
+    "harness_sha256=9a06970430fc59bfdb3485ac37de590bc5668c1f864813a246bacdb6cd004068"
+  ],
+  "fresh_context": true,
+  "host": "codex-cli 0.146.0",
+  "model": "gpt-5.6-terra",
+  "notes": "",
+  "result": "PASS",
+  "reviewed_by": "forward-routing-harness-v1",
+  "run_id": "e58407fd-370c-4c18-9693-910aba48c99b",
+  "schema_version": 1,
+  "skill": "audit-plan",
+  "started_at": "2026-08-07T01:16:23Z"
+}

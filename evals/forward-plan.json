@@ -1,0 +1,1341 @@
+{
+  "schema_version": 1,
+  "policy": {
+    "fresh_context_per_job": true,
+    "expected_result_hidden_from_agent": true,
+    "fixture_repository_disposable": true,
+    "independent_review_required": true,
+    "host_native_explicit_invocation": true,
+    "model_scope": [
+      "routing-positive",
+      "routing-explicit",
+      "routing-near-miss"
+    ],
+    "deterministic_scope": [
+      "authority",
+      "artifact"
+    ],
+    "results": [
+      "FAIL",
+      "PARTIAL",
+      "PASS"
+    ]
+  },
+  "jobs": [
+    {
+      "id": "audit-compare--routing-positive",
+      "skill": "audit-compare",
+      "kind": "routing-positive",
+      "source_case_id": "audit-compare-positive-1",
+      "prompt": "Compare our cache implementation with redis-optimizer and tell us what patterns to adopt.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "audit-compare",
+        "must_not_win": [
+          "audit-plan"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "audit-compare--routing-near-miss",
+      "skill": "audit-compare",
+      "kind": "routing-near-miss",
+      "source_case_id": "audit-compare-near-1",
+      "prompt": "Audit our Stripe implementation for webhook and subscription bugs.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "stripe-audit",
+        "must_not_win": [
+          "audit-compare"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "audit-plan--routing-positive",
+      "skill": "audit-plan",
+      "kind": "routing-positive",
+      "source_case_id": "audit-plan-positive-1",
+      "prompt": "Audit projects A and B and propose a new Rust service combining their best ideas.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "audit-plan",
+        "must_not_win": [
+          "migratepro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "audit-plan--routing-near-miss",
+      "skill": "audit-plan",
+      "kind": "routing-near-miss",
+      "source_case_id": "audit-plan-near-1",
+      "prompt": "Incrementally port this existing app to Go and keep it shippable.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "migratepro"
+      },
+      "expected": {
+        "winner": "migratepro",
+        "must_not_win": [
+          "audit-plan"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "brainstormpro--routing-positive",
+      "skill": "brainstormpro",
+      "kind": "routing-positive",
+      "source_case_id": "brainstormpro-positive-1",
+      "prompt": "Brainstorm how we could reduce API costs; we do not know the solution yet.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "brainstormpro",
+        "must_not_win": [
+          "planpro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "brainstormpro--routing-near-miss",
+      "skill": "brainstormpro",
+      "kind": "routing-near-miss",
+      "source_case_id": "brainstormpro-near-1",
+      "prompt": "Implement the approved caching design in agent-work/cache/planpro/PLAN.md.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "goalpro"
+      },
+      "expected": {
+        "winner": "goalpro",
+        "must_not_win": [
+          "brainstormpro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "compact-history--routing-positive",
+      "skill": "compact-history",
+      "kind": "routing-explicit",
+      "source_case_id": "compact-history-positive-1",
+      "prompt": "Compact these 62 agent-work initiatives, archive verified completed goals, and show what remains.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "compact-history"
+      },
+      "expected": {
+        "winner": "compact-history",
+        "must_not_win": [
+          "documentation-audit"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "compact-history--routing-near-miss",
+      "skill": "compact-history",
+      "kind": "routing-near-miss",
+      "source_case_id": "compact-history-near-1",
+      "prompt": "Audit our stale product documentation and propose a new docs structure.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "documentation-audit",
+        "must_not_win": [
+          "compact-history"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "design-direction--routing-positive",
+      "skill": "design-direction",
+      "kind": "routing-positive",
+      "source_case_id": "design-direction-positive-1",
+      "prompt": "Art direct this new consumer app and give me several distinct visual directions before implementation.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "design-direction",
+        "must_not_win": [
+          "designpro",
+          "planpro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "design-direction--routing-near-miss",
+      "skill": "design-direction",
+      "kind": "routing-near-miss",
+      "source_case_id": "design-direction-near-1",
+      "prompt": "Audit our existing app for raw colors, inconsistent components, and theme drift.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "designpro",
+        "must_not_win": [
+          "design-direction"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "design-review--routing-positive",
+      "skill": "design-review",
+      "kind": "routing-positive",
+      "source_case_id": "design-review-positive-1",
+      "prompt": "Review this UI diff against our approved design direction and return an approve or block verdict.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "design-review",
+        "must_not_win": [
+          "designpro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "design-review--routing-near-miss",
+      "skill": "design-review",
+      "kind": "routing-near-miss",
+      "source_case_id": "design-review-near-1",
+      "prompt": "Survey the entire design system and plan token, component, accessibility, and enforcement remediation.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "designpro",
+        "must_not_win": [
+          "design-review"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "designpro--routing-positive",
+      "skill": "designpro",
+      "kind": "routing-positive",
+      "source_case_id": "designpro-positive-1",
+      "prompt": "Audit our Next.js design system for inconsistent spacing, button sizes, typography, tokens, and accessibility, then plan enforcement.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "designpro",
+        "must_not_win": [
+          "planpro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "designpro--routing-near-miss",
+      "skill": "designpro",
+      "kind": "routing-near-miss",
+      "source_case_id": "designpro-near-1",
+      "prompt": "Plan a brand-new dashboard feature from these already-approved UI requirements.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "planpro",
+        "must_not_win": [
+          "designpro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "documentation-audit--routing-positive",
+      "skill": "documentation-audit",
+      "kind": "routing-positive",
+      "source_case_id": "documentation-audit-positive-1",
+      "prompt": "Audit every documentation file, classify what is stale or current, and prepare a cleanup plan.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "documentation-audit",
+        "must_not_win": [
+          "planpro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "documentation-audit--routing-near-miss",
+      "skill": "documentation-audit",
+      "kind": "routing-near-miss",
+      "source_case_id": "documentation-audit-near-1",
+      "prompt": "Write API documentation for the new endpoint we just implemented.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "none",
+        "must_not_win": [
+          "documentation-audit"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "email-lifecycle-audit--routing-positive",
+      "skill": "email-lifecycle-audit",
+      "kind": "routing-positive",
+      "source_case_id": "email-lifecycle-audit-positive-1",
+      "prompt": "Audit our implemented post-signup lifecycle email system from product events through onboarding, adoption, retention, and win-back campaigns without changing source or provider state.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "email-lifecycle-audit",
+        "must_not_win": [
+          "email-lifecycle-strategy",
+          "documentation-audit"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "email-lifecycle-audit--routing-near-miss",
+      "skill": "email-lifecycle-audit",
+      "kind": "routing-near-miss",
+      "source_case_id": "email-lifecycle-audit-near-1",
+      "prompt": "Design a greenfield lifecycle email program for our new SaaS product; no campaigns or provider integration exist yet.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "email-lifecycle-strategy",
+        "must_not_win": [
+          "email-lifecycle-audit"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "email-lifecycle-strategy--routing-positive",
+      "skill": "email-lifecycle-strategy",
+      "kind": "routing-positive",
+      "source_case_id": "email-lifecycle-strategy-positive-1",
+      "prompt": "Design our post-signup lifecycle email strategy around first value, repeated value, adoption, inactivity, and respectful win-back, then let me approve an interactive preview before implementation.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "email-lifecycle-strategy",
+        "must_not_win": [
+          "email-lifecycle-audit",
+          "brainstormpro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "email-lifecycle-strategy--routing-near-miss",
+      "skill": "email-lifecycle-strategy",
+      "kind": "routing-near-miss",
+      "source_case_id": "email-lifecycle-strategy-near-1",
+      "prompt": "Only audit our existing lifecycle campaigns and tell us what is currently broken; do not propose a replacement yet.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "email-lifecycle-audit",
+        "must_not_win": [
+          "email-lifecycle-strategy"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "feature-clone--routing-positive",
+      "skill": "feature-clone",
+      "kind": "routing-positive",
+      "source_case_id": "feature-clone-positive-1",
+      "prompt": "Clone the command palette feature into a portable specification.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "feature-clone",
+        "must_not_win": [
+          "feature-goal"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "feature-clone--routing-near-miss",
+      "skill": "feature-clone",
+      "kind": "routing-near-miss",
+      "source_case_id": "feature-clone-near-1",
+      "prompt": "Implement agent-work/search/feature-clone in this app.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "feature-goal"
+      },
+      "expected": {
+        "winner": "feature-goal",
+        "must_not_win": [
+          "feature-clone"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "feature-goal--routing-positive",
+      "skill": "feature-goal",
+      "kind": "routing-explicit",
+      "source_case_id": "feature-goal-positive-1",
+      "prompt": "Implement agent-work/command-palette/feature-clone in this target repository.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "feature-goal"
+      },
+      "expected": {
+        "winner": "feature-goal",
+        "must_not_win": [
+          "goalpro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "feature-goal--routing-near-miss",
+      "skill": "feature-goal",
+      "kind": "routing-near-miss",
+      "source_case_id": "feature-goal-near-1",
+      "prompt": "Document this feature so another app can build it later.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "feature-clone",
+        "must_not_win": [
+          "feature-goal"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "gamepro--routing-positive",
+      "skill": "gamepro",
+      "kind": "routing-explicit",
+      "source_case_id": "gamepro-positive-1",
+      "prompt": "Build this small browser game to MVP and keep showing me what is playable and what remains.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "gamepro"
+      },
+      "expected": {
+        "winner": "gamepro",
+        "must_not_win": [
+          "goalpro",
+          "planpro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "gamepro--routing-near-miss",
+      "skill": "gamepro",
+      "kind": "routing-near-miss",
+      "source_case_id": "gamepro-near-1",
+      "prompt": "Brainstorm three different game ideas around restoring a haunted radio, but do not build anything yet.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "brainstormpro",
+        "must_not_win": [
+          "gamepro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "goalpro--routing-positive",
+      "skill": "goalpro",
+      "kind": "routing-explicit",
+      "source_case_id": "goalpro-positive-1",
+      "prompt": "Drive agent-work/fix-retries/planpro/PLAN.md to completion and do not stop until every gate passes.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "goalpro"
+      },
+      "expected": {
+        "winner": "goalpro",
+        "must_not_win": [
+          "planpro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "goalpro--routing-near-miss",
+      "skill": "goalpro",
+      "kind": "routing-near-miss",
+      "source_case_id": "goalpro-near-1",
+      "prompt": "Implement agent-work/billing/feature-clone exactly as documented.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "feature-goal"
+      },
+      "expected": {
+        "winner": "feature-goal",
+        "must_not_win": [
+          "goalpro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "landing-page--routing-positive",
+      "skill": "landing-page",
+      "kind": "routing-explicit",
+      "source_case_id": "landing-page-positive-1",
+      "prompt": "Create and implement a conversion-focused landing page for this product, but verify the feature callouts and CTA framing with me and show an HTML preview first.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "landing-page"
+      },
+      "expected": {
+        "winner": "landing-page",
+        "must_not_win": [
+          "design-direction",
+          "planpro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "landing-page--routing-near-miss",
+      "skill": "landing-page",
+      "kind": "routing-near-miss",
+      "source_case_id": "landing-page-near-1",
+      "prompt": "Only humanize the prose already written on our landing page; do not change its CTA strategy, SEO, layout, design, or behavior.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "prose-humanizer",
+        "must_not_win": [
+          "landing-page"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "migratepro--routing-positive",
+      "skill": "migratepro",
+      "kind": "routing-explicit",
+      "source_case_id": "migratepro-positive-1",
+      "prompt": "Incrementally migrate this existing Python service to Rust while keeping it live.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "migratepro"
+      },
+      "expected": {
+        "winner": "migratepro",
+        "must_not_win": [
+          "audit-plan"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "migratepro--routing-near-miss",
+      "skill": "migratepro",
+      "kind": "routing-near-miss",
+      "source_case_id": "migratepro-near-1",
+      "prompt": "Propose a brand-new Rust project based on these references.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "audit-plan",
+        "must_not_win": [
+          "migratepro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "motion-audit--routing-positive",
+      "skill": "motion-audit",
+      "kind": "routing-positive",
+      "source_case_id": "motion-audit-positive-1",
+      "prompt": "Audit motion across this application for easing, interruption, performance, reduced motion, and cohesion.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "motion-audit",
+        "must_not_win": [
+          "motion-direction",
+          "design-review"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "motion-audit--routing-near-miss",
+      "skill": "motion-audit",
+      "kind": "routing-near-miss",
+      "source_case_id": "motion-audit-near-1",
+      "prompt": "Review only this pull request's dropdown animation and decide whether it can merge.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "design-review",
+        "must_not_win": [
+          "motion-audit"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "motion-direction--routing-positive",
+      "skill": "motion-direction",
+      "kind": "routing-positive",
+      "source_case_id": "motion-direction-positive-1",
+      "prompt": "Define a joyful animation strategy for this app and show me several coherent TurbulenceJS motion directions on synthetic pages before we choose.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "motion-direction",
+        "must_not_win": [
+          "motion-audit",
+          "design-direction"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "motion-direction--routing-near-miss",
+      "skill": "motion-direction",
+      "kind": "routing-near-miss",
+      "source_case_id": "motion-direction-near-1",
+      "prompt": "Diagnose why our existing route transitions stutter and leak work under rapid navigation.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "motion-audit",
+        "must_not_win": [
+          "motion-direction"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "onboarding-audit--routing-positive",
+      "skill": "onboarding-audit",
+      "kind": "routing-positive",
+      "source_case_id": "onboarding-audit-positive-1",
+      "prompt": "Audit our implemented signup and first-run experience, trace the path to activation, and report the highest-confidence friction without changing source.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "onboarding-audit",
+        "must_not_win": [
+          "onboarding-direction",
+          "designpro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "onboarding-audit--routing-near-miss",
+      "skill": "onboarding-audit",
+      "kind": "routing-near-miss",
+      "source_case_id": "onboarding-audit-near-1",
+      "prompt": "Design onboarding for a greenfield mobile app and show me several clickable activation flows before implementation.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "onboarding-direction",
+        "must_not_win": [
+          "onboarding-audit"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "onboarding-direction--routing-positive",
+      "skill": "onboarding-direction",
+      "kind": "routing-positive",
+      "source_case_id": "onboarding-direction-positive-1",
+      "prompt": "Design optimized onboarding for our new web and mobile product, compare three genuinely different activation paths, and let me approve a clickable preview before implementation.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "onboarding-direction",
+        "must_not_win": [
+          "design-direction",
+          "brainstormpro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "onboarding-direction--routing-near-miss",
+      "skill": "onboarding-direction",
+      "kind": "routing-near-miss",
+      "source_case_id": "onboarding-direction-near-1",
+      "prompt": "Audit the onboarding already in production and tell us where users encounter friction, but do not propose a replacement yet.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "onboarding-audit",
+        "must_not_win": [
+          "onboarding-direction"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "planpro--routing-positive",
+      "skill": "planpro",
+      "kind": "routing-positive",
+      "source_case_id": "planpro-positive-1",
+      "prompt": "Write a phased plan for adding organization invitations to this repository.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "planpro",
+        "must_not_win": [
+          "goalpro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "planpro--routing-near-miss",
+      "skill": "planpro",
+      "kind": "routing-near-miss",
+      "source_case_id": "planpro-near-1",
+      "prompt": "We need lower API costs but have no idea which solution to choose.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "brainstormpro",
+        "must_not_win": [
+          "planpro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "prose-humanizer--routing-positive",
+      "skill": "prose-humanizer",
+      "kind": "routing-positive",
+      "source_case_id": "prose-humanizer-positive-1",
+      "prompt": "Humanize this pasted announcement, remove the obvious AI tone, and preserve every fact and date.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "prose-humanizer",
+        "must_not_win": [
+          "landing-page",
+          "documentation-audit"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "prose-humanizer--routing-near-miss",
+      "skill": "prose-humanizer",
+      "kind": "routing-near-miss",
+      "source_case_id": "prose-humanizer-near-1",
+      "prompt": "Design, preview, and implement a new product landing page with stronger benefit framing and conversion CTAs.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "landing-page"
+      },
+      "expected": {
+        "winner": "landing-page",
+        "must_not_win": [
+          "prose-humanizer"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "releasepro--routing-positive",
+      "skill": "releasepro",
+      "kind": "routing-explicit",
+      "source_case_id": "releasepro-positive-1",
+      "prompt": "Cut a patch release from the completed goal.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "releasepro"
+      },
+      "expected": {
+        "winner": "releasepro",
+        "must_not_win": [
+          "goalpro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "releasepro--routing-near-miss",
+      "skill": "releasepro",
+      "kind": "routing-near-miss",
+      "source_case_id": "releasepro-near-1",
+      "prompt": "Finish the implementation before we think about releasing.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "goalpro"
+      },
+      "expected": {
+        "winner": "goalpro",
+        "must_not_win": [
+          "releasepro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "restructure--routing-positive",
+      "skill": "restructure",
+      "kind": "routing-explicit",
+      "source_case_id": "restructure-positive-1",
+      "prompt": "Reorganize this codebase's files and normalize its module layout.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "restructure"
+      },
+      "expected": {
+        "winner": "restructure",
+        "must_not_win": [
+          "migratepro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "restructure--routing-near-miss",
+      "skill": "restructure",
+      "kind": "routing-near-miss",
+      "source_case_id": "restructure-near-1",
+      "prompt": "Rewrite the modules in Rust while preserving behavior.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "migratepro"
+      },
+      "expected": {
+        "winner": "migratepro",
+        "must_not_win": [
+          "restructure"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "seo-content--routing-positive",
+      "skill": "seo-content",
+      "kind": "routing-explicit",
+      "source_case_id": "seo-content-positive-1",
+      "prompt": "Implement the one approved editorial brief in our SEO Strategy, verify every claim, and publish the article through this project's content system.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "seo-content"
+      },
+      "expected": {
+        "winner": "seo-content",
+        "must_not_win": [
+          "seo-strategy",
+          "goalpro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "seo-content--routing-near-miss",
+      "skill": "seo-content",
+      "kind": "routing-near-miss",
+      "source_case_id": "seo-content-near-1",
+      "prompt": "Design and implement this SEO landing page, but the CTA, proof, persuasion order, layout, and visual direction are still unresolved.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "landing-page"
+      },
+      "expected": {
+        "winner": "landing-page",
+        "must_not_win": [
+          "seo-content"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "seo-foundation--routing-positive",
+      "skill": "seo-foundation",
+      "kind": "routing-positive",
+      "source_case_id": "seo-foundation-positive-1",
+      "prompt": "Find our business and organic search competitors, confirm the list with me, inspect their SEO pages, and map the terms they target.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "seo-foundation",
+        "must_not_win": [
+          "seo-setup",
+          "audit-compare"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "seo-foundation--routing-near-miss",
+      "skill": "seo-foundation",
+      "kind": "routing-near-miss",
+      "source_case_id": "seo-foundation-near-1",
+      "prompt": "Configure GA4, Search Console, Keyword Planner, and Bing access and verify the live sitemap before any research.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "seo-setup"
+      },
+      "expected": {
+        "winner": "seo-setup",
+        "must_not_win": [
+          "seo-foundation"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "seo-indexing--routing-positive",
+      "skill": "seo-indexing",
+      "kind": "routing-explicit",
+      "source_case_id": "seo-indexing-positive-1",
+      "prompt": "Verify our newly published canonical pages are live and indexable, then submit up to ten eligible URLs through Google Search Console and record every result.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "seo-indexing"
+      },
+      "expected": {
+        "winner": "seo-indexing",
+        "must_not_win": [
+          "seo-monitor",
+          "seo-setup"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "seo-indexing--routing-near-miss",
+      "skill": "seo-indexing",
+      "kind": "routing-near-miss",
+      "source_case_id": "seo-indexing-near-1",
+      "prompt": "Audit why indexed pages have been dropping across Google and Bing, compare the mature windows, and recommend the smallest next action without changing anything.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "seo-monitor",
+        "must_not_win": [
+          "seo-indexing"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "seo-monitor--routing-positive",
+      "skill": "seo-monitor",
+      "kind": "routing-positive",
+      "source_case_id": "seo-monitor-positive-1",
+      "prompt": "Review this SEO page 14 days after launch using GA4, Search Console, Bing, its baseline, and protected-winner guardrails.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "seo-monitor",
+        "must_not_win": [
+          "seo-content",
+          "seo-strategy"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "seo-monitor--routing-near-miss",
+      "skill": "seo-monitor",
+      "kind": "routing-near-miss",
+      "source_case_id": "seo-monitor-near-1",
+      "prompt": "Implement the approved refresh brief for this one declining guide and verify its published content.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "seo-content"
+      },
+      "expected": {
+        "winner": "seo-content",
+        "must_not_win": [
+          "seo-monitor"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "seo-setup--routing-positive",
+      "skill": "seo-setup",
+      "kind": "routing-explicit",
+      "source_case_id": "seo-setup-positive-1",
+      "prompt": "Set up the SEO foundations for this app, including GA4, Google Search Console, Keyword Planner access, Bing Webmaster Tools, robots, and sitemap verification.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "seo-setup"
+      },
+      "expected": {
+        "winner": "seo-setup",
+        "must_not_win": [
+          "seo-foundation",
+          "seo-strategy"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "seo-setup--routing-near-miss",
+      "skill": "seo-setup",
+      "kind": "routing-near-miss",
+      "source_case_id": "seo-setup-near-1",
+      "prompt": "Our analytics and webmaster tools are already verified; discover organic competitors and build the keyword and page-ownership map.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "seo-foundation",
+        "must_not_win": [
+          "seo-setup"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "seo-strategy--routing-positive",
+      "skill": "seo-strategy",
+      "kind": "routing-positive",
+      "source_case_id": "seo-strategy-positive-1",
+      "prompt": "Turn our approved SEO competitor and keyword research into a plan for dedicated landing pages and blog posts.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "seo-strategy",
+        "must_not_win": [
+          "seo-foundation",
+          "landing-page"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "seo-strategy--routing-near-miss",
+      "skill": "seo-strategy",
+      "kind": "routing-near-miss",
+      "source_case_id": "seo-strategy-near-1",
+      "prompt": "We have no confirmed competitors or keyword clusters yet; discover the market and assign page ownership first.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "seo-foundation",
+        "must_not_win": [
+          "seo-strategy"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "stripe-audit--routing-positive",
+      "skill": "stripe-audit",
+      "kind": "routing-positive",
+      "source_case_id": "stripe-audit-positive-1",
+      "prompt": "Audit our Next.js Stripe subscriptions and missing renewal credits.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "stripe-audit",
+        "must_not_win": [
+          "audit-compare"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "stripe-audit--routing-near-miss",
+      "skill": "stripe-audit",
+      "kind": "routing-near-miss",
+      "source_case_id": "stripe-audit-near-1",
+      "prompt": "Add a generic webhook endpoint unrelated to payments.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "none",
+        "must_not_win": [
+          "stripe-audit"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "testpro--routing-positive",
+      "skill": "testpro",
+      "kind": "routing-explicit",
+      "source_case_id": "testpro-positive-1",
+      "prompt": "Audit our tests, identify weak assertions and the highest-risk coverage gaps, but do not change source or tests.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "testpro"
+      },
+      "expected": {
+        "winner": "testpro",
+        "must_not_win": [
+          "planpro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "testpro--routing-near-miss",
+      "skill": "testpro",
+      "kind": "routing-near-miss",
+      "source_case_id": "testpro-near-1",
+      "prompt": "Build a new feature using test-driven development.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "feature-goal"
+      },
+      "expected": {
+        "winner": "feature-goal",
+        "must_not_win": [
+          "testpro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "theme-library--routing-positive",
+      "skill": "theme-library",
+      "kind": "routing-positive",
+      "source_case_id": "theme-library-positive-1",
+      "prompt": "Use Candyland as a starting palette for this app, but evolve it freely so the result fits our dense collaborative workflow.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "theme-library",
+        "must_not_win": [
+          "design-direction",
+          "designpro"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "theme-library--routing-near-miss",
+      "skill": "theme-library",
+      "kind": "routing-near-miss",
+      "source_case_id": "theme-library-near-1",
+      "prompt": "Art direct the entire new product across layout, typography, materials, imagery, interaction, motion, and themes.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "design-direction",
+        "must_not_win": [
+          "theme-library"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "turbulencejs-integration--routing-positive",
+      "skill": "turbulencejs-integration",
+      "kind": "routing-explicit",
+      "source_case_id": "turbulencejs-integration-positive-1",
+      "prompt": "Add TurbulenceJS to this React app and choose restrained entrypoints for our high-frequency controls.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "turbulencejs-integration"
+      },
+      "expected": {
+        "winner": "turbulencejs-integration",
+        "must_not_win": [
+          "motion-audit",
+          "motion-direction"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "turbulencejs-integration--routing-near-miss",
+      "skill": "turbulencejs-integration",
+      "kind": "routing-near-miss",
+      "source_case_id": "turbulencejs-integration-near-1",
+      "prompt": "Audit every animation library and motion pattern in this app, then prepare a system-wide remediation plan.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "motion-audit",
+        "must_not_win": [
+          "turbulencejs-integration"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "turbulencejs-presentation--routing-positive",
+      "skill": "turbulencejs-presentation",
+      "kind": "routing-explicit",
+      "source_case_id": "turbulencejs-presentation-positive-1",
+      "prompt": "Create a browser-native TurbulenceJS product-launch presentation that tells one sourced story and deliberately reflows between 16:9 and 9:16.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "turbulencejs-presentation"
+      },
+      "expected": {
+        "winner": "turbulencejs-presentation",
+        "must_not_win": [
+          "turbulencejs-integration",
+          "landing-page"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "turbulencejs-presentation--routing-near-miss",
+      "skill": "turbulencejs-presentation",
+      "kind": "routing-near-miss",
+      "source_case_id": "turbulencejs-presentation-near-1",
+      "prompt": "Add TurbulenceJS to our existing dashboard controls and verify interruption, reduced motion, and teardown; there is no slide deck.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "turbulencejs-integration"
+      },
+      "expected": {
+        "winner": "turbulencejs-integration",
+        "must_not_win": [
+          "turbulencejs-presentation"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "workspacepro--routing-positive",
+      "skill": "workspacepro",
+      "kind": "routing-positive",
+      "source_case_id": "workspacepro-positive-1",
+      "prompt": "Create a master workspace around these six related Git repositories with shared docs, agent rules, utilities, references, and reproducible lock state.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "workspacepro",
+        "must_not_win": [
+          "restructure"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "workspacepro--routing-near-miss",
+      "skill": "workspacepro",
+      "kind": "routing-near-miss",
+      "source_case_id": "workspacepro-near-1",
+      "prompt": "Clean up the folder structure inside this one application repository.",
+      "invocation": {
+        "mode": "explicit",
+        "skill": "restructure"
+      },
+      "expected": {
+        "winner": "restructure",
+        "must_not_win": [
+          "workspacepro"
+        ]
+      },
+      "fresh_context_required": true
+    }
+  ]
+}

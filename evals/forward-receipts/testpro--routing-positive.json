@@ -1,0 +1,28 @@
+{
+  "artifacts": [],
+  "case_id": "testpro--routing-positive",
+  "context_sources": [
+    "fixture-repository",
+    "installed-skill",
+    "user-prompt"
+  ],
+  "evidence": [
+    "invocation=explicit",
+    "selected_skill=testpro",
+    "response_sha256=27cc1a6e8b2b160cd895d1398be636206c9e1be5a0e082406cb43169d9e9fb81",
+    "process_exit_code=0",
+    "payload_sha256=3499e4f6850b9b52191a24f90ca14f2c10c84a03589450ecbb8f34701a799dcc",
+    "plan_sha256=dc487a6d5aef436dca56a08420e9b01bd537c11fa459bb066367567f49dccbb3",
+    "harness_sha256=9a06970430fc59bfdb3485ac37de590bc5668c1f864813a246bacdb6cd004068"
+  ],
+  "fresh_context": true,
+  "host": "codex-cli 0.146.0",
+  "model": "gpt-5.6-terra",
+  "notes": "",
+  "result": "PASS",
+  "reviewed_by": "forward-routing-harness-v1",
+  "run_id": "828f1f5d-b693-41b6-92e9-1bdd5b241238",
+  "schema_version": 1,
+  "skill": "testpro",
+  "started_at": "2026-08-07T01:18:06Z"
+}

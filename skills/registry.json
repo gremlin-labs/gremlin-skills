@@ -1,0 +1,2234 @@
+{
+  "schema_version": 1,
+  "category_model": {
+    "status": "approved",
+    "values": [
+      "engineering",
+      "experience",
+      "growth"
+    ]
+  },
+  "invocation_policy": {
+    "status": "approved",
+    "allowed_modes": [
+      "model-visible",
+      "user-only"
+    ]
+  },
+  "skills": [
+    {
+      "name": "audit-compare",
+      "aliases": [],
+      "category": "engineering",
+      "maturity": "promoted",
+      "path": "skills/engineering/audit-compare",
+      "public_docs": {
+        "path": "docs/skills/audit-compare.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/audit-compare/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": true,
+        "quality_report": false,
+        "product_research": true
+      },
+      "contracts": [
+        "goalpro-handoff",
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "goalpro",
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "handoff",
+        "product"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "audit-plan",
+      "aliases": [],
+      "category": "engineering",
+      "maturity": "promoted",
+      "path": "skills/engineering/audit-plan",
+      "public_docs": {
+        "path": "docs/skills/audit-plan.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/audit-plan/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": false,
+        "product_research": true
+      },
+      "contracts": [
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [
+          "audit-compare"
+        ],
+        "optional_skills": [
+          "goalpro",
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "product"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "brainstormpro",
+      "aliases": [],
+      "category": "engineering",
+      "maturity": "promoted",
+      "path": "skills/engineering/brainstormpro",
+      "public_docs": {
+        "path": "docs/skills/brainstormpro.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/brainstormpro/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": false,
+        "product_research": true
+      },
+      "contracts": [
+        "goalpro-handoff",
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [
+          "planpro"
+        ],
+        "optional_skills": [
+          "goalpro",
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "product"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "compact-history",
+      "aliases": [],
+      "category": "engineering",
+      "maturity": "promoted",
+      "path": "skills/engineering/compact-history",
+      "public_docs": {
+        "path": "docs/skills/compact-history.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "user-only",
+        "claude": "user-only",
+        "codex": "user-only"
+      },
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/• compact-history/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": true,
+        "product_research": false
+      },
+      "contracts": [
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality"
+      ],
+      "tests": [
+        "python3 skills/engineering/compact-history/scripts/test_tools.py"
+      ],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "design-direction",
+      "aliases": [],
+      "category": "experience",
+      "maturity": "promoted",
+      "path": "skills/experience/design-direction",
+      "public_docs": {
+        "path": "docs/skills/design-direction.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/design-direction/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": true,
+        "quality_report": true,
+        "product_research": true
+      },
+      "contracts": [
+        "goalpro-handoff",
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "goalpro",
+          "planpro",
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality",
+        "handoff",
+        "product"
+      ],
+      "tests": [
+        "python3 skills/experience/design-direction/scripts/test_tools.py"
+      ],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "design-review",
+      "aliases": [],
+      "category": "experience",
+      "maturity": "promoted",
+      "path": "skills/experience/design-review",
+      "public_docs": {
+        "path": "docs/skills/design-review.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/design-review/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": true,
+        "product_research": true
+      },
+      "contracts": [
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "goalpro",
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality",
+        "product"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "designpro",
+      "aliases": [],
+      "category": "experience",
+      "maturity": "promoted",
+      "path": "skills/experience/designpro",
+      "public_docs": {
+        "path": "docs/skills/designpro.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/designpro/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": true,
+        "quality_report": true,
+        "product_research": true
+      },
+      "contracts": [
+        "goalpro-handoff",
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "goalpro",
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality",
+        "handoff",
+        "product"
+      ],
+      "tests": [
+        "python3 skills/experience/designpro/scripts/test_tools.py"
+      ],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "documentation-audit",
+      "aliases": [],
+      "category": "engineering",
+      "maturity": "promoted",
+      "path": "skills/engineering/documentation-audit",
+      "public_docs": {
+        "path": "docs/skills/documentation-audit.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/documentation-audit/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": true,
+        "quality_report": false,
+        "product_research": true
+      },
+      "contracts": [
+        "goalpro-handoff",
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "handoff",
+        "product"
+      ],
+      "tests": [
+        "python3 skills/engineering/documentation-audit/scripts/test_tools.py"
+      ],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "email-lifecycle-audit",
+      "aliases": [],
+      "category": "growth",
+      "maturity": "promoted",
+      "path": "skills/growth/email-lifecycle-audit",
+      "public_docs": {
+        "path": "docs/skills/email-lifecycle-audit.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/email-lifecycle-audit/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": true,
+        "product_research": true
+      },
+      "contracts": [
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [
+          "email-lifecycle-strategy"
+        ],
+        "optional_skills": [
+          "goalpro",
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality",
+        "product"
+      ],
+      "tests": [
+        "python3 skills/growth/email-lifecycle-audit/scripts/test_tools.py"
+      ],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "email-lifecycle-strategy",
+      "aliases": [],
+      "category": "growth",
+      "maturity": "promoted",
+      "path": "skills/growth/email-lifecycle-strategy",
+      "public_docs": {
+        "path": "docs/skills/email-lifecycle-strategy.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/email-lifecycle-strategy/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": true,
+        "quality_report": true,
+        "product_research": true
+      },
+      "contracts": [
+        "goalpro-handoff",
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [
+          "prose-humanizer"
+        ],
+        "optional_skills": [
+          "goalpro",
+          "planpro",
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality",
+        "handoff",
+        "product"
+      ],
+      "tests": [
+        "python3 skills/growth/email-lifecycle-strategy/scripts/test_tools.py"
+      ],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "feature-clone",
+      "aliases": [],
+      "category": "engineering",
+      "maturity": "promoted",
+      "path": "skills/engineering/feature-clone",
+      "public_docs": {
+        "path": "docs/skills/feature-clone.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/feature-clone/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": false,
+        "product_research": true
+      },
+      "contracts": [
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "product"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "feature-goal",
+      "aliases": [],
+      "category": "engineering",
+      "maturity": "promoted",
+      "path": "skills/engineering/feature-goal",
+      "public_docs": {
+        "path": "docs/skills/feature-goal.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "user-only",
+        "claude": "user-only",
+        "codex": "user-only"
+      },
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "task-scoped",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/feature-goal/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": true,
+        "product_research": false
+      },
+      "contracts": [
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [
+          "goalpro"
+        ],
+        "optional_skills": [
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "gamepro",
+      "aliases": [],
+      "category": "experience",
+      "maturity": "promoted",
+      "path": "skills/experience/gamepro",
+      "public_docs": {
+        "path": "docs/skills/gamepro.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "user-only",
+        "claude": "user-only",
+        "codex": "user-only"
+      },
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "task-scoped",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/gamepro/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": true,
+        "product_research": true
+      },
+      "contracts": [
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality",
+        "product"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "goalpro",
+      "aliases": [],
+      "category": "engineering",
+      "maturity": "promoted",
+      "path": "skills/engineering/goalpro",
+      "public_docs": {
+        "path": "docs/skills/goalpro.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "user-only",
+        "claude": "user-only",
+        "codex": "user-only"
+      },
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "task-scoped",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/goalpro/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": true,
+        "quality_report": true,
+        "product_research": false
+      },
+      "contracts": [
+        "goalpro-handoff",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality",
+        "handoff"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "landing-page",
+      "aliases": [],
+      "category": "experience",
+      "maturity": "promoted",
+      "path": "skills/experience/landing-page",
+      "public_docs": {
+        "path": "docs/skills/landing-page.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "user-only",
+        "claude": "user-only",
+        "codex": "user-only"
+      },
+      "authority": {
+        "mode": "hybrid",
+        "source_mutation": "after-approval",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/landing-page/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": true,
+        "product_research": true
+      },
+      "contracts": [
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [
+          "prose-humanizer",
+          "seo-strategy"
+        ],
+        "optional_skills": [
+          "theme-library",
+          "turbulencejs-integration"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality",
+        "product"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "migratepro",
+      "aliases": [],
+      "category": "engineering",
+      "maturity": "promoted",
+      "path": "skills/engineering/migratepro",
+      "public_docs": {
+        "path": "docs/skills/migratepro.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "user-only",
+        "claude": "user-only",
+        "codex": "user-only"
+      },
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "task-scoped",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/migratepro/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": true,
+        "product_research": false
+      },
+      "contracts": [
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "motion-audit",
+      "aliases": [],
+      "category": "experience",
+      "maturity": "promoted",
+      "path": "skills/experience/motion-audit",
+      "public_docs": {
+        "path": "docs/skills/motion-audit.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/motion-audit/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": true,
+        "quality_report": true,
+        "product_research": true
+      },
+      "contracts": [
+        "goalpro-handoff",
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "goalpro",
+          "motion-direction",
+          "planpro",
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality",
+        "handoff",
+        "product"
+      ],
+      "tests": [
+        "python3 skills/experience/motion-audit/scripts/test_tools.py"
+      ],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": [
+          "TurbulenceJS"
+        ]
+      },
+      "deprecation": null
+    },
+    {
+      "name": "motion-direction",
+      "aliases": [],
+      "category": "experience",
+      "maturity": "promoted",
+      "path": "skills/experience/motion-direction",
+      "public_docs": {
+        "path": "docs/skills/motion-direction.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/motion-direction/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": true,
+        "quality_report": true,
+        "product_research": true
+      },
+      "contracts": [
+        "goalpro-handoff",
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "goalpro",
+          "planpro",
+          "theme-library",
+          "turbulencejs-integration"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality",
+        "handoff",
+        "product"
+      ],
+      "tests": [
+        "python3 skills/experience/motion-direction/scripts/test_tools.py"
+      ],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": [
+          "TurbulenceJS"
+        ]
+      },
+      "deprecation": null
+    },
+    {
+      "name": "onboarding-audit",
+      "aliases": [],
+      "category": "experience",
+      "maturity": "promoted",
+      "path": "skills/experience/onboarding-audit",
+      "public_docs": {
+        "path": "docs/skills/onboarding-audit.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/onboarding-audit/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": true,
+        "product_research": true
+      },
+      "contracts": [
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [
+          "onboarding-direction"
+        ],
+        "optional_skills": [
+          "goalpro",
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality",
+        "product"
+      ],
+      "tests": [
+        "python3 skills/experience/onboarding-audit/scripts/test_tools.py"
+      ],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "onboarding-direction",
+      "aliases": [],
+      "category": "experience",
+      "maturity": "promoted",
+      "path": "skills/experience/onboarding-direction",
+      "public_docs": {
+        "path": "docs/skills/onboarding-direction.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/onboarding-direction/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": true,
+        "quality_report": true,
+        "product_research": true
+      },
+      "contracts": [
+        "goalpro-handoff",
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [
+          "prose-humanizer"
+        ],
+        "optional_skills": [
+          "goalpro",
+          "planpro",
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality",
+        "handoff",
+        "product"
+      ],
+      "tests": [
+        "python3 skills/experience/onboarding-direction/scripts/test_tools.py"
+      ],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "planpro",
+      "aliases": [],
+      "category": "engineering",
+      "maturity": "promoted",
+      "path": "skills/engineering/planpro",
+      "public_docs": {
+        "path": "docs/skills/planpro.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/planpro/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": true,
+        "quality_report": false,
+        "product_research": true
+      },
+      "contracts": [
+        "goalpro-handoff",
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "handoff",
+        "product"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "prose-humanizer",
+      "aliases": [],
+      "category": "experience",
+      "maturity": "promoted",
+      "path": "skills/experience/prose-humanizer",
+      "public_docs": {
+        "path": "docs/skills/prose-humanizer.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "task-scoped",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/prose-humanizer/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": true,
+        "product_research": false
+      },
+      "contracts": [
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [
+          "seo-strategy"
+        ],
+        "optional_skills": [
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": [
+          "blader/humanizer"
+        ]
+      },
+      "deprecation": null
+    },
+    {
+      "name": "releasepro",
+      "aliases": [],
+      "category": "engineering",
+      "maturity": "promoted",
+      "path": "skills/engineering/releasepro",
+      "public_docs": {
+        "path": "docs/skills/releasepro.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "user-only",
+        "claude": "user-only",
+        "codex": "user-only"
+      },
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "after-approval",
+        "external_actions": "approval-required"
+      },
+      "output_root": "agent-work/release-v{version-slug}/releasepro/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": true,
+        "product_research": false
+      },
+      "contracts": [
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "restructure",
+      "aliases": [],
+      "category": "engineering",
+      "maturity": "promoted",
+      "path": "skills/engineering/restructure",
+      "public_docs": {
+        "path": "docs/skills/restructure.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "user-only",
+        "claude": "user-only",
+        "codex": "user-only"
+      },
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "task-scoped",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/restructure/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": false,
+        "product_research": false
+      },
+      "contracts": [
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "seo-content",
+      "aliases": [],
+      "category": "growth",
+      "maturity": "promoted",
+      "path": "skills/growth/seo-content",
+      "public_docs": {
+        "path": "docs/skills/seo-content.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "user-only",
+        "claude": "user-only",
+        "codex": "user-only"
+      },
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "task-scoped",
+        "external_actions": "approval-required"
+      },
+      "output_root": "agent-work/{slug}/seo-content/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": true,
+        "product_research": true
+      },
+      "contracts": [
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [
+          "prose-humanizer"
+        ],
+        "optional_skills": [
+          "seo-indexing",
+          "seo-monitor",
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality",
+        "product"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "seo-foundation",
+      "aliases": [],
+      "category": "growth",
+      "maturity": "promoted",
+      "path": "skills/growth/seo-foundation",
+      "public_docs": {
+        "path": "docs/skills/seo-foundation.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/seo-foundation/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": true,
+        "product_research": true
+      },
+      "contracts": [
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "seo-strategy",
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality",
+        "product"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "seo-indexing",
+      "aliases": [],
+      "category": "growth",
+      "maturity": "promoted",
+      "path": "skills/growth/seo-indexing",
+      "public_docs": {
+        "path": "docs/skills/seo-indexing.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "user-only",
+        "claude": "user-only",
+        "codex": "user-only"
+      },
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "never",
+        "external_actions": "approval-required"
+      },
+      "output_root": "agent-work/{slug}/seo-indexing/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": true,
+        "product_research": true
+      },
+      "contracts": [
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "seo-monitor",
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality",
+        "product"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "seo-monitor",
+      "aliases": [],
+      "category": "growth",
+      "maturity": "promoted",
+      "path": "skills/growth/seo-monitor",
+      "public_docs": {
+        "path": "docs/skills/seo-monitor.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/seo-monitor/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": true,
+        "product_research": true
+      },
+      "contracts": [
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality",
+        "product"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "seo-setup",
+      "aliases": [],
+      "category": "growth",
+      "maturity": "promoted",
+      "path": "skills/growth/seo-setup",
+      "public_docs": {
+        "path": "docs/skills/seo-setup.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "user-only",
+        "claude": "user-only",
+        "codex": "user-only"
+      },
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "after-approval",
+        "external_actions": "approval-required"
+      },
+      "output_root": "agent-work/{slug}/seo-setup/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": true,
+        "product_research": true
+      },
+      "contracts": [
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "seo-foundation",
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality",
+        "product"
+      ],
+      "tests": [
+        "python3 skills/growth/seo-setup/scripts/tests/test_seo_stack.py"
+      ],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "seo-strategy",
+      "aliases": [],
+      "category": "growth",
+      "maturity": "promoted",
+      "path": "skills/growth/seo-strategy",
+      "public_docs": {
+        "path": "docs/skills/seo-strategy.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/seo-strategy/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": true,
+        "product_research": true
+      },
+      "contracts": [
+        "goalpro-handoff",
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "goalpro",
+          "landing-page",
+          "seo-content",
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality",
+        "product"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "stripe-audit",
+      "aliases": [],
+      "category": "growth",
+      "maturity": "promoted",
+      "path": "skills/growth/stripe-audit",
+      "public_docs": {
+        "path": "docs/skills/stripe-audit.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/stripe-audit/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": true,
+        "quality_report": false,
+        "product_research": true
+      },
+      "contracts": [
+        "goalpro-handoff",
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "goalpro",
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "handoff",
+        "product"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "testpro",
+      "aliases": [],
+      "category": "engineering",
+      "maturity": "promoted",
+      "path": "skills/engineering/testpro",
+      "public_docs": {
+        "path": "docs/skills/testpro.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "user-only",
+        "claude": "user-only",
+        "codex": "user-only"
+      },
+      "authority": {
+        "mode": "hybrid",
+        "source_mutation": "after-approval",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/testpro/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": true,
+        "product_research": false
+      },
+      "contracts": [
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "theme-library",
+      "aliases": [],
+      "category": "experience",
+      "maturity": "promoted",
+      "path": "skills/experience/theme-library",
+      "public_docs": {
+        "path": "docs/skills/theme-library.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/theme-library/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": false,
+        "goalpro_handoff": false,
+        "quality_report": true,
+        "product_research": true
+      },
+      "contracts": [
+        "goalpro-handoff",
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "goalpro",
+          "planpro"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality",
+        "product"
+      ],
+      "tests": [
+        "python3 skills/experience/theme-library/scripts/test_tools.py"
+      ],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
+      "name": "turbulencejs-integration",
+      "aliases": [],
+      "category": "experience",
+      "maturity": "promoted",
+      "path": "skills/experience/turbulencejs-integration",
+      "public_docs": {
+        "path": "docs/skills/turbulencejs-integration.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "user-only",
+        "claude": "user-only",
+        "codex": "user-only"
+      },
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "task-scoped",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/turbulencejs-integration/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": false,
+        "product_research": false
+      },
+      "contracts": [
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": [
+          "TurbulenceJS"
+        ]
+      },
+      "deprecation": null
+    },
+    {
+      "name": "turbulencejs-presentation",
+      "aliases": [],
+      "category": "experience",
+      "maturity": "promoted",
+      "path": "skills/experience/turbulencejs-presentation",
+      "public_docs": {
+        "path": "docs/skills/turbulencejs-presentation.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "user-only",
+        "claude": "user-only",
+        "codex": "user-only"
+      },
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "task-scoped",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/turbulencejs-presentation/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": false,
+        "quality_report": true,
+        "product_research": true
+      },
+      "contracts": [
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality",
+        "product"
+      ],
+      "tests": [
+        "node --test skills/experience/turbulencejs-presentation/scripts/test-tools.mjs"
+      ],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": [
+          "TurbulenceJS"
+        ]
+      },
+      "deprecation": null
+    },
+    {
+      "name": "workspacepro",
+      "aliases": [],
+      "category": "engineering",
+      "maturity": "promoted",
+      "path": "skills/engineering/workspacepro",
+      "public_docs": {
+        "path": "docs/skills/workspacepro.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/workspacepro/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": true,
+        "goalpro_handoff": true,
+        "quality_report": true,
+        "product_research": true
+      },
+      "contracts": [
+        "goalpro-handoff",
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": [
+          "goalpro",
+          "theme-library"
+        ]
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality",
+        "handoff",
+        "product"
+      ],
+      "tests": [
+        "python3 skills/engineering/workspacepro/scripts/test_tools.py"
+      ],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://turbulencejs.org/schemas/presentation-style.json",
+  "title": "TurbulenceJS presentation style guide",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "bestFor", "communicationTraits", "mood", "designSoul", "narrative", "visual", "motion", "aspects", "guardrails"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "bestFor": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+    "communicationTraits": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 1 } },
+    "mood": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 1 } },
+    "designSoul": { "type": "string", "minLength": 16 },
+    "narrative": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["suggestedSlideRange", "densityCurve", "arc"],
+      "properties": {
+        "suggestedSlideRange": { "type": "array", "prefixItems": [{ "type": "integer", "minimum": 1 }, { "type": "integer", "minimum": 1 }], "minItems": 2, "maxItems": 2 },
+        "densityCurve": { "type": "array", "minItems": 3, "items": { "type": "string" } },
+        "arc": { "type": "array", "minItems": 3, "items": { "type": "string" } }
+      }
+    },
+    "visual": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["paletteRoles", "typography", "layoutAffinities", "decorationDNA", "assetTreatment", "codeTreatment"],
+      "properties": {
+        "paletteRoles": { "type": "object", "minProperties": 5, "additionalProperties": { "type": "string" } },
+        "typography": { "type": "array", "minItems": 3, "items": { "type": "string" } },
+        "layoutAffinities": { "type": "array", "minItems": 2, "items": { "type": "string" } },
+        "decorationDNA": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "assetTreatment": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "codeTreatment": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    },
+    "motion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["preferredEntrypoints", "intensityRange", "signatureMove", "forbiddenMotion", "interruption", "cleanup", "reducedEndpoint"],
+      "properties": {
+        "preferredEntrypoints": { "type": "array", "minItems": 1, "items": { "type": "string", "enum": ["turbulencejs", "turbulencejs/subtle", "turbulencejs/cinematic", "turbulencejs/cartoon", "turbulencejs/effects", "turbulencejs/surfaces"] } },
+        "intensityRange": { "type": "array", "prefixItems": [{ "type": "integer", "minimum": 0, "maximum": 4 }, { "type": "integer", "minimum": 0, "maximum": 4 }], "minItems": 2, "maxItems": 2 },
+        "signatureMove": { "type": "string", "minLength": 1 },
+        "forbiddenMotion": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "interruption": { "type": "string", "minLength": 1 },
+        "cleanup": { "type": "string", "minLength": 1 },
+        "reducedEndpoint": { "type": "string", "minLength": 1 }
+      }
+    },
+    "aspects": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["landscape", "portrait", "stacking", "safeAreas", "focalPoint", "prohibitedBehavior"],
+      "properties": {
+        "landscape": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "portrait": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "stacking": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "safeAreas": { "type": "object", "required": ["landscape", "portrait"], "properties": { "landscape": { "type": "string" }, "portrait": { "type": "string" } } },
+        "focalPoint": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "prohibitedBehavior": { "type": "array", "minItems": 2, "items": { "type": "string" } }
+      }
+    },
+    "guardrails": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required", "forbidden", "qa"],
+      "properties": {
+        "required": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "forbidden": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "qa": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    }
+  }
+}

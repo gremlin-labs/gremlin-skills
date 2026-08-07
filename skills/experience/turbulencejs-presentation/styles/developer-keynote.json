@@ -1,0 +1,43 @@
+{
+  "id": "developer-keynote",
+  "name": "Developer Keynote",
+  "bestFor": ["technical product stories", "API launches", "architecture explanations"],
+  "communicationTraits": ["inspectable", "concise", "evidence-led", "confident without hype"],
+  "mood": ["focused", "precise", "quietly cinematic"],
+  "designSoul": "Make complex machinery feel legible, intentional, and ready to inspect.",
+  "narrative": {
+    "suggestedSlideRange": [8, 14],
+    "densityCurve": ["sparse promise", "moderate model", "dense proof", "sparse close"],
+    "arc": ["name the technical tension", "reveal the model", "show working evidence", "close on ownership"]
+  },
+  "visual": {
+    "paletteRoles": { "canvas": "near-black neutral", "surface": "cool elevated panel", "foreground": "high-contrast soft white", "muted": "cool gray-blue", "accent": "electric cyan", "support": "signal green" },
+    "typography": ["large compact sans titles", "calm readable body", "monospace reserved for real code and state"],
+    "layoutAffinities": ["asymmetric explanation plus proof", "labeled architecture layers", "code windows with generous line spacing"],
+    "decorationDNA": ["fine rules, measured grids, tiny diagnostic labels"],
+    "assetTreatment": ["use diagrams and product captures as evidence, not wallpaper"],
+    "codeTreatment": ["selectable syntax text, short executable fragments, visible ownership and cleanup"]
+  },
+  "motion": {
+    "preferredEntrypoints": ["turbulencejs", "turbulencejs/subtle", "turbulencejs/cinematic"],
+    "intensityRange": [1, 3],
+    "signatureMove": "A claim settles first, then connected evidence resolves in reading order.",
+    "forbiddenMotion": ["continuous decorative loops", "motion that obscures code", "unowned per-line schedulers"],
+    "interruption": "Navigation stops the prior owned performance before the next slide starts.",
+    "cleanup": "Settled slides report zero controllers, timers, frames, and observers.",
+    "reducedEndpoint": "Claim and evidence appear together with hierarchy preserved and no spatial travel."
+  },
+  "aspects": {
+    "landscape": ["use lateral claim-to-proof relationships", "keep code and labels within one scan path"],
+    "portrait": ["top-weight the claim", "place proof in a centered lower region", "convert architecture to a labeled vertical stack"],
+    "stacking": ["preserve claim before evidence", "keep labels adjacent to their subject"],
+    "safeAreas": { "landscape": "6% horizontal and vertical", "portrait": "8% horizontal, 7% vertical" },
+    "focalPoint": ["move the proof focal point rather than cropping it", "keep code centered in its reading region"],
+    "prohibitedBehavior": ["blanket scaling", "rotating diagrams", "shrinking code below the body minimum"]
+  },
+  "guardrails": {
+    "required": ["every technical claim has source or executable evidence", "one claim per slide", "semantic selectable code"],
+    "forbidden": ["invented benchmarks", "terminal chrome without informational purpose"],
+    "qa": ["inspect code at full portrait size", "verify title budgets", "exercise interruption and cleanup"]
+  }
+}

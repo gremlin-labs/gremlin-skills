@@ -1,0 +1,6 @@
+interface:
+  display_name: "Feature Clone"
+  short_description: "Extract a feature from an existing app into transposable"
+  default_prompt: "Use $feature-clone to apply the Feature Clone workflow to this request."
+policy:
+  allow_implicit_invocation: true

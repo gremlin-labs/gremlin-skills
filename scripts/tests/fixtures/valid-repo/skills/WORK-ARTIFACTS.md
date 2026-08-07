@@ -1,0 +1,3 @@
+# Work artifacts
+
+Fixture contract.

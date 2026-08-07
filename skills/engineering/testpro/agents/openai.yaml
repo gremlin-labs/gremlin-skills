@@ -1,0 +1,6 @@
+interface:
+  display_name: "Testpro"
+  short_description: "Audits an existing test suite and"
+  default_prompt: "Use $testpro to apply the Testpro workflow to this request."
+policy:
+  allow_implicit_invocation: false

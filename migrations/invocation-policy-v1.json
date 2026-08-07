@@ -1,0 +1,614 @@
+{
+  "schema_version": 1,
+  "migration": "invocation-policy-v1",
+  "status": "approved",
+  "policy": {
+    "model_visible": "Read-only or bounded transformation skills with strong routing evidence.",
+    "user_only": "High-autonomy, source-mutating, housekeeping, publishing, or external-state workflows.",
+    "authority_independent": true,
+    "cross_host_parity_required": true
+  },
+  "skills": [
+    {
+      "name": "audit-compare",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "goalpro",
+        "theme-library"
+      ],
+      "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
+    },
+    {
+      "name": "audit-plan",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [
+        {
+          "skill": "audit-compare",
+          "use": "reference",
+          "proposed_mode": "model-visible"
+        }
+      ],
+      "optional_complements": [
+        "goalpro",
+        "theme-library"
+      ],
+      "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
+    },
+    {
+      "name": "brainstormpro",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [
+        {
+          "skill": "planpro",
+          "use": "handoff",
+          "proposed_mode": "model-visible"
+        }
+      ],
+      "optional_complements": [
+        "goalpro",
+        "theme-library"
+      ],
+      "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
+    },
+    {
+      "name": "compact-history",
+      "proposed_mode": "user-only",
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "theme-library"
+      ],
+      "rationale": "Housekeeping executor can relocate managed artifacts after confirmation, so the human must name it."
+    },
+    {
+      "name": "design-direction",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "goalpro",
+        "planpro",
+        "theme-library"
+      ],
+      "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
+    },
+    {
+      "name": "design-review",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "goalpro",
+        "theme-library"
+      ],
+      "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
+    },
+    {
+      "name": "designpro",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "goalpro",
+        "theme-library"
+      ],
+      "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
+    },
+    {
+      "name": "documentation-audit",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "theme-library"
+      ],
+      "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
+    },
+    {
+      "name": "email-lifecycle-audit",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [
+        {
+          "skill": "email-lifecycle-strategy",
+          "use": "handoff",
+          "proposed_mode": "model-visible"
+        }
+      ],
+      "optional_complements": [
+        "goalpro",
+        "theme-library"
+      ],
+      "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
+    },
+    {
+      "name": "email-lifecycle-strategy",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [
+        {
+          "skill": "prose-humanizer",
+          "use": "embedded",
+          "proposed_mode": "model-visible"
+        }
+      ],
+      "optional_complements": [
+        "goalpro",
+        "planpro",
+        "theme-library"
+      ],
+      "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
+    },
+    {
+      "name": "feature-clone",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "theme-library"
+      ],
+      "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
+    },
+    {
+      "name": "feature-goal",
+      "proposed_mode": "user-only",
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "task-scoped",
+        "external_actions": "none"
+      },
+      "required_composition": [
+        {
+          "skill": "goalpro",
+          "use": "reference",
+          "proposed_mode": "user-only"
+        }
+      ],
+      "optional_complements": [
+        "theme-library"
+      ],
+      "rationale": "Executor or hybrid workflow can mutate task-scoped source after its gates, so the human must name it."
+    },
+    {
+      "name": "gamepro",
+      "proposed_mode": "user-only",
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "task-scoped",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "theme-library"
+      ],
+      "rationale": "Executor or hybrid workflow can mutate task-scoped source after its gates, so the human must name it."
+    },
+    {
+      "name": "goalpro",
+      "proposed_mode": "user-only",
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "task-scoped",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "theme-library"
+      ],
+      "rationale": "Executor or hybrid workflow can mutate task-scoped source after its gates, so the human must name it."
+    },
+    {
+      "name": "landing-page",
+      "proposed_mode": "user-only",
+      "authority": {
+        "mode": "hybrid",
+        "source_mutation": "after-approval",
+        "external_actions": "none"
+      },
+      "required_composition": [
+        {
+          "skill": "prose-humanizer",
+          "use": "embedded",
+          "proposed_mode": "model-visible"
+        },
+        {
+          "skill": "seo-strategy",
+          "use": "context",
+          "proposed_mode": "model-visible"
+        }
+      ],
+      "optional_complements": [
+        "theme-library",
+        "turbulencejs-integration"
+      ],
+      "rationale": "Executor or hybrid workflow can mutate task-scoped source after its gates, so the human must name it."
+    },
+    {
+      "name": "migratepro",
+      "proposed_mode": "user-only",
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "task-scoped",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "theme-library"
+      ],
+      "rationale": "Executor or hybrid workflow can mutate task-scoped source after its gates, so the human must name it."
+    },
+    {
+      "name": "motion-audit",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "goalpro",
+        "motion-direction",
+        "planpro",
+        "theme-library"
+      ],
+      "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
+    },
+    {
+      "name": "motion-direction",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "goalpro",
+        "planpro",
+        "theme-library",
+        "turbulencejs-integration"
+      ],
+      "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
+    },
+    {
+      "name": "onboarding-audit",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [
+        {
+          "skill": "onboarding-direction",
+          "use": "handoff",
+          "proposed_mode": "model-visible"
+        }
+      ],
+      "optional_complements": [
+        "goalpro",
+        "theme-library"
+      ],
+      "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
+    },
+    {
+      "name": "onboarding-direction",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [
+        {
+          "skill": "prose-humanizer",
+          "use": "embedded",
+          "proposed_mode": "model-visible"
+        }
+      ],
+      "optional_complements": [
+        "goalpro",
+        "planpro",
+        "theme-library"
+      ],
+      "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
+    },
+    {
+      "name": "planpro",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "theme-library"
+      ],
+      "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
+    },
+    {
+      "name": "prose-humanizer",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "task-scoped",
+        "external_actions": "none"
+      },
+      "required_composition": [
+        {
+          "skill": "seo-strategy",
+          "use": "context",
+          "proposed_mode": "model-visible"
+        }
+      ],
+      "optional_complements": [
+        "theme-library"
+      ],
+      "rationale": "Bounded task-scoped transformation with no external action; useful as an explicitly embedded primitive."
+    },
+    {
+      "name": "releasepro",
+      "proposed_mode": "user-only",
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "after-approval",
+        "external_actions": "approval-required"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "theme-library"
+      ],
+      "rationale": "Workflow can change external state and retains a second action approval gate after explicit invocation."
+    },
+    {
+      "name": "restructure",
+      "proposed_mode": "user-only",
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "task-scoped",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "theme-library"
+      ],
+      "rationale": "Executor or hybrid workflow can mutate task-scoped source after its gates, so the human must name it."
+    },
+    {
+      "name": "seo-content",
+      "proposed_mode": "user-only",
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "task-scoped",
+        "external_actions": "approval-required"
+      },
+      "required_composition": [
+        {
+          "skill": "prose-humanizer",
+          "use": "embedded",
+          "proposed_mode": "model-visible"
+        }
+      ],
+      "optional_complements": [
+        "seo-indexing",
+        "seo-monitor",
+        "theme-library"
+      ],
+      "rationale": "Workflow can change external state and retains a second action approval gate after explicit invocation."
+    },
+    {
+      "name": "seo-foundation",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "seo-strategy",
+        "theme-library"
+      ],
+      "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
+    },
+    {
+      "name": "seo-indexing",
+      "proposed_mode": "user-only",
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "never",
+        "external_actions": "approval-required"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "seo-monitor",
+        "theme-library"
+      ],
+      "rationale": "Workflow can change external state and retains a second action approval gate after explicit invocation."
+    },
+    {
+      "name": "seo-monitor",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "theme-library"
+      ],
+      "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
+    },
+    {
+      "name": "seo-setup",
+      "proposed_mode": "user-only",
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "after-approval",
+        "external_actions": "approval-required"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "seo-foundation",
+        "theme-library"
+      ],
+      "rationale": "Workflow can change external state and retains a second action approval gate after explicit invocation."
+    },
+    {
+      "name": "seo-strategy",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "goalpro",
+        "landing-page",
+        "seo-content",
+        "theme-library"
+      ],
+      "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
+    },
+    {
+      "name": "stripe-audit",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "goalpro",
+        "theme-library"
+      ],
+      "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
+    },
+    {
+      "name": "testpro",
+      "proposed_mode": "user-only",
+      "authority": {
+        "mode": "hybrid",
+        "source_mutation": "after-approval",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "theme-library"
+      ],
+      "rationale": "Executor or hybrid workflow can mutate task-scoped source after its gates, so the human must name it."
+    },
+    {
+      "name": "theme-library",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "goalpro",
+        "planpro"
+      ],
+      "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
+    },
+    {
+      "name": "turbulencejs-integration",
+      "proposed_mode": "user-only",
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "task-scoped",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "theme-library"
+      ],
+      "rationale": "Executor or hybrid workflow can mutate task-scoped source after its gates, so the human must name it."
+    },
+    {
+      "name": "turbulencejs-presentation",
+      "proposed_mode": "user-only",
+      "authority": {
+        "mode": "executor",
+        "source_mutation": "task-scoped",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "theme-library"
+      ],
+      "rationale": "Executor or hybrid workflow can mutate task-scoped source after its gates, so the human must name it."
+    },
+    {
+      "name": "workspacepro",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [
+        "goalpro",
+        "theme-library"
+      ],
+      "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
+    }
+  ],
+  "proposal_sha256": "8ee99a986e4b38c0c4d59576c0690deba7cb51d02b7e09cfae7666a6bec67220"
+}

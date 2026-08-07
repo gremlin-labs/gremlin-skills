@@ -1,0 +1,6817 @@
+{
+  "version": 2,
+  "catalogDigest": "sha256:52f2f469a03dddcece1124c076ed0ddd7acc72d248751f37bc7fdfd81d16d108",
+  "generatedThemeCount": 288,
+  "generatedFamilyCount": 54,
+  "unassignedThemes": [],
+  "categories": [
+    "Core Mischief",
+    "Zen and Restorative",
+    "Playful and Candy",
+    "Cosmic and Mystical",
+    "Retro Computing and Gaming",
+    "Nature and Environment",
+    "Warm Culinary and Material",
+    "Professional and Neutral",
+    "Luxury and Expressive"
+  ],
+  "sources": [
+    {
+      "id": "gremlin-theme-json",
+      "label": "Generated VS Code themes",
+      "source": "Bundled Gremlin generated editor-theme corpus",
+      "kind": "generated"
+    },
+    {
+      "id": "gremlin-variation-plans",
+      "label": "Gremlin variation declarations",
+      "source": "Bundled Gremlin variation-family declarations",
+      "kind": "source"
+    },
+    {
+      "id": "gremlin-package-theme-metadata",
+      "label": "VS Code theme contribution metadata",
+      "source": "Bundled editor-theme labels and mode metadata",
+      "kind": "manifest"
+    },
+    {
+      "id": "corporate-gremlin-colors",
+      "label": "GremlinLabs Theme Color Palettes",
+      "source": "Bundled GremlinLabs brand and Vibe palette corpus",
+      "kind": "corporate"
+    },
+    {
+      "id": "coderank-theme-specs",
+      "label": "CodeRank Theme Specifications",
+      "source": "Bundled CodeRank product palette corpus",
+      "kind": "product"
+    },
+    {
+      "id": "coderank-new-themes",
+      "label": "CodeRank New Theme Specifications",
+      "source": "Bundled CodeRank experimental theme corpus",
+      "kind": "product"
+    }
+  ],
+  "foundationPalettes": [
+    {
+      "id": "gremlin-core",
+      "name": "Gremlin Core",
+      "category": "Core Mischief",
+      "character": "Audacious brand energy with electric greens, disruptive orange, hot pink, purple, blue, mint, yellow, and explicit alert roles.",
+      "sourceId": "corporate-gremlin-colors",
+      "namedColors": [
+        {
+          "name": "Slurpy Blue",
+          "value": "#00A3FF",
+          "note": "Clear communication, trust"
+        },
+        {
+          "name": "Gremlin Green",
+          "value": "#1FCC00",
+          "note": "Primary brand, success states"
+        },
+        {
+          "name": "Electric Gremlin",
+          "value": "#4AFF33",
+          "note": "High energy accents"
+        },
+        {
+          "name": "Disruptive Orange",
+          "value": "#FF5722",
+          "note": "Attention, warnings"
+        },
+        {
+          "name": "Hot Pink Rebellion",
+          "value": "#FF0080",
+          "note": "Maximum impact"
+        },
+        {
+          "name": "Mischief Purple",
+          "value": "#8000FF",
+          "note": "Creative chaos"
+        },
+        {
+          "name": "Danger Red",
+          "value": "#CC2900",
+          "note": "Critical alerts"
+        },
+        {
+          "name": "Warm Energy",
+          "value": "#FF7744",
+          "note": "Secondary actions"
+        },
+        {
+          "name": "Radioactive Mint",
+          "value": "#00FF80",
+          "note": "Success explosions"
+        },
+        {
+          "name": "Chaotic Yellow",
+          "value": "#FFD600",
+          "note": "Notifications, energy"
+        }
+      ],
+      "alerts": {
+        "danger": {
+          "value": "#CC2900",
+          "name": "Danger Red"
+        },
+        "info": {
+          "value": "#00A3FF",
+          "name": "Slurpy Blue"
+        },
+        "success": {
+          "value": "#27EE00",
+          "name": "Bright Gremlin"
+        },
+        "warning": {
+          "value": "#FF5722",
+          "name": "Disruptive Orange"
+        }
+      },
+      "colors": [
+        "#00A3FF",
+        "#1FCC00",
+        "#4AFF33",
+        "#FF5722",
+        "#FF0080",
+        "#8000FF",
+        "#CC2900",
+        "#FF7744",
+        "#00FF80",
+        "#FFD600",
+        "#27EE00"
+      ]
+    },
+    {
+      "id": "vibe-lavender",
+      "name": "Vibe Lavender",
+      "category": "Zen and Restorative",
+      "character": "Spa-like lavender, sage, clay, dusty rose, aqua, and chamomile.",
+      "sourceId": "corporate-gremlin-colors",
+      "namedColors": [
+        {
+          "name": "Soft Sky Blue",
+          "value": "#9BB5D6",
+          "note": ""
+        },
+        {
+          "name": "Sage Green",
+          "value": "#A8C09A",
+          "note": ""
+        },
+        {
+          "name": "Mint Tea",
+          "value": "#B8CFB8",
+          "note": "(green alternative)"
+        },
+        {
+          "name": "Warm Clay",
+          "value": "#E6B89C",
+          "note": "(orange)"
+        },
+        {
+          "name": "Dusty Rose",
+          "value": "#D4A5C8",
+          "note": "(pink)"
+        },
+        {
+          "name": "Soft Lavender",
+          "value": "#B19CD9",
+          "note": "(purple)"
+        },
+        {
+          "name": "Muted Coral",
+          "value": "#D68B8B",
+          "note": "(red)"
+        },
+        {
+          "name": "Peachy Blush",
+          "value": "#E6A89C",
+          "note": "(salmon)"
+        },
+        {
+          "name": "Spa Aqua",
+          "value": "#9FC5C5",
+          "note": "(turquoise)"
+        },
+        {
+          "name": "Chamomile",
+          "value": "#E6D5A8",
+          "note": "(yellow)"
+        }
+      ],
+      "alerts": {
+        "danger": {
+          "value": "#D68B8B",
+          "name": "Muted Coral"
+        },
+        "info": {
+          "value": "#9BB5D6",
+          "name": "Soft Sky Blue"
+        },
+        "success": {
+          "value": "#A8C09A",
+          "name": "Sage Green"
+        },
+        "warning": {
+          "value": "#E6D5A8",
+          "name": "Chamomile"
+        }
+      },
+      "colors": [
+        "#9BB5D6",
+        "#A8C09A",
+        "#B8CFB8",
+        "#E6B89C",
+        "#D4A5C8",
+        "#B19CD9",
+        "#D68B8B",
+        "#E6A89C",
+        "#9FC5C5",
+        "#E6D5A8"
+      ]
+    },
+    {
+      "id": "vibe-marshmallow",
+      "name": "Vibe Marshmallow",
+      "category": "Playful and Candy",
+      "character": "Breakfast-cereal pastels with blueberry, mint, strawberry, grape, peach, and banana milk.",
+      "sourceId": "corporate-gremlin-colors",
+      "namedColors": [
+        {
+          "name": "Pale Blueberry Milk",
+          "value": "#B8D4E3",
+          "note": ""
+        },
+        {
+          "name": "Lucky Charm Green",
+          "value": "#C7E3C7",
+          "note": ""
+        },
+        {
+          "name": "Mint Marshmallow",
+          "value": "#D4E8D4",
+          "note": "(green alternative)"
+        },
+        {
+          "name": "Creamy Orange",
+          "value": "#FFD4B8",
+          "note": ""
+        },
+        {
+          "name": "Strawberry Milk",
+          "value": "#FFB8D1",
+          "note": "(pink)"
+        },
+        {
+          "name": "Grape Marshmallow",
+          "value": "#D1B8FF",
+          "note": "(purple)"
+        },
+        {
+          "name": "Cherry Pastel",
+          "value": "#FFB8B8",
+          "note": "(red)"
+        },
+        {
+          "name": "Peach Cream",
+          "value": "#FFC8B8",
+          "note": "(salmon)"
+        },
+        {
+          "name": "Mint Cream",
+          "value": "#B8E3D4",
+          "note": "(turquoise)"
+        },
+        {
+          "name": "Banana Milk",
+          "value": "#FFF4B8",
+          "note": "(yellow)"
+        }
+      ],
+      "alerts": {
+        "danger": {
+          "value": "#FFB8B8",
+          "name": "Cherry Pastel"
+        },
+        "info": {
+          "value": "#B8D4E3",
+          "name": "Pale Blueberry Milk"
+        },
+        "success": {
+          "value": "#C7E3C7",
+          "name": "Lucky Charm Green"
+        },
+        "warning": {
+          "value": "#FFF4B8",
+          "name": "Banana Milk"
+        }
+      },
+      "colors": [
+        "#B8D4E3",
+        "#C7E3C7",
+        "#D4E8D4",
+        "#FFD4B8",
+        "#FFB8D1",
+        "#D1B8FF",
+        "#FFB8B8",
+        "#FFC8B8",
+        "#B8E3D4",
+        "#FFF4B8"
+      ]
+    },
+    {
+      "id": "vibe-creamsicle",
+      "name": "Vibe Creamsicle",
+      "category": "Playful and Candy",
+      "character": "Warm orange sorbet with denim, pistachio, watermelon, lavender ice, coral, and mint chip.",
+      "sourceId": "corporate-gremlin-colors",
+      "namedColors": [
+        {
+          "name": "Soft Denim",
+          "value": "#A8C4D6",
+          "note": "(blue - more saturated)"
+        },
+        {
+          "name": "Pistachio Cream",
+          "value": "#B8D6A8",
+          "note": "(green - more saturated)"
+        },
+        {
+          "name": "Key Lime Sorbet",
+          "value": "#C4E0B4",
+          "note": "(green alternative)"
+        },
+        {
+          "name": "Creamsicle Core",
+          "value": "#FFB88C",
+          "note": "(orange - more saturated)"
+        },
+        {
+          "name": "Watermelon Sorbet",
+          "value": "#FFA8B8",
+          "note": "(pink - more saturated)"
+        },
+        {
+          "name": "Lavender Ice",
+          "value": "#C8A8E0",
+          "note": "(purple - more saturated)"
+        },
+        {
+          "name": "Strawberry Swirl",
+          "value": "#FF9999",
+          "note": "(red - more saturated)"
+        },
+        {
+          "name": "Coral Cream",
+          "value": "#FFB09C",
+          "note": "(salmon - more saturated)"
+        },
+        {
+          "name": "Mint Chip",
+          "value": "#9CD6C8",
+          "note": "(turquoise - more saturated)"
+        },
+        {
+          "name": "Lemon Sorbet",
+          "value": "#FFE09C",
+          "note": "(yellow - more saturated)"
+        }
+      ],
+      "alerts": {
+        "danger": {
+          "value": "#FF9999",
+          "name": "Strawberry Swirl"
+        },
+        "info": {
+          "value": "#A8C4D6",
+          "name": "Soft Denim"
+        },
+        "success": {
+          "value": "#B8D6A8",
+          "name": "Pistachio Cream"
+        },
+        "warning": {
+          "value": "#FFE09C",
+          "name": "Lemon Sorbet"
+        }
+      },
+      "colors": [
+        "#A8C4D6",
+        "#B8D6A8",
+        "#C4E0B4",
+        "#FFB88C",
+        "#FFA8B8",
+        "#C8A8E0",
+        "#FF9999",
+        "#FFB09C",
+        "#9CD6C8",
+        "#FFE09C"
+      ]
+    },
+    {
+      "id": "vibe-moonlight",
+      "name": "Vibe Moonlight",
+      "category": "Cosmic and Mystical",
+      "character": "Dark cosmic color with aurora green, nebula pink, deep-space purple, cyan, coral, and starlight yellow.",
+      "sourceId": "corporate-gremlin-colors",
+      "namedColors": [
+        {
+          "name": "Cosmic Blue",
+          "value": "#5E9EFF",
+          "note": ""
+        },
+        {
+          "name": "Aurora Green",
+          "value": "#4EE89E",
+          "note": ""
+        },
+        {
+          "name": "Northern Light",
+          "value": "#6EF8BE",
+          "note": "(green alternative)"
+        },
+        {
+          "name": "Sunset Ember",
+          "value": "#FF9E5E",
+          "note": "(orange)"
+        },
+        {
+          "name": "Nebula Pink",
+          "value": "#FF6E9E",
+          "note": ""
+        },
+        {
+          "name": "Deep Space Purple",
+          "value": "#9E6EFF",
+          "note": ""
+        },
+        {
+          "name": "Mars Red",
+          "value": "#FF6E6E",
+          "note": ""
+        },
+        {
+          "name": "Cosmic Coral",
+          "value": "#FF8E7E",
+          "note": "(salmon)"
+        },
+        {
+          "name": "Celestial Cyan",
+          "value": "#6EDEE8",
+          "note": "(turquoise)"
+        },
+        {
+          "name": "Starlight Yellow",
+          "value": "#FFE86E",
+          "note": ""
+        }
+      ],
+      "alerts": {
+        "danger": {
+          "value": "#FF6E6E",
+          "name": "Mars Red"
+        },
+        "info": {
+          "value": "#5E9EFF",
+          "name": "Cosmic Blue"
+        },
+        "success": {
+          "value": "#4EE89E",
+          "name": "Aurora Green"
+        },
+        "warning": {
+          "value": "#FFE86E",
+          "name": "Starlight Yellow"
+        }
+      },
+      "colors": [
+        "#5E9EFF",
+        "#4EE89E",
+        "#6EF8BE",
+        "#FF9E5E",
+        "#FF6E9E",
+        "#9E6EFF",
+        "#FF6E6E",
+        "#FF8E7E",
+        "#6EDEE8",
+        "#FFE86E"
+      ]
+    }
+  ],
+  "productPalettes": [
+    {
+      "id": "coderank-default-void",
+      "name": "Default (Void)",
+      "mapsTo": "void-protocol",
+      "category": "Core Mischief",
+      "mode": "dark",
+      "character": "Deep void with electric green accents",
+      "sourceId": "coderank-theme-specs",
+      "roles": {
+        "void": {
+          "label": "void",
+          "dark": "#000000"
+        },
+        "background": {
+          "label": "background",
+          "dark": "#0A0A0A"
+        },
+        "surface": {
+          "label": "surface",
+          "dark": "#111111"
+        },
+        "elevated": {
+          "label": "elevated",
+          "dark": "#1A1A1A"
+        },
+        "hover": {
+          "label": "hover",
+          "dark": "#222222"
+        },
+        "border": {
+          "label": "border",
+          "dark": "#2A2A2A"
+        },
+        "border-subtle": {
+          "label": "border-subtle",
+          "dark": "#1F1F1F"
+        },
+        "foreground": {
+          "label": "foreground",
+          "dark": "#FAFAFA"
+        },
+        "muted": {
+          "label": "muted",
+          "dark": "#888888"
+        },
+        "subtle": {
+          "label": "subtle",
+          "dark": "#555555"
+        },
+        "accent": {
+          "label": "accent",
+          "dark": "#1FCC00"
+        },
+        "accent-bright": {
+          "label": "accent-bright",
+          "dark": "#4AFF33"
+        },
+        "accent-electric": {
+          "label": "accent-electric",
+          "dark": "#80FF66"
+        },
+        "success": {
+          "label": "success",
+          "dark": "#1FCC00"
+        },
+        "danger": {
+          "label": "danger",
+          "dark": "#FF4444"
+        },
+        "warning": {
+          "label": "warning",
+          "dark": "#FFDD00"
+        },
+        "info": {
+          "label": "info",
+          "dark": "#00D4FF"
+        },
+        "magic": {
+          "label": "magic",
+          "dark": "#8B5CF6"
+        }
+      },
+      "colors": [
+        "#000000",
+        "#0A0A0A",
+        "#111111",
+        "#1A1A1A",
+        "#222222",
+        "#2A2A2A",
+        "#1F1F1F",
+        "#FAFAFA",
+        "#888888",
+        "#555555",
+        "#1FCC00",
+        "#4AFF33",
+        "#80FF66",
+        "#FF4444",
+        "#FFDD00",
+        "#00D4FF",
+        "#8B5CF6"
+      ]
+    },
+    {
+      "id": "coderank-chaos",
+      "name": "Chaos",
+      "mapsTo": "gremlin-chaos",
+      "category": "Core Mischief",
+      "mode": "dark",
+      "character": "Maximum mischief with neon greens and hot pink",
+      "sourceId": "coderank-theme-specs",
+      "roles": {
+        "void": {
+          "label": "void",
+          "dark": "#1A1A1A"
+        },
+        "background": {
+          "label": "background",
+          "dark": "#262726"
+        },
+        "surface": {
+          "label": "surface",
+          "dark": "#2E2F2E"
+        },
+        "elevated": {
+          "label": "elevated",
+          "dark": "#383938"
+        },
+        "hover": {
+          "label": "hover",
+          "dark": "#424342"
+        },
+        "border": {
+          "label": "border",
+          "dark": "#4A4B4A"
+        },
+        "border-subtle": {
+          "label": "border-subtle",
+          "dark": "#3A3B3A"
+        },
+        "foreground": {
+          "label": "foreground",
+          "dark": "#E0E6D3"
+        },
+        "muted": {
+          "label": "muted",
+          "dark": "#9AA2A6"
+        },
+        "subtle": {
+          "label": "subtle",
+          "dark": "#666666"
+        },
+        "accent": {
+          "label": "accent",
+          "dark": "#1FCC00"
+        },
+        "accent-bright": {
+          "label": "accent-bright",
+          "dark": "#4AFF33"
+        },
+        "accent-electric": {
+          "label": "accent-electric",
+          "dark": "#64DE39"
+        },
+        "success": {
+          "label": "success",
+          "dark": "#1FCC00"
+        },
+        "danger": {
+          "label": "danger",
+          "dark": "#FF1998"
+        },
+        "warning": {
+          "label": "warning",
+          "dark": "#FFDC00"
+        },
+        "info": {
+          "label": "info",
+          "dark": "#339AFF"
+        },
+        "magic": {
+          "label": "magic",
+          "dark": "#C489FF"
+        }
+      },
+      "colors": [
+        "#1A1A1A",
+        "#262726",
+        "#2E2F2E",
+        "#383938",
+        "#424342",
+        "#4A4B4A",
+        "#3A3B3A",
+        "#E0E6D3",
+        "#9AA2A6",
+        "#666666",
+        "#1FCC00",
+        "#4AFF33",
+        "#64DE39",
+        "#FF1998",
+        "#FFDC00",
+        "#339AFF",
+        "#C489FF"
+      ]
+    },
+    {
+      "id": "coderank-cheddar",
+      "name": "Cheddar",
+      "category": "Warm Culinary and Material",
+      "mode": "dark",
+      "character": "Warm amber tones on deep brown",
+      "sourceId": "coderank-theme-specs",
+      "roles": {
+        "void": {
+          "label": "void",
+          "dark": "#0D0906"
+        },
+        "background": {
+          "label": "background",
+          "dark": "#1A140D"
+        },
+        "surface": {
+          "label": "surface",
+          "dark": "#241C14"
+        },
+        "elevated": {
+          "label": "elevated",
+          "dark": "#2E241A"
+        },
+        "hover": {
+          "label": "hover",
+          "dark": "#3A2E22"
+        },
+        "border": {
+          "label": "border",
+          "dark": "#5D4D33"
+        },
+        "border-subtle": {
+          "label": "border-subtle",
+          "dark": "#443826"
+        },
+        "foreground": {
+          "label": "foreground",
+          "dark": "#FFDFB9"
+        },
+        "muted": {
+          "label": "muted",
+          "dark": "#C8A878"
+        },
+        "subtle": {
+          "label": "subtle",
+          "dark": "#8899AA"
+        },
+        "accent": {
+          "label": "accent",
+          "dark": "#F5A623"
+        },
+        "accent-bright": {
+          "label": "accent-bright",
+          "dark": "#FFC653"
+        },
+        "accent-electric": {
+          "label": "accent-electric",
+          "dark": "#FFD680"
+        },
+        "success": {
+          "label": "success",
+          "dark": "#00AD49"
+        },
+        "danger": {
+          "label": "danger",
+          "dark": "#F93E3E"
+        },
+        "warning": {
+          "label": "warning",
+          "dark": "#FFC653"
+        },
+        "info": {
+          "label": "info",
+          "dark": "#5899FF"
+        },
+        "magic": {
+          "label": "magic",
+          "dark": "#C489FF"
+        }
+      },
+      "colors": [
+        "#0D0906",
+        "#1A140D",
+        "#241C14",
+        "#2E241A",
+        "#3A2E22",
+        "#5D4D33",
+        "#443826",
+        "#FFDFB9",
+        "#C8A878",
+        "#8899AA",
+        "#F5A623",
+        "#FFC653",
+        "#FFD680",
+        "#00AD49",
+        "#F93E3E",
+        "#5899FF",
+        "#C489FF"
+      ]
+    },
+    {
+      "id": "coderank-deep-cacao",
+      "name": "Deep Cacao",
+      "mapsTo": "deep-cacao",
+      "category": "Warm Culinary and Material",
+      "mode": "dark",
+      "character": "Rich chocolate with golden yellow",
+      "sourceId": "coderank-theme-specs",
+      "roles": {
+        "void": {
+          "label": "void",
+          "dark": "#1A1200"
+        },
+        "background": {
+          "label": "background",
+          "dark": "#261C00"
+        },
+        "surface": {
+          "label": "surface",
+          "dark": "#302400"
+        },
+        "elevated": {
+          "label": "elevated",
+          "dark": "#3C2E08"
+        },
+        "hover": {
+          "label": "hover",
+          "dark": "#4C4020"
+        },
+        "border": {
+          "label": "border",
+          "dark": "#5C5030"
+        },
+        "border-subtle": {
+          "label": "border-subtle",
+          "dark": "#4A4018"
+        },
+        "foreground": {
+          "label": "foreground",
+          "dark": "#EFDEBB"
+        },
+        "muted": {
+          "label": "muted",
+          "dark": "#A09080"
+        },
+        "subtle": {
+          "label": "subtle",
+          "dark": "#6A5A4A"
+        },
+        "accent": {
+          "label": "accent",
+          "dark": "#FFD600"
+        },
+        "accent-bright": {
+          "label": "accent-bright",
+          "dark": "#FFE233"
+        },
+        "accent-electric": {
+          "label": "accent-electric",
+          "dark": "#FFEE66"
+        },
+        "success": {
+          "label": "success",
+          "dark": "#1FCC00"
+        },
+        "danger": {
+          "label": "danger",
+          "dark": "#CC2900"
+        },
+        "warning": {
+          "label": "warning",
+          "dark": "#FF5722"
+        },
+        "info": {
+          "label": "info",
+          "dark": "#00A3FF"
+        },
+        "magic": {
+          "label": "magic",
+          "dark": "#9D51FF"
+        }
+      },
+      "colors": [
+        "#1A1200",
+        "#261C00",
+        "#302400",
+        "#3C2E08",
+        "#4C4020",
+        "#5C5030",
+        "#4A4018",
+        "#EFDEBB",
+        "#A09080",
+        "#6A5A4A",
+        "#FFD600",
+        "#FFE233",
+        "#FFEE66",
+        "#1FCC00",
+        "#CC2900",
+        "#FF5722",
+        "#00A3FF",
+        "#9D51FF"
+      ]
+    },
+    {
+      "id": "coderank-nightmare-purple",
+      "name": "Nightmare Purple",
+      "mapsTo": "nightmare-purple",
+      "category": "Cosmic and Mystical",
+      "mode": "dark",
+      "character": "Void purple with hot pink rebellion",
+      "sourceId": "coderank-theme-specs",
+      "roles": {
+        "void": {
+          "label": "void",
+          "dark": "#120026"
+        },
+        "background": {
+          "label": "background",
+          "dark": "#1D0039"
+        },
+        "surface": {
+          "label": "surface",
+          "dark": "#281048"
+        },
+        "elevated": {
+          "label": "elevated",
+          "dark": "#3D2060"
+        },
+        "hover": {
+          "label": "hover",
+          "dark": "#4D2878"
+        },
+        "border": {
+          "label": "border",
+          "dark": "#5D3888"
+        },
+        "border-subtle": {
+          "label": "border-subtle",
+          "dark": "#3D2060"
+        },
+        "foreground": {
+          "label": "foreground",
+          "dark": "#E8D0FF"
+        },
+        "muted": {
+          "label": "muted",
+          "dark": "#9080A0"
+        },
+        "subtle": {
+          "label": "subtle",
+          "dark": "#6A5A7A"
+        },
+        "accent": {
+          "label": "accent",
+          "dark": "#FF0080"
+        },
+        "accent-bright": {
+          "label": "accent-bright",
+          "dark": "#FF40A0"
+        },
+        "accent-electric": {
+          "label": "accent-electric",
+          "dark": "#FF80C0"
+        },
+        "success": {
+          "label": "success",
+          "dark": "#1FCC00"
+        },
+        "danger": {
+          "label": "danger",
+          "dark": "#FF4000"
+        },
+        "warning": {
+          "label": "warning",
+          "dark": "#FFD600"
+        },
+        "info": {
+          "label": "info",
+          "dark": "#00A3FF"
+        },
+        "magic": {
+          "label": "magic",
+          "dark": "#9D51FF"
+        }
+      },
+      "colors": [
+        "#120026",
+        "#1D0039",
+        "#281048",
+        "#3D2060",
+        "#4D2878",
+        "#5D3888",
+        "#E8D0FF",
+        "#9080A0",
+        "#6A5A7A",
+        "#FF0080",
+        "#FF40A0",
+        "#FF80C0",
+        "#1FCC00",
+        "#FF4000",
+        "#FFD600",
+        "#00A3FF",
+        "#9D51FF"
+      ]
+    },
+    {
+      "id": "coderank-obsidian-chaos",
+      "name": "Obsidian Chaos",
+      "mapsTo": "obsidian-chaos",
+      "category": "Core Mischief",
+      "mode": "dark",
+      "character": "Near-black with explosive yellow energy",
+      "sourceId": "coderank-theme-specs",
+      "roles": {
+        "void": {
+          "label": "void",
+          "dark": "#080808"
+        },
+        "background": {
+          "label": "background",
+          "dark": "#121212"
+        },
+        "surface": {
+          "label": "surface",
+          "dark": "#1C1C1C"
+        },
+        "elevated": {
+          "label": "elevated",
+          "dark": "#282828"
+        },
+        "hover": {
+          "label": "hover",
+          "dark": "#404040"
+        },
+        "border": {
+          "label": "border",
+          "dark": "#505050"
+        },
+        "border-subtle": {
+          "label": "border-subtle",
+          "dark": "#383838"
+        },
+        "foreground": {
+          "label": "foreground",
+          "dark": "#FFFFC0"
+        },
+        "muted": {
+          "label": "muted",
+          "dark": "#909090"
+        },
+        "subtle": {
+          "label": "subtle",
+          "dark": "#606060"
+        },
+        "accent": {
+          "label": "accent",
+          "dark": "#FFD600"
+        },
+        "accent-bright": {
+          "label": "accent-bright",
+          "dark": "#FFE233"
+        },
+        "accent-electric": {
+          "label": "accent-electric",
+          "dark": "#FFEE66"
+        },
+        "success": {
+          "label": "success",
+          "dark": "#1FCC00"
+        },
+        "danger": {
+          "label": "danger",
+          "dark": "#CC2900"
+        },
+        "warning": {
+          "label": "warning",
+          "dark": "#FF5722"
+        },
+        "info": {
+          "label": "info",
+          "dark": "#00A3FF"
+        },
+        "magic": {
+          "label": "magic",
+          "dark": "#8000FF"
+        }
+      },
+      "colors": [
+        "#080808",
+        "#121212",
+        "#1C1C1C",
+        "#282828",
+        "#404040",
+        "#505050",
+        "#383838",
+        "#FFFFC0",
+        "#909090",
+        "#606060",
+        "#FFD600",
+        "#FFE233",
+        "#FFEE66",
+        "#1FCC00",
+        "#CC2900",
+        "#FF5722",
+        "#00A3FF",
+        "#8000FF"
+      ]
+    },
+    {
+      "id": "coderank-pixelo-dark",
+      "name": "Pixelo Dark",
+      "category": "Professional and Neutral",
+      "mode": "dark",
+      "character": "Neon CMYK design system",
+      "sourceId": "coderank-theme-specs",
+      "roles": {
+        "void": {
+          "label": "void",
+          "dark": "#141415"
+        },
+        "background": {
+          "label": "background",
+          "dark": "#1F1F20"
+        },
+        "surface": {
+          "label": "surface",
+          "dark": "#292929"
+        },
+        "elevated": {
+          "label": "elevated",
+          "dark": "#333333"
+        },
+        "hover": {
+          "label": "hover",
+          "dark": "#404040"
+        },
+        "border": {
+          "label": "border",
+          "dark": "#505050"
+        },
+        "border-subtle": {
+          "label": "border-subtle",
+          "dark": "#3A3A3A"
+        },
+        "foreground": {
+          "label": "foreground",
+          "dark": "#F8F8F8"
+        },
+        "muted": {
+          "label": "muted",
+          "dark": "#B0B0B0"
+        },
+        "subtle": {
+          "label": "subtle",
+          "dark": "#808080"
+        },
+        "accent": {
+          "label": "accent",
+          "dark": "#00ACE5"
+        },
+        "accent-bright": {
+          "label": "accent-bright",
+          "dark": "#00DBFF"
+        },
+        "accent-electric": {
+          "label": "accent-electric",
+          "dark": "#33E3FF"
+        },
+        "success": {
+          "label": "success",
+          "dark": "#00CF53"
+        },
+        "danger": {
+          "label": "danger",
+          "dark": "#D0006C"
+        },
+        "warning": {
+          "label": "warning",
+          "dark": "#99CC00"
+        },
+        "info": {
+          "label": "info",
+          "dark": "#00CDF2"
+        },
+        "magic": {
+          "label": "magic",
+          "dark": "#9D51FF"
+        }
+      },
+      "colors": [
+        "#141415",
+        "#1F1F20",
+        "#292929",
+        "#333333",
+        "#404040",
+        "#505050",
+        "#3A3A3A",
+        "#F8F8F8",
+        "#B0B0B0",
+        "#808080",
+        "#00ACE5",
+        "#00DBFF",
+        "#33E3FF",
+        "#00CF53",
+        "#D0006C",
+        "#99CC00",
+        "#00CDF2",
+        "#9D51FF"
+      ]
+    },
+    {
+      "id": "coderank-beige-box-dark",
+      "name": "Beige Box Dark",
+      "category": "Professional and Neutral",
+      "mode": "dark",
+      "character": "90s office nostalgia after hours",
+      "sourceId": "coderank-theme-specs",
+      "roles": {
+        "void": {
+          "label": "void",
+          "dark": "#1A1814"
+        },
+        "background": {
+          "label": "background",
+          "dark": "#373025"
+        },
+        "surface": {
+          "label": "surface",
+          "dark": "#423A2E"
+        },
+        "elevated": {
+          "label": "elevated",
+          "dark": "#4D4438"
+        },
+        "hover": {
+          "label": "hover",
+          "dark": "#5A5040"
+        },
+        "border": {
+          "label": "border",
+          "dark": "#6A6050"
+        },
+        "border-subtle": {
+          "label": "border-subtle",
+          "dark": "#524A3E"
+        },
+        "foreground": {
+          "label": "foreground",
+          "dark": "#C8C0B0"
+        },
+        "muted": {
+          "label": "muted",
+          "dark": "#9A9284"
+        },
+        "subtle": {
+          "label": "subtle",
+          "dark": "#6A6258"
+        },
+        "accent": {
+          "label": "accent",
+          "dark": "#D0B080"
+        },
+        "accent-bright": {
+          "label": "accent-bright",
+          "dark": "#E0C8A0"
+        },
+        "accent-electric": {
+          "label": "accent-electric",
+          "dark": "#F0DCC0"
+        },
+        "success": {
+          "label": "success",
+          "dark": "#80B080"
+        },
+        "danger": {
+          "label": "danger",
+          "dark": "#B08070"
+        },
+        "warning": {
+          "label": "warning",
+          "dark": "#D0C090"
+        },
+        "info": {
+          "label": "info",
+          "dark": "#80A0C8"
+        },
+        "magic": {
+          "label": "magic",
+          "dark": "#A888A0"
+        }
+      },
+      "colors": [
+        "#1A1814",
+        "#373025",
+        "#423A2E",
+        "#4D4438",
+        "#5A5040",
+        "#6A6050",
+        "#524A3E",
+        "#C8C0B0",
+        "#9A9284",
+        "#6A6258",
+        "#D0B080",
+        "#E0C8A0",
+        "#F0DCC0",
+        "#80B080",
+        "#B08070",
+        "#D0C090",
+        "#80A0C8",
+        "#A888A0"
+      ]
+    },
+    {
+      "id": "coderank-vibe-lavender-dark",
+      "name": "Vibe Lavender Dark",
+      "mapsTo": "vibe-lavender-dark",
+      "category": "Zen and Restorative",
+      "mode": "dark",
+      "character": "Zen spa coding vibes",
+      "sourceId": "coderank-theme-specs",
+      "roles": {
+        "void": {
+          "label": "void",
+          "dark": "#201A28"
+        },
+        "background": {
+          "label": "background",
+          "dark": "#2D2436"
+        },
+        "surface": {
+          "label": "surface",
+          "dark": "#382E42"
+        },
+        "elevated": {
+          "label": "elevated",
+          "dark": "#3A2F48"
+        },
+        "hover": {
+          "label": "hover",
+          "dark": "#4A3D58"
+        },
+        "border": {
+          "label": "border",
+          "dark": "#5A4D66"
+        },
+        "border-subtle": {
+          "label": "border-subtle",
+          "dark": "#443858"
+        },
+        "foreground": {
+          "label": "foreground",
+          "dark": "#E8DFF0"
+        },
+        "muted": {
+          "label": "muted",
+          "dark": "#B0A0B8"
+        },
+        "subtle": {
+          "label": "subtle",
+          "dark": "#7A6A88"
+        },
+        "accent": {
+          "label": "accent",
+          "dark": "#B19CD9"
+        },
+        "accent-bright": {
+          "label": "accent-bright",
+          "dark": "#C8A8E8"
+        },
+        "accent-electric": {
+          "label": "accent-electric",
+          "dark": "#DCC0F8"
+        },
+        "success": {
+          "label": "success",
+          "dark": "#A8C09A"
+        },
+        "danger": {
+          "label": "danger",
+          "dark": "#D68B8B"
+        },
+        "warning": {
+          "label": "warning",
+          "dark": "#E6D5A8"
+        },
+        "info": {
+          "label": "info",
+          "dark": "#9BB5D6"
+        },
+        "magic": {
+          "label": "magic",
+          "dark": "#D4A5C8"
+        }
+      },
+      "colors": [
+        "#201A28",
+        "#2D2436",
+        "#382E42",
+        "#3A2F48",
+        "#4A3D58",
+        "#5A4D66",
+        "#443858",
+        "#E8DFF0",
+        "#B0A0B8",
+        "#7A6A88",
+        "#B19CD9",
+        "#C8A8E8",
+        "#DCC0F8",
+        "#A8C09A",
+        "#D68B8B",
+        "#E6D5A8",
+        "#9BB5D6",
+        "#D4A5C8"
+      ]
+    },
+    {
+      "id": "coderank-vibe-marshmallow-dark",
+      "name": "Vibe Marshmallow Dark",
+      "mapsTo": "vibe-marshmallow-dark",
+      "category": "Playful and Candy",
+      "mode": "dark",
+      "character": "Pastel cereal on chocolate",
+      "sourceId": "coderank-theme-specs",
+      "roles": {
+        "void": {
+          "label": "void",
+          "dark": "#1E1A18"
+        },
+        "background": {
+          "label": "background",
+          "dark": "#2A2420"
+        },
+        "surface": {
+          "label": "surface",
+          "dark": "#343028"
+        },
+        "elevated": {
+          "label": "elevated",
+          "dark": "#3A3028"
+        },
+        "hover": {
+          "label": "hover",
+          "dark": "#4A4038"
+        },
+        "border": {
+          "label": "border",
+          "dark": "#5A5048"
+        },
+        "border-subtle": {
+          "label": "border-subtle",
+          "dark": "#443C34"
+        },
+        "foreground": {
+          "label": "foreground",
+          "dark": "#FFF8F0"
+        },
+        "muted": {
+          "label": "muted",
+          "dark": "#C8C0B8"
+        },
+        "subtle": {
+          "label": "subtle",
+          "dark": "#8A8278"
+        },
+        "accent": {
+          "label": "accent",
+          "dark": "#FFB8D1"
+        },
+        "accent-bright": {
+          "label": "accent-bright",
+          "dark": "#FFB8E1"
+        },
+        "accent-electric": {
+          "label": "accent-electric",
+          "dark": "#FFC8E8"
+        },
+        "success": {
+          "label": "success",
+          "dark": "#C7E3C7"
+        },
+        "danger": {
+          "label": "danger",
+          "dark": "#FFB8B8"
+        },
+        "warning": {
+          "label": "warning",
+          "dark": "#FFF4B8"
+        },
+        "info": {
+          "label": "info",
+          "dark": "#B8D4E3"
+        },
+        "magic": {
+          "label": "magic",
+          "dark": "#D1B8FF"
+        }
+      },
+      "colors": [
+        "#1E1A18",
+        "#2A2420",
+        "#343028",
+        "#3A3028",
+        "#4A4038",
+        "#5A5048",
+        "#443C34",
+        "#FFF8F0",
+        "#C8C0B8",
+        "#8A8278",
+        "#FFB8D1",
+        "#FFB8E1",
+        "#FFC8E8",
+        "#C7E3C7",
+        "#FFB8B8",
+        "#FFF4B8",
+        "#B8D4E3",
+        "#D1B8FF"
+      ]
+    },
+    {
+      "id": "coderank-vibe-moonlight",
+      "name": "Vibe Moonlight",
+      "mapsTo": "vibe-moonlight-dark",
+      "category": "Cosmic and Mystical",
+      "mode": "dark",
+      "character": "Cosmic night sky exploration",
+      "sourceId": "coderank-theme-specs",
+      "roles": {
+        "void": {
+          "label": "void",
+          "dark": "#080E1A"
+        },
+        "background": {
+          "label": "background",
+          "dark": "#0F1729"
+        },
+        "surface": {
+          "label": "surface",
+          "dark": "#182035"
+        },
+        "elevated": {
+          "label": "elevated",
+          "dark": "#1A2340"
+        },
+        "hover": {
+          "label": "hover",
+          "dark": "#2A3550"
+        },
+        "border": {
+          "label": "border",
+          "dark": "#3A4560"
+        },
+        "border-subtle": {
+          "label": "border-subtle",
+          "dark": "#283148"
+        },
+        "foreground": {
+          "label": "foreground",
+          "dark": "#E0E8F0"
+        },
+        "muted": {
+          "label": "muted",
+          "dark": "#8E9EAE"
+        },
+        "subtle": {
+          "label": "subtle",
+          "dark": "#5A6A7A"
+        },
+        "accent": {
+          "label": "accent",
+          "dark": "#6EDEE8"
+        },
+        "accent-bright": {
+          "label": "accent-bright",
+          "dark": "#8EE8F0"
+        },
+        "accent-electric": {
+          "label": "accent-electric",
+          "dark": "#AEF0F8"
+        },
+        "success": {
+          "label": "success",
+          "dark": "#4EE89E"
+        },
+        "danger": {
+          "label": "danger",
+          "dark": "#FF6E6E"
+        },
+        "warning": {
+          "label": "warning",
+          "dark": "#FFE86E"
+        },
+        "info": {
+          "label": "info",
+          "dark": "#5E9EFF"
+        },
+        "magic": {
+          "label": "magic",
+          "dark": "#9E6EFF"
+        }
+      },
+      "colors": [
+        "#080E1A",
+        "#0F1729",
+        "#182035",
+        "#1A2340",
+        "#2A3550",
+        "#3A4560",
+        "#283148",
+        "#E0E8F0",
+        "#8E9EAE",
+        "#5A6A7A",
+        "#6EDEE8",
+        "#8EE8F0",
+        "#AEF0F8",
+        "#4EE89E",
+        "#FF6E6E",
+        "#FFE86E",
+        "#5E9EFF",
+        "#9E6EFF"
+      ]
+    },
+    {
+      "id": "coderank-glacier",
+      "name": "Glacier",
+      "category": "Zen and Restorative",
+      "mode": "light",
+      "character": "Arctic ice, crisp and clean",
+      "sourceId": "coderank-theme-specs",
+      "roles": {
+        "void": {
+          "label": "void",
+          "light": "#FFFFFF"
+        },
+        "background": {
+          "label": "background",
+          "light": "#E8F4FA"
+        },
+        "surface": {
+          "label": "surface",
+          "light": "#F0F8FF"
+        },
+        "elevated": {
+          "label": "elevated",
+          "light": "#D8EAF4"
+        },
+        "hover": {
+          "label": "hover",
+          "light": "#C8DEF0"
+        },
+        "border": {
+          "label": "border",
+          "light": "#A0D4F0"
+        },
+        "border-subtle": {
+          "label": "border-subtle",
+          "light": "#C8E4F8"
+        },
+        "foreground": {
+          "label": "foreground",
+          "light": "#1E2E3E"
+        },
+        "muted": {
+          "label": "muted",
+          "light": "#4A6680"
+        },
+        "subtle": {
+          "label": "subtle",
+          "light": "#7A9AB0"
+        },
+        "accent": {
+          "label": "accent",
+          "light": "#5AACDC"
+        },
+        "accent-bright": {
+          "label": "accent-bright",
+          "light": "#7AB0E0"
+        },
+        "accent-electric": {
+          "label": "accent-electric",
+          "light": "#4A9AD0"
+        },
+        "success": {
+          "label": "success",
+          "light": "#4A7A7A"
+        },
+        "danger": {
+          "label": "danger",
+          "light": "#8B5A6B"
+        },
+        "warning": {
+          "label": "warning",
+          "light": "#7A8A6A"
+        },
+        "info": {
+          "label": "info",
+          "light": "#4A6A8B"
+        },
+        "magic": {
+          "label": "magic",
+          "light": "#6B5A7A"
+        }
+      },
+      "colors": [
+        "#FFFFFF",
+        "#E8F4FA",
+        "#F0F8FF",
+        "#D8EAF4",
+        "#C8DEF0",
+        "#A0D4F0",
+        "#C8E4F8",
+        "#1E2E3E",
+        "#4A6680",
+        "#7A9AB0",
+        "#5AACDC",
+        "#7AB0E0",
+        "#4A9AD0",
+        "#4A7A7A",
+        "#8B5A6B",
+        "#7A8A6A",
+        "#4A6A8B",
+        "#6B5A7A"
+      ]
+    },
+    {
+      "id": "coderank-beige-box-light",
+      "name": "Beige Box Light",
+      "category": "Professional and Neutral",
+      "mode": "light",
+      "character": "Classic 90s office aesthetic",
+      "sourceId": "coderank-theme-specs",
+      "roles": {
+        "void": {
+          "label": "void",
+          "light": "#FFFFFF"
+        },
+        "background": {
+          "label": "background",
+          "light": "#E8E0D0"
+        },
+        "surface": {
+          "label": "surface",
+          "light": "#F5F0E8"
+        },
+        "elevated": {
+          "label": "elevated",
+          "light": "#DED6C6"
+        },
+        "hover": {
+          "label": "hover",
+          "light": "#D0C8B8"
+        },
+        "border": {
+          "label": "border",
+          "light": "#C8B898"
+        },
+        "border-subtle": {
+          "label": "border-subtle",
+          "light": "#DCD4C4"
+        },
+        "foreground": {
+          "label": "foreground",
+          "light": "#3A3630"
+        },
+        "muted": {
+          "label": "muted",
+          "light": "#5A5248"
+        },
+        "subtle": {
+          "label": "subtle",
+          "light": "#8A8278"
+        },
+        "accent": {
+          "label": "accent",
+          "light": "#8A7A5A"
+        },
+        "accent-bright": {
+          "label": "accent-bright",
+          "light": "#A09060"
+        },
+        "accent-electric": {
+          "label": "accent-electric",
+          "light": "#B0A070"
+        },
+        "success": {
+          "label": "success",
+          "light": "#5A7A5A"
+        },
+        "danger": {
+          "label": "danger",
+          "light": "#8B5A4A"
+        },
+        "warning": {
+          "label": "warning",
+          "light": "#A09060"
+        },
+        "info": {
+          "label": "info",
+          "light": "#5A6A7A"
+        },
+        "magic": {
+          "label": "magic",
+          "light": "#7A5A6A"
+        }
+      },
+      "colors": [
+        "#FFFFFF",
+        "#E8E0D0",
+        "#F5F0E8",
+        "#DED6C6",
+        "#D0C8B8",
+        "#C8B898",
+        "#DCD4C4",
+        "#3A3630",
+        "#5A5248",
+        "#8A8278",
+        "#8A7A5A",
+        "#A09060",
+        "#B0A070",
+        "#5A7A5A",
+        "#8B5A4A",
+        "#5A6A7A",
+        "#7A5A6A"
+      ]
+    },
+    {
+      "id": "coderank-vibe-creamsicle-light",
+      "name": "Vibe Creamsicle Light",
+      "mapsTo": "vibe-creamsicle-light",
+      "category": "Playful and Candy",
+      "mode": "light",
+      "character": "Orange sorbet summer",
+      "sourceId": "coderank-theme-specs",
+      "roles": {
+        "void": {
+          "label": "void",
+          "light": "#FFFFFF"
+        },
+        "background": {
+          "label": "background",
+          "light": "#FFE7D0"
+        },
+        "surface": {
+          "label": "surface",
+          "light": "#FFF2E8"
+        },
+        "elevated": {
+          "label": "elevated",
+          "light": "#FFE0C8"
+        },
+        "hover": {
+          "label": "hover",
+          "light": "#FFD8B8"
+        },
+        "border": {
+          "label": "border",
+          "light": "#E8C8A8"
+        },
+        "border-subtle": {
+          "label": "border-subtle",
+          "light": "#F0D8C0"
+        },
+        "foreground": {
+          "label": "foreground",
+          "light": "#3A3028"
+        },
+        "muted": {
+          "label": "muted",
+          "light": "#6A5A4A"
+        },
+        "subtle": {
+          "label": "subtle",
+          "light": "#8A7A6A"
+        },
+        "accent": {
+          "label": "accent",
+          "light": "#FF8844"
+        },
+        "accent-bright": {
+          "label": "accent-bright",
+          "light": "#FF9966"
+        },
+        "accent-electric": {
+          "label": "accent-electric",
+          "light": "#FFAA77"
+        },
+        "success": {
+          "label": "success",
+          "light": "#A7CD94"
+        },
+        "danger": {
+          "label": "danger",
+          "light": "#FF9999"
+        },
+        "warning": {
+          "label": "warning",
+          "light": "#D1AB54"
+        },
+        "info": {
+          "label": "info",
+          "light": "#8BACC2"
+        },
+        "magic": {
+          "label": "magic",
+          "light": "#A27CBF"
+        }
+      },
+      "colors": [
+        "#FFFFFF",
+        "#FFE7D0",
+        "#FFF2E8",
+        "#FFE0C8",
+        "#FFD8B8",
+        "#E8C8A8",
+        "#F0D8C0",
+        "#3A3028",
+        "#6A5A4A",
+        "#8A7A6A",
+        "#FF8844",
+        "#FF9966",
+        "#FFAA77",
+        "#A7CD94",
+        "#FF9999",
+        "#D1AB54",
+        "#8BACC2",
+        "#A27CBF"
+      ]
+    },
+    {
+      "id": "coderank-vibe-lavender-light",
+      "name": "Vibe Lavender Light",
+      "mapsTo": "vibe-lavender-light",
+      "category": "Zen and Restorative",
+      "mode": "light",
+      "character": "Spa day zen",
+      "sourceId": "coderank-theme-specs",
+      "roles": {
+        "void": {
+          "label": "void",
+          "light": "#FFFFFF"
+        },
+        "background": {
+          "label": "background",
+          "light": "#F3E2F6"
+        },
+        "surface": {
+          "label": "surface",
+          "light": "#F9F0FC"
+        },
+        "elevated": {
+          "label": "elevated",
+          "light": "#E8D4F0"
+        },
+        "hover": {
+          "label": "hover",
+          "light": "#DCC8E8"
+        },
+        "border": {
+          "label": "border",
+          "light": "#D6A7FF"
+        },
+        "border-subtle": {
+          "label": "border-subtle",
+          "light": "#E4C8F8"
+        },
+        "foreground": {
+          "label": "foreground",
+          "light": "#2D2436"
+        },
+        "muted": {
+          "label": "muted",
+          "light": "#5A4D66"
+        },
+        "subtle": {
+          "label": "subtle",
+          "light": "#8A7A9A"
+        },
+        "accent": {
+          "label": "accent",
+          "light": "#9B7CC0"
+        },
+        "accent-bright": {
+          "label": "accent-bright",
+          "light": "#B19CD9"
+        },
+        "accent-electric": {
+          "label": "accent-electric",
+          "light": "#C8B0E8"
+        },
+        "success": {
+          "label": "success",
+          "light": "#608060"
+        },
+        "danger": {
+          "label": "danger",
+          "light": "#B06060"
+        },
+        "warning": {
+          "label": "warning",
+          "light": "#A09060"
+        },
+        "info": {
+          "label": "info",
+          "light": "#606090"
+        },
+        "magic": {
+          "label": "magic",
+          "light": "#806090"
+        }
+      },
+      "colors": [
+        "#FFFFFF",
+        "#F3E2F6",
+        "#F9F0FC",
+        "#E8D4F0",
+        "#DCC8E8",
+        "#D6A7FF",
+        "#E4C8F8",
+        "#2D2436",
+        "#5A4D66",
+        "#8A7A9A",
+        "#9B7CC0",
+        "#B19CD9",
+        "#C8B0E8",
+        "#608060",
+        "#B06060",
+        "#A09060",
+        "#606090",
+        "#806090"
+      ]
+    },
+    {
+      "id": "coderank-vibe-marshmallow-light",
+      "name": "Vibe Marshmallow Light",
+      "mapsTo": "vibe-marshmallow-light",
+      "category": "Playful and Candy",
+      "mode": "light",
+      "character": "Sweet pastel breakfast",
+      "sourceId": "coderank-theme-specs",
+      "roles": {
+        "void": {
+          "label": "void",
+          "light": "#FFFFFF"
+        },
+        "background": {
+          "label": "background",
+          "light": "#FFF8F0"
+        },
+        "surface": {
+          "label": "surface",
+          "light": "#FFFCF8"
+        },
+        "elevated": {
+          "label": "elevated",
+          "light": "#FFF0E8"
+        },
+        "hover": {
+          "label": "hover",
+          "light": "#FFE8E0"
+        },
+        "border": {
+          "label": "border",
+          "light": "#FFD0E8"
+        },
+        "border-subtle": {
+          "label": "border-subtle",
+          "light": "#FFE0F0"
+        },
+        "foreground": {
+          "label": "foreground",
+          "light": "#2A2420"
+        },
+        "muted": {
+          "label": "muted",
+          "light": "#5A5048"
+        },
+        "subtle": {
+          "label": "subtle",
+          "light": "#8A8078"
+        },
+        "accent": {
+          "label": "accent",
+          "light": "#E890B8"
+        },
+        "accent-bright": {
+          "label": "accent-bright",
+          "light": "#F0A0C8"
+        },
+        "accent-electric": {
+          "label": "accent-electric",
+          "light": "#F8B0D8"
+        },
+        "success": {
+          "label": "success",
+          "light": "#68A868"
+        },
+        "danger": {
+          "label": "danger",
+          "light": "#C87878"
+        },
+        "warning": {
+          "label": "warning",
+          "light": "#B8A050"
+        },
+        "info": {
+          "label": "info",
+          "light": "#6888A8"
+        },
+        "magic": {
+          "label": "magic",
+          "light": "#9878B8"
+        }
+      },
+      "colors": [
+        "#FFFFFF",
+        "#FFF8F0",
+        "#FFFCF8",
+        "#FFF0E8",
+        "#FFE8E0",
+        "#FFD0E8",
+        "#FFE0F0",
+        "#2A2420",
+        "#5A5048",
+        "#8A8078",
+        "#E890B8",
+        "#F0A0C8",
+        "#F8B0D8",
+        "#68A868",
+        "#C87878",
+        "#B8A050",
+        "#6888A8",
+        "#9878B8"
+      ]
+    }
+  ],
+  "referenceFamilies": [
+    {
+      "id": "atari-reference",
+      "name": "Atari",
+      "category": "Retro Computing and Gaming",
+      "mode": "dark",
+      "character": "Atari product palette",
+      "sourceId": "coderank-new-themes",
+      "roles": {
+        "--color-background": {
+          "label": "Background",
+          "dark": "#0D0906"
+        },
+        "--color-yellow": {
+          "label": "CodeRank",
+          "dark": "#FF6600"
+        },
+        "--color-purple": {
+          "label": "Tastemaker",
+          "dark": "#CC44AA"
+        },
+        "--color-blue": {
+          "label": "Influence",
+          "dark": "#44AACC"
+        },
+        "--color-green": {
+          "label": "Success/Green",
+          "dark": "#66BB44"
+        },
+        "--color-magenta": {
+          "label": "Alert/Magenta",
+          "dark": "#FF3366"
+        },
+        "--color-orange": {
+          "label": "Warm accent",
+          "dark": "#FFB300"
+        }
+      },
+      "colors": [
+        "#0D0906",
+        "#FF6600",
+        "#CC44AA",
+        "#44AACC",
+        "#66BB44",
+        "#FF3366",
+        "#FFB300"
+      ]
+    },
+    {
+      "id": "candyland-reference",
+      "name": "Candyland",
+      "category": "Playful and Candy",
+      "mode": "light-and-dark",
+      "character": "Candyland product palette",
+      "sourceId": "coderank-new-themes",
+      "roles": {
+        "--color-background": {
+          "label": "Background",
+          "dark": "#2A050F",
+          "light": "#FFF0F5"
+        },
+        "--color-yellow": {
+          "label": "CodeRank",
+          "dark": "#FF0055",
+          "light": "#CC0044"
+        },
+        "--color-purple": {
+          "label": "Tastemaker",
+          "dark": "#9900FF",
+          "light": "#7700CC"
+        },
+        "--color-blue": {
+          "label": "Influence",
+          "dark": "#0099FF",
+          "light": "#0077CC"
+        },
+        "--color-green": {
+          "label": "Success/Green",
+          "dark": "#00CC66",
+          "light": "#009944"
+        },
+        "--color-magenta": {
+          "label": "Alert/Magenta",
+          "dark": "#FF00AA",
+          "light": "#CC0077"
+        },
+        "--color-orange": {
+          "label": "Warm accent",
+          "dark": "#FF7700",
+          "light": "#CC5500"
+        }
+      },
+      "colors": [
+        "#2A050F",
+        "#FFF0F5",
+        "#FF0055",
+        "#CC0044",
+        "#9900FF",
+        "#7700CC",
+        "#0099FF",
+        "#0077CC",
+        "#00CC66",
+        "#009944",
+        "#FF00AA",
+        "#CC0077",
+        "#FF7700",
+        "#CC5500"
+      ]
+    },
+    {
+      "id": "commodore-64-reference",
+      "name": "Commodore 64",
+      "mapsTo": "commodore-64",
+      "category": "Retro Computing and Gaming",
+      "mode": "dark",
+      "character": "Commodore 64 product palette",
+      "sourceId": "coderank-new-themes",
+      "roles": {
+        "--color-background": {
+          "label": "Background",
+          "dark": "#1E1B38"
+        },
+        "--color-yellow": {
+          "label": "CodeRank",
+          "dark": "#FFD700"
+        },
+        "--color-purple": {
+          "label": "Tastemaker",
+          "dark": "#FF69B4"
+        },
+        "--color-blue": {
+          "label": "Influence",
+          "dark": "#55FFFF"
+        },
+        "--color-green": {
+          "label": "Success/Green",
+          "dark": "#55FF55"
+        },
+        "--color-magenta": {
+          "label": "Alert/Magenta",
+          "dark": "#FF55FF"
+        },
+        "--color-orange": {
+          "label": "Warm accent",
+          "dark": "#FFAA00"
+        }
+      },
+      "colors": [
+        "#1E1B38",
+        "#FFD700",
+        "#FF69B4",
+        "#55FFFF",
+        "#55FF55",
+        "#FF55FF",
+        "#FFAA00"
+      ]
+    },
+    {
+      "id": "game-boy-reference",
+      "name": "Game Boy",
+      "category": "Retro Computing and Gaming",
+      "mode": "dark",
+      "character": "Game Boy product palette",
+      "sourceId": "coderank-new-themes",
+      "roles": {
+        "--color-background": {
+          "label": "Background",
+          "dark": "#211E20"
+        },
+        "--color-yellow": {
+          "label": "CodeRank",
+          "dark": "#9AFF6E"
+        },
+        "--color-purple": {
+          "label": "Tastemaker",
+          "dark": "#C0EDEF"
+        },
+        "--color-blue": {
+          "label": "Influence",
+          "dark": "#A39BD6"
+        },
+        "--color-green": {
+          "label": "Success/Green",
+          "dark": "#7BA145"
+        },
+        "--color-magenta": {
+          "label": "Alert/Magenta",
+          "dark": "#DF529E"
+        },
+        "--color-orange": {
+          "label": "Warm accent",
+          "dark": "#EE9662"
+        }
+      },
+      "colors": [
+        "#211E20",
+        "#9AFF6E",
+        "#C0EDEF",
+        "#A39BD6",
+        "#7BA145",
+        "#DF529E",
+        "#EE9662"
+      ]
+    },
+    {
+      "id": "marshmallow-cereal-reference",
+      "name": "Marshmallow Cereal",
+      "mapsTo": "vibe-marshmallow-light",
+      "category": "Playful and Candy",
+      "mode": "light-and-dark",
+      "character": "Marshmallow Cereal product palette",
+      "sourceId": "coderank-new-themes",
+      "roles": {
+        "--color-background": {
+          "label": "Background",
+          "dark": "#2A1E2C",
+          "light": "#FDF8F0"
+        },
+        "--color-yellow": {
+          "label": "CodeRank",
+          "dark": "#FF6EB4",
+          "light": "#E0007A"
+        },
+        "--color-purple": {
+          "label": "Tastemaker",
+          "dark": "#9B59FF",
+          "light": "#6B00CC"
+        },
+        "--color-blue": {
+          "label": "Influence",
+          "dark": "#33C3FF",
+          "light": "#0088CC"
+        },
+        "--color-green": {
+          "label": "Success/Green",
+          "dark": "#44D48A",
+          "light": "#008855"
+        },
+        "--color-magenta": {
+          "label": "Alert/Magenta",
+          "dark": "#FF3399",
+          "light": "#CC0066"
+        },
+        "--color-orange": {
+          "label": "Warm accent",
+          "dark": "#FF8C42",
+          "light": "#CC5500"
+        }
+      },
+      "colors": [
+        "#2A1E2C",
+        "#FDF8F0",
+        "#FF6EB4",
+        "#E0007A",
+        "#9B59FF",
+        "#6B00CC",
+        "#33C3FF",
+        "#0088CC",
+        "#44D48A",
+        "#008855",
+        "#FF3399",
+        "#CC0066",
+        "#FF8C42",
+        "#CC5500"
+      ]
+    },
+    {
+      "id": "super-nintendo-reference",
+      "name": "Super Nintendo",
+      "category": "Retro Computing and Gaming",
+      "mode": "light-and-dark",
+      "character": "Super Nintendo product palette",
+      "sourceId": "coderank-new-themes",
+      "roles": {
+        "--color-background": {
+          "label": "Background",
+          "light": "#D5D2CE",
+          "dark": "#0E0C18"
+        },
+        "--color-yellow": {
+          "label": "CodeRank",
+          "light": "#CC8800",
+          "dark": "#FFCC00"
+        },
+        "--color-purple": {
+          "label": "Tastemaker",
+          "light": "#6B2FA0",
+          "dark": "#943CA6"
+        },
+        "--color-blue": {
+          "label": "Influence",
+          "light": "#2255CC",
+          "dark": "#4E7AE8"
+        },
+        "--color-green": {
+          "label": "Green",
+          "light": "#228C44",
+          "dark": "#3ECC6E"
+        },
+        "--color-magenta": {
+          "label": "Magenta",
+          "light": "#B3004A",
+          "dark": "#E8327A"
+        },
+        "--color-orange": {
+          "label": "Orange",
+          "light": "#B85C00",
+          "dark": "#FF8C22"
+        }
+      },
+      "colors": [
+        "#0E0C18",
+        "#D5D2CE",
+        "#FFCC00",
+        "#CC8800",
+        "#943CA6",
+        "#6B2FA0",
+        "#4E7AE8",
+        "#2255CC",
+        "#3ECC6E",
+        "#228C44",
+        "#E8327A",
+        "#B3004A",
+        "#FF8C22",
+        "#B85C00"
+      ]
+    },
+    {
+      "id": "terminal-reference",
+      "name": "Terminal",
+      "mapsTo": "terminal-green",
+      "category": "Retro Computing and Gaming",
+      "mode": "dark",
+      "character": "Terminal product palette",
+      "sourceId": "coderank-new-themes",
+      "roles": {
+        "--color-background": {
+          "label": "Background",
+          "dark": "#040804"
+        },
+        "--color-yellow": {
+          "label": "CodeRank",
+          "dark": "#AAFF00"
+        },
+        "--color-purple": {
+          "label": "Tastemaker",
+          "dark": "#00FFCC"
+        },
+        "--color-blue": {
+          "label": "Influence",
+          "dark": "#33CCFF"
+        },
+        "--color-green": {
+          "label": "Success/Green",
+          "dark": "#00FF41"
+        },
+        "--color-magenta": {
+          "label": "Alert/Magenta",
+          "dark": "#FF00AA"
+        },
+        "--color-orange": {
+          "label": "Warm accent",
+          "dark": "#FFAA00"
+        }
+      },
+      "colors": [
+        "#040804",
+        "#AAFF00",
+        "#00FFCC",
+        "#33CCFF",
+        "#00FF41",
+        "#FF00AA",
+        "#FFAA00"
+      ]
+    },
+    {
+      "id": "vhs-reference",
+      "name": "VHS",
+      "mapsTo": "vhs-rewind",
+      "category": "Retro Computing and Gaming",
+      "mode": "dark",
+      "character": "VHS product palette",
+      "sourceId": "coderank-new-themes",
+      "roles": {
+        "--color-background": {
+          "label": "Background",
+          "dark": "#08060F"
+        },
+        "--color-yellow": {
+          "label": "CodeRank",
+          "dark": "#FFE000"
+        },
+        "--color-purple": {
+          "label": "Tastemaker",
+          "dark": "#FF2D95"
+        },
+        "--color-blue": {
+          "label": "Influence",
+          "dark": "#00FFCC"
+        },
+        "--color-green": {
+          "label": "Success/Green",
+          "dark": "#44FF99"
+        },
+        "--color-magenta": {
+          "label": "Alert/Magenta",
+          "dark": "#FF00CC"
+        },
+        "--color-orange": {
+          "label": "Warm accent",
+          "dark": "#FF9933"
+        }
+      },
+      "colors": [
+        "#08060F",
+        "#FFE000",
+        "#FF2D95",
+        "#00FFCC",
+        "#44FF99",
+        "#FF00CC",
+        "#FF9933"
+      ]
+    }
+  ],
+  "families": [
+    {
+      "slug": "acceptance-mode",
+      "name": "Acceptance Mode",
+      "category": "Zen and Restorative",
+      "representative": "gremlin-theme-acceptance-mode.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#2D2D2D",
+        "#D4D4D4",
+        "#2E2E2E",
+        "#363636",
+        "#656565",
+        "#A9DC76",
+        "#78DCE8",
+        "#E991E3",
+        "#FFD866",
+        "#FC9867",
+        "#B7D175",
+        "#BBBBBB"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-acceptance-mode-high-contrast-clarity.json",
+          "label": "Gremlin Dark - Acceptance Mode Clarity",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-acceptance-mode-infused-low-balanced.json",
+          "label": "Gremlin Dark - Acceptance Mode Balanced",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-acceptance-mode-medium-vibrant-flow.json",
+          "label": "Gremlin Dark - Acceptance Mode Flow",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-acceptance-mode-subdued-tranquil.json",
+          "label": "Gremlin Dark - Acceptance Mode Tranquil",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-acceptance-mode.json",
+          "label": "Gremlin Dark - Acceptance Mode",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "arctic-aurora",
+      "name": "Arctic Aurora",
+      "category": "Nature and Environment",
+      "representative": "gremlin-theme-arctic-aurora.json",
+      "modes": [
+        "light"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#EBF3FF",
+        "#2A3344",
+        "#FCFEFF",
+        "#F5F8FC",
+        "#94BFFF",
+        "#00CC88",
+        "#4488CC",
+        "#FF88CC",
+        "#FFCC66",
+        "#FF9966",
+        "#00FF99",
+        "#CC6666"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-arctic-aurora-high-contrast-glacier.json",
+          "label": "Gremlin Light - Arctic Aurora Glacier",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-arctic-aurora-infused-medium-northern-lights.json",
+          "label": "Gremlin Light - Arctic Aurora Northern Lights",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-arctic-aurora-subdued-polar-night.json",
+          "label": "Gremlin Light - Arctic Aurora Polar Night",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-arctic-aurora-vibrant-solar-storm.json",
+          "label": "Gremlin Light - Arctic Aurora Solar Storm",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-arctic-aurora.json",
+          "label": "Gremlin Light - Arctic Aurora",
+          "mode": "light"
+        }
+      ]
+    },
+    {
+      "slug": "beige-trousers",
+      "name": "Beige Trousers",
+      "category": "Professional and Neutral",
+      "representative": "gremlin-theme-beige-trousers.json",
+      "modes": [
+        "light"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#EAD8AF",
+        "#2A2A2A",
+        "#F0E0BD",
+        "#E8D9B6",
+        "#D8B76A",
+        "#1FCC00",
+        "#8FAA7D",
+        "#5A8FB8",
+        "#D4B5B5",
+        "#D4C85A",
+        "#C4945A",
+        "#A3B891"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-beige-trousers-high-contrast-presentation.json",
+          "label": "Gremlin Light - Beige Trousers Presentation",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-beige-trousers-infused-low-casual-friday.json",
+          "label": "Gremlin Light - Beige Trousers Casual Friday",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-beige-trousers-subdued-boardroom.json",
+          "label": "Gremlin Light - Beige Trousers Boardroom",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-beige-trousers-vibrant-promotion.json",
+          "label": "Gremlin Light - Beige Trousers Promotion",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-beige-trousers.json",
+          "label": "Gremlin Light - Beige Trousers",
+          "mode": "light"
+        }
+      ]
+    },
+    {
+      "slug": "beige-trousers-pro",
+      "name": "Beige Trousers Pro",
+      "category": "Professional and Neutral",
+      "representative": "gremlin-theme-beige-trousers-pro.json",
+      "modes": [
+        "light"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#EAD8AF",
+        "#1E1E1E",
+        "#F0E2C0",
+        "#E5D6B3",
+        "#D8B76A",
+        "#00A3FF",
+        "#7A9B6C",
+        "#4A90B8",
+        "#C4A5A5",
+        "#C4B85A",
+        "#B8845A",
+        "#8FAA7D"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-beige-trousers-pro-high-contrast-executive.json",
+          "label": "Gremlin Light - Beige Trousers Executive",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-beige-trousers-pro-infused-low-stakeholder.json",
+          "label": "Gremlin Light - Beige Trousers Stakeholder",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-beige-trousers-pro-medium-vibrant-ipo.json",
+          "label": "Gremlin Light - Beige Trousers IPO",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-beige-trousers-pro-subdued-quarterly-report.json",
+          "label": "Gremlin Light - Beige Trousers Quarterly Report",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-beige-trousers-pro.json",
+          "label": "Gremlin Light - Beige Trousers Pro",
+          "mode": "light"
+        }
+      ]
+    },
+    {
+      "slug": "chaos-reversed",
+      "name": "Chaos Reversed",
+      "category": "Luxury and Expressive",
+      "representative": "gremlin-theme-chaos-reversed.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#13151B",
+        "#E0FFF0",
+        "#141620",
+        "#1A1C24",
+        "#41475D",
+        "#98A2B5",
+        "#A9DC76",
+        "#78DCE8",
+        "#E991E3",
+        "#FFD866",
+        "#FC9867",
+        "#B7D175"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-chaos-reversed-extreme-electric-paradox.json",
+          "label": "Gremlin Dark - Chaos Reversed Paradox",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-chaos-reversed-high-contrast-inverted.json",
+          "label": "Gremlin Dark - Chaos Reversed Inverted",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-chaos-reversed-infused-medium-dimensional.json",
+          "label": "Gremlin Dark - Chaos Reversed Dimensional",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-chaos-reversed-subdued-mirror.json",
+          "label": "Gremlin Dark - Chaos Reversed Mirror",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-chaos-reversed.json",
+          "label": "Gremlin Dark - Chaos Reversed",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "chaos-wrenchcore",
+      "name": "Chaos Wrenchcore",
+      "category": "Professional and Neutral",
+      "representative": "gremlin-theme-chaos-wrenchcore.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 6,
+      "swatches": [
+        "#1A1D25",
+        "#D8E0E8",
+        "#1B1E28",
+        "#20232D",
+        "#484F67",
+        "#FC9867",
+        "#8FB86B",
+        "#6B8FB8",
+        "#B88FA8",
+        "#B8A86B",
+        "#A3B87F",
+        "#B8C7D5"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-chaos-wrenchcore-electric-plasma.json",
+          "label": "Gremlin Dark - Chaos Wrenchcore Plasma",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-chaos-wrenchcore-extreme-vibrant-foundry.json",
+          "label": "Gremlin Dark - Chaos Wrenchcore Foundry",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-chaos-wrenchcore-high-contrast-forged.json",
+          "label": "Gremlin Dark - Chaos Wrenchcore Forged",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-chaos-wrenchcore-infused-medium-oil-stained.json",
+          "label": "Gremlin Dark - Chaos Wrenchcore Oil Stained",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-chaos-wrenchcore-subdued-rust.json",
+          "label": "Gremlin Dark - Chaos Wrenchcore Rust",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-chaos-wrenchcore.json",
+          "label": "Gremlin Dark - Chaos Wrenchcore",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "cherry-candy",
+      "name": "Cherry Candy",
+      "category": "Playful and Candy",
+      "representative": "gremlin-theme-cherry-candy.json",
+      "modes": [
+        "light"
+      ],
+      "variantCount": 6,
+      "swatches": [
+        "#FFE1EB",
+        "#4A2A3A",
+        "#FFF5FA",
+        "#FFE8F0",
+        "#FF8AB1",
+        "#FF88B8",
+        "#88FF88",
+        "#88B8FF",
+        "#FFE888",
+        "#FFA888",
+        "#A8FFA8",
+        "#FF8888"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-cherry-candy-high-contrast-rock-candy.json",
+          "label": "Gremlin Light - Cherry Candy Rock Candy",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-cherry-candy-infused-medium-swirled.json",
+          "label": "Gremlin Light - Cherry Candy Swirled",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-cherry-candy-medium-electric-pop-rocks.json",
+          "label": "Gremlin Light - Cherry Candy Pop Rocks",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-cherry-candy-subdued-taffy.json",
+          "label": "Gremlin Light - Cherry Candy Taffy",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-cherry-candy-vibrant-sugar-rush.json",
+          "label": "Gremlin Light - Cherry Candy Sugar Rush",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-cherry-candy.json",
+          "label": "Gremlin Light - Cherry Candy",
+          "mode": "light"
+        }
+      ]
+    },
+    {
+      "slug": "commodore-64",
+      "name": "Commodore 64",
+      "category": "Retro Computing and Gaming",
+      "representative": "gremlin-theme-commodore-64.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#322572",
+        "#70A4B2",
+        "#302473",
+        "#3A2C7F",
+        "#5945C2",
+        "#6C5EB5",
+        "#B468A8",
+        "#FFF468",
+        "#9F7E5B",
+        "#548C9B",
+        "#9B5252",
+        "#E2DFF4"
+      ],
+      "mappedReferences": [
+        {
+          "id": "commodore-64-reference",
+          "name": "Commodore 64",
+          "mapsTo": "commodore-64",
+          "category": "Retro Computing and Gaming",
+          "mode": "dark",
+          "character": "Commodore 64 product palette",
+          "sourceId": "coderank-new-themes",
+          "roles": {
+            "--color-background": {
+              "label": "Background",
+              "dark": "#1E1B38"
+            },
+            "--color-yellow": {
+              "label": "CodeRank",
+              "dark": "#FFD700"
+            },
+            "--color-purple": {
+              "label": "Tastemaker",
+              "dark": "#FF69B4"
+            },
+            "--color-blue": {
+              "label": "Influence",
+              "dark": "#55FFFF"
+            },
+            "--color-green": {
+              "label": "Success/Green",
+              "dark": "#55FF55"
+            },
+            "--color-magenta": {
+              "label": "Alert/Magenta",
+              "dark": "#FF55FF"
+            },
+            "--color-orange": {
+              "label": "Warm accent",
+              "dark": "#FFAA00"
+            }
+          },
+          "colors": [
+            "#1E1B38",
+            "#FFD700",
+            "#FF69B4",
+            "#55FFFF",
+            "#55FF55",
+            "#FF55FF",
+            "#FFAA00"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "file": "gremlin-theme-commodore-64-high-contrast-breadbin.json",
+          "label": "Gremlin Dark - Commodore 64 Breadbin",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-commodore-64-infused-low-datasette.json",
+          "label": "Gremlin Dark - Commodore 64 Datasette",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-commodore-64-subdued-vic-ii.json",
+          "label": "Gremlin Dark - Commodore 64 VIC-II",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-commodore-64-vibrant-sid-chip.json",
+          "label": "Gremlin Dark - Commodore 64 SID Chip",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-commodore-64.json",
+          "label": "Gremlin Dark - Commodore 64",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "concrete-jungle",
+      "name": "Concrete Jungle",
+      "category": "Nature and Environment",
+      "representative": "gremlin-theme-concrete-jungle.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 6,
+      "swatches": [
+        "#252525",
+        "#D0D0D0",
+        "#262626",
+        "#2E2E2E",
+        "#5D5D5D",
+        "#FFCC00",
+        "#7A8A5A",
+        "#5A7A8A",
+        "#AA7A8A",
+        "#FF6600",
+        "#8A9A6A",
+        "#B6B6B6"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-concrete-jungle-extreme-electric-demolition.json",
+          "label": "Gremlin Dark - Concrete Jungle Demolition",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-concrete-jungle-high-contrast-brutalist.json",
+          "label": "Gremlin Dark - Concrete Jungle Brutalist",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-concrete-jungle-infused-medium-graffiti.json",
+          "label": "Gremlin Dark - Concrete Jungle Graffiti",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-concrete-jungle-subdued-overcast.json",
+          "label": "Gremlin Dark - Concrete Jungle Overcast",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-concrete-jungle-vibrant-construction.json",
+          "label": "Gremlin Dark - Concrete Jungle Construction",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-concrete-jungle.json",
+          "label": "Gremlin Dark - Concrete Jungle",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "copper-wire",
+      "name": "Copper Wire",
+      "category": "Nature and Environment",
+      "representative": "gremlin-theme-copper-wire.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#151210",
+        "#D8C8B8",
+        "#161210",
+        "#1E1A18",
+        "#544740",
+        "#FF8844",
+        "#4FA87F",
+        "#4A8FA8",
+        "#D8848F",
+        "#FFB855",
+        "#5FB88F",
+        "#C6AF97"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-copper-wire-high-contrast-high-voltage.json",
+          "label": "Gremlin Dark - Copper Wire High Voltage",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-copper-wire-infused-medium-oxidized.json",
+          "label": "Gremlin Dark - Copper Wire Oxidized",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-copper-wire-subdued-patina.json",
+          "label": "Gremlin Dark - Copper Wire Patina",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-copper-wire-vibrant-live-wire.json",
+          "label": "Gremlin Dark - Copper Wire Live Wire",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-copper-wire.json",
+          "label": "Gremlin Dark - Copper Wire",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "cotton-candy-brainrot",
+      "name": "Cotton Candy Brainrot",
+      "category": "Playful and Candy",
+      "representative": "gremlin-theme-cotton-candy-brainrot.json",
+      "modes": [
+        "light"
+      ],
+      "variantCount": 4,
+      "swatches": [
+        "#E1F1FF",
+        "#4A4560",
+        "#F5FAFF",
+        "#E8F0FA",
+        "#8AC8FF",
+        "#FF88CC",
+        "#7ABF8A",
+        "#6A8ABF",
+        "#CF7A9A",
+        "#CFBF7A",
+        "#CF9A7A",
+        "#8ACF9A"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-cotton-candy-brainrot-alt-accent-pixie.json",
+          "label": "Gremlin Light - Cotton Candy Brainrot Pixie",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-cotton-candy-brainrot-electric-overdose.json",
+          "label": "Gremlin Light - Cotton Candy Brainrot Overdose",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-cotton-candy-brainrot-low-contrast-melted.json",
+          "label": "Gremlin Light - Cotton Candy Brainrot Melted",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-cotton-candy-brainrot.json",
+          "label": "Gremlin Light - Cotton Candy Brainrot",
+          "mode": "light"
+        }
+      ]
+    },
+    {
+      "slug": "crystal-healing",
+      "name": "Crystal Healing",
+      "category": "Cosmic and Mystical",
+      "representative": "gremlin-theme-crystal-healing.json",
+      "modes": [
+        "light"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#FFE9F5",
+        "#4A3A4A",
+        "#FFFCFE",
+        "#FFF0F8",
+        "#FF92D0",
+        "#D8B8FF",
+        "#A8E8C8",
+        "#A8C8E8",
+        "#FFB8E8",
+        "#FFE8A8",
+        "#FFC8A8",
+        "#B8F8D8"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-crystal-healing-high-contrast-clarity.json",
+          "label": "Gremlin Light - Crystal Healing Clarity",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-crystal-healing-infused-medium-aura.json",
+          "label": "Gremlin Light - Crystal Healing Aura",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-crystal-healing-subdued-meditation.json",
+          "label": "Gremlin Light - Crystal Healing Meditation",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-crystal-healing-vibrant-charged.json",
+          "label": "Gremlin Light - Crystal Healing Charged",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-crystal-healing.json",
+          "label": "Gremlin Light - Crystal Healing",
+          "mode": "light"
+        }
+      ]
+    },
+    {
+      "slug": "dank-gremlin",
+      "name": "Dank Gremlin",
+      "category": "Core Mischief",
+      "representative": "gremlin-theme-dank-gremlin.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#032700",
+        "#D0FFD0",
+        "#032800",
+        "#063500",
+        "#0D9600",
+        "#4AFF33",
+        "#4DD732",
+        "#6ED0E8",
+        "#E986DD",
+        "#FFDB62",
+        "#FC975F",
+        "#B1CE69"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-dank-gremlin-electric-algae-bloom.json",
+          "label": "Gremlin Dark - Dank Gremlin Algae Bloom",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-dank-gremlin-extreme-contrast-abyss.json",
+          "label": "Gremlin Dark - Dank Gremlin Abyss",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-dank-gremlin-infused-high-bog.json",
+          "label": "Gremlin Dark - Dank Gremlin Bog",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-dank-gremlin-subdued-moss.json",
+          "label": "Gremlin Dark - Dank Gremlin Moss",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-dank-gremlin.json",
+          "label": "Gremlin Dark - Dank Gremlin",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "dank-gremlin-toxic",
+      "name": "Dank Gremlin Toxic",
+      "category": "Core Mischief",
+      "representative": "gremlin-theme-dank-gremlin-toxic.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 6,
+      "swatches": [
+        "#032700",
+        "#C0FFE0",
+        "#032A00",
+        "#053805",
+        "#0D9600",
+        "#00FF80",
+        "#00FFE5",
+        "#FF0080",
+        "#FFD600",
+        "#FF8800",
+        "#8DFFC7",
+        "#FF3300"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-dank-gremlin-toxic-electric-meltdown.json",
+          "label": "Gremlin Dark - Dank Gremlin Meltdown",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-dank-gremlin-toxic-extreme-contrast-hazmat.json",
+          "label": "Gremlin Dark - Dank Gremlin HAZMAT",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-dank-gremlin-toxic-high-vibrant-biohazard.json",
+          "label": "Gremlin Dark - Dank Gremlin Biohazard",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-dank-gremlin-toxic-infused-high-contaminated.json",
+          "label": "Gremlin Dark - Dank Gremlin Contaminated",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-dank-gremlin-toxic-subdued-quarantine.json",
+          "label": "Gremlin Dark - Dank Gremlin Quarantine",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-dank-gremlin-toxic.json",
+          "label": "Gremlin Dark - Dank Gremlin Toxic",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "deep-cacao",
+      "name": "Deep Cacao",
+      "category": "Warm Culinary and Material",
+      "representative": "gremlin-theme-deep-cacao.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 6,
+      "swatches": [
+        "#2A1F00",
+        "#B19073",
+        "#241A00",
+        "#322400",
+        "#876200",
+        "#A56F40",
+        "#7A8F6A",
+        "#6A7A8F",
+        "#BA7A8A",
+        "#CAB85A",
+        "#BA8A5A",
+        "#8FA87A"
+      ],
+      "mappedReferences": [
+        {
+          "id": "coderank-deep-cacao",
+          "name": "Deep Cacao",
+          "mapsTo": "deep-cacao",
+          "category": "Warm Culinary and Material",
+          "mode": "dark",
+          "character": "Rich chocolate with golden yellow",
+          "sourceId": "coderank-theme-specs",
+          "roles": {
+            "void": {
+              "label": "void",
+              "dark": "#1A1200"
+            },
+            "background": {
+              "label": "background",
+              "dark": "#261C00"
+            },
+            "surface": {
+              "label": "surface",
+              "dark": "#302400"
+            },
+            "elevated": {
+              "label": "elevated",
+              "dark": "#3C2E08"
+            },
+            "hover": {
+              "label": "hover",
+              "dark": "#4C4020"
+            },
+            "border": {
+              "label": "border",
+              "dark": "#5C5030"
+            },
+            "border-subtle": {
+              "label": "border-subtle",
+              "dark": "#4A4018"
+            },
+            "foreground": {
+              "label": "foreground",
+              "dark": "#EFDEBB"
+            },
+            "muted": {
+              "label": "muted",
+              "dark": "#A09080"
+            },
+            "subtle": {
+              "label": "subtle",
+              "dark": "#6A5A4A"
+            },
+            "accent": {
+              "label": "accent",
+              "dark": "#FFD600"
+            },
+            "accent-bright": {
+              "label": "accent-bright",
+              "dark": "#FFE233"
+            },
+            "accent-electric": {
+              "label": "accent-electric",
+              "dark": "#FFEE66"
+            },
+            "success": {
+              "label": "success",
+              "dark": "#1FCC00"
+            },
+            "danger": {
+              "label": "danger",
+              "dark": "#CC2900"
+            },
+            "warning": {
+              "label": "warning",
+              "dark": "#FF5722"
+            },
+            "info": {
+              "label": "info",
+              "dark": "#00A3FF"
+            },
+            "magic": {
+              "label": "magic",
+              "dark": "#9D51FF"
+            }
+          },
+          "colors": [
+            "#1A1200",
+            "#261C00",
+            "#302400",
+            "#3C2E08",
+            "#4C4020",
+            "#5C5030",
+            "#4A4018",
+            "#EFDEBB",
+            "#A09080",
+            "#6A5A4A",
+            "#FFD600",
+            "#FFE233",
+            "#FFEE66",
+            "#1FCC00",
+            "#CC2900",
+            "#FF5722",
+            "#00A3FF",
+            "#9D51FF"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "file": "gremlin-theme-deep-cacao-electric-espresso.json",
+          "label": "Gremlin Dark - Deep Cacao Espresso",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-deep-cacao-extreme-contrast-truffle.json",
+          "label": "Gremlin Dark - Deep Cacao Truffle",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-deep-cacao-high-vibrant-dark-roast.json",
+          "label": "Gremlin Dark - Deep Cacao Dark Roast",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-deep-cacao-infused-medium-mocha.json",
+          "label": "Gremlin Dark - Deep Cacao Mocha",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-deep-cacao-subdued-milk.json",
+          "label": "Gremlin Dark - Deep Cacao Milk",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-deep-cacao.json",
+          "label": "Gremlin Dark - Deep Cacao",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "deep-cacao-mint",
+      "name": "Deep Cacao Mint",
+      "category": "Warm Culinary and Material",
+      "representative": "gremlin-theme-deep-cacao-mint.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#231900",
+        "#D0FFE0",
+        "#281C00",
+        "#302200",
+        "#926A00",
+        "#00FF80",
+        "#5AD4B8",
+        "#FFB8D1",
+        "#FFE86E",
+        "#D4945A",
+        "#4AFF33",
+        "#9DFFBE"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-deep-cacao-mint-electric-peppermint-bark.json",
+          "label": "Gremlin Dark - Deep Cacao Peppermint Bark",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-deep-cacao-mint-high-vibrant-after-eight.json",
+          "label": "Gremlin Dark - Deep Cacao After Eight",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-deep-cacao-mint-infused-high-mint-chip.json",
+          "label": "Gremlin Dark - Deep Cacao Mint Chip",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-deep-cacao-mint-subdued-white-chocolate.json",
+          "label": "Gremlin Dark - Deep Cacao White Chocolate Mint",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-deep-cacao-mint.json",
+          "label": "Gremlin Dark - Deep Cacao Mint",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "deep-ocean",
+      "name": "Deep Ocean",
+      "category": "Nature and Environment",
+      "representative": "gremlin-theme-deep-ocean.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#00050B",
+        "#88DDEE",
+        "#000510",
+        "#020A16",
+        "#00317A",
+        "#00CCCC",
+        "#00CC88",
+        "#00A8CC",
+        "#FF88CC",
+        "#FFCC00",
+        "#FF6644",
+        "#00FFAA"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-deep-ocean-electric-bioluminescent.json",
+          "label": "Gremlin Dark - Deep Ocean Bioluminescent",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-deep-ocean-extreme-contrast-abyss.json",
+          "label": "Gremlin Dark - Deep Ocean Abyss",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-deep-ocean-infused-high-pressure.json",
+          "label": "Gremlin Dark - Deep Ocean Pressure",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-deep-ocean-subdued-twilight-zone.json",
+          "label": "Gremlin Dark - Deep Ocean Twilight Zone",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-deep-ocean.json",
+          "label": "Gremlin Dark - Deep Ocean",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "desert-bloom",
+      "name": "Desert Bloom",
+      "category": "Nature and Environment",
+      "representative": "gremlin-theme-desert-bloom.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 6,
+      "swatches": [
+        "#25201C",
+        "#E0D0C0",
+        "#26211C",
+        "#2E2924",
+        "#64584C",
+        "#FF00AA",
+        "#7A9A6A",
+        "#6A8AAA",
+        "#FFCC5A",
+        "#CC7A4A",
+        "#8AAA7A",
+        "#CFB79E"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-desert-bloom-extreme-electric-superboom.json",
+          "label": "Gremlin Dark - Desert Bloom Superbloom",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-desert-bloom-high-contrast-canyon.json",
+          "label": "Gremlin Dark - Desert Bloom Canyon",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-desert-bloom-infused-medium-oasis.json",
+          "label": "Gremlin Dark - Desert Bloom Oasis",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-desert-bloom-subdued-drought.json",
+          "label": "Gremlin Dark - Desert Bloom Drought",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-desert-bloom-vibrant-monsoon.json",
+          "label": "Gremlin Dark - Desert Bloom Monsoon",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-desert-bloom.json",
+          "label": "Gremlin Dark - Desert Bloom",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "electric-rebellion",
+      "name": "Electric Rebellion",
+      "category": "Core Mischief",
+      "representative": "gremlin-theme-electric-rebellion.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#2D2D2D",
+        "#FFE0F0",
+        "#2C2C2C",
+        "#383838",
+        "#656565",
+        "#FF0080",
+        "#00FF99",
+        "#0099FF",
+        "#FFCC00",
+        "#FF9900",
+        "#33FFAA",
+        "#FFADD7"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-electric-rebellion-electric-revolution.json",
+          "label": "Gremlin Dark - Electric Rebellion Revolution",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-electric-rebellion-extreme-contrast-anarchy.json",
+          "label": "Gremlin Dark - Electric Rebellion Anarchy",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-electric-rebellion-high-electric-uprising.json",
+          "label": "Gremlin Dark - Electric Rebellion Uprising",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-electric-rebellion-infused-high-insurgent.json",
+          "label": "Gremlin Dark - Electric Rebellion Insurgent",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-electric-rebellion.json",
+          "label": "Gremlin Dark - Electric Rebellion",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "erosion-protocol",
+      "name": "Erosion Protocol",
+      "category": "Nature and Environment",
+      "representative": "gremlin-theme-erosion-protocol.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#35302E",
+        "#C8C0B8",
+        "#353028",
+        "#403A37",
+        "#716761",
+        "#A8957A",
+        "#8FA87A",
+        "#7A8FA8",
+        "#C4A5B5",
+        "#C4C49A",
+        "#C4A58A",
+        "#A8B89A"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-erosion-protocol-high-subdued-patina.json",
+          "label": "Gremlin Dark - Erosion Protocol Patina",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-erosion-protocol-infused-medium-oxidized.json",
+          "label": "Gremlin Dark - Erosion Protocol Oxidized",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-erosion-protocol-low-contrast-dust.json",
+          "label": "Gremlin Dark - Erosion Protocol Dust",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-erosion-protocol-subdued-weathered.json",
+          "label": "Gremlin Dark - Erosion Protocol Weathered",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-erosion-protocol.json",
+          "label": "Gremlin Dark - Erosion Protocol",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "gremlin-chaos",
+      "name": "Gremlin Chaos",
+      "category": "Core Mischief",
+      "representative": "gremlin-theme-gremlin-chaos.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#2D2D2D",
+        "#D1FFA2",
+        "#2E2E2E",
+        "#363636",
+        "#656565",
+        "#1FCC00",
+        "#00FF80",
+        "#0080FF",
+        "#FF0080",
+        "#FFD600",
+        "#FF8000",
+        "#B8FF6F"
+      ],
+      "mappedReferences": [
+        {
+          "id": "coderank-chaos",
+          "name": "Chaos",
+          "mapsTo": "gremlin-chaos",
+          "category": "Core Mischief",
+          "mode": "dark",
+          "character": "Maximum mischief with neon greens and hot pink",
+          "sourceId": "coderank-theme-specs",
+          "roles": {
+            "void": {
+              "label": "void",
+              "dark": "#1A1A1A"
+            },
+            "background": {
+              "label": "background",
+              "dark": "#262726"
+            },
+            "surface": {
+              "label": "surface",
+              "dark": "#2E2F2E"
+            },
+            "elevated": {
+              "label": "elevated",
+              "dark": "#383938"
+            },
+            "hover": {
+              "label": "hover",
+              "dark": "#424342"
+            },
+            "border": {
+              "label": "border",
+              "dark": "#4A4B4A"
+            },
+            "border-subtle": {
+              "label": "border-subtle",
+              "dark": "#3A3B3A"
+            },
+            "foreground": {
+              "label": "foreground",
+              "dark": "#E0E6D3"
+            },
+            "muted": {
+              "label": "muted",
+              "dark": "#9AA2A6"
+            },
+            "subtle": {
+              "label": "subtle",
+              "dark": "#666666"
+            },
+            "accent": {
+              "label": "accent",
+              "dark": "#1FCC00"
+            },
+            "accent-bright": {
+              "label": "accent-bright",
+              "dark": "#4AFF33"
+            },
+            "accent-electric": {
+              "label": "accent-electric",
+              "dark": "#64DE39"
+            },
+            "success": {
+              "label": "success",
+              "dark": "#1FCC00"
+            },
+            "danger": {
+              "label": "danger",
+              "dark": "#FF1998"
+            },
+            "warning": {
+              "label": "warning",
+              "dark": "#FFDC00"
+            },
+            "info": {
+              "label": "info",
+              "dark": "#339AFF"
+            },
+            "magic": {
+              "label": "magic",
+              "dark": "#C489FF"
+            }
+          },
+          "colors": [
+            "#1A1A1A",
+            "#262726",
+            "#2E2F2E",
+            "#383938",
+            "#424342",
+            "#4A4B4A",
+            "#3A3B3A",
+            "#E0E6D3",
+            "#9AA2A6",
+            "#666666",
+            "#1FCC00",
+            "#4AFF33",
+            "#64DE39",
+            "#FF1998",
+            "#FFDC00",
+            "#339AFF",
+            "#C489FF"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "file": "gremlin-theme-gremlin-chaos-electric-maximum.json",
+          "label": "Gremlin Dark - Gremlin Chaos Maximum",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-gremlin-chaos-extreme-contrast-void.json",
+          "label": "Gremlin Dark - Gremlin Chaos Void",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-gremlin-chaos-extreme-electric-nuclear.json",
+          "label": "Gremlin Dark - Gremlin Chaos Nuclear",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-gremlin-chaos-infused-high-radioactive.json",
+          "label": "Gremlin Dark - Gremlin Chaos Radioactive",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-gremlin-chaos.json",
+          "label": "Gremlin Dark - Gremlin Chaos",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "gremlin-terra",
+      "name": "Gremlin Terra",
+      "category": "Nature and Environment",
+      "representative": "gremlin-theme-gremlin-terra.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 6,
+      "swatches": [
+        "#211F24",
+        "#E0D0C8",
+        "#222025",
+        "#2A272D",
+        "#595260",
+        "#1FCC00",
+        "#4DD732",
+        "#6ED0E8",
+        "#E986DD",
+        "#FFDB62",
+        "#FC975F",
+        "#B1CE69"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-gremlin-terra-extreme-electric-volcanic-soil.json",
+          "label": "Gremlin Dark - Gremlin Terra Volcanic Soil",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-gremlin-terra-high-contrast-bedrock.json",
+          "label": "Gremlin Dark - Gremlin Terra Bedrock",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-gremlin-terra-infused-medium-loam.json",
+          "label": "Gremlin Dark - Gremlin Terra Loam",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-gremlin-terra-subdued-clay.json",
+          "label": "Gremlin Dark - Gremlin Terra Clay",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-gremlin-terra-vibrant-fertile.json",
+          "label": "Gremlin Dark - Gremlin Terra Fertile",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-gremlin-terra.json",
+          "label": "Gremlin Dark - Gremlin Terra",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "labcoat",
+      "name": "Labcoat",
+      "category": "Professional and Neutral",
+      "representative": "gremlin-theme-labcoat.json",
+      "modes": [
+        "light"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#C4C6C2",
+        "#1A1A1A",
+        "#D0D2CE",
+        "#999D95",
+        "#0D9900",
+        "#4A8FB8",
+        "#B88FA8",
+        "#B8B85A",
+        "#B8845A",
+        "#1FCC00",
+        "#B85A5A",
+        "#000000"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-labcoat-high-contrast-sterile.json",
+          "label": "Gremlin Light - Labcoat Sterile",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-labcoat-infused-low-surgical.json",
+          "label": "Gremlin Light - Labcoat Surgical",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-labcoat-subdued-cleanroom.json",
+          "label": "Gremlin Light - Labcoat Cleanroom",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-labcoat-vibrant-emergency.json",
+          "label": "Gremlin Light - Labcoat Emergency",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-labcoat.json",
+          "label": "Gremlin Light - Labcoat",
+          "mode": "light"
+        }
+      ]
+    },
+    {
+      "slug": "labcoat-experimental",
+      "name": "Labcoat Experimental",
+      "category": "Professional and Neutral",
+      "representative": "gremlin-theme-labcoat-experimental.json",
+      "modes": [
+        "light"
+      ],
+      "variantCount": 6,
+      "swatches": [
+        "#C4C6C2",
+        "#1A1A1A",
+        "#D2CECC",
+        "#C8C4C0",
+        "#999D95",
+        "#FF5722",
+        "#4AFF33",
+        "#00A3FF",
+        "#FF0080",
+        "#FFD600",
+        "#00FF80",
+        "#CC2900"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-labcoat-experimental-electric-critical-mass.json",
+          "label": "Gremlin Light - Labcoat Critical Mass",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-labcoat-experimental-extreme-contrast-hazmat.json",
+          "label": "Gremlin Light - Labcoat HAZMAT",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-labcoat-experimental-high-vibrant-meltdown.json",
+          "label": "Gremlin Light - Labcoat Meltdown",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-labcoat-experimental-infused-high-contaminated.json",
+          "label": "Gremlin Light - Labcoat Contaminated",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-labcoat-experimental-subdued-control-group.json",
+          "label": "Gremlin Light - Labcoat Control Group",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-labcoat-experimental.json",
+          "label": "Gremlin Light - Labcoat Experimental",
+          "mode": "light"
+        }
+      ]
+    },
+    {
+      "slug": "lemonade-stand",
+      "name": "Lemonade Stand",
+      "category": "Playful and Candy",
+      "representative": "gremlin-theme-lemonade-stand.json",
+      "modes": [
+        "light"
+      ],
+      "variantCount": 4,
+      "swatches": [
+        "#FFF5CE",
+        "#4A4535",
+        "#FFFAE5",
+        "#FFF4D5",
+        "#FFE377",
+        "#6ABF4A",
+        "#5A8A4A",
+        "#4A7A9A",
+        "#AA6A7A",
+        "#AA9A3A",
+        "#AA7A3A",
+        "#6A9A5A"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-lemonade-stand-high-contrast-tart.json",
+          "label": "Gremlin Light - Lemonade Stand Tart",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-lemonade-stand-infused-low-diluted.json",
+          "label": "Gremlin Light - Lemonade Stand Diluted",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-lemonade-stand-vibrant-concentrate.json",
+          "label": "Gremlin Light - Lemonade Stand Concentrate",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-lemonade-stand.json",
+          "label": "Gremlin Light - Lemonade Stand",
+          "mode": "light"
+        }
+      ]
+    },
+    {
+      "slug": "lethal-yellow",
+      "name": "Lethal Yellow",
+      "category": "Core Mischief",
+      "representative": "gremlin-theme-lethal-yellow.json",
+      "modes": [
+        "light"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#CBF000",
+        "#1A1A1A",
+        "#E0FF20",
+        "#D0F500",
+        "#829900",
+        "#FF5722",
+        "#009900",
+        "#0066CC",
+        "#FF0066",
+        "#FFCC00",
+        "#FF6600",
+        "#00CC00"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-lethal-yellow-electric-nuclear.json",
+          "label": "Gremlin Light - Lethal Yellow Nuclear",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-lethal-yellow-extreme-contrast-biohazard.json",
+          "label": "Gremlin Light - Lethal Yellow Biohazard",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-lethal-yellow-infused-high-contaminated.json",
+          "label": "Gremlin Light - Lethal Yellow Contaminated",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-lethal-yellow-subdued-caution.json",
+          "label": "Gremlin Light - Lethal Yellow Caution",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-lethal-yellow.json",
+          "label": "Gremlin Light - Lethal Yellow",
+          "mode": "light"
+        }
+      ]
+    },
+    {
+      "slug": "lethal-yellow-reversed",
+      "name": "Lethal Yellow Reversed",
+      "category": "Core Mischief",
+      "representative": "gremlin-theme-lethal-yellow-reversed.json",
+      "modes": [
+        "light"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#CBF000",
+        "#000000",
+        "#E0FF20",
+        "#D0F500",
+        "#829900",
+        "#8000FF",
+        "#FF0080",
+        "#00A3FF",
+        "#00FF80",
+        "#FF00AA",
+        "#00FF00",
+        "#FF00FF"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-lethal-yellow-reversed-electric-acid-trip.json",
+          "label": "Gremlin Light - Lethal Yellow Acid Trip",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-lethal-yellow-reversed-extreme-contrast-mind-melt.json",
+          "label": "Gremlin Light - Lethal Yellow Mind Melt",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-lethal-yellow-reversed-high-electric-dimension-shift.json",
+          "label": "Gremlin Light - Lethal Yellow Dimension Shift",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-lethal-yellow-reversed-infused-high-kaleidoscope.json",
+          "label": "Gremlin Light - Lethal Yellow Kaleidoscope",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-lethal-yellow-reversed.json",
+          "label": "Gremlin Light - Lethal Yellow Reversed",
+          "mode": "light"
+        }
+      ]
+    },
+    {
+      "slug": "midnight-mischief",
+      "name": "Midnight Mischief",
+      "category": "Core Mischief",
+      "representative": "gremlin-theme-midnight-mischief.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 6,
+      "swatches": [
+        "#1C1C1C",
+        "#E8E0FF",
+        "#1D1D1D",
+        "#252525",
+        "#545454",
+        "#B366FF",
+        "#5AD87F",
+        "#5A8FD8",
+        "#D85A8F",
+        "#D8C85A",
+        "#D8845A",
+        "#7AD89F"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-midnight-mischief-electric-neon-night.json",
+          "label": "Gremlin Dark - Midnight Mischief Neon Night",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-midnight-mischief-extreme-vibrant-nocturnal.json",
+          "label": "Gremlin Dark - Midnight Mischief Nocturnal",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-midnight-mischief-high-contrast-witching-hour.json",
+          "label": "Gremlin Dark - Midnight Mischief Witching Hour",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-midnight-mischief-infused-medium-purple-haze.json",
+          "label": "Gremlin Dark - Midnight Mischief Purple Haze",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-midnight-mischief-subdued-twilight.json",
+          "label": "Gremlin Dark - Midnight Mischief Twilight",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-midnight-mischief.json",
+          "label": "Gremlin Dark - Midnight Mischief",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "mischief-stone",
+      "name": "Mischief Stone",
+      "category": "Nature and Environment",
+      "representative": "gremlin-theme-mischief-stone.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 6,
+      "swatches": [
+        "#26292E",
+        "#E0E0E0",
+        "#26292F",
+        "#2E3137",
+        "#585E6B",
+        "#8000FF",
+        "#A9DC76",
+        "#78DCE8",
+        "#E991E3",
+        "#FFD866",
+        "#FC9867",
+        "#B7D175"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-mischief-stone-extreme-electric-obsidian.json",
+          "label": "Gremlin Dark - Mischief Stone Obsidian",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-mischief-stone-high-contrast-granite.json",
+          "label": "Gremlin Dark - Mischief Stone Granite",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-mischief-stone-infused-medium-enchanted.json",
+          "label": "Gremlin Dark - Mischief Stone Enchanted",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-mischief-stone-subdued-limestone.json",
+          "label": "Gremlin Dark - Mischief Stone Limestone",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-mischief-stone-vibrant-crystal.json",
+          "label": "Gremlin Dark - Mischief Stone Crystal",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-mischief-stone.json",
+          "label": "Gremlin Dark - Mischief Stone",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "neon-arcade",
+      "name": "Neon Arcade",
+      "category": "Retro Computing and Gaming",
+      "representative": "gremlin-theme-neon-arcade.json",
+      "modes": [
+        "dark",
+        "light"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#050505",
+        "#00FFFF",
+        "#060606",
+        "#0E0E0E",
+        "#3D3D3D",
+        "#FF00FF",
+        "#00FF00",
+        "#FFFF00",
+        "#FF6600",
+        "#39FF14",
+        "#00CCCC",
+        "#FF0066"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-neon-arcade-electric-laser-tag.json",
+          "label": "Gremlin Dark - Neon Arcade Laser Tag",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-neon-arcade-extreme-contrast-high-score.json",
+          "label": "Gremlin Dark - Neon Arcade High Score",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-neon-arcade-high-vibrant-prize-zone.json",
+          "label": "Gremlin Dark - Neon Arcade Prize Zone",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-neon-arcade-infused-high-black-light.json",
+          "label": "Gremlin Dark - Neon Arcade Black Light",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-neon-arcade.json",
+          "label": "Gremlin Dark - Neon Arcade",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "nightmare-purple",
+      "name": "Nightmare Purple",
+      "category": "Cosmic and Mystical",
+      "representative": "gremlin-theme-nightmare-purple.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 4,
+      "swatches": [
+        "#180030",
+        "#FFD0F0",
+        "#190033",
+        "#200042",
+        "#51009F",
+        "#FF0080",
+        "#8F4FD8",
+        "#6A4FD8",
+        "#D8AF4F",
+        "#D84F8F",
+        "#AF6FD8",
+        "#FF9DE0"
+      ],
+      "mappedReferences": [
+        {
+          "id": "coderank-nightmare-purple",
+          "name": "Nightmare Purple",
+          "mapsTo": "nightmare-purple",
+          "category": "Cosmic and Mystical",
+          "mode": "dark",
+          "character": "Void purple with hot pink rebellion",
+          "sourceId": "coderank-theme-specs",
+          "roles": {
+            "void": {
+              "label": "void",
+              "dark": "#120026"
+            },
+            "background": {
+              "label": "background",
+              "dark": "#1D0039"
+            },
+            "surface": {
+              "label": "surface",
+              "dark": "#281048"
+            },
+            "elevated": {
+              "label": "elevated",
+              "dark": "#3D2060"
+            },
+            "hover": {
+              "label": "hover",
+              "dark": "#4D2878"
+            },
+            "border": {
+              "label": "border",
+              "dark": "#5D3888"
+            },
+            "border-subtle": {
+              "label": "border-subtle",
+              "dark": "#3D2060"
+            },
+            "foreground": {
+              "label": "foreground",
+              "dark": "#E8D0FF"
+            },
+            "muted": {
+              "label": "muted",
+              "dark": "#9080A0"
+            },
+            "subtle": {
+              "label": "subtle",
+              "dark": "#6A5A7A"
+            },
+            "accent": {
+              "label": "accent",
+              "dark": "#FF0080"
+            },
+            "accent-bright": {
+              "label": "accent-bright",
+              "dark": "#FF40A0"
+            },
+            "accent-electric": {
+              "label": "accent-electric",
+              "dark": "#FF80C0"
+            },
+            "success": {
+              "label": "success",
+              "dark": "#1FCC00"
+            },
+            "danger": {
+              "label": "danger",
+              "dark": "#FF4000"
+            },
+            "warning": {
+              "label": "warning",
+              "dark": "#FFD600"
+            },
+            "info": {
+              "label": "info",
+              "dark": "#00A3FF"
+            },
+            "magic": {
+              "label": "magic",
+              "dark": "#9D51FF"
+            }
+          },
+          "colors": [
+            "#120026",
+            "#1D0039",
+            "#281048",
+            "#3D2060",
+            "#4D2878",
+            "#5D3888",
+            "#E8D0FF",
+            "#9080A0",
+            "#6A5A7A",
+            "#FF0080",
+            "#FF40A0",
+            "#FF80C0",
+            "#1FCC00",
+            "#FF4000",
+            "#FFD600",
+            "#00A3FF",
+            "#9D51FF"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "file": "gremlin-theme-nightmare-purple-extreme-contrast-void.json",
+          "label": "Gremlin Dark - Nightmare Purple Void",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-nightmare-purple-high-vibrant-lucid.json",
+          "label": "Gremlin Dark - Nightmare Purple Lucid",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-nightmare-purple-infused-high-hallucination.json",
+          "label": "Gremlin Dark - Nightmare Purple Hallucination",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-nightmare-purple.json",
+          "label": "Gremlin Dark - Nightmare Purple",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "nightmare-purple-electric",
+      "name": "Nightmare Purple Electric",
+      "category": "Cosmic and Mystical",
+      "representative": "gremlin-theme-nightmare-purple-electric.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 6,
+      "swatches": [
+        "#180030",
+        "#C0F0FF",
+        "#190035",
+        "#210043",
+        "#51009F",
+        "#00A3FF",
+        "#00FF80",
+        "#FF0080",
+        "#FFD600",
+        "#FF8800",
+        "#4AFF33",
+        "#8DE4FF"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-nightmare-purple-electric-electric-neon.json",
+          "label": "Gremlin Dark - Nightmare Purple Neon",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-nightmare-purple-electric-extreme-contrast-matrix.json",
+          "label": "Gremlin Dark - Nightmare Purple Matrix",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-nightmare-purple-electric-fever.json",
+          "label": "Gremlin Dark - Nightmare Purple Fever",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-nightmare-purple-electric-high-electric-cyberpunk.json",
+          "label": "Gremlin Dark - Nightmare Purple Cyberpunk",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-nightmare-purple-electric-infused-high-hologram.json",
+          "label": "Gremlin Dark - Nightmare Purple Hologram",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-nightmare-purple-electric.json",
+          "label": "Gremlin Dark - Nightmare Purple Electric",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "obsidian-chaos",
+      "name": "Obsidian Chaos",
+      "category": "Core Mischief",
+      "representative": "gremlin-theme-obsidian-chaos.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#0D0D0D",
+        "#F0E8D0",
+        "#0E0E0E",
+        "#161616",
+        "#454545",
+        "#FFD600",
+        "#4DD732",
+        "#6ED0E8",
+        "#E986DD",
+        "#FFDB62",
+        "#FC975F",
+        "#B1CE69"
+      ],
+      "mappedReferences": [
+        {
+          "id": "coderank-obsidian-chaos",
+          "name": "Obsidian Chaos",
+          "mapsTo": "obsidian-chaos",
+          "category": "Core Mischief",
+          "mode": "dark",
+          "character": "Near-black with explosive yellow energy",
+          "sourceId": "coderank-theme-specs",
+          "roles": {
+            "void": {
+              "label": "void",
+              "dark": "#080808"
+            },
+            "background": {
+              "label": "background",
+              "dark": "#121212"
+            },
+            "surface": {
+              "label": "surface",
+              "dark": "#1C1C1C"
+            },
+            "elevated": {
+              "label": "elevated",
+              "dark": "#282828"
+            },
+            "hover": {
+              "label": "hover",
+              "dark": "#404040"
+            },
+            "border": {
+              "label": "border",
+              "dark": "#505050"
+            },
+            "border-subtle": {
+              "label": "border-subtle",
+              "dark": "#383838"
+            },
+            "foreground": {
+              "label": "foreground",
+              "dark": "#FFFFC0"
+            },
+            "muted": {
+              "label": "muted",
+              "dark": "#909090"
+            },
+            "subtle": {
+              "label": "subtle",
+              "dark": "#606060"
+            },
+            "accent": {
+              "label": "accent",
+              "dark": "#FFD600"
+            },
+            "accent-bright": {
+              "label": "accent-bright",
+              "dark": "#FFE233"
+            },
+            "accent-electric": {
+              "label": "accent-electric",
+              "dark": "#FFEE66"
+            },
+            "success": {
+              "label": "success",
+              "dark": "#1FCC00"
+            },
+            "danger": {
+              "label": "danger",
+              "dark": "#CC2900"
+            },
+            "warning": {
+              "label": "warning",
+              "dark": "#FF5722"
+            },
+            "info": {
+              "label": "info",
+              "dark": "#00A3FF"
+            },
+            "magic": {
+              "label": "magic",
+              "dark": "#8000FF"
+            }
+          },
+          "colors": [
+            "#080808",
+            "#121212",
+            "#1C1C1C",
+            "#282828",
+            "#404040",
+            "#505050",
+            "#383838",
+            "#FFFFC0",
+            "#909090",
+            "#606060",
+            "#FFD600",
+            "#FFE233",
+            "#FFEE66",
+            "#1FCC00",
+            "#CC2900",
+            "#FF5722",
+            "#00A3FF",
+            "#8000FF"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "file": "gremlin-theme-obsidian-chaos-electric-eruption.json",
+          "label": "Gremlin Dark - Obsidian Chaos Eruption",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-obsidian-chaos-extreme-contrast-magma.json",
+          "label": "Gremlin Dark - Obsidian Chaos Magma",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-obsidian-chaos-high-vibrant-volcanic.json",
+          "label": "Gremlin Dark - Obsidian Chaos Volcanic",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-obsidian-chaos-infused-high-lava-flow.json",
+          "label": "Gremlin Dark - Obsidian Chaos Lava Flow",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-obsidian-chaos.json",
+          "label": "Gremlin Dark - Obsidian Chaos",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "powder-room",
+      "name": "Powder Room",
+      "category": "Luxury and Expressive",
+      "representative": "gremlin-theme-powder-room.json",
+      "modes": [
+        "light"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#FFF1E1",
+        "#3A3A4A",
+        "#FFFCF8",
+        "#FFF0E8",
+        "#FFC88A",
+        "#FFA8C8",
+        "#A8D8A8",
+        "#8FB8D8",
+        "#FFE8B8",
+        "#FFB8A8",
+        "#B8E8B8",
+        "#FF9898"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-powder-room-high-contrast-vanity-mirror.json",
+          "label": "Gremlin Light - Powder Room Vanity Mirror",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-powder-room-infused-low-perfumed.json",
+          "label": "Gremlin Light - Powder Room Perfumed",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-powder-room-subdued-soft-focus.json",
+          "label": "Gremlin Light - Powder Room Soft Focus",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-powder-room-vibrant-hollywood.json",
+          "label": "Gremlin Light - Powder Room Hollywood",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-powder-room.json",
+          "label": "Gremlin Light - Powder Room",
+          "mode": "light"
+        }
+      ]
+    },
+    {
+      "slug": "pure-void",
+      "name": "Pure Void",
+      "category": "Zen and Restorative",
+      "representative": "gremlin-theme-pure-void.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 4,
+      "swatches": [
+        "#0F0F0F",
+        "#606060",
+        "#101010",
+        "#181818",
+        "#474747",
+        "#454545",
+        "#485848",
+        "#404858",
+        "#584048",
+        "#585848",
+        "#584840",
+        "#505850"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-pure-void-infused-low-ghost.json",
+          "label": "Gremlin Dark - Pure Void Ghost",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-pure-void-low-contrast-phantom.json",
+          "label": "Gremlin Dark - Pure Void Phantom",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-pure-void-subdued-whisper.json",
+          "label": "Gremlin Dark - Pure Void Whisper",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-pure-void.json",
+          "label": "Gremlin Dark - Pure Void",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "rose-gold-empress",
+      "name": "Rose Gold Empress",
+      "category": "Luxury and Expressive",
+      "representative": "gremlin-theme-rose-gold-empress.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#251C23",
+        "#FFE8F0",
+        "#26201C",
+        "#2E242C",
+        "#644C5F",
+        "#FFB8D8",
+        "#A8D8B8",
+        "#B8A8D8",
+        "#FFD8A8",
+        "#FFB8A8",
+        "#B8E8C8",
+        "#FFB5CF"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-rose-gold-empress-high-contrast-throne.json",
+          "label": "Gremlin Dark - Rose Gold Empress Throne",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-rose-gold-empress-infused-medium-jeweled.json",
+          "label": "Gremlin Dark - Rose Gold Empress Jeweled",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-rose-gold-empress-subdued-silk.json",
+          "label": "Gremlin Dark - Rose Gold Empress Silk",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-rose-gold-empress-vibrant-crown.json",
+          "label": "Gremlin Dark - Rose Gold Empress Crown",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-rose-gold-empress.json",
+          "label": "Gremlin Dark - Rose Gold Empress",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "sergeant-mischief",
+      "name": "Sergeant Mischief",
+      "category": "Professional and Neutral",
+      "representative": "gremlin-theme-sergeant-mischief.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 6,
+      "swatches": [
+        "#353A2B",
+        "#D8D0C0",
+        "#353A2A",
+        "#404435",
+        "#70795B",
+        "#FFD700",
+        "#7A8F5A",
+        "#5A7A8F",
+        "#A87A8F",
+        "#C4B85A",
+        "#A8845A",
+        "#8FA874"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-sergeant-mischief-alt-accent-bronze.json",
+          "label": "Gremlin Dark - Sergeant Mischief Bronze",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-sergeant-mischief-extreme-vibrant-combat.json",
+          "label": "Gremlin Dark - Sergeant Mischief Combat",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-sergeant-mischief-high-contrast-tactical.json",
+          "label": "Gremlin Dark - Sergeant Mischief Tactical",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-sergeant-mischief-nightvision.json",
+          "label": "Gremlin Dark - Sergeant Mischief Night Vision",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-sergeant-mischief-subdued-stealth.json",
+          "label": "Gremlin Dark - Sergeant Mischief Stealth",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-sergeant-mischief.json",
+          "label": "Gremlin Dark - Sergeant Mischief",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "shadow-realm",
+      "name": "Shadow Realm",
+      "category": "Core Mischief",
+      "representative": "gremlin-theme-shadow-realm.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 6,
+      "swatches": [
+        "#2D2D2D",
+        "#E0E0E0",
+        "#2E2E2E",
+        "#363636",
+        "#656565",
+        "#1FCC00",
+        "#4DD732",
+        "#6ED0E8",
+        "#E986DD",
+        "#FFDB62",
+        "#FC975F",
+        "#B1CE69"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-shadow-realm-extreme-electric-void-walker.json",
+          "label": "Gremlin Dark - Shadow Realm Void Walker",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-shadow-realm-high-contrast-umbra.json",
+          "label": "Gremlin Dark - Shadow Realm Umbra",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-shadow-realm-infused-medium-twilight.json",
+          "label": "Gremlin Dark - Shadow Realm Twilight",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-shadow-realm-subdued-penumbra.json",
+          "label": "Gremlin Dark - Shadow Realm Penumbra",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-shadow-realm-vibrant-eclipse.json",
+          "label": "Gremlin Dark - Shadow Realm Eclipse",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-shadow-realm.json",
+          "label": "Gremlin Dark - Shadow Realm",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "silk-kimono",
+      "name": "Silk Kimono",
+      "category": "Luxury and Expressive",
+      "representative": "gremlin-theme-silk-kimono.json",
+      "modes": [
+        "light"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#FFEEE6",
+        "#4A3A3A",
+        "#FFFCFA",
+        "#FFF0EC",
+        "#FFB18F",
+        "#FFB8CC",
+        "#7FB87F",
+        "#6B9BD8",
+        "#FFD89C",
+        "#FFB88C",
+        "#8FC88F",
+        "#FF8888"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-silk-kimono-high-contrast-calligraphy.json",
+          "label": "Gremlin Light - Silk Kimono Calligraphy",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-silk-kimono-infused-low-morning-mist.json",
+          "label": "Gremlin Light - Silk Kimono Morning Mist",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-silk-kimono-subdued-tea-ceremony.json",
+          "label": "Gremlin Light - Silk Kimono Tea Ceremony",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-silk-kimono-vibrant-festival.json",
+          "label": "Gremlin Light - Silk Kimono Festival",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-silk-kimono.json",
+          "label": "Gremlin Light - Silk Kimono",
+          "mode": "light"
+        }
+      ]
+    },
+    {
+      "slug": "spilled-latte",
+      "name": "Spilled Latte",
+      "category": "Warm Culinary and Material",
+      "representative": "gremlin-theme-spilled-latte.json",
+      "modes": [
+        "light"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#F1E5DA",
+        "#3A2F2A",
+        "#F8F0E8",
+        "#F0E8E0",
+        "#D9BA9B",
+        "#8F5A2A",
+        "#7A8F6A",
+        "#6A7A8F",
+        "#BA7A8A",
+        "#CAB85A",
+        "#BA8A5A",
+        "#8FA87A"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-spilled-latte-alt-accent-blonde.json",
+          "label": "Gremlin Light - Spilled Latte Blonde",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-spilled-latte-high-contrast-ristretto.json",
+          "label": "Gremlin Light - Spilled Latte Ristretto",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-spilled-latte-infused-medium-macchiato.json",
+          "label": "Gremlin Light - Spilled Latte Macchiato",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-spilled-latte-vibrant-espresso.json",
+          "label": "Gremlin Light - Spilled Latte Espresso",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-spilled-latte.json",
+          "label": "Gremlin Light - Spilled Latte",
+          "mode": "light"
+        }
+      ]
+    },
+    {
+      "slug": "subway-tile",
+      "name": "Subway Tile",
+      "category": "Nature and Environment",
+      "representative": "gremlin-theme-subway-tile.json",
+      "modes": [
+        "light"
+      ],
+      "variantCount": 6,
+      "swatches": [
+        "#F2F2F2",
+        "#1A1A1A",
+        "#FCFCFC",
+        "#F5F5F5",
+        "#C7C7C7",
+        "#5A9A7A",
+        "#4A7A8A",
+        "#CC8A9A",
+        "#CCAA5A",
+        "#CC7A5A",
+        "#6AAA8A",
+        "#AA5A5A"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-subway-tile-high-contrast-exposed-brick.json",
+          "label": "Gremlin Light - Subway Tile Exposed Brick",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-subway-tile-infused-low-patina.json",
+          "label": "Gremlin Light - Subway Tile Patina",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-subway-tile-medium-subdued-vintage.json",
+          "label": "Gremlin Light - Subway Tile Vintage",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-subway-tile-subdued-flat-white.json",
+          "label": "Gremlin Light - Subway Tile Flat White",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-subway-tile-vibrant-neon-sign.json",
+          "label": "Gremlin Light - Subway Tile Neon Sign",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-subway-tile.json",
+          "label": "Gremlin Light - Subway Tile",
+          "mode": "light"
+        }
+      ]
+    },
+    {
+      "slug": "terminal-green",
+      "name": "Terminal Green",
+      "category": "Retro Computing and Gaming",
+      "representative": "gremlin-theme-terminal-green.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#000000",
+        "#00FF00",
+        "#000800",
+        "#001100",
+        "#333333",
+        "#00CC00",
+        "#999999",
+        "#B3B3B3",
+        "#0AC20A",
+        "#404040"
+      ],
+      "mappedReferences": [
+        {
+          "id": "terminal-reference",
+          "name": "Terminal",
+          "mapsTo": "terminal-green",
+          "category": "Retro Computing and Gaming",
+          "mode": "dark",
+          "character": "Terminal product palette",
+          "sourceId": "coderank-new-themes",
+          "roles": {
+            "--color-background": {
+              "label": "Background",
+              "dark": "#040804"
+            },
+            "--color-yellow": {
+              "label": "CodeRank",
+              "dark": "#AAFF00"
+            },
+            "--color-purple": {
+              "label": "Tastemaker",
+              "dark": "#00FFCC"
+            },
+            "--color-blue": {
+              "label": "Influence",
+              "dark": "#33CCFF"
+            },
+            "--color-green": {
+              "label": "Success/Green",
+              "dark": "#00FF41"
+            },
+            "--color-magenta": {
+              "label": "Alert/Magenta",
+              "dark": "#FF00AA"
+            },
+            "--color-orange": {
+              "label": "Warm accent",
+              "dark": "#FFAA00"
+            }
+          },
+          "colors": [
+            "#040804",
+            "#AAFF00",
+            "#00FFCC",
+            "#33CCFF",
+            "#00FF41",
+            "#FF00AA",
+            "#FFAA00"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "file": "gremlin-theme-terminal-green-electric-matrix.json",
+          "label": "Gremlin Dark - Terminal Green Matrix",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-terminal-green-extreme-contrast-mainframe.json",
+          "label": "Gremlin Dark - Terminal Green Mainframe",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-terminal-green-infused-high-phosphor-burn.json",
+          "label": "Gremlin Dark - Terminal Green Phosphor Burn",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-terminal-green-subdued-amber.json",
+          "label": "Gremlin Dark - Terminal Green Amber",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-terminal-green.json",
+          "label": "Gremlin Dark - Terminal Green",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "tidal-pool",
+      "name": "Tidal Pool",
+      "category": "Nature and Environment",
+      "representative": "gremlin-theme-tidal-pool.json",
+      "modes": [
+        "light"
+      ],
+      "variantCount": 6,
+      "swatches": [
+        "#EBF5F5",
+        "#2A3A3A",
+        "#F8FCFC",
+        "#F0F5F5",
+        "#B1D8D8",
+        "#5ACCCC",
+        "#5AAA7A",
+        "#4A8ACC",
+        "#FFAACC",
+        "#FFCC8A",
+        "#FF8A5A",
+        "#6ACC8A"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-tidal-pool-high-contrast-reef.json",
+          "label": "Gremlin Light - Tidal Pool Reef",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-tidal-pool-infused-medium-sea-spray.json",
+          "label": "Gremlin Light - Tidal Pool Sea Spray",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-tidal-pool-medium-vibrant-lagoon.json",
+          "label": "Gremlin Light - Tidal Pool Lagoon",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-tidal-pool-subdued-low-tide.json",
+          "label": "Gremlin Light - Tidal Pool Low Tide",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-tidal-pool-vibrant-high-tide.json",
+          "label": "Gremlin Light - Tidal Pool High Tide",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-tidal-pool.json",
+          "label": "Gremlin Light - Tidal Pool",
+          "mode": "light"
+        }
+      ]
+    },
+    {
+      "slug": "transcendence-purple",
+      "name": "Transcendence Purple",
+      "category": "Zen and Restorative",
+      "representative": "gremlin-theme-transcendence-purple.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 6,
+      "swatches": [
+        "#26292E",
+        "#E0D8F0",
+        "#262930",
+        "#2E3037",
+        "#585E6B",
+        "#B366FF",
+        "#66FF66",
+        "#6666FF",
+        "#FF66CC",
+        "#FFCC66",
+        "#FF8866",
+        "#88FF88"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-transcendence-purple-electric-enlightenment.json",
+          "label": "Gremlin Dark - Transcendence Purple Enlightenment",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-transcendence-purple-high-contrast-clarity.json",
+          "label": "Gremlin Dark - Transcendence Purple Clarity",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-transcendence-purple-infused-medium-aura.json",
+          "label": "Gremlin Dark - Transcendence Purple Aura",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-transcendence-purple-low-subdued-zen.json",
+          "label": "Gremlin Dark - Transcendence Purple Zen",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-transcendence-purple-subdued-meditation.json",
+          "label": "Gremlin Dark - Transcendence Purple Meditation",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-transcendence-purple.json",
+          "label": "Gremlin Dark - Transcendence Purple",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "velvet-underground",
+      "name": "Velvet Underground",
+      "category": "Luxury and Expressive",
+      "representative": "gremlin-theme-velvet-underground.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#140C14",
+        "#E8D0E0",
+        "#160C18",
+        "#1E1220",
+        "#5B345B",
+        "#D8B86B",
+        "#6BD86B",
+        "#6B6BD8",
+        "#D86B95",
+        "#D8956B",
+        "#8BD88B",
+        "#D7AEC9"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-velvet-underground-electric-opium.json",
+          "label": "Gremlin Dark - Velvet Underground Opium",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-velvet-underground-extreme-contrast-midnight.json",
+          "label": "Gremlin Dark - Velvet Underground Midnight",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-velvet-underground-infused-high-burgundy-wine.json",
+          "label": "Gremlin Dark - Velvet Underground Burgundy Wine",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-velvet-underground-subdued-smoke.json",
+          "label": "Gremlin Dark - Velvet Underground Smoke",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-velvet-underground.json",
+          "label": "Gremlin Dark - Velvet Underground",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "vhs-rewind",
+      "name": "VHS Rewind",
+      "category": "Retro Computing and Gaming",
+      "representative": "gremlin-theme-vhs-rewind-base.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 8,
+      "swatches": [
+        "#07050B",
+        "#E0F0FF",
+        "#080610",
+        "#0C0A14",
+        "#312759",
+        "#FF00AA",
+        "#00FF88",
+        "#00E5FF",
+        "#FFFF00",
+        "#FF8800",
+        "#44FF00",
+        "#ADD7FF"
+      ],
+      "mappedReferences": [
+        {
+          "id": "vhs-reference",
+          "name": "VHS",
+          "mapsTo": "vhs-rewind",
+          "category": "Retro Computing and Gaming",
+          "mode": "dark",
+          "character": "VHS product palette",
+          "sourceId": "coderank-new-themes",
+          "roles": {
+            "--color-background": {
+              "label": "Background",
+              "dark": "#08060F"
+            },
+            "--color-yellow": {
+              "label": "CodeRank",
+              "dark": "#FFE000"
+            },
+            "--color-purple": {
+              "label": "Tastemaker",
+              "dark": "#FF2D95"
+            },
+            "--color-blue": {
+              "label": "Influence",
+              "dark": "#00FFCC"
+            },
+            "--color-green": {
+              "label": "Success/Green",
+              "dark": "#44FF99"
+            },
+            "--color-magenta": {
+              "label": "Alert/Magenta",
+              "dark": "#FF00CC"
+            },
+            "--color-orange": {
+              "label": "Warm accent",
+              "dark": "#FF9933"
+            }
+          },
+          "colors": [
+            "#08060F",
+            "#FFE000",
+            "#FF2D95",
+            "#00FFCC",
+            "#44FF99",
+            "#FF00CC",
+            "#FF9933"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "file": "gremlin-theme-vhs-rewind-alt-accent-cyan.json",
+          "label": "Gremlin Dark - VHS Rewind - Cyan Accent",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vhs-rewind-base.json",
+          "label": "Gremlin Dark - VHS Rewind",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vhs-rewind-electric-full-saturation.json",
+          "label": "Gremlin Dark - VHS Rewind - Full Saturation",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vhs-rewind-extreme-vibrant-oled-crt.json",
+          "label": "Gremlin Dark - VHS Rewind - OLED CRT",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vhs-rewind-high-contrast-tracking-error.json",
+          "label": "Gremlin Dark - VHS Rewind - Tracking Error",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vhs-rewind-infused-high-chroma-bleed.json",
+          "label": "Gremlin Dark - VHS Rewind - Chroma Bleed",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vhs-rewind-low-subdued-pause-mode.json",
+          "label": "Gremlin Dark - VHS Rewind - Pause Mode",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vhs-rewind-subdued-degraded.json",
+          "label": "Gremlin Dark - VHS Rewind - Degraded Tape",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "vibe-black",
+      "name": "Vibe Black",
+      "category": "Zen and Restorative",
+      "representative": "gremlin-theme-vibe-black.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#0F0F0F",
+        "#C8C8C8",
+        "#101010",
+        "#181818",
+        "#474747",
+        "#00A3FF",
+        "#A9DC76",
+        "#78DCE8",
+        "#E991E3",
+        "#FFD866",
+        "#FC9867",
+        "#B7D175"
+      ],
+      "mappedReferences": [],
+      "variants": [
+        {
+          "file": "gremlin-theme-vibe-black-extreme-contrast-absolute.json",
+          "label": "Gremlin Dark - Vibe Black Absolute",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vibe-black-high-vibrant-eclipse.json",
+          "label": "Gremlin Dark - Vibe Black Eclipse",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vibe-black-infused-low-shadow.json",
+          "label": "Gremlin Dark - Vibe Black Shadow",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vibe-black-subdued-stealth.json",
+          "label": "Gremlin Dark - Vibe Black Stealth",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vibe-black.json",
+          "label": "Gremlin Dark - Vibe Black",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "vibe-creamsicle-light",
+      "name": "Vibe Creamsicle Light",
+      "category": "Playful and Candy",
+      "representative": "gremlin-theme-vibe-creamsicle-light.json",
+      "modes": [
+        "light"
+      ],
+      "variantCount": 6,
+      "swatches": [
+        "#FFE6CE",
+        "#4A3020",
+        "#FFF2E5",
+        "#FFEAD5",
+        "#FFBB77",
+        "#FF8844",
+        "#B8D6A8",
+        "#A8C4D6",
+        "#FFA8B8",
+        "#FFE09C",
+        "#FFB88C",
+        "#C4E0B4"
+      ],
+      "mappedReferences": [
+        {
+          "id": "coderank-vibe-creamsicle-light",
+          "name": "Vibe Creamsicle Light",
+          "mapsTo": "vibe-creamsicle-light",
+          "category": "Playful and Candy",
+          "mode": "light",
+          "character": "Orange sorbet summer",
+          "sourceId": "coderank-theme-specs",
+          "roles": {
+            "void": {
+              "label": "void",
+              "light": "#FFFFFF"
+            },
+            "background": {
+              "label": "background",
+              "light": "#FFE7D0"
+            },
+            "surface": {
+              "label": "surface",
+              "light": "#FFF2E8"
+            },
+            "elevated": {
+              "label": "elevated",
+              "light": "#FFE0C8"
+            },
+            "hover": {
+              "label": "hover",
+              "light": "#FFD8B8"
+            },
+            "border": {
+              "label": "border",
+              "light": "#E8C8A8"
+            },
+            "border-subtle": {
+              "label": "border-subtle",
+              "light": "#F0D8C0"
+            },
+            "foreground": {
+              "label": "foreground",
+              "light": "#3A3028"
+            },
+            "muted": {
+              "label": "muted",
+              "light": "#6A5A4A"
+            },
+            "subtle": {
+              "label": "subtle",
+              "light": "#8A7A6A"
+            },
+            "accent": {
+              "label": "accent",
+              "light": "#FF8844"
+            },
+            "accent-bright": {
+              "label": "accent-bright",
+              "light": "#FF9966"
+            },
+            "accent-electric": {
+              "label": "accent-electric",
+              "light": "#FFAA77"
+            },
+            "success": {
+              "label": "success",
+              "light": "#A7CD94"
+            },
+            "danger": {
+              "label": "danger",
+              "light": "#FF9999"
+            },
+            "warning": {
+              "label": "warning",
+              "light": "#D1AB54"
+            },
+            "info": {
+              "label": "info",
+              "light": "#8BACC2"
+            },
+            "magic": {
+              "label": "magic",
+              "light": "#A27CBF"
+            }
+          },
+          "colors": [
+            "#FFFFFF",
+            "#FFE7D0",
+            "#FFF2E8",
+            "#FFE0C8",
+            "#FFD8B8",
+            "#E8C8A8",
+            "#F0D8C0",
+            "#3A3028",
+            "#6A5A4A",
+            "#8A7A6A",
+            "#FF8844",
+            "#FF9966",
+            "#FFAA77",
+            "#A7CD94",
+            "#FF9999",
+            "#D1AB54",
+            "#8BACC2",
+            "#A27CBF"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "file": "gremlin-theme-vibe-creamsicle-light-high-contrast-popsicle.json",
+          "label": "Gremlin Light - Vibe Creamsicle Popsicle",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-vibe-creamsicle-light-infused-medium-swirl.json",
+          "label": "Gremlin Light - Vibe Creamsicle Swirl",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-vibe-creamsicle-light-medium-subdued-sherbet.json",
+          "label": "Gremlin Light - Vibe Creamsicle Sherbet",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-vibe-creamsicle-light-subdued-melted.json",
+          "label": "Gremlin Light - Vibe Creamsicle Melted",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-vibe-creamsicle-light-vibrant-citrus.json",
+          "label": "Gremlin Light - Vibe Creamsicle Citrus",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-vibe-creamsicle-light.json",
+          "label": "Gremlin Light - Vibe Creamsicle",
+          "mode": "light"
+        }
+      ]
+    },
+    {
+      "slug": "vibe-lavender-dark",
+      "name": "Vibe Lavender Dark",
+      "category": "Zen and Restorative",
+      "representative": "gremlin-theme-vibe-lavender-dark.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#282130",
+        "#E0D0F0",
+        "#292032",
+        "#312840",
+        "#604D73",
+        "#C8A8E8",
+        "#A8C09A",
+        "#9BB5D6",
+        "#D4A5C8",
+        "#E6D5A8",
+        "#E6B89C",
+        "#B8CFB8"
+      ],
+      "mappedReferences": [
+        {
+          "id": "coderank-vibe-lavender-dark",
+          "name": "Vibe Lavender Dark",
+          "mapsTo": "vibe-lavender-dark",
+          "category": "Zen and Restorative",
+          "mode": "dark",
+          "character": "Zen spa coding vibes",
+          "sourceId": "coderank-theme-specs",
+          "roles": {
+            "void": {
+              "label": "void",
+              "dark": "#201A28"
+            },
+            "background": {
+              "label": "background",
+              "dark": "#2D2436"
+            },
+            "surface": {
+              "label": "surface",
+              "dark": "#382E42"
+            },
+            "elevated": {
+              "label": "elevated",
+              "dark": "#3A2F48"
+            },
+            "hover": {
+              "label": "hover",
+              "dark": "#4A3D58"
+            },
+            "border": {
+              "label": "border",
+              "dark": "#5A4D66"
+            },
+            "border-subtle": {
+              "label": "border-subtle",
+              "dark": "#443858"
+            },
+            "foreground": {
+              "label": "foreground",
+              "dark": "#E8DFF0"
+            },
+            "muted": {
+              "label": "muted",
+              "dark": "#B0A0B8"
+            },
+            "subtle": {
+              "label": "subtle",
+              "dark": "#7A6A88"
+            },
+            "accent": {
+              "label": "accent",
+              "dark": "#B19CD9"
+            },
+            "accent-bright": {
+              "label": "accent-bright",
+              "dark": "#C8A8E8"
+            },
+            "accent-electric": {
+              "label": "accent-electric",
+              "dark": "#DCC0F8"
+            },
+            "success": {
+              "label": "success",
+              "dark": "#A8C09A"
+            },
+            "danger": {
+              "label": "danger",
+              "dark": "#D68B8B"
+            },
+            "warning": {
+              "label": "warning",
+              "dark": "#E6D5A8"
+            },
+            "info": {
+              "label": "info",
+              "dark": "#9BB5D6"
+            },
+            "magic": {
+              "label": "magic",
+              "dark": "#D4A5C8"
+            }
+          },
+          "colors": [
+            "#201A28",
+            "#2D2436",
+            "#382E42",
+            "#3A2F48",
+            "#4A3D58",
+            "#5A4D66",
+            "#443858",
+            "#E8DFF0",
+            "#B0A0B8",
+            "#7A6A88",
+            "#B19CD9",
+            "#C8A8E8",
+            "#DCC0F8",
+            "#A8C09A",
+            "#D68B8B",
+            "#E6D5A8",
+            "#9BB5D6",
+            "#D4A5C8"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "file": "gremlin-theme-vibe-lavender-dark-high-vibrant-lucid.json",
+          "label": "Gremlin Dark - Vibe Lavender Lucid",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vibe-lavender-dark-infused-medium-dreamy.json",
+          "label": "Gremlin Dark - Vibe Lavender Dreamy",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vibe-lavender-dark-low-contrast-twilight.json",
+          "label": "Gremlin Dark - Vibe Lavender Twilight",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vibe-lavender-dark-subdued-moonlit.json",
+          "label": "Gremlin Dark - Vibe Lavender Moonlit",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vibe-lavender-dark.json",
+          "label": "Gremlin Dark - Vibe Lavender",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "vibe-lavender-light",
+      "name": "Vibe Lavender Light",
+      "category": "Zen and Restorative",
+      "representative": "gremlin-theme-vibe-lavender-light.json",
+      "modes": [
+        "light"
+      ],
+      "variantCount": 6,
+      "swatches": [
+        "#EFE7F0",
+        "#4A3A5A",
+        "#F8F3F9",
+        "#F0EBF2",
+        "#CBB0D0",
+        "#9B7CC0",
+        "#A8C09A",
+        "#9BB5D6",
+        "#D4A5C8",
+        "#E6D5A8",
+        "#E6B89C",
+        "#B8CFB8"
+      ],
+      "mappedReferences": [
+        {
+          "id": "coderank-vibe-lavender-light",
+          "name": "Vibe Lavender Light",
+          "mapsTo": "vibe-lavender-light",
+          "category": "Zen and Restorative",
+          "mode": "light",
+          "character": "Spa day zen",
+          "sourceId": "coderank-theme-specs",
+          "roles": {
+            "void": {
+              "label": "void",
+              "light": "#FFFFFF"
+            },
+            "background": {
+              "label": "background",
+              "light": "#F3E2F6"
+            },
+            "surface": {
+              "label": "surface",
+              "light": "#F9F0FC"
+            },
+            "elevated": {
+              "label": "elevated",
+              "light": "#E8D4F0"
+            },
+            "hover": {
+              "label": "hover",
+              "light": "#DCC8E8"
+            },
+            "border": {
+              "label": "border",
+              "light": "#D6A7FF"
+            },
+            "border-subtle": {
+              "label": "border-subtle",
+              "light": "#E4C8F8"
+            },
+            "foreground": {
+              "label": "foreground",
+              "light": "#2D2436"
+            },
+            "muted": {
+              "label": "muted",
+              "light": "#5A4D66"
+            },
+            "subtle": {
+              "label": "subtle",
+              "light": "#8A7A9A"
+            },
+            "accent": {
+              "label": "accent",
+              "light": "#9B7CC0"
+            },
+            "accent-bright": {
+              "label": "accent-bright",
+              "light": "#B19CD9"
+            },
+            "accent-electric": {
+              "label": "accent-electric",
+              "light": "#C8B0E8"
+            },
+            "success": {
+              "label": "success",
+              "light": "#608060"
+            },
+            "danger": {
+              "label": "danger",
+              "light": "#B06060"
+            },
+            "warning": {
+              "label": "warning",
+              "light": "#A09060"
+            },
+            "info": {
+              "label": "info",
+              "light": "#606090"
+            },
+            "magic": {
+              "label": "magic",
+              "light": "#806090"
+            }
+          },
+          "colors": [
+            "#FFFFFF",
+            "#F3E2F6",
+            "#F9F0FC",
+            "#E8D4F0",
+            "#DCC8E8",
+            "#D6A7FF",
+            "#E4C8F8",
+            "#2D2436",
+            "#5A4D66",
+            "#8A7A9A",
+            "#9B7CC0",
+            "#B19CD9",
+            "#C8B0E8",
+            "#608060",
+            "#B06060",
+            "#A09060",
+            "#606090",
+            "#806090"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "file": "gremlin-theme-vibe-lavender-light-high-contrast-clarity.json",
+          "label": "Gremlin Light - Vibe Lavender Clarity",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-vibe-lavender-light-infused-low-aromatherapy.json",
+          "label": "Gremlin Light - Vibe Lavender Aromatherapy",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-vibe-lavender-light-medium-subdued-zen.json",
+          "label": "Gremlin Light - Vibe Lavender Zen",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-vibe-lavender-light-subdued-meditation.json",
+          "label": "Gremlin Light - Vibe Lavender Meditation",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-vibe-lavender-light-vibrant-bloom.json",
+          "label": "Gremlin Light - Vibe Lavender Bloom",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-vibe-lavender-light.json",
+          "label": "Gremlin Light - Vibe Lavender",
+          "mode": "light"
+        }
+      ]
+    },
+    {
+      "slug": "vibe-marshmallow-dark",
+      "name": "Vibe Marshmallow Dark",
+      "category": "Playful and Candy",
+      "representative": "gremlin-theme-vibe-marshmallow-dark.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#25201C",
+        "#FFE8D0",
+        "#26201C",
+        "#2E2824",
+        "#64564C",
+        "#FFB8E1",
+        "#C7E3C7",
+        "#B8D4E3",
+        "#FFB8D1",
+        "#FFF4B8",
+        "#FFD4B8",
+        "#D4E8D4"
+      ],
+      "mappedReferences": [
+        {
+          "id": "coderank-vibe-marshmallow-dark",
+          "name": "Vibe Marshmallow Dark",
+          "mapsTo": "vibe-marshmallow-dark",
+          "category": "Playful and Candy",
+          "mode": "dark",
+          "character": "Pastel cereal on chocolate",
+          "sourceId": "coderank-theme-specs",
+          "roles": {
+            "void": {
+              "label": "void",
+              "dark": "#1E1A18"
+            },
+            "background": {
+              "label": "background",
+              "dark": "#2A2420"
+            },
+            "surface": {
+              "label": "surface",
+              "dark": "#343028"
+            },
+            "elevated": {
+              "label": "elevated",
+              "dark": "#3A3028"
+            },
+            "hover": {
+              "label": "hover",
+              "dark": "#4A4038"
+            },
+            "border": {
+              "label": "border",
+              "dark": "#5A5048"
+            },
+            "border-subtle": {
+              "label": "border-subtle",
+              "dark": "#443C34"
+            },
+            "foreground": {
+              "label": "foreground",
+              "dark": "#FFF8F0"
+            },
+            "muted": {
+              "label": "muted",
+              "dark": "#C8C0B8"
+            },
+            "subtle": {
+              "label": "subtle",
+              "dark": "#8A8278"
+            },
+            "accent": {
+              "label": "accent",
+              "dark": "#FFB8D1"
+            },
+            "accent-bright": {
+              "label": "accent-bright",
+              "dark": "#FFB8E1"
+            },
+            "accent-electric": {
+              "label": "accent-electric",
+              "dark": "#FFC8E8"
+            },
+            "success": {
+              "label": "success",
+              "dark": "#C7E3C7"
+            },
+            "danger": {
+              "label": "danger",
+              "dark": "#FFB8B8"
+            },
+            "warning": {
+              "label": "warning",
+              "dark": "#FFF4B8"
+            },
+            "info": {
+              "label": "info",
+              "dark": "#B8D4E3"
+            },
+            "magic": {
+              "label": "magic",
+              "dark": "#D1B8FF"
+            }
+          },
+          "colors": [
+            "#1E1A18",
+            "#2A2420",
+            "#343028",
+            "#3A3028",
+            "#4A4038",
+            "#5A5048",
+            "#443C34",
+            "#FFF8F0",
+            "#C8C0B8",
+            "#8A8278",
+            "#FFB8D1",
+            "#FFB8E1",
+            "#FFC8E8",
+            "#C7E3C7",
+            "#FFB8B8",
+            "#FFF4B8",
+            "#B8D4E3",
+            "#D1B8FF"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "file": "gremlin-theme-vibe-marshmallow-dark-electric-candy-land.json",
+          "label": "Gremlin Dark - Vibe Marshmallow Candy Land",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vibe-marshmallow-dark-infused-high-s-mores.json",
+          "label": "Gremlin Dark - Vibe Marshmallow S'mores",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vibe-marshmallow-dark-medium-vibrant-midnight-snack.json",
+          "label": "Gremlin Dark - Vibe Marshmallow Midnight Snack",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vibe-marshmallow-dark-subdued-cocoa.json",
+          "label": "Gremlin Dark - Vibe Marshmallow Cocoa",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vibe-marshmallow-dark.json",
+          "label": "Gremlin Dark - Vibe Marshmallow",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "vibe-marshmallow-light",
+      "name": "Vibe Marshmallow Light",
+      "category": "Playful and Candy",
+      "representative": "gremlin-theme-vibe-marshmallow-light.json",
+      "modes": [
+        "light"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#FFF1E1",
+        "#410B26",
+        "#FFFCF8",
+        "#FFF4E8",
+        "#FFC88A",
+        "#FF99CC",
+        "#C7E3C7",
+        "#B8D4E3",
+        "#FFB8D1",
+        "#FFF4B8",
+        "#FFD4B8",
+        "#D4E8D4"
+      ],
+      "mappedReferences": [
+        {
+          "id": "coderank-vibe-marshmallow-light",
+          "name": "Vibe Marshmallow Light",
+          "mapsTo": "vibe-marshmallow-light",
+          "category": "Playful and Candy",
+          "mode": "light",
+          "character": "Sweet pastel breakfast",
+          "sourceId": "coderank-theme-specs",
+          "roles": {
+            "void": {
+              "label": "void",
+              "light": "#FFFFFF"
+            },
+            "background": {
+              "label": "background",
+              "light": "#FFF8F0"
+            },
+            "surface": {
+              "label": "surface",
+              "light": "#FFFCF8"
+            },
+            "elevated": {
+              "label": "elevated",
+              "light": "#FFF0E8"
+            },
+            "hover": {
+              "label": "hover",
+              "light": "#FFE8E0"
+            },
+            "border": {
+              "label": "border",
+              "light": "#FFD0E8"
+            },
+            "border-subtle": {
+              "label": "border-subtle",
+              "light": "#FFE0F0"
+            },
+            "foreground": {
+              "label": "foreground",
+              "light": "#2A2420"
+            },
+            "muted": {
+              "label": "muted",
+              "light": "#5A5048"
+            },
+            "subtle": {
+              "label": "subtle",
+              "light": "#8A8078"
+            },
+            "accent": {
+              "label": "accent",
+              "light": "#E890B8"
+            },
+            "accent-bright": {
+              "label": "accent-bright",
+              "light": "#F0A0C8"
+            },
+            "accent-electric": {
+              "label": "accent-electric",
+              "light": "#F8B0D8"
+            },
+            "success": {
+              "label": "success",
+              "light": "#68A868"
+            },
+            "danger": {
+              "label": "danger",
+              "light": "#C87878"
+            },
+            "warning": {
+              "label": "warning",
+              "light": "#B8A050"
+            },
+            "info": {
+              "label": "info",
+              "light": "#6888A8"
+            },
+            "magic": {
+              "label": "magic",
+              "light": "#9878B8"
+            }
+          },
+          "colors": [
+            "#FFFFFF",
+            "#FFF8F0",
+            "#FFFCF8",
+            "#FFF0E8",
+            "#FFE8E0",
+            "#FFD0E8",
+            "#FFE0F0",
+            "#2A2420",
+            "#5A5048",
+            "#8A8078",
+            "#E890B8",
+            "#F0A0C8",
+            "#F8B0D8",
+            "#68A868",
+            "#C87878",
+            "#B8A050",
+            "#6888A8",
+            "#9878B8"
+          ]
+        },
+        {
+          "id": "marshmallow-cereal-reference",
+          "name": "Marshmallow Cereal",
+          "mapsTo": "vibe-marshmallow-light",
+          "category": "Playful and Candy",
+          "mode": "light-and-dark",
+          "character": "Marshmallow Cereal product palette",
+          "sourceId": "coderank-new-themes",
+          "roles": {
+            "--color-background": {
+              "label": "Background",
+              "dark": "#2A1E2C",
+              "light": "#FDF8F0"
+            },
+            "--color-yellow": {
+              "label": "CodeRank",
+              "dark": "#FF6EB4",
+              "light": "#E0007A"
+            },
+            "--color-purple": {
+              "label": "Tastemaker",
+              "dark": "#9B59FF",
+              "light": "#6B00CC"
+            },
+            "--color-blue": {
+              "label": "Influence",
+              "dark": "#33C3FF",
+              "light": "#0088CC"
+            },
+            "--color-green": {
+              "label": "Success/Green",
+              "dark": "#44D48A",
+              "light": "#008855"
+            },
+            "--color-magenta": {
+              "label": "Alert/Magenta",
+              "dark": "#FF3399",
+              "light": "#CC0066"
+            },
+            "--color-orange": {
+              "label": "Warm accent",
+              "dark": "#FF8C42",
+              "light": "#CC5500"
+            }
+          },
+          "colors": [
+            "#2A1E2C",
+            "#FDF8F0",
+            "#FF6EB4",
+            "#E0007A",
+            "#9B59FF",
+            "#6B00CC",
+            "#33C3FF",
+            "#0088CC",
+            "#44D48A",
+            "#008855",
+            "#FF3399",
+            "#CC0066",
+            "#FF8C42",
+            "#CC5500"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "file": "gremlin-theme-vibe-marshmallow-light-high-contrast-cartoon.json",
+          "label": "Gremlin Light - Vibe Marshmallow Cartoon",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-vibe-marshmallow-light-infused-medium-cereal-bowl.json",
+          "label": "Gremlin Light - Vibe Marshmallow Cereal Bowl",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-vibe-marshmallow-light-subdued-skim-milk.json",
+          "label": "Gremlin Light - Vibe Marshmallow Skim Milk",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-vibe-marshmallow-light-vibrant-sugar-rush.json",
+          "label": "Gremlin Light - Vibe Marshmallow Sugar Rush",
+          "mode": "light"
+        },
+        {
+          "file": "gremlin-theme-vibe-marshmallow-light.json",
+          "label": "Gremlin Light - Vibe Marshmallow",
+          "mode": "light"
+        }
+      ]
+    },
+    {
+      "slug": "vibe-moonlight-dark",
+      "name": "Vibe Moonlight Dark",
+      "category": "Cosmic and Mystical",
+      "representative": "gremlin-theme-vibe-moonlight-dark.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 6,
+      "swatches": [
+        "#0D1322",
+        "#E0E8FF",
+        "#0C1426",
+        "#121A2C",
+        "#2A4174",
+        "#6EDEE8",
+        "#4EE89E",
+        "#5E9EFF",
+        "#FF6E9E",
+        "#FFE86E",
+        "#FF9E5E",
+        "#6EF8BE"
+      ],
+      "mappedReferences": [
+        {
+          "id": "coderank-vibe-moonlight",
+          "name": "Vibe Moonlight",
+          "mapsTo": "vibe-moonlight-dark",
+          "category": "Cosmic and Mystical",
+          "mode": "dark",
+          "character": "Cosmic night sky exploration",
+          "sourceId": "coderank-theme-specs",
+          "roles": {
+            "void": {
+              "label": "void",
+              "dark": "#080E1A"
+            },
+            "background": {
+              "label": "background",
+              "dark": "#0F1729"
+            },
+            "surface": {
+              "label": "surface",
+              "dark": "#182035"
+            },
+            "elevated": {
+              "label": "elevated",
+              "dark": "#1A2340"
+            },
+            "hover": {
+              "label": "hover",
+              "dark": "#2A3550"
+            },
+            "border": {
+              "label": "border",
+              "dark": "#3A4560"
+            },
+            "border-subtle": {
+              "label": "border-subtle",
+              "dark": "#283148"
+            },
+            "foreground": {
+              "label": "foreground",
+              "dark": "#E0E8F0"
+            },
+            "muted": {
+              "label": "muted",
+              "dark": "#8E9EAE"
+            },
+            "subtle": {
+              "label": "subtle",
+              "dark": "#5A6A7A"
+            },
+            "accent": {
+              "label": "accent",
+              "dark": "#6EDEE8"
+            },
+            "accent-bright": {
+              "label": "accent-bright",
+              "dark": "#8EE8F0"
+            },
+            "accent-electric": {
+              "label": "accent-electric",
+              "dark": "#AEF0F8"
+            },
+            "success": {
+              "label": "success",
+              "dark": "#4EE89E"
+            },
+            "danger": {
+              "label": "danger",
+              "dark": "#FF6E6E"
+            },
+            "warning": {
+              "label": "warning",
+              "dark": "#FFE86E"
+            },
+            "info": {
+              "label": "info",
+              "dark": "#5E9EFF"
+            },
+            "magic": {
+              "label": "magic",
+              "dark": "#9E6EFF"
+            }
+          },
+          "colors": [
+            "#080E1A",
+            "#0F1729",
+            "#182035",
+            "#1A2340",
+            "#2A3550",
+            "#3A4560",
+            "#283148",
+            "#E0E8F0",
+            "#8E9EAE",
+            "#5A6A7A",
+            "#6EDEE8",
+            "#8EE8F0",
+            "#AEF0F8",
+            "#4EE89E",
+            "#FF6E6E",
+            "#FFE86E",
+            "#5E9EFF",
+            "#9E6EFF"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "file": "gremlin-theme-vibe-moonlight-dark-electric-supernova.json",
+          "label": "Gremlin Dark - Vibe Moonlight Supernova",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vibe-moonlight-dark-extreme-contrast-void.json",
+          "label": "Gremlin Dark - Vibe Moonlight Void",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vibe-moonlight-dark-high-vibrant-cosmos.json",
+          "label": "Gremlin Dark - Vibe Moonlight Cosmos",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vibe-moonlight-dark-infused-medium-nebula.json",
+          "label": "Gremlin Dark - Vibe Moonlight Nebula",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vibe-moonlight-dark-vibrant-aurora.json",
+          "label": "Gremlin Dark - Vibe Moonlight Aurora",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-vibe-moonlight-dark.json",
+          "label": "Gremlin Dark - Vibe Moonlight",
+          "mode": "dark"
+        }
+      ]
+    },
+    {
+      "slug": "void-protocol",
+      "name": "Void Protocol",
+      "category": "Core Mischief",
+      "representative": "gremlin-theme-void-protocol.json",
+      "modes": [
+        "dark"
+      ],
+      "variantCount": 5,
+      "swatches": [
+        "#000000",
+        "#F0F0F0",
+        "#030303",
+        "#050505",
+        "#333333",
+        "#00FF80",
+        "#0080FF",
+        "#FF0080",
+        "#FFD600",
+        "#FF8000",
+        "#33FF99",
+        "#D6D6D6"
+      ],
+      "mappedReferences": [
+        {
+          "id": "coderank-default-void",
+          "name": "Default (Void)",
+          "mapsTo": "void-protocol",
+          "category": "Core Mischief",
+          "mode": "dark",
+          "character": "Deep void with electric green accents",
+          "sourceId": "coderank-theme-specs",
+          "roles": {
+            "void": {
+              "label": "void",
+              "dark": "#000000"
+            },
+            "background": {
+              "label": "background",
+              "dark": "#0A0A0A"
+            },
+            "surface": {
+              "label": "surface",
+              "dark": "#111111"
+            },
+            "elevated": {
+              "label": "elevated",
+              "dark": "#1A1A1A"
+            },
+            "hover": {
+              "label": "hover",
+              "dark": "#222222"
+            },
+            "border": {
+              "label": "border",
+              "dark": "#2A2A2A"
+            },
+            "border-subtle": {
+              "label": "border-subtle",
+              "dark": "#1F1F1F"
+            },
+            "foreground": {
+              "label": "foreground",
+              "dark": "#FAFAFA"
+            },
+            "muted": {
+              "label": "muted",
+              "dark": "#888888"
+            },
+            "subtle": {
+              "label": "subtle",
+              "dark": "#555555"
+            },
+            "accent": {
+              "label": "accent",
+              "dark": "#1FCC00"
+            },
+            "accent-bright": {
+              "label": "accent-bright",
+              "dark": "#4AFF33"
+            },
+            "accent-electric": {
+              "label": "accent-electric",
+              "dark": "#80FF66"
+            },
+            "success": {
+              "label": "success",
+              "dark": "#1FCC00"
+            },
+            "danger": {
+              "label": "danger",
+              "dark": "#FF4444"
+            },
+            "warning": {
+              "label": "warning",
+              "dark": "#FFDD00"
+            },
+            "info": {
+              "label": "info",
+              "dark": "#00D4FF"
+            },
+            "magic": {
+              "label": "magic",
+              "dark": "#8B5CF6"
+            }
+          },
+          "colors": [
+            "#000000",
+            "#0A0A0A",
+            "#111111",
+            "#1A1A1A",
+            "#222222",
+            "#2A2A2A",
+            "#1F1F1F",
+            "#FAFAFA",
+            "#888888",
+            "#555555",
+            "#1FCC00",
+            "#4AFF33",
+            "#80FF66",
+            "#FF4444",
+            "#FFDD00",
+            "#00D4FF",
+            "#8B5CF6"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "file": "gremlin-theme-void-protocol-electric-radiation.json",
+          "label": "Gremlin Dark - Void Protocol Radiation",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-void-protocol-extreme-contrast-singularity.json",
+          "label": "Gremlin Dark - Void Protocol Singularity",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-void-protocol-extreme-electric-event-horizon.json",
+          "label": "Gremlin Dark - Void Protocol Event Horizon",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-void-protocol-infused-high-contamination.json",
+          "label": "Gremlin Dark - Void Protocol Contamination",
+          "mode": "dark"
+        },
+        {
+          "file": "gremlin-theme-void-protocol.json",
+          "label": "Gremlin Dark - Void Protocol",
+          "mode": "dark"
+        }
+      ]
+    }
+  ]
+}

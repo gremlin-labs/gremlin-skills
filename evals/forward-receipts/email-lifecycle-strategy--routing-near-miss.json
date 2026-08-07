@@ -1,0 +1,28 @@
+{
+  "artifacts": [],
+  "case_id": "email-lifecycle-strategy--routing-near-miss",
+  "context_sources": [
+    "fixture-repository",
+    "installed-skill",
+    "user-prompt"
+  ],
+  "evidence": [
+    "invocation=implicit",
+    "selected_skill=email-lifecycle-audit",
+    "response_sha256=647611f852512e510bd399dd4c695c956f89a16c628e2da8ee3ed760238651bc",
+    "process_exit_code=0",
+    "payload_sha256=3499e4f6850b9b52191a24f90ca14f2c10c84a03589450ecbb8f34701a799dcc",
+    "plan_sha256=dc487a6d5aef436dca56a08420e9b01bd537c11fa459bb066367567f49dccbb3",
+    "harness_sha256=9a06970430fc59bfdb3485ac37de590bc5668c1f864813a246bacdb6cd004068"
+  ],
+  "fresh_context": true,
+  "host": "codex-cli 0.146.0",
+  "model": "gpt-5.6-terra",
+  "notes": "",
+  "result": "PASS",
+  "reviewed_by": "forward-routing-harness-v1",
+  "run_id": "c4ca2264-fec8-41c9-af20-5956896c23ec",
+  "schema_version": 1,
+  "skill": "email-lifecycle-strategy",
+  "started_at": "2026-08-07T01:16:52Z"
+}

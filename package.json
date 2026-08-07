@@ -1,0 +1,25 @@
+{
+  "name": "gremlin-skills",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A very particular set of agent skills for planning, designing, testing, and shipping software.",
+  "license": "MIT",
+  "author": {
+    "name": "E.J. Coughlin",
+    "email": "ej@gremlinlabs.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gremlin-labs/gremlin-skills.git"
+  },
+  "homepage": "https://github.com/gremlin-labs/gremlin-skills#readme",
+  "scripts": {
+    "test": "python3 scripts/run_validation.py",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "version:check": "node scripts/sync-plugin-version.mjs --check"
+  },
+  "devDependencies": {
+    "@changesets/cli": "2.31.1"
+  }
+}

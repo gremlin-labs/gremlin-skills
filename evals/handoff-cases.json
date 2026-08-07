@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "documentation-audit-approved-cleanup",
+      "producer_skill": "documentation-audit",
+      "input_kind": "handoff",
+      "prompt": "Execute an unchanged approved documentation cleanup with parent-child moves, archives, and link rewrites.",
+      "approval_status": "APPROVED",
+      "expected_state": "READY",
+      "expected_action": "Preserve catalog evidence and execute reversible slices at the resolved parent root without reclassifying unchanged files.",
+      "failure_if": ["Goalpro writes internal work into a workspace child", "Goalpro deletes documents before replacement and backlink verification"]
+    },
+    {
+      "id": "approved-ready",
+      "producer_skill": "planpro",
+      "input_kind": "handoff",
+      "prompt": "Execute this unchanged approved Planpro handoff.",
+      "approval_status": "APPROVED",
+      "expected_state": "READY",
+      "expected_action": "Create criteria with source and approval provenance, then begin without repeating full approval.",
+      "failure_if": ["Goalpro asks the user to approve unchanged criteria again", "Goalpro skips handoff validation"]
+    },
+    {
+      "id": "discoverable-delta",
+      "producer_skill": "audit-compare",
+      "input_kind": "handoff",
+      "prompt": "Execute an approved handoff whose package-manager command was omitted but is unambiguous in the repository.",
+      "approval_status": "APPROVED",
+      "expected_state": "READY",
+      "expected_action": "Discover and cite the command without another user round because scope and risk do not change.",
+      "failure_if": ["A formatting omission causes redundant approval", "The command is guessed instead of discovered"]
+    },
+    {
+      "id": "material-ambiguity",
+      "producer_skill": "stripe-audit",
+      "input_kind": "handoff",
+      "prompt": "Execute an approved Stripe handoff, but a new destructive production backfill is now required.",
+      "approval_status": "APPROVED",
+      "expected_state": "NEEDS DELTA CONFIRMATION",
+      "expected_action": "Show only the new destructive backfill, risk, rollback, and authority delta; ask one focused question before mutation.",
+      "failure_if": ["Goalpro treats old approval as authority for the new production mutation", "Goalpro repeats unrelated approved criteria"]
+    },
+    {
+      "id": "designpro-approved-theme-handoff",
+      "producer_skill": "designpro",
+      "input_kind": "handoff",
+      "prompt": "Execute an unchanged approved Designpro handoff covering token migration, three themes, lint rules, documentation, and visual gates.",
+      "approval_status": "APPROVED",
+      "expected_state": "READY",
+      "expected_action": "Create criteria linked to the audit matrices and begin the ordered reversible slices without re-auditing or re-confirming unchanged theme decisions.",
+      "failure_if": ["Goalpro discards the design evidence and invents a new aesthetic", "Goalpro enables blocking lint before the approved staged violations are migrated", "Goalpro asks for full approval again"]
+    },
+    {
+      "id": "workspacepro-approved-control-plane-handoff",
+      "producer_skill": "workspacepro",
+      "input_kind": "handoff",
+      "prompt": "Execute an unchanged approved Workspacepro handoff that introduces a shadow manifest, validates one dependency chain, and then migrates remaining project groups.",
+      "approval_status": "APPROVED",
+      "expected_state": "READY",
+      "expected_action": "Create criteria linked to the workspace inventory and begin reversible slices without re-auditing or mutating dirty child repositories outside the approved plan.",
+      "failure_if": ["Goalpro moves every repository before the shadow manifest is proven", "Goalpro treats audit approval as authority to create remotes or push commits", "Goalpro repeats full approval"]
+    },
+    {
+      "id": "raw-goal",
+      "producer_skill": "goalpro",
+      "input_kind": "raw-goal",
+      "prompt": "Improve reliability across the application.",
+      "approval_status": "NOT APPLICABLE",
+      "expected_state": "FULL CRITERIA CONFIRMATION",
+      "expected_action": "Investigate enough to draft complete criteria and request explicit approval before implementation.",
+      "failure_if": ["Goalpro mutates source before criteria approval"]
+    },
+    {
+      "id": "existing-goal",
+      "producer_skill": "goalpro",
+      "input_kind": "existing-goal",
+      "prompt": "Resume an interrupted handoff whose agent-work/{slug}/goalpro/ folder already contains progress.",
+      "approval_status": "APPROVED",
+      "expected_state": "RESUME OR RECONCILE",
+      "expected_action": "Compare sources and progress, resume the same goal or expose a material delta, and never overwrite or suffix silently.",
+      "failure_if": ["Existing progress is overwritten", "A new slug is invented without resolving the conflict"]
+    },
+    {
+      "id": "design-direction-approved-handoff",
+      "producer_skill": "design-direction",
+      "input_kind": "handoff",
+      "prompt": "Execute an unchanged approved visual direction whose feature scope, semantic system map, themes, and acceptance criteria are concrete.",
+      "approval_status": "APPROVED",
+      "expected_state": "READY",
+      "expected_action": "Preserve the selected direction and rejected alternatives, then implement semantic roles and vertical slices without re-opening visual selection.",
+      "failure_if": ["Goalpro invents a fourth direction", "Components branch on theme names", "Unchanged direction is sent back for full approval"]
+    },
+    {
+      "id": "motion-audit-approved-handoff",
+      "producer_skill": "motion-audit",
+      "input_kind": "handoff",
+      "prompt": "Execute an unchanged approved motion-system remediation with token, component, reduced-motion, performance, and perceptual gates.",
+      "approval_status": "APPROVED",
+      "expected_state": "READY",
+      "expected_action": "Implement ordered motion-system slices and verify rapid input, representative load, accessibility, and perceptual criteria without re-auditing.",
+      "failure_if": ["Goalpro treats scanner candidates as proven defects", "Feel checks and reduced motion are omitted", "Motion values bypass system roles"]
+    },
+    {
+      "id": "motion-direction-approved-handoff",
+      "producer_skill": "motion-direction",
+      "input_kind": "handoff",
+      "prompt": "Execute the approved Motion Direction Studio revision and animation policy using verified public TurbulenceJS capabilities and the specified rollout.",
+      "approval_status": "APPROVED",
+      "expected_state": "READY",
+      "expected_action": "Preserve the selected motion language, semantic roles, delight tiers, reduced endpoints, lifecycle ownership, and component matrix while implementing ordered vertical slices.",
+      "failure_if": ["Goalpro reopens direction selection", "Preview simulation is treated as exact runtime proof", "Signature behavior spreads beyond approved rare triggers", "Public capability gaps turn into TurbulenceJS maintainer instructions"]
+    },
+    {
+      "id": "email-lifecycle-strategy-approved-handoff",
+      "producer_skill": "email-lifecycle-strategy",
+      "input_kind": "handoff",
+      "prompt": "Execute the unchanged approved Email Lifecycle Strategy preview revision whose product events, lifecycle states, campaigns, copy, consent, deliverability, measurement, rollout, external actions, and project gates are concrete.",
+      "approval_status": "APPROVED",
+      "expected_state": "READY",
+      "expected_action": "Preserve the selected lifecycle logic, campaign arbitration, protected message meaning, EML traceability, consent and deliverability boundaries, measurement design, and approval scope while implementing reversible vertical slices and keeping manual external actions explicit.",
+      "failure_if": ["Goalpro reopens strategy selection","Preview decisions are treated as observed production or inbox behavior","Campaigns send or provider and DNS state change beyond approved authority","Consent classification sender reply expectations or suppression rules drift","The implementation drops duplicate late-event accessibility rendering holdout or rollback criteria"]
+    },
+    {
+      "id": "onboarding-direction-approved-handoff",
+      "producer_skill": "onboarding-direction",
+      "input_kind": "handoff",
+      "prompt": "Execute the unchanged approved Onboarding Direction preview revision whose web and mobile flows, auth and permission timing, copy, measurement, rollout, and project gates are concrete.",
+      "approval_status": "APPROVED",
+      "expected_state": "READY",
+      "expected_action": "Preserve the selected activation path, platform differences, strengths, finding traceability, protected copy meaning, and approval boundary while implementing reversible vertical slices.",
+      "failure_if": ["Goalpro reopens direction selection", "Preview timing is treated as measured production behavior", "Authentication, permissions, data collection, or notification behavior changes beyond approval", "The implementation drops interruption, recovery, accessibility, or measurement criteria"]
+    }
+  ]
+}

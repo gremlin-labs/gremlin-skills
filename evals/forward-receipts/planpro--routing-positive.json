@@ -1,0 +1,28 @@
+{
+  "artifacts": [],
+  "case_id": "planpro--routing-positive",
+  "context_sources": [
+    "fixture-repository",
+    "installed-skill",
+    "user-prompt"
+  ],
+  "evidence": [
+    "invocation=implicit",
+    "selected_skill=planpro",
+    "response_sha256=8e8e70bd7812ce2e8223a7a2abcb827e237b91b193189318ecf4a4d2ee32d095",
+    "process_exit_code=0",
+    "payload_sha256=3499e4f6850b9b52191a24f90ca14f2c10c84a03589450ecbb8f34701a799dcc",
+    "plan_sha256=dc487a6d5aef436dca56a08420e9b01bd537c11fa459bb066367567f49dccbb3",
+    "harness_sha256=9a06970430fc59bfdb3485ac37de590bc5668c1f864813a246bacdb6cd004068"
+  ],
+  "fresh_context": true,
+  "host": "codex-cli 0.146.0",
+  "model": "gpt-5.6-terra",
+  "notes": "",
+  "result": "PASS",
+  "reviewed_by": "forward-routing-harness-v1",
+  "run_id": "76ec2cc0-f075-4f55-93aa-a27de161437a",
+  "schema_version": 1,
+  "skill": "planpro",
+  "started_at": "2026-08-07T01:17:28Z"
+}

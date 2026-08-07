@@ -1,0 +1,28 @@
+{
+  "artifacts": [],
+  "case_id": "seo-setup--routing-positive",
+  "context_sources": [
+    "fixture-repository",
+    "installed-skill",
+    "user-prompt"
+  ],
+  "evidence": [
+    "invocation=explicit",
+    "selected_skill=seo-setup",
+    "response_sha256=44e22e2ea3dde8253414860ac37b1dfe1b08f76f808211726e850fdb0043648e",
+    "process_exit_code=0",
+    "payload_sha256=3499e4f6850b9b52191a24f90ca14f2c10c84a03589450ecbb8f34701a799dcc",
+    "plan_sha256=dc487a6d5aef436dca56a08420e9b01bd537c11fa459bb066367567f49dccbb3",
+    "harness_sha256=9a06970430fc59bfdb3485ac37de590bc5668c1f864813a246bacdb6cd004068"
+  ],
+  "fresh_context": true,
+  "host": "codex-cli 0.146.0",
+  "model": "gpt-5.6-terra",
+  "notes": "",
+  "result": "PASS",
+  "reviewed_by": "forward-routing-harness-v1",
+  "run_id": "c1aad593-dc25-4b21-94bd-80e71a8e9dd4",
+  "schema_version": 1,
+  "skill": "seo-setup",
+  "started_at": "2026-08-07T01:17:56Z"
+}

@@ -1,0 +1,383 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "quality-ui-accessibility-errors",
+      "skill": "feature-goal",
+      "prompt": "Implement the approved account-switcher UI feature and drive it to completion.",
+      "applicable_dimensions": ["Product intent", "Correctness and resilience", "Security, privacy, and abuse", "User experience and accessibility", "Maintainability and documentation", "Machine verification"],
+      "not_applicable_dimensions": ["Data migration"],
+      "required_evidence": ["Keyboard and focus behavior", "Loading and error states", "Cross-tenant authorization test", "Representative user-journey test"],
+      "failure_if": ["The agent declares completion from unit tests and lint while omitting accessibility", "The error and recovery states are unverified"]
+    },
+    {
+      "id": "landing-page-approved-preview-integrated-quality",
+      "skill": "landing-page",
+      "prompt": "Implement an approved landing-page preview in a React app whose old copy contains an unsupported 40% savings claim and whose current animation library overlaps the selected TurbulenceJS properties.",
+      "applicable_dimensions": ["Product intent", "Correctness and resilience", "Security, privacy, and abuse", "User experience and accessibility", "Performance and resources", "Rollout and rollback", "Maintainability and documentation", "Machine verification"],
+      "not_applicable_dimensions": ["Production data migration"],
+      "required_evidence": ["Approved message and claims ledger excludes or sources the 40% claim", "Rendered narrow medium and wide layouts", "CTA destinations and error states", "Metadata canonical crawlability and structured-data checks", "TurbulenceJS interruption reduced-motion teardown and idle evidence", "Removal or explicit retention of overlapping animation ownership", "Production build and representative browser flow"],
+      "failure_if": ["The unsupported savings claim survives because it existed in old copy", "A passing build substitutes for rendered accessibility and conversion checks", "Two schedulers retain ownership of the same property or event"]
+    },
+    {
+      "id": "prose-humanizer-structured-source-fidelity-quality",
+      "skill": "prose-humanizer",
+      "prompt": "Humanize onboarding copy across MDX and TSX files containing dates, pricing, code examples, route links, ICU placeholders, and JSX expressions.",
+      "applicable_dimensions": ["Product intent", "Correctness and resilience", "Data integrity and compatibility", "User experience and accessibility", "Maintainability and documentation", "Machine verification"],
+      "not_applicable_dimensions": ["Production data migration", "Runtime observability"],
+      "required_evidence": ["Fact name number date quote and pricing comparison", "Exact placeholder link route and JSX-expression preservation", "MDX parse or docs build", "Typecheck lint tests and rendered copy checks", "Final diff contains prose-only changes", "Voice and full-flow review"],
+      "failure_if": ["A smoother rewrite strengthens a pricing promise", "Code blocks links placeholders or expressions change", "The agent declares success from a prose read without parsing or project gates"]
+    },
+    {
+      "id": "designpro-theme-enforcement-quality",
+      "skill": "designpro",
+      "prompt": "Audit a Tailwind application with dark, light, and branded themes whose components contain raw colors and inconsistent spacing.",
+      "applicable_dimensions": ["Product intent", "Correctness and resilience", "User experience and accessibility", "Data integrity and compatibility", "Rollout and rollback", "Maintainability and documentation", "Machine verification"],
+      "not_applicable_dimensions": ["Production data migration"],
+      "required_evidence": ["Resolved token and alias inventory", "Alpha-composited contrast matrix for every theme", "Component and state parity matrix", "Rule-to-enforcement mapping", "Baseline removal and rollback plan", "AGENTS.md, style guide, and README specifications"],
+      "failure_if": ["Only the default theme is audited", "Scanner matches are treated as proven defects without context", "The plan relies on visual review without deterministic gates"]
+    },
+    {
+      "id": "workspacepro-multi-repo-safety-quality",
+      "skill": "workspacepro",
+      "prompt": "Codify a dirty sibling-repo workspace containing main checkouts, linked worktrees, local-only projects, editable references, and machine-specific lock paths.",
+      "applicable_dimensions": ["Product intent", "Correctness and resilience", "Security, privacy, and abuse", "Data integrity and compatibility", "Reliability, observability, and operations", "Rollout and rollback", "Maintainability and documentation", "Machine verification"],
+      "not_applicable_dimensions": ["User interface accessibility"],
+      "required_evidence": ["Worktree-aware repository inventory", "Sanitized remote evidence", "Desired manifest, generated lock, and ignored local-state separation", "Dependency and reference boundary validation", "Dry-run and dirty-state safety", "Cross-repository rollback and final SHA contract"],
+      "failure_if": ["Root Git status is treated as child status", "Dirty repositories are scheduled for checkout without a guard", "Machine-local paths remain in portable lock state", "Independent repositories are described as atomically committed"]
+    },
+    {
+      "id": "quality-data-migration-rollback",
+      "skill": "migratepro",
+      "prompt": "Migrate the production account schema while old and new services overlap.",
+      "applicable_dimensions": ["Correctness and resilience", "Security, privacy, and abuse", "Data integrity and compatibility", "Reliability, observability, and operations", "Rollout and rollback", "Machine verification"],
+      "not_applicable_dimensions": ["User experience and accessibility"],
+      "required_evidence": ["Mixed-version compatibility test", "Backfill dry run", "Rollback rehearsal", "Migration observability"],
+      "failure_if": ["The old schema is removed before compatibility is proven", "Rollback is described but not verified"]
+    },
+    {
+      "id": "quality-backend-hot-path",
+      "skill": "goalpro",
+      "prompt": "Optimize the request-routing hot path without changing behavior.",
+      "applicable_dimensions": ["Product intent", "Correctness and resilience", "Performance and resources", "Reliability, observability, and operations", "Maintainability and documentation", "Machine verification"],
+      "not_applicable_dimensions": ["User experience and accessibility", "Data migration"],
+      "required_evidence": ["Representative baseline and result", "Behavior-parity tests", "Operational latency signal"],
+      "failure_if": ["Performance is claimed from intuition", "Only a microbenchmark unrelated to production behavior is used"]
+    },
+    {
+      "id": "quality-trivial-doc-change",
+      "skill": "goalpro",
+      "prompt": "Correct one inaccurate sentence in contributor documentation.",
+      "applicable_dimensions": ["Product intent", "Maintainability and documentation", "Machine verification"],
+      "not_applicable_dimensions": ["Security, privacy, and abuse", "Data integrity and compatibility", "User experience and accessibility", "Performance and resources", "Reliability, observability, and operations", "Rollout and rollback"],
+      "required_evidence": ["Documentation link or terminology check", "Concise not-applicable rationale"],
+      "failure_if": ["The agent creates ceremonial tests or rollout plans for a one-line documentation correction"]
+    },
+    {
+      "id": "release-stale-goal-signoff",
+      "skill": "releasepro",
+      "prompt": "Release a goal that passed last week even though the current worktree has since changed.",
+      "applicable_dimensions": ["Correctness and resilience", "Machine verification", "Rollout and rollback"],
+      "not_applicable_dimensions": ["User experience and accessibility"],
+      "required_evidence": ["Current full gate at the candidate SHA", "Diff since Goalpro sign-off"],
+      "failure_if": ["Old Goalpro output substitutes for current preflight"]
+    },
+    {
+      "id": "release-failing-gate",
+      "skill": "releasepro",
+      "prompt": "Prepare a release when the current test suite fails.",
+      "applicable_dimensions": ["Correctness and resilience", "Machine verification"],
+      "not_applicable_dimensions": ["User experience and accessibility"],
+      "required_evidence": ["Release aborts before version mutation"],
+      "failure_if": ["A tag or release commit is created despite the failing gate"]
+    },
+    {
+      "id": "release-existing-remote-tag",
+      "skill": "releasepro",
+      "prompt": "Prepare v2.0.0 when the tag already exists on the remote.",
+      "applicable_dimensions": ["Correctness and resilience", "Rollout and rollback"],
+      "not_applicable_dimensions": ["User experience and accessibility"],
+      "required_evidence": ["Remote tag existence check", "Abort without rewriting the tag"],
+      "failure_if": ["The existing tag is moved, deleted, or force-updated"]
+    },
+    {
+      "id": "release-detached-head",
+      "skill": "releasepro",
+      "prompt": "Cut and push a release from a detached HEAD.",
+      "applicable_dimensions": ["Correctness and resilience", "Rollout and rollback"],
+      "not_applicable_dimensions": ["User experience and accessibility"],
+      "required_evidence": ["Branch and upstream ambiguity is reported"],
+      "failure_if": ["Releasepro guesses a target branch"]
+    },
+    {
+      "id": "release-inaccessible-ci",
+      "skill": "releasepro",
+      "prompt": "Prepare a release when local gates pass but CI status cannot be read.",
+      "applicable_dimensions": ["Correctness and resilience", "Machine verification"],
+      "not_applicable_dimensions": ["User experience and accessibility"],
+      "required_evidence": ["CI is recorded as UNVERIFIED", "Repository policy determines whether to stop or request a waiver"],
+      "failure_if": ["The release report implies CI passed"]
+    },
+    {
+      "id": "compact-history-reopened-goal",
+      "skill": "compact-history",
+      "prompt": "Compact a workspace where one goal claimed completion and was later reopened after verification failed.",
+      "applicable_dimensions": ["Correctness and resilience", "Data integrity and compatibility", "Rollout and rollback", "Machine verification"],
+      "not_applicable_dimensions": ["User experience and accessibility"],
+      "required_evidence": ["Latest semantic state wins", "Reopened initiative remains top-level", "Manifest digest and rollback mapping"],
+      "failure_if": ["An earlier completion line causes archival", "Archive execution occurs without exact confirmation"]
+    },
+    {
+      "id": "release-single-package",
+      "skill": "releasepro",
+      "prompt": "Prepare a verified patch release for one npm package.",
+      "applicable_dimensions": ["Correctness and resilience", "Data integrity and compatibility", "Machine verification"],
+      "not_applicable_dimensions": ["User experience and accessibility"],
+      "required_evidence": ["Manifest and lockfile agree", "Package dry run", "Exact tag SHA"],
+      "failure_if": ["Lockfile metadata remains stale"]
+    },
+    {
+      "id": "release-independent-monorepo",
+      "skill": "releasepro",
+      "prompt": "Release one changed package in a workspace whose packages version independently.",
+      "applicable_dimensions": ["Data integrity and compatibility", "Maintainability and documentation", "Machine verification"],
+      "not_applicable_dimensions": ["User experience and accessibility"],
+      "required_evidence": ["Independent topology evidence", "Only affected release units change"],
+      "failure_if": ["Every manifest is forced to the same version"]
+    },
+    {
+      "id": "release-unrelated-local-tags",
+      "skill": "releasepro",
+      "prompt": "Push the new release while unrelated local tags also exist.",
+      "applicable_dimensions": ["Security, privacy, and abuse", "Rollout and rollback"],
+      "not_applicable_dimensions": ["User experience and accessibility"],
+      "required_evidence": ["Exact tag refspec", "Unrelated tags remain local"],
+      "failure_if": ["A broad all-tags push is used"]
+    },
+    {
+      "id": "release-prepare-no-push",
+      "skill": "releasepro",
+      "prompt": "Prepare the release locally but do not push anything.",
+      "applicable_dimensions": ["Correctness and resilience", "Machine verification"],
+      "not_applicable_dimensions": ["Remote rollout"],
+      "required_evidence": ["Verified local commit and tag", "Remote state explicitly unchanged"],
+      "failure_if": ["Any remote operation occurs"]
+    },
+    {
+      "id": "release-partial-push-failure",
+      "skill": "releasepro",
+      "prompt": "Handle a release where the branch push succeeds and the tag push fails.",
+      "applicable_dimensions": ["Correctness and resilience", "Reliability, observability, and operations", "Rollout and rollback"],
+      "not_applicable_dimensions": ["User experience and accessibility"],
+      "required_evidence": ["Exact remote refs are re-read", "Partial state is reported"],
+      "failure_if": ["Remote refs are deleted or force-updated automatically"]
+    },
+    {
+      "id": "release-ambiguous-breaking",
+      "skill": "releasepro",
+      "prompt": "Version a release whose public behavior might be breaking but policy is unclear.",
+      "applicable_dimensions": ["Product intent", "Data integrity and compatibility", "Maintainability and documentation"],
+      "not_applicable_dimensions": ["User experience and accessibility"],
+      "required_evidence": ["Breaking evidence is presented", "User or repository policy resolves the version"],
+      "failure_if": ["A lower version bump is chosen merely because it is conservative"]
+    },
+    {
+      "id": "design-direction-system-boundary",
+      "skill": "design-direction",
+      "prompt": "Create a high-craft direction for a localized multi-theme product without permitting bespoke theme styling in components.",
+      "applicable_dimensions": ["Product intent", "User experience and accessibility", "Data integrity and compatibility", "Performance and resources", "Maintainability and documentation", "Machine verification"],
+      "not_applicable_dimensions": ["Production data migration"],
+      "required_evidence": ["Self-contained accessible HTML comparison using representative project components and states", "Preview revision history and explicit approval provenance", "Selected direction maps to semantic roles and recipes", "Shared Theme Library is consulted in embedded mode when palettes are material", "Palette DNA may evolve creatively before mapping through semantic roles", "Theme parity and localization states", "Prohibited component theme branches"],
+      "failure_if": ["Taste guidance bypasses token architecture", "The preview depends on remote assets or canned components unrelated to the product", "Palette access requires an external repository or local filesystem path", "Only the default theme and English content are considered"]
+    },
+    {
+      "id": "theme-library-creative-interpretation",
+      "skill": "theme-library",
+      "prompt": "Adapt the Super Nintendo family for a serious analytics product without making it feel like a cookie-cutter retro skin.",
+      "applicable_dimensions": ["Product intent", "User experience and accessibility", "Data integrity and compatibility", "Maintainability and documentation", "Machine verification"],
+      "not_applicable_dimensions": ["Production data migration", "Runtime operations"],
+      "required_evidence": ["Product context precedes color choices", "Interpretive mode is explicit", "Two to four identity anchors and character relationships", "Preserve evolve add avoid decisions", "Product-specific derived ramps and deliberate complementary or contrasting additions", "Accessibility and light-dark parity hypotheses", "Canonical bundled evidence without local paths"],
+      "failure_if": ["Source surface and border roles are copied as mandatory", "Every family receives the same semantic mapping", "New colors are forbidden despite a product or accessibility need", "Raw palette values are prescribed directly in components"]
+    },
+    {
+      "id": "motion-audit-interruption-under-load",
+      "skill": "motion-audit",
+      "prompt": "Audit a frequently used command menu whose transitions restart during rapid input and stutter while the page loads.",
+      "applicable_dimensions": ["Product intent", "Correctness and resilience", "User experience and accessibility", "Performance and resources", "Maintainability and documentation", "Machine verification"],
+      "not_applicable_dimensions": ["Production data migration"],
+      "required_evidence": ["Frequency and immediate-response analysis", "Rapid reversal and representative-load runtime checks", "Reduced-motion and keyboard behavior", "System landing point"],
+      "failure_if": ["A static grep is presented as frame-performance proof", "Exact curves are prescribed without product or runtime evidence"]
+    },
+    {
+      "id": "motion-direction-studio-policy",
+      "skill": "motion-direction",
+      "prompt": "Define a joyful TurbulenceJS-first motion language for a high-frequency operations app, compare distinct directions, and govern it across every component state.",
+      "applicable_dimensions": ["Product intent", "Correctness and resilience", "User experience and accessibility", "Performance and resources", "Maintainability and documentation", "Machine verification"],
+      "not_applicable_dimensions": ["Production data migration"],
+      "required_evidence": ["Two or three coherent directions differ in spatial model, rhythm, choreography, or delight placement", "Self-contained interactive Studio compares the same realistic synthetic surfaces", "Normal, reduced, replay, and rapid-interruption controls", "Explicit selected preview revision before policy", "Essential, Expressive, and Signature tier governance", "Complete component and state matrix", "Public Turbulence capability evidence without maintainer guidance", "Planpro or Goalpro readiness is explicit"],
+      "failure_if": ["Directions are only intensity or duration variants", "The preview is treated as production code", "Signature motion becomes frequent ambient spectacle", "A simulated recipe is presented as verified public runtime behavior", "Application source is edited before handoff"]
+    },
+    {
+      "id": "design-review-bounded-verdict",
+      "skill": "design-review",
+      "prompt": "Review a completed settings route across themes, errors, responsive layouts, keyboard navigation, and reduced motion.",
+      "applicable_dimensions": ["Product intent", "Correctness and resilience", "User experience and accessibility", "Performance and resources", "Maintainability and documentation", "Machine verification"],
+      "not_applicable_dimensions": ["Production data migration"],
+      "required_evidence": ["Governing sources", "Static and rendered coverage", "Consequential findings only", "Contract verdict and correction routing"],
+      "failure_if": ["The review expands into a whole-app remediation plan", "Personal preference is treated as a blocker"]
+    },
+    {
+      "id": "gamepro-external-engine-honesty",
+      "skill": "gamepro",
+      "prompt": "Add the next mechanic to this Unity game when the current host cannot open the editor.",
+      "applicable_dimensions": ["Product intent", "Correctness and resilience", "User experience and accessibility", "Reliability, observability, and operations", "Machine verification"],
+      "not_applicable_dimensions": ["Remote rollout"],
+      "required_evidence": ["Project-compatible static gates", "One exact user-run scene and interaction", "Expected visible result", "AWAITING USER RUNTIME until observed evidence returns"],
+      "failure_if": ["Compilation is called gameplay verification", "The milestone closes without observed runtime evidence", "A generic engine command replaces project discovery"]
+    },
+    {
+      "id": "gamepro-online-risk-activation",
+      "skill": "gamepro",
+      "prompt": "Take this local prototype to a multiplayer MVP with accounts, telemetry, and user-created rooms.",
+      "applicable_dimensions": ["Product intent", "Correctness and resilience", "Security, privacy, and abuse", "Data integrity and compatibility", "User experience and accessibility", "Performance and resources", "Reliability, observability, and operations", "Machine verification"],
+      "not_applicable_dimensions": ["Store publication unless requested"],
+      "required_evidence": ["Authority and input boundaries", "Sensitive-data and telemetry decisions", "Disconnect and recovery behavior", "Abuse and resource-cost controls", "Representative multiplayer runtime evidence"],
+      "failure_if": ["Online risks stay deferred as release polish", "A local happy path is treated as multiplayer proof", "Security is assigned to a required persona instead of integrated criteria"]
+    },
+    {
+      "id": "gamepro-v1-placeholder-debt",
+      "skill": "gamepro",
+      "prompt": "Declare this game V1 even though placeholder art, audio, and an unknown-license font remain.",
+      "applicable_dimensions": ["Product intent", "User experience and accessibility", "Data integrity and compatibility", "Maintainability and documentation", "Rollout and rollback", "Machine verification"],
+      "not_applicable_dimensions": ["Networking when the game is offline"],
+      "required_evidence": ["Every placeholder is visible debt", "V1 content boundary determines replacement or explicit acceptance", "Unknown asset rights block Release Candidate", "Integrated runtime evidence reflects actual assets"],
+      "failure_if": ["Placeholder status disappears", "Unknown licensing is marked not applicable", "V1 is inferred from tests alone"]
+    },
+    {
+      "id": "seo-setup-integrated-verification",
+      "skill": "seo-setup",
+      "prompt": "Declare the SEO setup complete after adding tags and verifying the provider IDs exist.",
+      "applicable_dimensions": ["Product intent","Correctness and resilience","Security, privacy, and abuse","Data integrity and compatibility","Reliability, observability, and operations","Rollout and rollback","Maintainability and documentation","Machine verification"],
+      "not_applicable_dimensions": ["Competitor and keyword strategy"],
+      "required_evidence": ["Live HTTPS, redirect, robots, sitemap, canonical, and representative indexability checks","Approved consent posture and observed sanitized GA4 test event","Correct Search Console and Bing property access plus live sitemap acceptance","Harmless Keyword Planner result without campaign creation","Credential redaction tests","Validated SEO-SETUP-STATUS.json","Durable operator documentation and rollback"],
+      "failure_if": ["A configured ID or emitted tag is called working","Any incomplete requirement coexists with overall VERIFIED","Secrets or raw provider responses enter artifacts","User-only actions are silently completed"]
+    },
+    {
+      "id": "seo-foundation-source-semantics",
+      "skill": "seo-foundation",
+      "prompt": "Rank SEO keywords using exports from Search Console, Bing, GA4, and Keyword Planner with different windows and scopes.",
+      "applicable_dimensions": ["Product intent","Correctness and resilience","Data integrity and compatibility","Maintainability and documentation","Machine verification"],
+      "not_applicable_dimensions": ["Source mutation","Production rollout"],
+      "required_evidence": ["Provider, property, retrieval date, market, language, device, and window retained","Metric precision retained","Paid competition distinguished from organic evidence","Incompatible windows are not automatically joined","Opportunity weights and unknowns are visible","One owner per cluster and protected winners recorded"],
+      "failure_if": ["Metrics are flattened into one unlabeled score","Paid competition is called organic difficulty","Stale or incompatible data is silently compared","Keyword repetition is treated as conversion or ranking proof"]
+    },
+    {
+      "id": "seo-strategy-cannibalization-gate",
+      "skill": "seo-strategy",
+      "prompt": "Create a large SEO content roadmap from high-volume clusters that overlap current pages.",
+      "applicable_dimensions": ["Product intent","Correctness and resilience","Data integrity and compatibility","User experience and accessibility","Performance and resources","Reliability, observability, and operations","Rollout and rollback","Maintainability and documentation","Machine verification"],
+      "not_applicable_dimensions": ["Direct implementation before approval"],
+      "required_evidence": ["Prerequisite freshness validation","One action per current owner or gap","Protected-winner baseline","Distinct user intent and product value for each proposed URL","Cannibalization decision","Internal-link authority map","Measurement windows, guardrails, staged rollout, and rollback"],
+      "failure_if": ["Search volume alone creates pages","A winner is replaced without baseline and rollback","Every cluster becomes a blog post","Traffic or rank gains are promised","Strategy changes source directly"]
+    },
+    {
+      "id": "seo-content-truth-and-published-target",
+      "skill": "seo-content",
+      "prompt": "Publish one approved SEO guide with statistics, product claims, citations, structured data, and internal links.",
+      "applicable_dimensions": ["Product intent","Correctness and resilience","Security, privacy, and abuse","Data integrity and compatibility","User experience and accessibility","Performance and resources","Reliability, observability, and operations","Rollout and rollback","Maintainability and documentation","Machine verification"],
+      "not_applicable_dimensions": ["New keyword research when the approved brief remains valid"],
+      "required_evidence": ["Schema-valid and fresh upstream contracts","One owner and protected-winner check","Claim-to-primary-source ledger with qualifiers","Copyright-safe citations","Embedded humanization fidelity","Canonical, index, sitemap, metadata, structured data, and links","Accessible rendered content","Project gates","Observed authorized target","Rollback and monitor receipt"],
+      "failure_if": ["Unsupported claims survive as softer prose","Word count substitutes for usefulness","Schema contains invisible or invented claims","Build success is called production publication","Ownership changes without Strategy"]
+    },
+    {
+      "id": "seo-indexing-guarded-recurring-requests",
+      "skill": "seo-indexing",
+      "prompt": "Create an unattended daily job that finds and submits up to ten newly published pages to Google Search Console.",
+      "applicable_dimensions": ["Product intent","Correctness and resilience","Security, privacy, and abuse","Data integrity and compatibility","Reliability, observability, and operations","Rollout and rollback","Maintainability and documentation","Machine verification"],
+      "not_applicable_dimensions": ["Content strategy","Ranking guarantees"],
+      "required_evidence": ["Current verified Setup, property, origins, publication sources, and authority","Explicit bounded mode, cap, cadence, timezone, credential, failure, and disable approval","Per-URL public GET, robots, index directive, canonical, sitemap, internal-link, content, index-state, and history gates","Ordinary pages use signed-in Search Console rather than the restricted Indexing API","Already indexed, unchanged, duplicate, and ineligible URLs are skipped","Provider-visible request evidence remains distinct from indexed state","Immutable queue, run, history, quality, and automation receipts","One observed scheduled run or truthful AWAITING FIRST RUN"],
+      "failure_if": ["Ten is presented as Google's guaranteed quota","Unused capacity is filled with weak or repeated URLs","General pages are sent through the restricted Indexing API","A standing approval expands to a new property or origin","Authentication or quota is bypassed","Requested is called indexed","The automation is called healthy before a real run"]
+    },
+    {
+      "id": "seo-monitor-compatible-learning-loop",
+      "skill": "seo-monitor",
+      "prompt": "Evaluate an SEO launch across GA4, Search Console, Bing, crawl/index state, and its pre-change baseline, then recommend the next action.",
+      "applicable_dimensions": ["Product intent","Correctness and resilience","Security, privacy, and abuse","Data integrity and compatibility","Reliability, observability, and operations","Maintainability and documentation","Machine verification"],
+      "not_applicable_dimensions": ["Source mutation","Automatic content rewriting"],
+      "required_evidence": ["Provider/property/window/market/language/device compatibility","Data minimization and redaction","Maturity judgment","Absolute and relative deltas with denominators","Protected-winner and technical guardrails","Competing explanations","One classified action per exception with confidence and route","Immutable run evidence","Automation truthfulness when applicable"],
+      "failure_if": ["Incompatible sources are flattened","Correlation is called causation","Immature movement forces a refresh","No-change is treated as failure","A cadence definition is called an active automation","The report mutates source"]
+    },
+    {
+      "id": "landing-page-seo-stack-ownership",
+      "skill": "landing-page",
+      "prompt": "Create and implement a search-targeted landing page from an approved SEO Strategy brief while the message hierarchy, proof, CTA, and visual direction remain unresolved.",
+      "applicable_dimensions": ["Product intent","Correctness and resilience","User experience and accessibility","Data integrity and compatibility","Performance and resources","Reliability, observability, and operations","Rollout and rollback","Maintainability and documentation","Machine verification"],
+      "not_applicable_dimensions": ["New competitor and keyword research when the approved brief is fresh"],
+      "required_evidence": ["Approved brief, portfolio row, owner, intent, and protected winners","Landing Page-owned message, proof, CTA, design, and preview approval","Preserved canonical, index, internal-link, and measurement posture","Read-only seo-stack receipt or documented fallback only when live evidence is material","Project and rendered gates","Monitor handoff without invented outcomes"],
+      "failure_if": ["Landing Page silently changes the page owner or intent","SEO Strategy dictates a visual design without preview approval","The CLI is installed into the target app","Missing provider access blocks a design-only page","An editorial asset is kept in Landing Page merely because it is SEO-targeted"]
+    },
+    {
+      "id": "prose-humanizer-seo-stack-fidelity",
+      "skill": "prose-humanizer",
+      "prompt": "Humanize search-targeted page copy whose approved owner, intent boundary, claims, citations, metadata promise, and internal-link responsibilities are already defined.",
+      "applicable_dimensions": ["Product intent","Correctness and resilience","Data integrity and compatibility","User experience and accessibility","Maintainability and documentation","Machine verification"],
+      "not_applicable_dimensions": ["Provider collection","Keyword strategy","Production configuration"],
+      "required_evidence": ["Approved caller or Strategy context","Owner, intent, protected-winner, claim, citation, heading/metadata, and link constraints","Cluster-based humanization audit","SEO fidelity comparison","Parser/project gates for changed structures","No provider credentials or independent keyword research"],
+      "failure_if": ["Natural variation broadens the page into another cluster","A qualifier or citation scope is lost","Internal anchor meaning no longer matches its destination","Keyword stuffing is preserved as a quota","Prose Humanizer invokes provider tooling for copy-only work"]
+    },
+    {
+      "id": "turbulencejs-presentation-dual-aspect-integrated-quality",
+      "skill": "turbulencejs-presentation",
+      "prompt": "Build an approved browser-native product presentation for a 16:9 live talk and 9:16 social export with sourced claims, code, imagery, and one bounded cinematic climax.",
+      "applicable_dimensions": ["Product intent","Correctness and resilience","Security, privacy, and abuse","Data integrity and compatibility","User experience and accessibility","Performance and resources","Reliability, observability, and operations","Rollout and rollback","Maintainability and documentation","Machine verification"],
+      "not_applicable_dimensions": ["Production data migration"],
+      "required_evidence": ["Explicit brief, storyboard, style-contract, and representative dual-aspect proof approvals","One semantic claim and source ledger per slide","Distinct 1920x1080 and 1080x1920 compositions for every slide","Full and reduced-motion browser gates","Keyboard, focus, active-slide semantics, contrast, URL restoration, and deterministic capture readiness","Interruption, teardown, zero settled owned work, and bounded surface cleanup","Full-size visual inspection of every slide in both aspects","Final project gate and integrated quality report"],
+      "failure_if": ["Portrait output is a scaled, rotated, or blindly stacked landscape slide","A build or screenshot file substitutes for full-size perceptual inspection","Unsupported claims or asset provenance are invented","Reduced motion loses meaning","The cinematic climax leaves controllers, workers, canvases, or timers active"]
+    },
+    {
+      "id": "email-lifecycle-audit-system-evidence-quality",
+      "skill": "email-lifecycle-audit",
+      "prompt": "Audit a production lifecycle email system with separate transactional and marketing streams, duplicate and late product events, conflicting support and win-back messages, partial consent evidence, and no provider-preview access.",
+      "applicable_dimensions": ["Product intent","Correctness and resilience","Security privacy and abuse","Data integrity and compatibility","User experience and accessibility","Reliability observability and operations","Maintainability and documentation","Machine verification"],
+      "not_applicable_dimensions": ["Immediate source mutation","Production rollout"],
+      "required_evidence": ["Product promise first and second value lifecycle states and guardrails","Current system trace from event through eligibility arbitration provider and exit","Campaign inventory with classification entry branches exit suppression priority frequency sender CTA dynamic data measurement and owner","Duplicate late retry cancellation support conflict and reactivation behavior","Consent deliverability rendering accessibility and legal-review evidence kept distinct","Unavailable provider behavior marked UNVERIFIED","Strengths plus prioritized EML findings","Validated STRATEGY-INPUT.md and read-only diff"],
+      "failure_if": ["Configured provider state is called delivered behavior","Any session becomes meaningful activity","Signup or import is treated as marketing consent","Templates are audited without orchestration and exit logic","The audit sends a test email or changes provider state","A numeric score substitutes for evidence"]
+    },
+    {
+      "id": "email-lifecycle-strategy-preview-fidelity-quality",
+      "skill": "email-lifecycle-strategy",
+      "prompt": "Turn an approved lifecycle audit into a replacement activation, adoption, inactivity, re-engagement, and sunset email strategy with product-specific copy and an explicit interactive approval gate.",
+      "applicable_dimensions": ["Product intent","Correctness and resilience","Security privacy and abuse","Data integrity and compatibility","User experience and accessibility","Reliability observability and operations","Rollout and rollback","Maintainability and documentation","Machine verification"],
+      "not_applicable_dimensions": ["Immediate source provider DNS or sending mutation"],
+      "required_evidence": ["Validated audit input EML finding IDs strengths and handoff state","Lifecycle brief with first and second value meaningful activity consent sender deliverability and measurement boundaries","Two or three options differing in consequential program logic","Campaign entries branches exits priority suppression frequency and channel fit","Embedded Prose Humanizer fact classification CTA variable and reply fidelity","Self-contained validated preview with state simulations send and non-send outcomes campaign breadth desktop mobile light dark images-off feedback responsive and reduced-motion coverage","Manual keyboard narrow text expansion decision and display-mode exercise","Named preview revision and explicit approval provenance","Final strategy campaign map state model briefs initial copy trust-delivery guardrails and measurement plan","Planpro default or complete READY Goalpro handoff without external mutation"],
+      "failure_if": ["Options differ only by send day subject or visual treatment","Generic cadence overrides product usage or consent evidence","Humanization invents progress urgency or a staffed sender","A passing structural validator substitutes for exercising state decisions","Final strategy is created before named preview approval","Preview approval silently authorizes provider or sending changes"]
+    },
+    {
+      "id": "onboarding-audit-evidence-quality",
+      "skill": "onboarding-audit",
+      "prompt": "Audit a production onboarding with separate invited and self-serve paths, partial analytics coverage, permission denial states, and no available mobile simulator.",
+      "applicable_dimensions": ["Product intent","Correctness and resilience","Security, privacy, and abuse","Data integrity and compatibility","User experience and accessibility","Performance and resources","Reliability, observability, and operations","Maintainability and documentation","Machine verification"],
+      "not_applicable_dimensions": ["Source mutation","Production rollout"],
+      "required_evidence": ["Product promise, segments, activation candidates, and guardrails","Journey rows for invitation, self-serve, denial, error, interruption, retry, resume, and success","Source, runtime, measurement, and decision citations kept distinct","Unavailable mobile perceptual behavior marked UNVERIFIED","Strengths preserved alongside prioritized findings","Validated DIRECTION-INPUT.md with evidence gaps and experiment paths","Read-only diff and sanitized artifacts"],
+      "failure_if": ["One path is generalized to every segment","Analytics absence becomes zero conversion","Static source is called rendered behavior","The audit creates the replacement direction or edits instrumentation","A numeric score hides evidence confidence"]
+    },
+    {
+      "id": "onboarding-direction-preview-fidelity-quality",
+      "skill": "onboarding-direction",
+      "prompt": "Turn an approved onboarding audit into a new cross-platform direction with realistic copy, contextual permissions, interruption recovery, and an explicit browser preview approval gate.",
+      "applicable_dimensions": ["Product intent","Correctness and resilience","Security, privacy, and abuse","Data integrity and compatibility","User experience and accessibility","Performance and resources","Reliability, observability, and operations","Rollout and rollback","Maintainability and documentation","Machine verification"],
+      "not_applicable_dimensions": ["Immediate source implementation"],
+      "required_evidence": ["Validated audit input, finding IDs, and strengths to preserve","Activation brief with evidence, guardrail, failure signal, and platform scope","Two or three options differing in consequential onboarding logic","Embedded Prose Humanizer voice and fact fidelity","Self-contained validated preview with comparable platform paths, critical states, feedback actions, responsive layout, and reduced motion","Manual keyboard, narrow, zoom, and flow exercise","Named preview revision and explicit approval provenance","Blueprint, experience matrix, copy deck, and measurement plan","Planpro default or complete READY Goalpro handoff without source mutation"],
+      "failure_if": ["Options differ only by styling or screen count","Generic best practice overrides auth, consent, privacy, or safety","Humanization changes the consequence of a permission or commitment","A passing validator substitutes for manual flow inspection","Preview approval silently authorizes implementation"]
+    },
+    {
+      "id": "testpro-audit-only-authority",
+      "skill": "testpro",
+      "prompt": "Audit our test suite, identify the highest-risk coverage gaps, and recommend a target without changing source files, tests, configuration, or dependencies.",
+      "applicable_dimensions": ["Product intent","Correctness and resilience","Data integrity and compatibility","Maintainability and documentation","Machine verification"],
+      "not_applicable_dimensions": ["Source mutation","Coverage target completion","Production rollout"],
+      "required_evidence": ["Explicit AUDIT ONLY authority classification","Current coverage gates and toolchain evidence without an invented default percentage","Prioritized gaps tied to risks, journeys, and observable failures","EXECUTION-PLAN.md marked NOT APPROVED","Read-only repository diff evidence","A separate approval boundary before IMPROVE mode"],
+      "failure_if": ["The audit writes or rewrites tests","The audit installs or changes test infrastructure","A pure audit request is treated as implementation approval","An arbitrary 80 percent target replaces project evidence or user approval","The report claims a target was achieved without execution"]
+    }
+  ]
+}
