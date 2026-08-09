@@ -9,10 +9,10 @@
   "evidence": [
     "invocation=implicit",
     "selected_skill=designpro",
-    "response_sha256=d67562922c7bf712f3e8334a9faa2ed6b8f36eba5cc245793f96e3431787b367",
+    "response_sha256=22548be9a39a41ed20f8240ec51466acc7b414cace844dfcba21a179ee507be9",
     "process_exit_code=0",
-    "payload_sha256=3499e4f6850b9b52191a24f90ca14f2c10c84a03589450ecbb8f34701a799dcc",
-    "plan_sha256=dc487a6d5aef436dca56a08420e9b01bd537c11fa459bb066367567f49dccbb3",
+    "payload_sha256=57e5f5c43f1e82794fc8168e6b211de815e295fa7d79b41d01d55d508cbcf262",
+    "plan_sha256=ede02df76f0d8c45ea7ecd72bf96dc7d6164b18883755f063f98c57791a27ffe",
     "harness_sha256=9a06970430fc59bfdb3485ac37de590bc5668c1f864813a246bacdb6cd004068"
   ],
   "fresh_context": true,
@@ -21,8 +21,8 @@
   "notes": "",
   "result": "PASS",
   "reviewed_by": "forward-routing-harness-v1",
-  "run_id": "0626fce8-5e6d-4b2b-a466-71f96dbbce66",
+  "run_id": "bef7edfc-5b55-44a7-9122-558c8e09b89a",
   "schema_version": 1,
   "skill": "design-direction",
-  "started_at": "2026-08-07T01:16:35Z"
+  "started_at": "2026-08-09T16:52:59Z"
 }

@@ -9,10 +9,10 @@
   "evidence": [
     "invocation=explicit",
     "selected_skill=seo-indexing",
-    "response_sha256=2bc8a1fc34bcb073bfca1535476146fcebd587d18f2f3495aec2ed478c478276",
+    "response_sha256=986b8a5bef46b8ea27cceec17d91b7501ff578d78f6dc8a4bf32d8719128b50e",
     "process_exit_code=0",
-    "payload_sha256=3499e4f6850b9b52191a24f90ca14f2c10c84a03589450ecbb8f34701a799dcc",
-    "plan_sha256=dc487a6d5aef436dca56a08420e9b01bd537c11fa459bb066367567f49dccbb3",
+    "payload_sha256=57e5f5c43f1e82794fc8168e6b211de815e295fa7d79b41d01d55d508cbcf262",
+    "plan_sha256=ede02df76f0d8c45ea7ecd72bf96dc7d6164b18883755f063f98c57791a27ffe",
     "harness_sha256=9a06970430fc59bfdb3485ac37de590bc5668c1f864813a246bacdb6cd004068"
   ],
   "fresh_context": true,
@@ -21,8 +21,8 @@
   "notes": "",
   "result": "PASS",
   "reviewed_by": "forward-routing-harness-v1",
-  "run_id": "091a9e4b-c9dd-49a7-94cb-64ff0f8d205c",
+  "run_id": "ea3de169-24e2-4be9-adc2-f593f0327070",
   "schema_version": 1,
   "skill": "seo-indexing",
-  "started_at": "2026-08-07T01:17:49Z"
+  "started_at": "2026-08-09T16:54:19Z"
 }

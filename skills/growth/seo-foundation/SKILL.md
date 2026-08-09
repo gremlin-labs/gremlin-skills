@@ -1,6 +1,6 @@
 ---
 name: seo-foundation
-description: Builds an evidence-backed SEO foundation by discovering and confirming business and organic competitors, inspecting their page strategies, sampling Google and Bing results, combining first-party queries with Google Ads Keyword Planner demand, and assigning keyword clusters to page owners. Use when a user asks for SEO competitor research, keyword or search-term research, a competitive search analysis, keyword clustering, cannibalization prevention, or the research foundation for an SEO strategy.
+description: Builds an evidence-backed SEO foundation by discovering and confirming business and organic competitors, inspecting representative pages, sampling Google and Bing results, combining first-party queries with Google Ads Keyword Planner demand, and assigning keyword clusters to page owners without prescribing page content. Use when a user asks for SEO competitor research, keyword or search-term research, a competitive search analysis, keyword clustering, cannibalization prevention, or the research foundation for an SEO strategy.
 ---
 
 # SEO Foundation
@@ -16,7 +16,7 @@ digraph seo_foundation {
   baseline [shape=box, label="Inventory current pages, queries,\nclusters, and protected winners"];
   discover [shape=box, label="Discover business and organic\ncompetitor candidates"];
   confirm [shape=diamond, label="User confirms competitor\nscope and exclusions?"];
-  inspect [shape=box, label="Inspect representative competitor\npages and strategies"];
+  inspect [shape=box, label="Inspect representative competitor\npages and classify evidence"];
   serp [shape=box, label="Sample Google and Bing\nfor candidate queries"];
   new_comp [shape=diamond, label="Material new competitor\nor intent discovered?"];
   demand [shape=box, label="Enrich through first-party data\nand Keyword Planner"];
@@ -46,13 +46,15 @@ Resolve the owning work root and maintain `agent-work/{slug}/WORK.md` using [the
 ## Boundaries
 
 - Remain read-only outside this stage. Do not edit metadata, pages, links, sitemaps, tracking, DNS, provider settings, or external accounts.
-- Do not create content briefs or a publishing roadmap; that belongs to `seo-strategy`.
+- Do not create content briefs or a publishing roadmap. Strategy owns portfolio actions; `seo-content` or `landing-page` owns the later page-specific brief.
+- Do not prescribe titles, modules, testing, methodology, proof formats, section order, page length, or fixed content structures. Foundation observations are inputs to later page-specific research, not implementation requirements.
 - Do not treat business competitors, organic SERP competitors, publishers, marketplaces, aggregators, directories, or adjacent substitutes as interchangeable.
 - Do not call raw word frequency a competitor's “SEO strategy.” Weight titles, headings, page roles, internal anchors, navigation, entities, structured data, format, proof, and repeated search intent while excluding boilerplate.
 - Do not bypass bot protection, authentication, paywalls, rate limits, or site terms. Use public pages, search results, available first-party exports, current APIs, and authorized signed-in computer use.
 - Never combine Google, Bing, Analytics, Keyword Planner, third-party metrics, markets, languages, devices, or date windows without preserving and explaining their distinct scopes.
 - Google Ads competition is paid-search advertiser competition, not organic ranking difficulty.
 - Search results are samples, not universal rank truth. Record engine, query, date, market, language, device/context, and limitations.
+- Label every material conclusion `OBSERVED`, `INFERRED`, `HYPOTHESIS`, or `UNSUPPORTED`. Competitor recurrence and rank position do not prove causality, conversion value, or that this product should adopt the pattern.
 
 ## 1. Validate Setup and choose the pipeline slug
 
@@ -96,7 +98,7 @@ Present the candidate list with why each matters, confidence, evidence, and prop
 
 If the user already approved a current competitor set in an authoritative artifact, cite it and ask only about material new candidates.
 
-## 5. Inspect competitor page strategies
+## 5. Inspect representative competitor pages
 
 For each approved competitor, select representative pages by role rather than crawling blindly: homepage, category/product owner, high-ranking landing page, hub, guide/blog, comparison, tool/directory, and relevant locale surface. Inspect final rendered/public state when possible.
 
@@ -105,15 +107,15 @@ Record in `COMPETITOR-ANALYSIS.md`:
 - page role, intended query/intent, title, description, H1/H2 structure, content format, proof, CTA, schema, canonical/index posture, and update signals;
 - navigation, internal anchors, hub/spoke relationships, repeated entities and phrases, supporting content, and cross-cluster bridges;
 - differentiation between brand positioning, conversion content, educational support, and template boilerplate;
-- strengths, gaps, risks, unsupported claims, and adoption fit for this product.
+- observed strengths, gaps, risks, unsupported claims, and relevance to later page-specific investigation.
 
-Do not copy competitor prose, structure, or claims. Extract patterns and evidence.
+Write `EVIDENCE-LEDGER.md` and classify every material pattern or conclusion `OBSERVED`, `INFERRED`, `HYPOTHESIS`, or `UNSUPPORTED`, with scope, sources, counterevidence, and limitations. Do not copy competitor prose, structure, or claims. Do not use “preserve,” “adapt,” “adopt,” “required,” or equivalent implementation language here.
 
 ## 6. Sample SERPs and iterate discovery
 
 Search Google and Bing for the candidate terms and intent variants. Write `SERP-SNAPSHOTS.md` with reproducible scope and the observed result/page types, domains, intent mix, SERP features, and volatility limitations.
 
-When a materially new domain or search intent recurs, classify it and inspect representative pages. Repeat competitor-page and SERP analysis until the next pass produces no material new competitor, intent, or page-role evidence, or until diminishing returns are explicit. Do not loop merely because another domain exists.
+When a materially new domain or search intent recurs, classify it and inspect representative pages. Repeat competitor-page and SERP analysis until the next pass produces no material new competitor, intent, or page-role evidence, or until diminishing returns are explicit. Do not loop merely because another domain exists. Record recurrence as an observation; never claim it caused ranking or must be copied.
 
 ## 7. Enrich demand and rank opportunities
 
@@ -125,7 +127,7 @@ Combine:
 - current page ownership and product fulfilment;
 - optional third-party data whose proprietary semantics are labelled.
 
-Write normalized `KEYWORD-DEMAND.csv` plus its source dictionary in `KEYWORD-DEMAND.md`. Rank opportunity by evidence-adjusted user/product value and feasibility, not search volume alone. Include demand/trend, intent and conversion relevance, current traction, product truth, SERP/page-type fit, competitive evidence, authority/internal-link fit, cannibalization risk, effort, reversibility, and uncertainty. Do not invent universal weights; state and justify any project-specific scoring.
+Write normalized `KEYWORD-DEMAND.csv` plus its source dictionary in `KEYWORD-DEMAND.md`. Rank opportunity by evidence-adjusted user/product value and feasibility, not search volume alone. Include demand/trend, intent and conversion relevance, current traction, product truth, observed SERP/page-role fit, competitive evidence, authority/internal-link fit, cannibalization risk, effort, reversibility, and uncertainty. Page roles remain hypotheses until Strategy selects a portfolio action and a page specialist completes page-specific benchmarking. Do not invent universal weights; state and justify any project-specific scoring.
 
 ## 8. Cluster and assign page ownership
 
@@ -144,7 +146,7 @@ One page may support adjacent language, but it cannot be the primary owner of in
 
 ## 9. Consolidate and approve the foundation
 
-Write `SEO-FOUNDATION.md` as the consumption index: scope, source ledger, baseline, competitor map, SERP findings, ranked opportunities, clusters, ownership, protected winners, risks, unknowns, and freshness/revalidation rules. Link detailed artifacts instead of duplicating them.
+Write `SEO-FOUNDATION.md` as the consumption index: scope, source and evidence ledgers, baseline, competitor map, SERP findings, ranked opportunities, clusters, ownership, protected winners, risks, unknowns, and freshness/revalidation rules. Link detailed artifacts instead of duplicating them. State explicitly that content structures, modules, titles, methods, and implementation gates remain undecided.
 
 Show the proposed competitor set, priority opportunities, cluster map, ownership decisions, protected winners, and material unknowns. Ask whether the foundation matches the user's market and product understanding. Record approval provenance and revisions in the artifact and `WORK.md`.
 
@@ -153,7 +155,8 @@ Show the proposed competitor set, priority opportunities, cluster map, ownership
 - `FOUNDATION-BRIEF.md` — product, market, language, outcome, scope, and source contract.
 - `SITE-BASELINE.md` — current pages, queries, owners, conversions, and protected winners.
 - `COMPETITORS.md` — classified candidates, evidence, user decisions, and iteration history.
-- `COMPETITOR-ANALYSIS.md` — representative page-level strategy evidence.
+- `COMPETITOR-ANALYSIS.md` — representative page-level observations and limitations.
+- `EVIDENCE-LEDGER.md` — scoped observations, inferences, hypotheses, unsupported ideas, counterevidence, and limitations.
 - `SERP-SNAPSHOTS.md` — engine/query/scope-labelled search-result samples.
 - `KEYWORD-DEMAND.csv` and `KEYWORD-DEMAND.md` — normalized evidence and field/source dictionary.
 - `KEYWORD-CLUSTERS.md` — intent-led cluster definitions and boundaries.
@@ -163,7 +166,7 @@ Show the proposed competitor set, priority opportunities, cluster map, ownership
 
 ## Done
 
-Finish only when Setup evidence is valid; market and product scope are explicit; the user has confirmed material competitor inclusions/exclusions; representative competitor pages and both requested search engines have been sampled; iterative discovery reaches an evidenced stop; demand preserves source semantics; every material cluster has one owner or an explicit unresolved decision; protected winners and cannibalization rules are recorded; and the user approves the consolidated foundation.
+Finish only when Setup evidence is valid; market and product scope are explicit; the user has confirmed material competitor inclusions/exclusions; representative competitor pages and both requested search engines have been sampled; iterative discovery reaches an evidenced stop; every material conclusion has an evidence status; no competitor pattern has been promoted into a page requirement; demand preserves source semantics; every material cluster has one owner or an explicit unresolved decision; protected winners and cannibalization rules are recorded; and the user approves the consolidated foundation.
 
 State: “I am satisfied the SEO foundation is complete because …” with evidence coverage, remaining uncertainty, and the exact `SEO-FOUNDATION.md` path. Do not implement or hand directly to Goalpro; the next stage is `seo-strategy` with the same slug.
 

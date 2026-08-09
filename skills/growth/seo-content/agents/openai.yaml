@@ -1,6 +1,6 @@
 interface:
   display_name: "SEO Content"
-  short_description: "Executes one approved SEO content brief at a time by validating"
+  short_description: "Benchmarks, challenges, briefs, and executes one SEO-targeted"
   default_prompt: "Use $seo-content to apply the SEO Content workflow to this request."
 policy:
-  allow_implicit_invocation: false
+  allow_implicit_invocation: true

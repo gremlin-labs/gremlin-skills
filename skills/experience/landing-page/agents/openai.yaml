@@ -3,4 +3,4 @@ interface:
   short_description: "Designs conversion-focused landing pages and optionally"
   default_prompt: "Use $landing-page to apply the Landing Page workflow to this request."
 policy:
-  allow_implicit_invocation: false
+  allow_implicit_invocation: true

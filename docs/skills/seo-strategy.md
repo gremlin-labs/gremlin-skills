@@ -1,10 +1,10 @@
 # SEO Strategy
 
-Turns verified SEO setup and an approved competitive, keyword-demand, cluster, and page-ownership foundation into a prioritized, non-cannibalizing portfolio plan for search-targeted landing pages and editorial content.
+Turns verified SEO setup and an approved competitive, keyword-demand, cluster, and page-ownership foundation into a prioritized, non-cannibalizing portfolio plan without prescribing page-level content.
 
 ## When to reach for it
 
-Use when a user asks for an SEO strategy, SEO roadmap, landing-page or blog plan, content portfolio, topic roadmap, or implementation handoff after `seo-setup` and `seo-foundation` are complete.
+Use when a user asks for an SEO strategy, SEO roadmap, landing-page or editorial portfolio, topic roadmap, or specialist queue after `seo-setup` and `seo-foundation` are complete.
 
 ## Prerequisites
 
@@ -16,7 +16,7 @@ It may inspect project and external evidence and write only its skill-scoped wor
 
 ## Outputs
 
-Work is owned at `agent-work/{slug}/seo-strategy/`. Required contract artifacts currently include `STRATEGY-BRIEF.md`, `CONTENT-PORTFOLIO.csv`, `LANDING-PAGE-BRIEFS.md`, `EDITORIAL-BRIEFS.md`, `INTERNAL-LINK-MAP.md`, `MEASUREMENT-PLAN.md`, `SEO-ROADMAP.md`, `SEO-STRATEGY.md`. Conditional files are emitted only when their documented condition applies.
+Work is owned at `agent-work/{slug}/seo-strategy/`. Required contract artifacts currently include `STRATEGY-BRIEF.md`, `CONTENT-PORTFOLIO.csv`, `PAGE-OPPORTUNITIES.md`, `INTERNAL-LINK-MAP.md`, `MEASUREMENT-PLAN.md`, `SEO-ROADMAP.md`, `SEO-STRATEGY.md`. Strategy selects portfolio actions and specialist routes; titles, structures, modules, testing, methodology, page briefs, and page-content acceptance gates remain downstream. Conditional files are emitted only when their documented condition applies.
 
 ## Common questions
 
@@ -30,7 +30,7 @@ Yes. Its archive has no required sibling-skill dependency; optional integrations
 
 ## Visible success
 
-The required artifacts exist at the declared output root, claims are backed by the evidence level the skill requires, applicable verification gates pass, and the skill stops at its documented authority boundary. Structural validation alone is not treated as proof of product judgment.
+The required artifacts exist at the declared output root, every page opportunity exposes evidence strength and benchmark readiness, no page-level prescription is laundered into implementation, applicable verification gates pass, and the skill stops at its documented authority boundary.
 
 ## Adjacent Gremlin skills
 
@@ -51,4 +51,3 @@ The required artifacts exist at the declared output root, claims are backed by t
 | Skill-local tests | No skill-local suite declared |
 | Stable distributions | standalone_archive, stable_plugin, public_install |
 <!-- END GENERATED:REGISTRY-CONTRACT -->
-

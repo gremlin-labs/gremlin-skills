@@ -9,10 +9,10 @@
   "evidence": [
     "invocation=explicit",
     "selected_skill=gamepro",
-    "response_sha256=842a452426b24188d53d362783b1f880246f588a303283e850b17d904a05a5bf",
+    "response_sha256=b6aecc2043d4570de6610f9db7facf1609eeab878f52514de2cc00e0fc071efd",
     "process_exit_code=0",
-    "payload_sha256=3499e4f6850b9b52191a24f90ca14f2c10c84a03589450ecbb8f34701a799dcc",
-    "plan_sha256=dc487a6d5aef436dca56a08420e9b01bd537c11fa459bb066367567f49dccbb3",
+    "payload_sha256=57e5f5c43f1e82794fc8168e6b211de815e295fa7d79b41d01d55d508cbcf262",
+    "plan_sha256=ede02df76f0d8c45ea7ecd72bf96dc7d6164b18883755f063f98c57791a27ffe",
     "harness_sha256=9a06970430fc59bfdb3485ac37de590bc5668c1f864813a246bacdb6cd004068"
   ],
   "fresh_context": true,
@@ -21,8 +21,8 @@
   "notes": "",
   "result": "PASS",
   "reviewed_by": "forward-routing-harness-v1",
-  "run_id": "9b15eadc-4633-43ba-ae94-80e0acc17587",
+  "run_id": "23c6d624-2f72-4767-b17a-34470207d1d3",
   "schema_version": 1,
   "skill": "gamepro",
-  "started_at": "2026-08-07T01:17:00Z"
+  "started_at": "2026-08-09T16:53:28Z"
 }

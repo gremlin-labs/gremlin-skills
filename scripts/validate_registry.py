@@ -16,13 +16,14 @@ from skill_registry import RegistryError, SkillRegistry, load_registry
 FRONTMATTER_NAME_RE = re.compile(r"^name:\s*([^\s]+)\s*$", re.MULTILINE)
 SIBLING_SKILL_LINK_RE = re.compile(r"\.\./([a-z0-9]+(?:-[a-z0-9]+)*)/(?:SKILL|REFERENCE)\.md")
 LOCAL_CONTRACT_LINK_RE = re.compile(
-    r"\(contracts/(work-artifacts|product-research|execution-quality|goalpro-handoff)\.md\)"
+    r"\(contracts/(work-artifacts|product-research|execution-quality|goalpro-handoff|seo-page-quality)\.md\)"
 )
 CONTRACT_FILE_TO_ID = {
     "work-artifacts": "work-artifacts",
     "product-research": "product-research",
     "execution-quality": "quality",
     "goalpro-handoff": "goalpro-handoff",
+    "seo-page-quality": "seo-page-quality",
 }
 
 

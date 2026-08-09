@@ -9,10 +9,10 @@
   "evidence": [
     "invocation=implicit",
     "selected_skill=none",
-    "response_sha256=295ca0a1718200b75b4489bad341d98d77f024d6ea570e31c1046cd9707b2e79",
+    "response_sha256=37d6bff6425dd45e138f8614c0390d8749722a78e2783f610cfb67fe6f1b0926",
     "process_exit_code=0",
-    "payload_sha256=3499e4f6850b9b52191a24f90ca14f2c10c84a03589450ecbb8f34701a799dcc",
-    "plan_sha256=dc487a6d5aef436dca56a08420e9b01bd537c11fa459bb066367567f49dccbb3",
+    "payload_sha256=57e5f5c43f1e82794fc8168e6b211de815e295fa7d79b41d01d55d508cbcf262",
+    "plan_sha256=ede02df76f0d8c45ea7ecd72bf96dc7d6164b18883755f063f98c57791a27ffe",
     "harness_sha256=9a06970430fc59bfdb3485ac37de590bc5668c1f864813a246bacdb6cd004068"
   ],
   "fresh_context": true,
@@ -21,8 +21,8 @@
   "notes": "",
   "result": "PASS",
   "reviewed_by": "forward-routing-harness-v1",
-  "run_id": "915a132b-55f0-4893-9063-695423806c87",
+  "run_id": "87c45a1e-c388-4795-acfd-e560ab973db8",
   "schema_version": 1,
   "skill": "stripe-audit",
-  "started_at": "2026-08-07T01:18:05Z"
+  "started_at": "2026-08-09T16:54:36Z"
 }

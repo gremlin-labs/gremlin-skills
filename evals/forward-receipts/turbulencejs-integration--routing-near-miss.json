@@ -9,10 +9,10 @@
   "evidence": [
     "invocation=implicit",
     "selected_skill=motion-audit",
-    "response_sha256=7e9a82da37b00b370a1e2a5f6c46c89f1934cc0ff89089c8bbd2a028f3ba9606",
+    "response_sha256=238ec24140db7f71b4c0f548a9f77545f73ee98906e8cc65d900822cf41ea6ee",
     "process_exit_code=0",
-    "payload_sha256=3499e4f6850b9b52191a24f90ca14f2c10c84a03589450ecbb8f34701a799dcc",
-    "plan_sha256=dc487a6d5aef436dca56a08420e9b01bd537c11fa459bb066367567f49dccbb3",
+    "payload_sha256=57e5f5c43f1e82794fc8168e6b211de815e295fa7d79b41d01d55d508cbcf262",
+    "plan_sha256=ede02df76f0d8c45ea7ecd72bf96dc7d6164b18883755f063f98c57791a27ffe",
     "harness_sha256=9a06970430fc59bfdb3485ac37de590bc5668c1f864813a246bacdb6cd004068"
   ],
   "fresh_context": true,
@@ -21,8 +21,8 @@
   "notes": "",
   "result": "PASS",
   "reviewed_by": "forward-routing-harness-v1",
-  "run_id": "ca5f5912-9a3d-47b5-b734-123ce7aa8aa2",
+  "run_id": "b1a35b23-8869-4a32-9dad-d66948d82d19",
   "schema_version": 1,
   "skill": "turbulencejs-integration",
-  "started_at": "2026-08-07T01:18:12Z"
+  "started_at": "2026-08-09T16:54:47Z"
 }

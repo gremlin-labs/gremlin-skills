@@ -2,6 +2,17 @@
 
 Use this reference for competitor taxonomy, page inspection, SERP evidence, keyword normalization, opportunity ranking, clustering, and page ownership.
 
+## Evidence-strength contract
+
+Classify every material conclusion:
+
+- `OBSERVED` — directly visible in a dated and scoped page, SERP, product source, or first-party dataset.
+- `INFERRED` — interpretation supported by named observations; record reasoning and credible alternatives.
+- `HYPOTHESIS` — a testable idea for later Strategy or page-specialist investigation; never an implementation requirement.
+- `UNSUPPORTED` — unavailable, contradicted, or too weak to carry downstream.
+
+Record source, market/language, query or page scope, retrieval date, counterevidence, limitations, and revalidation trigger. A repeated module, phrase, testing claim, methodology page, outline, page length, or ranking position does not establish causality or adoption value.
+
 ## Competitor taxonomy
 
 Classify every domain independently:
@@ -59,7 +70,7 @@ For each representative page capture:
 | Recurring entities/phrases | Topic language after boilerplate filtering |
 | Distinctive strategy | What is meaningfully different from sibling pages |
 | Weakness, risk, or uncertainty | Thinness, overlap, unsupported claim, inaccessible evidence |
-| Adoption fit | Preserve, adapt, reject, or investigate for this product |
+| Investigation relevance | Why a later portfolio or page-specific study may examine it; never an adoption instruction |
 
 ## Term and phrase extraction
 
@@ -181,14 +192,14 @@ Rank into explicit bands such as `P0`, `P1`, `P2`, `PARK`, and `REJECT`, or use 
 - user value and product/business fit;
 - search intent and truthful fulfilment;
 - demand, trend, current traction, and conversion evidence;
-- SERP intent and expected page type;
+- SERP intent and observed page-role mix;
 - competitor coverage and differentiation opportunity;
 - current authority and internal-link support;
 - protected-winner and cannibalization risk;
 - evidence/claim cost, content/engineering effort, and reversibility;
 - uncertainty and cheapest validation experiment.
 
-Do not assign fixed universal weights. If numeric weights are used, document and approve them. High volume with weak product fit or high harm risk can be `REJECT`.
+Do not assign fixed universal weights. If numeric weights are used, document and approve them. High volume with weak product fit or high harm risk can be `REJECT`. Any proposed page role remains `HYPOTHESIS` until Strategy and the owning page specialist validate it.
 
 ## Cluster contract
 
@@ -249,6 +260,7 @@ Required sections:
 ## Approval and freshness
 ## Product, market, language, and outcome
 ## Source ledger and limitations
+## Evidence ledger and claim strength
 ## Current site and first-party baseline
 ## Competitor map
 ## SERP and page-strategy findings
@@ -259,4 +271,4 @@ Required sections:
 ## Downstream contract for SEO Strategy
 ```
 
-The downstream contract names required detailed artifacts and flags incompatible or stale scopes. It never grants implementation approval.
+The downstream contract names required detailed artifacts and flags incompatible or stale scopes. It never grants implementation approval and never prescribes titles, modules, methodology, testing, proof formats, outlines, or acceptance criteria.

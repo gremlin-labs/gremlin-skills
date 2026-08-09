@@ -9,10 +9,10 @@
   "evidence": [
     "invocation=implicit",
     "selected_skill=motion-audit",
-    "response_sha256=fe58d2a8b4a44becdf64e3fb978e6638c26de3c212cfab76d197546f2ef00b32",
+    "response_sha256=5bcf86ed33f85f3d6a73a66af29002615e447b1fb0c23a3cfdb62f8b8db5858d",
     "process_exit_code=0",
-    "payload_sha256=3499e4f6850b9b52191a24f90ca14f2c10c84a03589450ecbb8f34701a799dcc",
-    "plan_sha256=dc487a6d5aef436dca56a08420e9b01bd537c11fa459bb066367567f49dccbb3",
+    "payload_sha256=57e5f5c43f1e82794fc8168e6b211de815e295fa7d79b41d01d55d508cbcf262",
+    "plan_sha256=ede02df76f0d8c45ea7ecd72bf96dc7d6164b18883755f063f98c57791a27ffe",
     "harness_sha256=9a06970430fc59bfdb3485ac37de590bc5668c1f864813a246bacdb6cd004068"
   ],
   "fresh_context": true,
@@ -21,8 +21,8 @@
   "notes": "",
   "result": "PASS",
   "reviewed_by": "forward-routing-harness-v1",
-  "run_id": "45c71cb1-d565-4d50-8455-9551cc2b20be",
+  "run_id": "d757d74d-d055-436b-8a0f-80432a197b8c",
   "schema_version": 1,
   "skill": "motion-audit",
-  "started_at": "2026-08-07T01:17:16Z"
+  "started_at": "2026-08-09T16:53:42Z"
 }

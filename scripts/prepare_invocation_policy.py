@@ -27,6 +27,7 @@ REQUIRED_DEPENDENCY_USES = {
     ("onboarding-direction", "prose-humanizer"): "embedded",
     ("prose-humanizer", "seo-strategy"): "context",
     ("seo-content", "prose-humanizer"): "embedded",
+    ("seo-content", "seo-strategy"): "context",
 }
 
 
@@ -45,6 +46,11 @@ def recommendation(record: dict[str, Any]) -> tuple[str, str]:
         return (
             "model-visible",
             "Bounded task-scoped transformation with no external action; useful as an explicitly embedded primitive.",
+        )
+    if record["name"] in {"landing-page", "seo-content"}:
+        return (
+            "model-visible",
+            "Page specialist begins read-only, requires exact approval before source mutation, and must remain auto-discoverable for operational pipeline routing.",
         )
     if record["name"] == "compact-history":
         return (
@@ -156,13 +162,18 @@ def render_report(data: dict[str, Any]) -> str:
     counts: dict[str, int] = {"model-visible": 0, "user-only": 0}
     for record in data["skills"]:
         counts[record["proposed_mode"]] += 1
+    registry_status = (
+        "- Public registry and host metadata match this approved matrix."
+        if data["status"] == "approved"
+        else "- Public registry and host metadata remain unchanged until this complete matrix is approved."
+    )
     lines = [
         "# Invocation policy owner review",
         "",
         f"- Status: `{data['status']}`",
         f"- Proposal SHA-256: `{data['proposal_sha256']}`",
         f"- Recommendation: {counts['model-visible']} model-visible; {counts['user-only']} user-only",
-        "- Public registry and host metadata remain unchanged until this complete matrix is approved.",
+        registry_status,
         "- Invocation does not grant authority; every existing approval and external-action gate remains in force.",
         "",
         "## Matrix",

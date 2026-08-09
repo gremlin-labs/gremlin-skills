@@ -44,6 +44,12 @@ CONTRACTS = {
             "goalpro-handoff.md",
             ("quality",),
         ),
+        ContractDefinition(
+            "seo-page-quality",
+            "contracts/seo-page-quality.md",
+            "seo-page-quality.md",
+            ("product-research",),
+        ),
     )
 }
 

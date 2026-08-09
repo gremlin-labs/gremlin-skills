@@ -207,13 +207,15 @@ The SEO Stack is optional context, not a prerequisite for every landing page. Ac
 |---|---|---|
 | Verified technical/provider foundation | `seo-setup` | Preserve consent, canonical origin, sitemap, and index architecture; use read-only evidence only when needed |
 | Competitors, keyword demand, clusters, and page ownership | `seo-foundation` | Consume approved evidence; do not rerun research or redefine the cluster |
-| Portfolio action, target URL, search intent, protected winners, internal links, measurement | `seo-strategy` | Validate and preserve the exact approved landing-page brief |
-| Persuasion, message, proof, CTA, layout, visual direction, HTML preview, bounded implementation | `landing-page` | Own and approve these decisions |
+| Portfolio action, target URL, search intent, protected winners, internal-link role, measurement | `seo-strategy` | Validate and preserve the approved page opportunity without inheriting page prescriptions |
+| Page-specific benchmark, title, catalogue durability, persuasion, message, proof, CTA, layout, visual direction, HTML preview, bounded implementation | `landing-page` | Own, challenge, and approve these decisions |
 | Editorial article/guide without material landing-page decisions | `seo-content` | Route rather than duplicating editorial execution |
 | Post-publication URL verification and individual indexing request | `seo-indexing` | Emit the final canonical URL and production receipt; do not submit inside Landing Page |
 | Outcome and guardrail review | `seo-monitor` | Emit a verified page/measurement handoff; do not claim post-launch results during implementation |
 
-An approved SEO brief is evidence, not a complete landing-page design. Landing Page may refine headline wording, persuasion order, CTA hierarchy, proof presentation, and layout while preserving the brief's user job, claims boundary, primary owner, overlap exclusions, index/canonical posture, and required links. Any material delta in those preserved decisions returns to Strategy.
+An approved SEO opportunity is portfolio evidence, not a landing-page brief. Landing Page applies [the page-quality contract](contracts/seo-page-quality.md), then owns the title, headline wording, persuasion order, CTA hierarchy, proof presentation, structure, and layout while preserving the opportunity's user job, primary owner, overlap exclusions, protected assets, internal-link role, and measurement boundary. Any material delta in those preserved decisions returns to Strategy.
+
+For search-targeted work, `PAGE-BENCHMARK.md`, `PAGE-REQUIREMENTS.md`, and `EDITORIAL-REVIEW.md` are mandatory before message approval. Competitor recurrence cannot become a required module or causal ranking claim. Technical correctness cannot change `REVISE`, `NO PAGE`, or `BLOCKED` into `PUBLISH`.
 
 ### Consultation record
 
@@ -223,7 +225,10 @@ When the Stack applies, add to `RESEARCH.md` and `SEO-PLAN.md`:
 seo_slug
 setup_status_path and freshness
 foundation_path and approval
-strategy_path, brief_id, revision, and approval
+strategy_path, item_id, revision, and approval
+page_benchmark_path, scope, and freshness
+page_requirements_path
+editorial_review_path, verdict, revision, and approval
 primary_cluster and search_intent
 current_owner and proposed_owner
 protected_winners and overlap_exclusions

@@ -243,11 +243,11 @@ SEO growth:
 ```
 seo-setup ──→ seo-foundation ──→ seo-strategy ──┬─→ landing-page ──┐
                                                 ├─→ seo-content ───┼─→ seo-indexing ──→ seo-monitor
-                                                └─→ goalpro ───────┘                       ├─→ INDEXING ASSIST → seo-indexing
+                                                └─→ technical-only goalpro                ├─→ INDEXING ASSIST → seo-indexing
                                                                                           └─→ other measured routes
 ```
 
-`seo-monitor` remains read-only. `seo-indexing` alone owns approved individual indexing requests and optional reminder/recurring submission jobs; `seo-setup` retains ownership of the shared `seo-stack` CLI and prerequisite configuration.
+Foundation records evidence, demand, intent, and ownership without prescribing page content. Strategy owns portfolio actions and page opportunities, not titles, outlines, modules, testing, methodology, or page-content acceptance gates. `landing-page` and `seo-content` apply the shared page-quality contract, benchmark the exact page, obtain approval, and own implementation. Goalpro receives only approved technical SEO work from Strategy; it is not a fallback for page creation. `seo-monitor` remains read-only. `seo-indexing` alone owns approved individual indexing requests and optional reminder/recurring submission jobs; `seo-setup` retains ownership of the shared `seo-stack` CLI and prerequisite configuration.
 
 ## Getting help
 

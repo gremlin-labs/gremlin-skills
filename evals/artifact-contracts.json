@@ -119,13 +119,16 @@
         {"path":"RESEARCH.md","required":true,"headings":["Product and visitors","Arrival intent and journey","Evidence sources","Product truth","Brand and implementation inventory","Existing page","Constraints","Alternatives","Unknowns"]},
         {"path":"MESSAGE-MAP.md","required":true,"headings":["Audience and arrival intent","Problem and desired outcome","Unique approach and differentiation","Product callouts","Feature to benefit framing","Claims and proof ledger","Objections and risk reversal","CTA ladder","Voice and prohibited language","Approval provenance","Unknowns"]},
         {"path":"COPY-DECK.md","required":true,"headings":["Voice","Headline hierarchy","Product highlights","Proof and objections","CTA and microcopy","Humanization record","Final approved copy"]},
-        {"path":"SEO-PLAN.md","required":true,"headings":["Disposition","Upstream SEO Stack contract","Traffic and query intent","Ownership and protected winners","Information architecture","Metadata","Canonical crawl and links","Entities and structured data","Performance","Measurement","Unknowns"]},
+        {"path":"SEO-PLAN.md","required":true,"headings":["Disposition","Upstream SEO Stack contract","Benchmark and editorial verdict","Traffic and query intent","Ownership and protected winners","Information architecture","Metadata","Canonical crawl and links","Entities and structured data","Performance","Measurement","Unknowns"]},
+        {"path":"PAGE-BENCHMARK.md","required":false,"condition":"Required for an explicitly search-targeted page or when same-slug SEO Strategy artifacts govern the request.","headings":["Scope and freshness","Current owner","Representative pages","Observed page roles","Competitive patterns and gaps","Counterevidence and limitations"]},
+        {"path":"PAGE-REQUIREMENTS.md","required":false,"condition":"Required whenever PAGE-BENCHMARK.md is required.","headings":["Must","Optional","Test","Rejected","Invalidation conditions"]},
+        {"path":"EDITORIAL-REVIEW.md","required":false,"condition":"Required whenever PAGE-BENCHMARK.md is required.","headings":["Truth and competitiveness","Title and snippet review","Evergreen and catalogue test","Comparative page review","Verdict and approval"]},
         {"path":"PAGE-DIRECTIONS.md","required":true,"headings":["Adaptive mode","Shared approved message","Directions","Recommendation","Trade-offs and experiments","Revision history","Approval"]},
         {"path":"LANDING-PAGE-PREVIEW.html","required":true,"headings":["message","cta","product","proof","objections","responsive","motion","seo","tradeoffs"]},
         {"path":"previews/LANDING-PAGE-PREVIEW-R{n}.html","required":true,"headings":["message","cta","product","proof","objections","responsive","motion","seo","tradeoffs"]},
         {"path":"IMPLEMENTATION-PLAN.md","required":false,"condition":"Required after a preview revision is approved for implementation.","headings":["Approved outcome","Source targets","Content and assets","Components and responsive behavior","SEO","TurbulenceJS target map","Implementation slices","Project gates","Browser scenarios","Rollout and rollback","Boundaries"]},
         {"path":"PROGRESS.md","required":true,"headings":["Progress"]},
-        {"path":"QUALITY-REPORT.md","required":true,"headings":["Quality report","Approved preview and message","Project gates","Rendered and runtime evidence","SEO","Copy and claims","Motion","Deviations and waivers","Final integrated verification","Final status"]},
+        {"path":"QUALITY-REPORT.md","required":true,"headings":["Quality report","Approved preview and message","Project gates","Rendered and runtime evidence","SEO","SEO page quality","Copy and claims","Motion","Deviations and waivers","Final integrated verification","Final status"]},
         {"path":"NOTES.md","required":false,"condition":"Only when sanitized research or decisions add durable context.","headings":["Notes"]}
       ]
     },
@@ -341,12 +344,13 @@
         {"path":"SITE-BASELINE.md","required":true,"headings":["Current pages","First-party queries","Conversions","Protected winners"]},
         {"path":"COMPETITORS.md","required":true,"headings":["Candidate competitors","Confirmed set","Excluded candidates","Iteration history"]},
         {"path":"COMPETITOR-ANALYSIS.md","required":true,"headings":["Page evidence","Repeated terms and phrases","Page roles","Limitations"]},
+        {"path":"EVIDENCE-LEDGER.md","required":true,"headings":["Observed","Inferred","Hypotheses","Unsupported","Counterevidence and limitations"]},
         {"path":"SERP-SNAPSHOTS.md","required":true,"headings":["Scope","Google","Bing","New competitor discoveries"]},
         {"path":"KEYWORD-DEMAND.csv","required":true,"headings":["source_provider","query","metric_name","metric_value","metric_precision"]},
         {"path":"KEYWORD-DEMAND.md","required":true,"headings":["Source dictionary","Scope compatibility","Precision","Limitations"]},
         {"path":"KEYWORD-CLUSTERS.md","required":true,"headings":["Cluster definitions","Intent boundaries","Evidence","Exclusions"]},
         {"path":"PAGE-OWNERSHIP.md","required":true,"headings":["Current owners","Proposed owners","Support and bridge roles","Protected winners","Cannibalization"]},
-        {"path":"SEO-FOUNDATION.md","required":true,"headings":["Approval and freshness","Competitor map","Ranked keyword opportunities","Keyword clusters","Page ownership and protected winners","Downstream contract for SEO Strategy"]},
+        {"path":"SEO-FOUNDATION.md","required":true,"headings":["Approval and freshness","Evidence ledger and claim strength","Competitor map","Ranked keyword opportunities","Keyword clusters","Page ownership and protected winners","Downstream contract for SEO Strategy"]},
         {"path":"NOTES.md","required":false,"condition":"Only when sanitized research notes need separate durable storage.","headings":["Notes"]}
       ]
     },
@@ -356,13 +360,12 @@
       "files": [
         {"path":"STRATEGY-BRIEF.md","required":true,"headings":["Product and search outcomes","Prerequisite evidence","Constraints","Delivery model","Approval"]},
         {"path":"CONTENT-PORTFOLIO.csv","required":true,"headings":["owner","cluster","action","priority","state"]},
-        {"path":"LANDING-PAGE-BRIEFS.md","required":true,"headings":["Decision and ownership","User and product outcome","Evidence and differentiation","Content and experience","Search and distribution","Delivery and verification"]},
-        {"path":"EDITORIAL-BRIEFS.md","required":true,"headings":["Decision and ownership","User and product outcome","Evidence and differentiation","Content and experience","Search and distribution","Delivery and verification"]},
+        {"path":"PAGE-OPPORTUNITIES.md","required":true,"headings":["Portfolio decision and ownership","User and product outcome","Evidence strength and gaps","Portfolio relationship","Specialist route"]},
         {"path":"INTERNAL-LINK-MAP.md","required":true,"headings":["Source","Destination","Anchor guidance","User reason","Authority flow"]},
         {"path":"MEASUREMENT-PLAN.md","required":true,"headings":["Baselines","Source windows","Leading signals","Outcome signals","Guardrails","Rollback triggers"]},
         {"path":"SEO-ROADMAP.md","required":true,"headings":["Priorities","Dependencies","Reversible slices","Rollout","Rollback"]},
-        {"path":"SEO-STRATEGY.md","required":true,"headings":["Approval, revision, and scope","Portfolio decisions and protected assets","Landing-page plan","Editorial plan","Internal-link and technical plan","Prioritized roadmap","Measurement, rollout, and rollback"]},
-        {"path":"GOALPRO-INPUT.md","required":false,"condition":"Only when the user explicitly approves direct implementation scope.","headings":["Goal and product outcome","Approval provenance","Implementation slices","Acceptance criteria","Quality applicability","Project gates","Manual and external actions","Readiness"]},
+        {"path":"SEO-STRATEGY.md","required":true,"headings":["Approval, revision, and scope","Portfolio decisions and protected assets","Landing-page opportunities","Editorial opportunities","Internal-link and technical plan","Prioritized roadmap","Measurement, rollout, and rollback"]},
+        {"path":"GOALPRO-INPUT.md","required":false,"condition":"Only when the user explicitly approves bounded technical implementation that does not create or rewrite page content.","headings":["Goal and product outcome","Approval provenance","Implementation slices","Acceptance criteria","Quality applicability","Project gates","Manual and external actions","Readiness"]},
         {"path":"NOTES.md","required":false,"condition":"Only when sanitized research or decisions need separate durable notes.","headings":["Notes"]}
       ]
     },
@@ -370,14 +373,18 @@
       "skill": "seo-content",
       "output_root": "agent-work/{slug}/seo-content/",
       "files": [
-        {"path":"BRIEF-VALIDATION.md","required":true,"headings":["Prerequisite paths and freshness","Owner, intent, and protected winners","Brief consistency","Route decision"]},
-        {"path":"CONTENT-PLAN.md","required":true,"headings":["Brief, revision, and approval","Owner, intent, and protected winners","Target and authority","Source and claim plan","Implementation","Verification gates","Publish or deployment path","Rollout and rollback"]},
+        {"path":"BRIEF-VALIDATION.md","required":true,"headings":["Prerequisite paths and freshness","Owner, intent, and protected winners","Upstream consistency","Strategic challenges","Route decision"]},
+        {"path":"PAGE-BENCHMARK.md","required":true,"headings":["Scope and freshness","Current owner","Representative pages","Observed page roles","Competitive patterns and gaps","Counterevidence and limitations"]},
+        {"path":"PAGE-REQUIREMENTS.md","required":true,"headings":["Must","Optional","Test","Rejected","Invalidation conditions"]},
+        {"path":"EDITORIAL-BRIEF.md","required":true,"headings":["Brief revision and approval","Owner and intent","Reader promise","Title and metadata","Information architecture and catalogue model","Requirements and prohibited overlap","Sources and claims","Links and next step","Maintenance measurement and invalidation"]},
+        {"path":"EDITORIAL-REVIEW.md","required":true,"headings":["Benchmark scope and freshness","Truth and competitiveness matrix","Title and snippet review","Evergreen and catalogue test","Comparative page review","Information gain and reasons to choose this page","Revisions and rejected alternatives","Verdict and approval","Invalidation and revalidation triggers"]},
+        {"path":"CONTENT-PLAN.md","required":true,"headings":["Brief, revision, and approval","Benchmark and editorial verdict","Owner, intent, and protected winners","Target and authority","Source and claim plan","Implementation","Verification gates","Publish or deployment path","Rollout and rollback"]},
         {"path":"SOURCE-LEDGER.md","required":true,"headings":["Sources","Claims supported","Limitations","Citation destinations"]},
         {"path":"CLAIM-LEDGER.md","required":true,"headings":["Verified","User-approved","Attributed","Unknown","Rejected"]},
         {"path":"CONTENT-DRAFT.md","required":false,"condition":"Required when exact copy review is needed or the project does not own the final content source.","headings":["Content draft"]},
         {"path":"PROGRESS.md","required":true,"headings":["Progress"]},
-        {"path":"CONTENT-RECEIPT.md","required":true,"headings":["Brief and approval provenance","Final target and status","Owner, cluster, intent, and action","Changed files or records","Claims, sources, and rejected claims","Search and internal-link posture","Published-target evidence","Indexing handoff","Baseline and monitor windows","Rollback"]},
-        {"path":"QUALITY-REPORT.md","required":true,"headings":["Quality report","Final integrated verification"]},
+        {"path":"CONTENT-RECEIPT.md","required":true,"headings":["Brief and approval provenance","Benchmark and editorial verdict","Final target and status","Owner, cluster, intent, and action","Changed files or records","Claims, sources, and rejected claims","Search and internal-link posture","Published-target evidence","Indexing handoff","Baseline and monitor windows","Rollback"]},
+        {"path":"QUALITY-REPORT.md","required":true,"headings":["Quality report","Editorial competitiveness","Final comparative verification","Final integrated verification"]},
         {"path":"NOTES.md","required":false,"condition":"Only when sanitized research or decisions need separate durable notes.","headings":["Notes"]}
       ]
     },

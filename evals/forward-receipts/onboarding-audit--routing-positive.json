@@ -9,10 +9,10 @@
   "evidence": [
     "invocation=implicit",
     "selected_skill=onboarding-audit",
-    "response_sha256=9a17aa09c092b4fac4bcb8cb7198273ba1f831d4733f067a9d6fca4b0fdf7999",
+    "response_sha256=aad0774ffdf54b826a43d355839ed3b9d11699c7bf904e4f6ffb91cd35022d4e",
     "process_exit_code=0",
-    "payload_sha256=3499e4f6850b9b52191a24f90ca14f2c10c84a03589450ecbb8f34701a799dcc",
-    "plan_sha256=dc487a6d5aef436dca56a08420e9b01bd537c11fa459bb066367567f49dccbb3",
+    "payload_sha256=57e5f5c43f1e82794fc8168e6b211de815e295fa7d79b41d01d55d508cbcf262",
+    "plan_sha256=ede02df76f0d8c45ea7ecd72bf96dc7d6164b18883755f063f98c57791a27ffe",
     "harness_sha256=9a06970430fc59bfdb3485ac37de590bc5668c1f864813a246bacdb6cd004068"
   ],
   "fresh_context": true,
@@ -21,8 +21,8 @@
   "notes": "",
   "result": "PASS",
   "reviewed_by": "forward-routing-harness-v1",
-  "run_id": "adbe4229-d793-4aaa-b930-42634cfc0cc4",
+  "run_id": "504d5390-53b0-4547-845c-d4ff243a062b",
   "schema_version": 1,
   "skill": "onboarding-audit",
-  "started_at": "2026-08-07T01:17:21Z"
+  "started_at": "2026-08-09T16:53:49Z"
 }

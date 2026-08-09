@@ -50,7 +50,7 @@ digraph landing_page {
 
 Resolve the owning work root and maintain `agent-work/{slug}/WORK.md` using [the canonical work-artifact contract](contracts/work-artifacts.md) when present, otherwise use the bundled [portable contract](contracts/work-artifacts.md). Write stage artifacts under `agent-work/{slug}/landing-page/`.
 
-Read [REFERENCE.md](REFERENCE.md) before shaping the message, page, SEO, or implementation. Read [PREVIEW.md](PREVIEW.md) completely before generating HTML.
+Read [REFERENCE.md](REFERENCE.md) before shaping the message, page, SEO, or implementation. Read [PREVIEW.md](PREVIEW.md) completely before generating HTML. For a search-targeted page, also apply [the SEO page-quality contract](contracts/seo-page-quality.md).
 
 ## Boundaries
 
@@ -60,7 +60,7 @@ Read [REFERENCE.md](REFERENCE.md) before shaping the message, page, SEO, or impl
 - Do not use dark patterns, disguised controls, misleading countdowns, preselected consent, inaccessible urgency, or CTAs whose labels conceal the result.
 - Keep preview code inside the skill stage. It is a decision artifact, not production code.
 - Do not change live analytics, advertising, domains, production configuration, CMS content, or external services without separate authorization.
-- When an approved SEO Stack brief exists, preserve its primary owner, search intent, protected winners, canonical/index posture, internal-link responsibilities, and measurement guardrails. Landing Page owns persuasion, CTA, visual direction, preview, and bounded page implementation—not SEO portfolio strategy.
+- When an approved SEO Stack opportunity exists, preserve its primary owner, search intent, protected winners, internal-link responsibilities, and measurement guardrails. Treat any upstream title, outline, modules, proof format, or page brief as a hypothesis. Landing Page owns page-specific benchmarking, persuasion, CTA, visual direction, preview, approval, and bounded page implementation—not SEO portfolio strategy.
 - When a search-targeted canonical production page is newly published or materially updated, emit exact publication evidence for `seo-indexing`; do not request indexing inside Landing Page or claim the page is indexed.
 - Do not invoke Goalpro. This skill owns its approved implementation loop.
 
@@ -68,7 +68,9 @@ Read [REFERENCE.md](REFERENCE.md) before shaping the message, page, SEO, or impl
 
 Inspect product docs, implementation, screenshots, routes, pricing, brand guidance, research, analytics evidence, current copy, search intent, and available proof. Separate `EVIDENCE`, `USER DECISION`, `ASSUMPTION`, and `UNKNOWN`.
 
-For an explicitly search-targeted page or when same-slug SEO artifacts are supplied or discovered, follow the optional SEO Stack consultation below before shaping the message. An approved `seo-strategy` landing-page brief outranks inferred query intent; material owner, URL, intent, or protected-winner conflicts return to Strategy rather than being resolved in the preview.
+For an explicitly search-targeted page or when same-slug SEO artifacts are supplied or discovered, follow the optional SEO Stack consultation below before shaping the message. An approved `seo-strategy` page opportunity establishes the portfolio owner and intent, but it does not establish a page title, structure, modules, proof format, or competitive quality. Material owner, URL, intent, or protected-winner conflicts return to Strategy rather than being resolved in the preview.
+
+Before shaping the message, write `PAGE-BENCHMARK.md`, `PAGE-REQUIREMENTS.md`, and `EDITORIAL-REVIEW.md` under the shared page-quality contract. Inspect the current owner plus representative current results and full pages for the exact query scope. Set `PUBLISH`, `REVISE`, `NO PAGE`, or `BLOCKED`; only `PUBLISH` may proceed to message and preview approval.
 
 Use the bundled `templates/` files for every matching artifact rather than recreating their structure. Write `RESEARCH.md` and `MESSAGE-MAP.md`. The message map must cover audience, arrival intent, problem, desired outcome, unique approach, prioritized product callouts, feature-to-benefit framing, differentiation, proof, objections, risk reversal, and CTA ladder.
 
@@ -80,7 +82,9 @@ Write `COPY-DECK.md` with headline hierarchy, supporting copy, product highlight
 
 Discover `prose-humanizer` through the host skill registry or as the sibling `../prose-humanizer/SKILL.md`. When available, read it and use embedded mode; keep all evidence in this stage. If unavailable, use the humanization fallback in `REFERENCE.md`. Humanization must preserve approved claims, conversion intent, brand voice, markup, and product terminology.
 
-Write `SEO-PLAN.md` with an explicit `INDEX`, `NOINDEX`, or `UNRESOLVED` disposition; upstream brief and owner when applicable; traffic/query intent; protected winners and overlap exclusions; title and description; canonical and crawl behavior; heading and information architecture; internal links; entities and structured data; social metadata; performance implications; and post-launch measurement. SEO must serve the visitor and never distort the approved message or silently change an upstream ownership decision.
+Write `SEO-PLAN.md` with an explicit `INDEX`, `NOINDEX`, or `UNRESOLVED` disposition; upstream opportunity and owner when applicable; benchmark and editorial verdict; traffic/query intent; protected winners and overlap exclusions; title and description; canonical and crawl behavior; heading and information architecture; internal links; entities and structured data; social metadata; performance implications; and post-launch measurement. SEO must serve the visitor and never distort the approved message or silently change an upstream ownership decision.
+
+For a search-targeted page, test the title for truth, appeal, differentiation, evergreen durability, and catalogue scalability. Removing an unsupported superlative is only a truth correction; the replacement must still give the user a concrete reason to choose the page.
 
 ## 3. Choose directions adaptively
 
@@ -140,6 +144,7 @@ Run the target project's full applicable tests, types, lint, build, and browser 
 - representative narrow, medium, and wide layouts plus text expansion and content extremes;
 - metadata, canonical/index posture, structured data validity, crawlable content, internal links, and social cards when applicable;
 - approved SEO Stack owner, intent boundary, protected winners, internal-link map, and measurement baseline when applicable;
+- dated page benchmark, title and catalogue durability, visible information advantage, and final `PUBLISH` verdict when search-targeted;
 - performance budgets, image/font behavior, layout stability, hydration, console, and network failures;
 - TurbulenceJS normal endpoint, reduced motion, rapid interruption, retargeting, cleanup, idle behavior, and absence of competing ownership;
 - authorized analytics only, with consent and privacy behavior preserved.
@@ -152,6 +157,7 @@ Write `QUALITY-REPORT.md`, update `WORK.md`, and extract durable reader-facing d
 - `MESSAGE-MAP.md` — callouts, framing, claims/proof, objections, CTA ladder, approval provenance.
 - `COPY-DECK.md` — approved page and microcopy plus embedded humanization evidence.
 - `SEO-PLAN.md` — index posture, search intent, semantics, entities, metadata, links, structured data, performance, measurement.
+- `PAGE-BENCHMARK.md`, `PAGE-REQUIREMENTS.md`, and `EDITORIAL-REVIEW.md` — conditional search-targeted competitive evidence, requirement strength, title/catalogue review, verdict, and approval.
 - `PAGE-DIRECTIONS.md` — adaptive options, recommendation, revisions, feedback, and approval.
 - `LANDING-PAGE-PREVIEW.html` and `previews/` — validated current alias and immutable revisions.
 - `IMPLEMENTATION-PLAN.md` — approved target map, slices, gates, motion, rollout, and rollback.
@@ -163,16 +169,16 @@ Use the examples and schemas in [REFERENCE.md](REFERENCE.md). Templates are star
 
 ## Done
 
-- **Preview-only complete:** product truth and framing are approved; a named immutable preview revision passes structural and manual preview gates; copy remains human and factual; CTA intent and destinations are explicit; production mutation is absent; `QUALITY-REPORT.md`, `PROGRESS.md`, and `WORK.md` point to the preview evidence and pending implementation boundary. State: “I am satisfied this landing-page preview is complete because …”.
+- **Preview-only complete:** product truth and framing are approved; a named immutable preview revision passes structural and manual preview gates; copy remains human and factual; CTA intent and destinations are explicit; any search-targeted page retains an approved `PUBLISH` verdict against a current benchmark; production mutation is absent; `QUALITY-REPORT.md`, `PROGRESS.md`, and `WORK.md` point to the preview evidence and pending implementation boundary. State: “I am satisfied this landing-page preview is complete because …”.
 - **Implementation complete:** the preview criteria remain met; production matches the approved revision; applicable project, browser, SEO, accessibility, responsive, performance, and TurbulenceJS gates pass; all quality dimensions end `VERIFIED`, `NOT APPLICABLE`, or explicitly `WAIVED`; and `WORK.md` points to final evidence. State: “I am satisfied this landing page is complete because …”.
 
 ## Optional SEO Stack consultation
 
 Use this integration only when the request is search-targeted, an SEO brief is supplied, or same-slug SEO artifacts are discoverable. Ordinary campaign or product landing pages do not require the SEO Stack.
 
-1. Discover `seo-strategy` through the host skill registry; if the host has no registry, resolve sibling `../seo-strategy/SKILL.md`. Read it and validate the exact landing-page brief, `CONTENT-PORTFOLIO.csv` row, approval revision, owner, intent, protected winners, internal links, index/canonical posture, and measurement plan.
+1. Discover `seo-strategy` through the host skill registry; if the host has no registry, resolve sibling `../seo-strategy/SKILL.md`. Read it and validate `CONTENT-PORTFOLIO.csv`, `PAGE-OPPORTUNITIES.md`, the approval revision, owner, intent, protected winners, internal-link role, and measurement plan.
 2. Follow Strategy's pointers to `seo-foundation` and `seo-setup` only as needed to validate ownership or fragile setup evidence. Do not duplicate competitor/keyword research or silently repair upstream decisions.
-3. Keep the Strategy owner and user job fixed while Landing Page decides message hierarchy, proof, CTA ladder, persuasion, layout, visual direction, preview, and implementation. Route a material owner, URL, query-intent, or cannibalization change back to `seo-strategy`; route an editorial asset without material landing-page decisions to `seo-content`.
+3. Keep the Strategy owner and user job fixed while Landing Page benchmarks the exact page and decides title, message hierarchy, proof, CTA ladder, persuasion, layout, visual direction, preview, and implementation. Route a material owner, URL, query-intent, or cannibalization change back to `seo-strategy`; route an editorial asset without material landing-page decisions to `seo-content`.
 4. When live technical evidence is useful, discover `seo-setup`, read its `CLI.md`, confirm schema compatibility, and use only compatible read-only `seo-stack inventory`, status, or validation commands. The CLI is optional agent tooling; never install it into the target application, request provider credentials for a prose/design-only task, or use it for external mutation.
 5. Record upstream paths, revision/freshness, preserved decisions, CLI receipts or fallback evidence, indexing-assistance eligibility, and unresolved gaps in `RESEARCH.md` and `SEO-PLAN.md`. Embedded SEO consultation keeps artifact ownership in Landing Page.
 6. After an approved canonical production target is observed, hand its final URL, owner, publication time, canonical/index/sitemap/link posture, and receipt path to `seo-indexing`; pass both page and indexing receipts to `seo-monitor` without inventing outcomes.

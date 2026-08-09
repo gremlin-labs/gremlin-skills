@@ -236,7 +236,7 @@ After rewriting, verify:
 - structured-data-visible text remains consistent with rendered copy;
 - the final copy does not promise rankings, traffic, product outcomes, or authority it cannot prove.
 
-If the existing copy conflicts with the approved SEO brief, report the contradiction. Humanization cannot choose which source should win.
+If the existing copy conflicts with the approved page-specialist brief or governing SEO opportunity, report the contradiction. Humanization cannot choose which source should win or treat a Strategy opportunity as page-level copy authority.
 
 ## Broad and high-stakes review
 

@@ -7,12 +7,12 @@
     "user-prompt"
   ],
   "evidence": [
-    "invocation=explicit",
+    "invocation=implicit",
     "selected_skill=landing-page",
-    "response_sha256=51608c56dce2c4293f759bc039a444cbff69c9d8c783245e6a773fe8ae6fbc1c",
+    "response_sha256=3540eb13f9a18418130800bf284b4b260b72d4c6e6aba01de22ab2f49f923f80",
     "process_exit_code=0",
-    "payload_sha256=3499e4f6850b9b52191a24f90ca14f2c10c84a03589450ecbb8f34701a799dcc",
-    "plan_sha256=dc487a6d5aef436dca56a08420e9b01bd537c11fa459bb066367567f49dccbb3",
+    "payload_sha256=57e5f5c43f1e82794fc8168e6b211de815e295fa7d79b41d01d55d508cbcf262",
+    "plan_sha256=ede02df76f0d8c45ea7ecd72bf96dc7d6164b18883755f063f98c57791a27ffe",
     "harness_sha256=9a06970430fc59bfdb3485ac37de590bc5668c1f864813a246bacdb6cd004068"
   ],
   "fresh_context": true,
@@ -21,8 +21,8 @@
   "notes": "",
   "result": "PASS",
   "reviewed_by": "forward-routing-harness-v1",
-  "run_id": "a1c0653b-c9a4-4755-9aaf-0648bbefaff4",
+  "run_id": "89262294-ae2c-4ae7-8c5e-d23706efb08a",
   "schema_version": 1,
   "skill": "prose-humanizer",
-  "started_at": "2026-08-07T01:17:33Z"
+  "started_at": "2026-08-09T16:54:03Z"
 }

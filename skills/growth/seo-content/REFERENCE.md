@@ -1,6 +1,6 @@
 # SEO Content reference
 
-Use this reference to validate one brief, build a source and claim ledger, implement safely, and prove the asset without weakening upstream ownership.
+Use this reference to challenge one page opportunity, benchmark its competitive context, create a specialist-owned editorial brief, build source and claim ledgers, implement safely, and prove the asset without weakening upstream ownership.
 
 ## Prerequisite validation
 
@@ -23,51 +23,51 @@ The approved Foundation must name:
 
 ### Strategy
 
-The portfolio row and exact brief must agree on:
+The portfolio row and page opportunity must agree on:
 
 ```text
-brief_id
-approval_status and revision
+item_id
+strategy_approval_status and revision
 action
 primary_cluster
 intent and user_job
 current_owner and proposed_owner
-target_url or target decision
-page_role and format
-product_value and differentiation
-required facts, proof, and primary sources
-claims requiring user approval
-outline requirements and prohibited overlap
+target_url or unresolved target decision
+candidate_page_role
+product_value hypothesis
+evidence strength and gaps
+prohibited overlap
 internal sources and destinations
-index, canonical, schema, and sitemap posture
 conversion/outcome
 baseline and measurement windows
-rollout, rollback, and protected winners
+protected winners
+recommended specialist and benchmark state
 ```
 
-Conflicts are `BLOCKED — RETURN TO SEO STRATEGY`, not drafting decisions.
+Ownership, intent, portfolio-action, and protected-winner conflicts are `BLOCKED — RETURN TO SEO STRATEGY`. Titles, formats, structures, proof presentation, content requirements, and competitive strength remain this specialist's decisions after page-specific research.
 
 ## Route matrix
 
 | Request | Owner |
 |---|---|
-| One approved article, guide, glossary, help/education, comparison, or use-case content brief | `seo-content` |
+| One approved article, guide, glossary, help/education, comparison, catalogue, or use-case page opportunity | `seo-content` |
 | Landing page with unresolved message, CTA, proof, persuasion, layout, visual direction, or preview | `landing-page` |
 | Cluster, intent, owner, URL, portfolio action, or cannibalization is unresolved | `seo-strategy` |
 | Only humanize existing approved copy without SEO/content implementation | `prose-humanizer` |
 | Implement several heterogeneous approved source/config slices | Goalpro |
-| Research competitors, SERPs, demand, or ownership | `seo-foundation` |
+| Research the broad competitor, demand, cluster, or ownership market | `seo-foundation` |
+| Benchmark the exact editorial query and representative pages | `seo-content` |
 | Verify and optionally request indexing for an approved published canonical URL | `seo-indexing` |
 
-When routing to Landing Page, provide the exact brief, primary cluster, intent boundary, protected winners, approved facts, required internal links, index/canonical posture, and measurement contract. Landing Page owns message/design/preview decisions but cannot silently change SEO ownership.
+When routing to Landing Page, provide the page opportunity, primary cluster, intent boundary, protected winners, approved facts, internal-link role, and measurement contract. Landing Page owns page-specific benchmarking, message, design, preview, and implementation decisions but cannot silently change SEO ownership.
 
 ## Authority and risk matrix
 
 | Action | Default authority |
 |---|---|
 | Read repository, public pages, approved artifacts, and primary sources | Inspection; allowed |
-| Draft inside `agent-work/{slug}/seo-content/` | Allowed after valid brief |
-| Reversible source edit implementing an exact approved brief | Allowed only when the user requested implementation |
+| Benchmark and draft inside `agent-work/{slug}/seo-content/` | Allowed after a valid page opportunity |
+| Reversible source edit implementing an exact approved specialist brief with `PUBLISH` verdict | Allowed only after exact brief approval and implementation authority |
 | Material claim, target URL, ownership, index/canonical, redirect, analytics, privacy, or strategy delta | Exact renewed approval |
 | High-stakes medical, legal, financial, safety, or policy claim | Exact draft approval before publication |
 | External CMS mutation or production deployment | Explicit target/publish authorization |
@@ -121,6 +121,34 @@ Rules:
 - Competitor claims require current public evidence and neutral framing. Do not imply private knowledge or endorse unsupported comparison tables.
 - Statistics retain population, geography, sample, window, unit, and uncertainty needed to interpret them.
 
+## Page benchmark and editorial brief
+
+Apply [the SEO page-quality contract](contracts/seo-page-quality.md). `PAGE-BENCHMARK.md` records the exact query scope, current owner, representative current results and full pages, page-role evidence, title promises, catalogue or data models, useful coverage, proof, interaction, conversion paths, weaknesses, unserved needs, counterevidence, and limitations.
+
+`PAGE-REQUIREMENTS.md` classifies every requirement `MUST`, `OPTIONAL`, `TEST`, or `REJECTED`. It cannot promote a competitor convention into `MUST` without independent user-job, product-truth, claim-integrity, accessibility, or page-role evidence.
+
+`EDITORIAL-BRIEF.md` is created here, not inherited from Strategy. It includes:
+
+```text
+brief_id and revision
+strategy_item_id
+approval_status
+owner, URL decision, cluster, and intent boundary
+target user and job
+page role and differentiated reader promise
+title, H1, description, and their truth/durability constraints
+information architecture and catalogue/data model
+MUST requirements and prohibited overlap
+OPTIONAL and TEST decisions
+primary-source and claim plan
+internal links and conversion/next-step path
+index, canonical, schema, and sitemap posture
+accessibility, maintenance, rollout, rollback, and measurement
+material unknowns and invalidation signals
+```
+
+`EDITORIAL-REVIEW.md` records the truth/competitiveness matrix, title and catalogue tests, comparison against representative pages, exact `PUBLISH`, `REVISE`, `NO PAGE`, or `BLOCKED` verdict, revisions, and approval provenance.
+
 ## Information-gain test
 
 Before drafting, answer:
@@ -143,11 +171,16 @@ If these do not have concrete answers, return to Strategy with `NO NEW URL` or `
 - Examples are accurate, runnable or clearly illustrative, and not fabricated firsthand experience.
 - Each section contributes new information, synthesis, proof, or action.
 - The conclusion points to the next useful product/content action only when relevant.
+- The page role resembles what currently satisfies the query while the execution remains original.
+- The page gives a concrete reason to choose it over the current owner and representative alternatives.
+- The information architecture can accommodate the planned catalogue, data, comparisons, and routine additions.
 
 ### Language
 
 - Natural terms replace forced exact-match repetition.
 - Titles/headings are descriptive and non-clickbait.
+- The title is compelling, specific, differentiated, fulfilled by the page, and durable under routine inventory changes.
+- Removing an unsupported superlative does not excuse generic or noncompetitive wording.
 - Claims retain caveats and attribution.
 - Domain language remains precise.
 - Copy avoids generic AI transitions, inflated importance, forced triples, fake quotations, and repetitive summaries.
@@ -166,7 +199,7 @@ If these do not have concrete answers, return to Strategy with `NO NEW URL` or `
 | Surface | Verify |
 |---|---|
 | URL | Stable, intended owner, correct locale/trailing-slash policy, no accidental collision |
-| Title/H1 | Honest, useful, distinguishable, and aligned without requiring exact duplication |
+| Title/H1 | Honest, compelling, distinguishable, evergreen or explicitly snapshot-scoped, catalogue-safe, and aligned without requiring exact duplication |
 | Description | Accurate invitation, no unsupported promise or keyword list |
 | Canonical | Self or approved alternative, absolute when required, correct final origin |
 | Robots | Intended index posture in rendered HTTP/meta behavior |
@@ -193,16 +226,18 @@ Do not add schema merely because a generator supports it. Eligibility for a sear
 
 ## Verification ladder
 
-1. **Factual:** compare final rendered copy with claim and source ledgers.
-2. **Ownership:** compare URL, intent, headings, and links with Foundation/Strategy.
-3. **Static:** parse content/frontmatter/schema; check links/assets/citations.
-4. **Project:** format, lint, type, tests, content build, full build.
-5. **Rendered:** representative viewports, zoom, keyboard, themes/locales, console/network.
-6. **Search:** final HTML/head, response/index headers, canonical, sitemap, structured data.
-7. **Target:** observed local/preview/CMS/production result at the authorized target.
-8. **Receipt:** baseline pointer, changed target, rollback, limitations, Monitor handoff.
+1. **Benchmark:** compare the final draft with the dated representative pages, page role, user job, title promise, catalogue needs, and information-gain hypothesis.
+2. **Editorial:** confirm the final title and page still earn `PUBLISH`; record why an experienced editor would publish it now.
+3. **Factual:** compare final rendered copy with claim and source ledgers.
+4. **Ownership:** compare URL, intent, headings, and links with Foundation/Strategy.
+5. **Static:** parse content/frontmatter/schema; check links/assets/citations.
+6. **Project:** format, lint, type, tests, content build, full build.
+7. **Rendered:** representative viewports, zoom, keyboard, themes/locales, console/network.
+8. **Search:** final HTML/head, response/index headers, canonical, sitemap, structured data.
+9. **Target:** observed local/preview/CMS/production result at the authorized target.
+10. **Receipt:** baseline pointer, changed target, rollback, limitations, Monitor handoff.
 
-A lower rung never substitutes for a higher one. A successful build is not production publication, and rendered presence is not indexation.
+No rung substitutes for another. A successful build cannot rescue a weak editorial verdict, is not production publication, and rendered presence is not indexation.
 
 ## Content plan template
 
@@ -210,6 +245,7 @@ A lower rung never substitutes for a higher one. A successful build is not produ
 # SEO content plan
 
 ## Brief, revision, and approval
+## Benchmark and editorial verdict
 ## Owner, intent, and protected winners
 ## Target and authority
 ## Source and claim plan
@@ -222,12 +258,29 @@ A lower rung never substitutes for a higher one. A successful build is not produ
 ## Material deltas and approval
 ```
 
+## Editorial review template
+
+```markdown
+# Editorial review
+
+## Benchmark scope and freshness
+## Truth and competitiveness matrix
+## Title and snippet review
+## Evergreen and catalogue test
+## Comparative page review
+## Information gain and reasons to choose this page
+## Revisions and rejected alternatives
+## Verdict and approval
+## Invalidation and revalidation triggers
+```
+
 ## Content receipt template
 
 ```markdown
 # SEO content receipt
 
 ## Brief and approval provenance
+## Benchmark and editorial verdict
 ## Final target and status
 ## Owner, cluster, intent, and action
 ## Changed files or records

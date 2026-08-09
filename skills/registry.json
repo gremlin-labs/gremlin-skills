@@ -887,9 +887,9 @@
         "status": "published"
       },
       "invocation": {
-        "mode": "user-only",
-        "claude": "user-only",
-        "codex": "user-only"
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
       },
       "authority": {
         "mode": "hybrid",
@@ -909,6 +909,7 @@
       "contracts": [
         "product-research",
         "quality",
+        "seo-page-quality",
         "work-artifacts"
       ],
       "dependencies": {
@@ -1508,13 +1509,13 @@
         "status": "published"
       },
       "invocation": {
-        "mode": "user-only",
-        "claude": "user-only",
-        "codex": "user-only"
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
       },
       "authority": {
-        "mode": "executor",
-        "source_mutation": "task-scoped",
+        "mode": "hybrid",
+        "source_mutation": "after-approval",
         "external_actions": "approval-required"
       },
       "output_root": "agent-work/{slug}/seo-content/",
@@ -1530,11 +1531,13 @@
       "contracts": [
         "product-research",
         "quality",
+        "seo-page-quality",
         "work-artifacts"
       ],
       "dependencies": {
         "required_skills": [
-          "prose-humanizer"
+          "prose-humanizer",
+          "seo-strategy"
         ],
         "optional_skills": [
           "seo-indexing",
@@ -1835,6 +1838,7 @@
         "goalpro-handoff",
         "product-research",
         "quality",
+        "seo-page-quality",
         "work-artifacts"
       ],
       "dependencies": {

@@ -533,12 +533,12 @@
     {
       "id": "landing-page--routing-positive",
       "skill": "landing-page",
-      "kind": "routing-explicit",
+      "kind": "routing-positive",
       "source_case_id": "landing-page-positive-1",
       "prompt": "Create and implement a conversion-focused landing page for this product, but verify the feature callouts and CTA framing with me and show an HTML preview first.",
       "invocation": {
-        "mode": "explicit",
-        "skill": "landing-page"
+        "mode": "implicit",
+        "skill": null
       },
       "expected": {
         "winner": "landing-page",
@@ -813,8 +813,8 @@
       "source_case_id": "prose-humanizer-near-1",
       "prompt": "Design, preview, and implement a new product landing page with stronger benefit framing and conversion CTAs.",
       "invocation": {
-        "mode": "explicit",
-        "skill": "landing-page"
+        "mode": "implicit",
+        "skill": null
       },
       "expected": {
         "winner": "landing-page",
@@ -899,12 +899,12 @@
     {
       "id": "seo-content--routing-positive",
       "skill": "seo-content",
-      "kind": "routing-explicit",
+      "kind": "routing-positive",
       "source_case_id": "seo-content-positive-1",
-      "prompt": "Implement the one approved editorial brief in our SEO Strategy, verify every claim, and publish the article through this project's content system.",
+      "prompt": "Take this approved editorial opportunity, benchmark the exact query and competing pages, challenge the proposed title and structure, then implement the approved specialist brief through this project's content system.",
       "invocation": {
-        "mode": "explicit",
-        "skill": "seo-content"
+        "mode": "implicit",
+        "skill": null
       },
       "expected": {
         "winner": "seo-content",
@@ -922,8 +922,8 @@
       "source_case_id": "seo-content-near-1",
       "prompt": "Design and implement this SEO landing page, but the CTA, proof, persuasion order, layout, and visual direction are still unresolved.",
       "invocation": {
-        "mode": "explicit",
-        "skill": "landing-page"
+        "mode": "implicit",
+        "skill": null
       },
       "expected": {
         "winner": "landing-page",
@@ -1031,10 +1031,10 @@
       "skill": "seo-monitor",
       "kind": "routing-near-miss",
       "source_case_id": "seo-monitor-near-1",
-      "prompt": "Implement the approved refresh brief for this one declining guide and verify its published content.",
+      "prompt": "Benchmark and implement the approved refresh opportunity for this one declining guide, then verify its published content.",
       "invocation": {
-        "mode": "explicit",
-        "skill": "seo-content"
+        "mode": "implicit",
+        "skill": null
       },
       "expected": {
         "winner": "seo-content",

@@ -1,6 +1,6 @@
 # SEO Foundation
 
-Builds an evidence-backed SEO foundation by discovering and confirming business and organic competitors, inspecting their page strategies, sampling Google and Bing results, combining first-party queries with Google Ads Keyword Planner demand, and assigning keyword clusters to page owners.
+Builds an evidence-backed SEO foundation by discovering and confirming business and organic competitors, inspecting representative pages, sampling Google and Bing results, combining first-party queries with Google Ads Keyword Planner demand, and assigning keyword clusters to page owners without prescribing page content.
 
 ## When to reach for it
 
@@ -16,7 +16,7 @@ It may inspect project and external evidence and write only its skill-scoped wor
 
 ## Outputs
 
-Work is owned at `agent-work/{slug}/seo-foundation/`. Required contract artifacts currently include `FOUNDATION-BRIEF.md`, `SITE-BASELINE.md`, `COMPETITORS.md`, `COMPETITOR-ANALYSIS.md`, `SERP-SNAPSHOTS.md`, `KEYWORD-DEMAND.csv`, `KEYWORD-DEMAND.md`, `KEYWORD-CLUSTERS.md`, `PAGE-OWNERSHIP.md`, `SEO-FOUNDATION.md`. Conditional files are emitted only when their documented condition applies.
+Work is owned at `agent-work/{slug}/seo-foundation/`. Required contract artifacts currently include `FOUNDATION-BRIEF.md`, `SITE-BASELINE.md`, `COMPETITORS.md`, `COMPETITOR-ANALYSIS.md`, `EVIDENCE-LEDGER.md`, `SERP-SNAPSHOTS.md`, `KEYWORD-DEMAND.csv`, `KEYWORD-DEMAND.md`, `KEYWORD-CLUSTERS.md`, `PAGE-OWNERSHIP.md`, `SEO-FOUNDATION.md`. Material conclusions are labelled `OBSERVED`, `INFERRED`, `HYPOTHESIS`, or `UNSUPPORTED`; page-level prescriptions remain downstream. Conditional files are emitted only when their documented condition applies.
 
 ## Common questions
 
@@ -30,7 +30,7 @@ Yes. Its archive has no required sibling-skill dependency; optional integrations
 
 ## Visible success
 
-The required artifacts exist at the declared output root, claims are backed by the evidence level the skill requires, applicable verification gates pass, and the skill stops at its documented authority boundary. Structural validation alone is not treated as proof of product judgment.
+The required artifacts exist at the declared output root, claims are backed by explicit evidence-strength labels, competitor recurrence is not treated as causal or prescriptive, applicable verification gates pass, and the skill stops at its documented authority boundary. Structural validation alone is not treated as proof of product judgment.
 
 ## Adjacent Gremlin skills
 
@@ -51,4 +51,3 @@ The required artifacts exist at the declared output root, claims are backed by t
 | Skill-local tests | No skill-local suite declared |
 | Stable distributions | standalone_archive, stable_plugin, public_install |
 <!-- END GENERATED:REGISTRY-CONTRACT -->
-

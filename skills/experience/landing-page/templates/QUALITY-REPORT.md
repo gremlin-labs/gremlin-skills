@@ -15,6 +15,7 @@
 | Accessibility | UNKNOWN | |
 | Responsive behavior | UNKNOWN | |
 | SEO | UNKNOWN | |
+| SEO page quality | UNKNOWN | |
 | Performance | UNKNOWN | |
 | Motion | UNKNOWN | |
 | Correctness and resilience | UNKNOWN | |
@@ -27,6 +28,8 @@
 ## Rendered and runtime evidence
 
 ## SEO
+
+## SEO page quality
 
 ## Copy and claims
 

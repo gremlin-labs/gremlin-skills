@@ -1,9 +1,9 @@
 # Invocation policy owner review
 
 - Status: `approved`
-- Proposal SHA-256: `8ee99a986e4b38c0c4d59576c0690deba7cb51d02b7e09cfae7666a6bec67220`
-- Recommendation: 22 model-visible; 14 user-only
-- Public registry and host metadata remain unchanged until this complete matrix is approved.
+- Proposal SHA-256: `0b1ac09e7a4674ca56ed4138df2735a01084d952480ba98f6a5fc61b78036e88`
+- Recommendation: 24 model-visible; 12 user-only
+- Public registry and host metadata match this approved matrix.
 - Invocation does not grant authority; every existing approval and external-action gate remains in force.
 
 ## Matrix
@@ -24,7 +24,7 @@
 | `feature-goal` | **user-only** | executor; source task-scoped; external none | goalpro (reference, user-only) | theme-library | Executor or hybrid workflow can mutate task-scoped source after its gates, so the human must name it. |
 | `gamepro` | **user-only** | executor; source task-scoped; external none | — | theme-library | Executor or hybrid workflow can mutate task-scoped source after its gates, so the human must name it. |
 | `goalpro` | **user-only** | executor; source task-scoped; external none | — | theme-library | Executor or hybrid workflow can mutate task-scoped source after its gates, so the human must name it. |
-| `landing-page` | **user-only** | hybrid; source after-approval; external none | prose-humanizer (embedded, model-visible), seo-strategy (context, model-visible) | theme-library, turbulencejs-integration | Executor or hybrid workflow can mutate task-scoped source after its gates, so the human must name it. |
+| `landing-page` | **model-visible** | hybrid; source after-approval; external none | prose-humanizer (embedded, model-visible), seo-strategy (context, model-visible) | theme-library, turbulencejs-integration | Page specialist begins read-only, requires exact approval before source mutation, and must remain auto-discoverable for operational pipeline routing. |
 | `migratepro` | **user-only** | executor; source task-scoped; external none | — | theme-library | Executor or hybrid workflow can mutate task-scoped source after its gates, so the human must name it. |
 | `motion-audit` | **model-visible** | read-only; source never; external none | — | goalpro, motion-direction, planpro, theme-library | Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action. |
 | `motion-direction` | **model-visible** | read-only; source never; external none | — | goalpro, planpro, theme-library, turbulencejs-integration | Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action. |
@@ -34,7 +34,7 @@
 | `prose-humanizer` | **model-visible** | executor; source task-scoped; external none | seo-strategy (context, model-visible) | theme-library | Bounded task-scoped transformation with no external action; useful as an explicitly embedded primitive. |
 | `releasepro` | **user-only** | executor; source after-approval; external approval-required | — | theme-library | Workflow can change external state and retains a second action approval gate after explicit invocation. |
 | `restructure` | **user-only** | executor; source task-scoped; external none | — | theme-library | Executor or hybrid workflow can mutate task-scoped source after its gates, so the human must name it. |
-| `seo-content` | **user-only** | executor; source task-scoped; external approval-required | prose-humanizer (embedded, model-visible) | seo-indexing, seo-monitor, theme-library | Workflow can change external state and retains a second action approval gate after explicit invocation. |
+| `seo-content` | **model-visible** | hybrid; source after-approval; external approval-required | prose-humanizer (embedded, model-visible), seo-strategy (context, model-visible) | seo-indexing, seo-monitor, theme-library | Page specialist begins read-only, requires exact approval before source mutation, and must remain auto-discoverable for operational pipeline routing. |
 | `seo-foundation` | **model-visible** | read-only; source never; external none | — | seo-strategy, theme-library | Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action. |
 | `seo-indexing` | **user-only** | executor; source never; external approval-required | — | seo-monitor, theme-library | Workflow can change external state and retains a second action approval gate after explicit invocation. |
 | `seo-monitor` | **model-visible** | read-only; source never; external none | — | theme-library | Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action. |

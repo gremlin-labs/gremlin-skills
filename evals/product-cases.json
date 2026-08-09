@@ -227,9 +227,19 @@
       "prompt": "Research SEO opportunities for a marketplace whose buyers and sellers use different terms in the US and UK.",
       "relevant_dimensions": ["User segments","Market and language scope","Search intent","Competitor taxonomy","Demand source compatibility","Page ownership"],
       "not_applicable_dimensions": ["Source implementation"],
-      "expected_outputs": ["Separate user and market scopes","Business and organic competitor distinctions","Engine and locale labelled SERP evidence","Source-window-preserving demand","Distinct intent clusters","One owner per material cluster"],
+      "expected_outputs": ["Separate user and market scopes","Business and organic competitor distinctions","Engine and locale labelled SERP evidence","Source-window-preserving demand","Observed inferred hypothesis and unsupported classifications","Distinct intent clusters","One owner per material cluster","No page-level content prescriptions"],
       "material_question": "Which user segment and market is the initial strategic priority when the product evidence does not decide it?",
-      "failure_if": ["US and UK demand are silently merged","Paid competition becomes organic difficulty","Competitor copying replaces product fit","Two pages own the same cluster without a bridge rule"]
+      "failure_if": ["US and UK demand are silently merged","Paid competition becomes organic difficulty","Competitor recurrence becomes a causal ranking or adoption claim","Competitor copying replaces product fit","Two pages own the same cluster without a bridge rule"]
+    },
+    {
+      "id": "product-seo-foundation-weak-pattern-evidence",
+      "skill": "seo-foundation",
+      "prompt": "Several ranking pages mention tested recommendations, link to methodology, and share a similar outline; record what our future page should contain.",
+      "relevant_dimensions": ["Evidence strength","SERP scope","Competitor page observations","Causality","Downstream authority"],
+      "not_applicable_dimensions": ["Page brief","Source implementation"],
+      "expected_outputs": ["Dated scoped page observations","OBSERVED labels for testing methodology and structure","HYPOTHESIS or UNSUPPORTED status for adoption or ranking causality","Counterevidence and limitations","Later page-specific investigation relevance only"],
+      "material_question": "What did the pages demonstrably contain, and what remains unknown about why they rank or what our page needs?",
+      "failure_if": ["Tested recommendations become a requirement","A methodology page is prescribed without an actual claim requiring it","Repeated structure becomes a fixed outline","Ranking is treated as causal proof","Foundation writes a content brief"]
     },
     {
       "id": "product-seo-strategy-protected-winner",
@@ -237,19 +247,39 @@
       "prompt": "Plan new comparison and use-case pages when an existing guide already ranks and converts for part of the same cluster.",
       "relevant_dimensions": ["Protected winners","Search intent","Product value","Cannibalization","Portfolio action","Measurement and rollback"],
       "not_applicable_dimensions": ["Unapproved implementation"],
-      "expected_outputs": ["Current winner baseline","One explicit action per owner or gap","Distinct intent and product value for any new URL","Internal-link authority plan","Staged rollout and rollback trigger","Approved consumption index"],
+      "expected_outputs": ["Current winner baseline","One explicit action per owner or gap","Distinct intent and product value for any new URL","Page opportunity with evidence strength gaps and specialist route","Internal-link authority plan","Staged rollout and rollback trigger","Approved consumption index"],
       "material_question": "Does the proposed page serve a distinct user job that the current winner should not own?",
-      "failure_if": ["A new URL is recommended from volume alone","The existing winner loses ownership without evidence","Rankings are promised","Strategy mutates source before approval"]
+      "failure_if": ["A new URL is recommended from volume alone","The existing winner loses ownership without evidence","Strategy authors a title outline module requirement methodology requirement or page-content acceptance gate","Page creation routes directly to Goalpro","Rankings are promised","Strategy mutates source before approval"]
+    },
+    {
+      "id": "product-seo-strategy-insufficient-page-benchmark",
+      "skill": "seo-strategy",
+      "prompt": "The Foundation found a keyword and proposed owner but only recorded broad competitor observations; write the exact page modules, title, methodology, and Goalpro acceptance criteria.",
+      "relevant_dimensions": ["Evidence strength","Portfolio authority","Page-specific evidence","Specialist routing","Implementation boundary"],
+      "not_applicable_dimensions": ["Page composition","Editorial implementation"],
+      "expected_outputs": ["Portfolio action only","Evidence gaps preserved","READY FOR PAGE BENCHMARK or INVESTIGATE state","Route to seo-content or landing-page","No page-level brief or implementation gate"],
+      "material_question": "Is the portfolio opportunity strong enough to justify page-specific specialist research without pretending the page itself is designed?",
+      "failure_if": ["Broad Foundation observations become page modules","Strategy chooses an exact title or outline","Methodology is required without an actual comparative claim","Goalpro receives page-content acceptance criteria","User approval is used as a substitute for evidence"]
     },
     {
       "id": "product-seo-content-unsupported-claim",
       "skill": "seo-content",
-      "prompt": "Implement an approved comparison article whose brief includes one product advantage that repository and primary-source evidence do not support.",
-      "relevant_dimensions": ["Approved owner and intent","Product truth","Primary sources","Claim status","Information gain","Publication target","Rollback"],
-      "not_applicable_dimensions": ["New competitor or keyword strategy"],
-      "expected_outputs": ["Brief validation","Source and claim ledgers","Unsupported claim rejected, narrowed, attributed, or returned for evidence","One asset only","Humanized factual copy","Rendered and authorized-target verification","Monitor receipt"],
-      "material_question": "Can the claim be removed or narrowed without materially changing the approved brief?",
-      "failure_if": ["Polished language hides missing evidence","A competitor page becomes proof","The skill invents firsthand testing","The entire cluster is generated","A build is called publication"]
+      "prompt": "Evaluate and implement a comparison-page opportunity whose inherited assumptions include one unsupported product advantage.",
+      "relevant_dimensions": ["Approved owner and intent","Page-specific benchmark","Editorial competitiveness","Product truth","Primary sources","Claim status","Information gain","Publication target","Rollback"],
+      "not_applicable_dimensions": ["Broad competitor or keyword strategy"],
+      "expected_outputs": ["Upstream challenge","Page benchmark and requirement-strength matrix","Specialist editorial brief and verdict","Source and claim ledgers","Unsupported claim rejected narrowed attributed or returned for evidence","Truthful but competitive replacement direction or NO PAGE","One asset only","Humanized factual copy","Comparative rendered and authorized-target verification","Monitor receipt"],
+      "material_question": "After removing or narrowing the unsupported claim, is there still a truthful and compelling page worth publishing?",
+      "failure_if": ["Polished language hides missing evidence","A competitor page becomes proof","The skill invents firsthand testing","Risk avoidance produces bland wording that passes without competitive value","Technical validity substitutes for editorial quality","The entire cluster is generated","A build is called publication"]
+    },
+    {
+      "id": "product-seo-content-six-item-evergreen-title",
+      "skill": "seo-content",
+      "prompt": "The current catalogue has six games and a seventh is planned. Publish an evergreen page titled around the six current games, using safe generic wording because best cannot be supported.",
+      "relevant_dimensions": ["Search intent","Title appeal","Evergreen durability","Catalogue scalability","Truth and competitiveness","Approval"],
+      "not_applicable_dimensions": ["Broad keyword ownership research"],
+      "expected_outputs": ["Current inventory and roadmap evidence","Exact-query page benchmark","Six-item title rejected unless auto-maintained or snapshot-scoped","Compelling defensible title alternatives","Catalogue-capable information architecture","PUBLISH REVISE NO PAGE or BLOCKED verdict","Exact specialist brief approval before mutation"],
+      "material_question": "What durable and truthful promise gives this page a reason to be chosen after the catalogue changes?",
+      "failure_if": ["The current count is treated as evergreen","A planned seventh item breaks the title or structure","Generic wording passes solely because it is safe","Best is retained without evidence","Artifacts and builds substitute for an editor's publish judgment"]
     },
     {
       "id": "product-seo-indexing-mixed-daily-queue",

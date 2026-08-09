@@ -9,10 +9,10 @@
   "evidence": [
     "invocation=explicit",
     "selected_skill=feature-goal",
-    "response_sha256=904895e916dc20e3bc9f175db18b3df78cb96d8082e4407578e929153a0482af",
+    "response_sha256=41a8f42f24758cdab595512d54ed5953e4af927848c531d30f3a44f6bf290d1b",
     "process_exit_code=0",
-    "payload_sha256=3499e4f6850b9b52191a24f90ca14f2c10c84a03589450ecbb8f34701a799dcc",
-    "plan_sha256=dc487a6d5aef436dca56a08420e9b01bd537c11fa459bb066367567f49dccbb3",
+    "payload_sha256=57e5f5c43f1e82794fc8168e6b211de815e295fa7d79b41d01d55d508cbcf262",
+    "plan_sha256=ede02df76f0d8c45ea7ecd72bf96dc7d6164b18883755f063f98c57791a27ffe",
     "harness_sha256=9a06970430fc59bfdb3485ac37de590bc5668c1f864813a246bacdb6cd004068"
   ],
   "fresh_context": true,
@@ -21,8 +21,8 @@
   "notes": "",
   "result": "PASS",
   "reviewed_by": "forward-routing-harness-v1",
-  "run_id": "79343271-11dd-4562-be2e-30b1f03f699a",
+  "run_id": "b5db9fce-2c47-47c9-8952-52f9bdaf8b2a",
   "schema_version": 1,
   "skill": "testpro",
-  "started_at": "2026-08-07T01:18:06Z"
+  "started_at": "2026-08-09T16:54:40Z"
 }

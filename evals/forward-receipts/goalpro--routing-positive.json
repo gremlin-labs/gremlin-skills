@@ -9,10 +9,10 @@
   "evidence": [
     "invocation=explicit",
     "selected_skill=goalpro",
-    "response_sha256=12c517f83195fbb335d1d185c70854f2b4664434e2ea8480fa27cf73063c51cb",
+    "response_sha256=8e94d392a918aca71d3412d05666408a1c012fd5928c1e8cf0da213fd6058f46",
     "process_exit_code=0",
-    "payload_sha256=3499e4f6850b9b52191a24f90ca14f2c10c84a03589450ecbb8f34701a799dcc",
-    "plan_sha256=dc487a6d5aef436dca56a08420e9b01bd537c11fa459bb066367567f49dccbb3",
+    "payload_sha256=57e5f5c43f1e82794fc8168e6b211de815e295fa7d79b41d01d55d508cbcf262",
+    "plan_sha256=ede02df76f0d8c45ea7ecd72bf96dc7d6164b18883755f063f98c57791a27ffe",
     "harness_sha256=9a06970430fc59bfdb3485ac37de590bc5668c1f864813a246bacdb6cd004068"
   ],
   "fresh_context": true,
@@ -21,8 +21,8 @@
   "notes": "",
   "result": "PASS",
   "reviewed_by": "forward-routing-harness-v1",
-  "run_id": "efd4b8f9-81b5-4c62-b7ca-217a0945b2ec",
+  "run_id": "c8b26f3d-9368-442e-a641-9070c5881e3d",
   "schema_version": 1,
   "skill": "goalpro",
-  "started_at": "2026-08-07T01:17:04Z"
+  "started_at": "2026-08-09T16:53:30Z"
 }

@@ -34,7 +34,7 @@ class ContractMaterializationTests(unittest.TestCase):
 
     def test_current_repository_snapshots_are_exact(self) -> None:
         registry = load_registry(ROOT)
-        self.assertEqual(114, len(expected_snapshots(ROOT, registry)))
+        self.assertEqual(117, len(expected_snapshots(ROOT, registry)))
         self.assertEqual([], check_materialized(ROOT, registry))
 
     def test_write_then_check_materializes_digest_stamped_snapshot(self) -> None:

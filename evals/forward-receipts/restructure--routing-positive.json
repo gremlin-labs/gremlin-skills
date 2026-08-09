@@ -9,10 +9,10 @@
   "evidence": [
     "invocation=explicit",
     "selected_skill=restructure",
-    "response_sha256=847f51b7592fab8e463429cad9dff263e25c9a05335c1009bf09039742a3cf5a",
+    "response_sha256=36a3c908d5457f509b8ec4786ecdbaca42e1d27ba905091235e92f42799a292c",
     "process_exit_code=0",
-    "payload_sha256=3499e4f6850b9b52191a24f90ca14f2c10c84a03589450ecbb8f34701a799dcc",
-    "plan_sha256=dc487a6d5aef436dca56a08420e9b01bd537c11fa459bb066367567f49dccbb3",
+    "payload_sha256=57e5f5c43f1e82794fc8168e6b211de815e295fa7d79b41d01d55d508cbcf262",
+    "plan_sha256=ede02df76f0d8c45ea7ecd72bf96dc7d6164b18883755f063f98c57791a27ffe",
     "harness_sha256=9a06970430fc59bfdb3485ac37de590bc5668c1f864813a246bacdb6cd004068"
   ],
   "fresh_context": true,
@@ -21,8 +21,8 @@
   "notes": "",
   "result": "PASS",
   "reviewed_by": "forward-routing-harness-v1",
-  "run_id": "c3403933-88d6-4c38-95f3-0217192cb35b",
+  "run_id": "1e04b3d4-6f7c-4cd1-80c6-7fa253e5b967",
   "schema_version": 1,
   "skill": "restructure",
-  "started_at": "2026-08-07T01:17:37Z"
+  "started_at": "2026-08-09T16:54:10Z"
 }

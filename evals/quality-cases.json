@@ -268,8 +268,8 @@
       "prompt": "Rank SEO keywords using exports from Search Console, Bing, GA4, and Keyword Planner with different windows and scopes.",
       "applicable_dimensions": ["Product intent","Correctness and resilience","Data integrity and compatibility","Maintainability and documentation","Machine verification"],
       "not_applicable_dimensions": ["Source mutation","Production rollout"],
-      "required_evidence": ["Provider, property, retrieval date, market, language, device, and window retained","Metric precision retained","Paid competition distinguished from organic evidence","Incompatible windows are not automatically joined","Opportunity weights and unknowns are visible","One owner per cluster and protected winners recorded"],
-      "failure_if": ["Metrics are flattened into one unlabeled score","Paid competition is called organic difficulty","Stale or incompatible data is silently compared","Keyword repetition is treated as conversion or ranking proof"]
+      "required_evidence": ["Provider, property, retrieval date, market, language, device, and window retained","Metric precision retained","Paid competition distinguished from organic evidence","Incompatible windows are not automatically joined","Every material conclusion labelled OBSERVED, INFERRED, HYPOTHESIS, or UNSUPPORTED","Opportunity weights and unknowns are visible","One owner per cluster and protected winners recorded","No page modules, titles, methodology, testing, or fixed structures prescribed"],
+      "failure_if": ["Metrics are flattened into one unlabeled score","Paid competition is called organic difficulty","Stale or incompatible data is silently compared","Keyword or competitor recurrence is treated as conversion, ranking, or causal proof","A recurring competitor pattern becomes an adoption instruction"]
     },
     {
       "id": "seo-strategy-cannibalization-gate",
@@ -277,17 +277,26 @@
       "prompt": "Create a large SEO content roadmap from high-volume clusters that overlap current pages.",
       "applicable_dimensions": ["Product intent","Correctness and resilience","Data integrity and compatibility","User experience and accessibility","Performance and resources","Reliability, observability, and operations","Rollout and rollback","Maintainability and documentation","Machine verification"],
       "not_applicable_dimensions": ["Direct implementation before approval"],
-      "required_evidence": ["Prerequisite freshness validation","One action per current owner or gap","Protected-winner baseline","Distinct user intent and product value for each proposed URL","Cannibalization decision","Internal-link authority map","Measurement windows, guardrails, staged rollout, and rollback"],
-      "failure_if": ["Search volume alone creates pages","A winner is replaced without baseline and rollback","Every cluster becomes a blog post","Traffic or rank gains are promised","Strategy changes source directly"]
+      "required_evidence": ["Prerequisite freshness and evidence-strength validation","One action per current owner or gap","Protected-winner baseline","Distinct user intent and product value for each proposed URL","Cannibalization decision","Page opportunity with evidence gaps and benchmark state","Specialist route without a page-level brief","Internal-link authority map","Measurement windows, guardrails, staged rollout, and rollback"],
+      "failure_if": ["Search volume alone creates pages","A winner is replaced without baseline and rollback","Every cluster becomes a blog post","Strategy specifies a title, outline, module, testing requirement, methodology, or page-content acceptance gate","Strategy routes editorial or landing-page creation directly to Goalpro","Traffic or rank gains are promised","Strategy changes source directly"]
     },
     {
       "id": "seo-content-truth-and-published-target",
       "skill": "seo-content",
-      "prompt": "Publish one approved SEO guide with statistics, product claims, citations, structured data, and internal links.",
+      "prompt": "Evaluate and publish one approved SEO guide opportunity with statistics, product claims, citations, structured data, and internal links.",
       "applicable_dimensions": ["Product intent","Correctness and resilience","Security, privacy, and abuse","Data integrity and compatibility","User experience and accessibility","Performance and resources","Reliability, observability, and operations","Rollout and rollback","Maintainability and documentation","Machine verification"],
-      "not_applicable_dimensions": ["New keyword research when the approved brief remains valid"],
-      "required_evidence": ["Schema-valid and fresh upstream contracts","One owner and protected-winner check","Claim-to-primary-source ledger with qualifiers","Copyright-safe citations","Embedded humanization fidelity","Canonical, index, sitemap, metadata, structured data, and links","Accessible rendered content","Project gates","Observed authorized target","Rollback and monitor receipt"],
-      "failure_if": ["Unsupported claims survive as softer prose","Word count substitutes for usefulness","Schema contains invisible or invented claims","Build success is called production publication","Ownership changes without Strategy"]
+      "not_applicable_dimensions": ["Broad market keyword discovery when the approved Strategy opportunity remains valid"],
+      "required_evidence": ["Schema-valid and fresh upstream contracts","One owner and protected-winner check","Exact-query and representative full-page benchmark","MUST OPTIONAL TEST and REJECTED requirement classifications","Truth and competitiveness judged independently","Compelling evergreen title and catalogue-capacity test","Approved specialist brief and PUBLISH verdict","Claim-to-primary-source ledger with qualifiers","Copyright-safe citations","Embedded humanization fidelity","Comparative final editorial review","Canonical, index, sitemap, metadata, structured data, and links","Accessible rendered content","Project gates","Observed authorized target","Rollback and monitor receipt"],
+      "failure_if": ["Unsupported claims survive as softer prose","Removing best or another unsupported claim produces bland noncompetitive wording that passes","A mutable catalogue count is frozen into an evergreen title","The page has no visible advantage over the current owner or representative alternatives","Word count substitutes for usefulness","Schema contains invisible or invented claims","Technical gates rescue a REVISE NO PAGE or BLOCKED verdict","Build success is called production publication","Ownership changes without Strategy"]
+    },
+    {
+      "id": "seo-content-evergreen-catalogue-editorial-gate",
+      "skill": "seo-content",
+      "prompt": "Publish an evergreen catalogue page whose proposed title says it contains six games even though a seventh game is planned, then replace an unsupported best claim with the safest generic wording.",
+      "applicable_dimensions": ["Product intent","Correctness and resilience","Data integrity and compatibility","User experience and accessibility","Rollout and rollback","Maintainability and documentation","Machine verification"],
+      "not_applicable_dimensions": ["External indexing submission before publication"],
+      "required_evidence": ["Inventory lifecycle and planned-catalogue evidence","Exact-query title and page-role benchmark","Explicit evergreen and catalogue-capacity test","Six-game title rejected unless automatically maintained or deliberately snapshot-scoped","Truthful but compelling differentiated title alternatives","Structure verified against planned additions","Experienced-editor PUBLISH REVISE NO PAGE or BLOCKED verdict","Approval before source mutation"],
+      "failure_if": ["The current item count is treated as a durable title fact","Unsupported best becomes bland wording and passes by risk avoidance alone","A technically truthful title is called competitive without comparison","The structure cannot hold the planned catalogue","Implementation begins before the specialist editorial direction is approved"]
     },
     {
       "id": "seo-indexing-guarded-recurring-requests",
@@ -310,11 +319,11 @@
     {
       "id": "landing-page-seo-stack-ownership",
       "skill": "landing-page",
-      "prompt": "Create and implement a search-targeted landing page from an approved SEO Strategy brief while the message hierarchy, proof, CTA, and visual direction remain unresolved.",
+      "prompt": "Create and implement a search-targeted landing page from an approved SEO Strategy opportunity while the title, message hierarchy, proof, CTA, and visual direction remain unresolved.",
       "applicable_dimensions": ["Product intent","Correctness and resilience","User experience and accessibility","Data integrity and compatibility","Performance and resources","Reliability, observability, and operations","Rollout and rollback","Maintainability and documentation","Machine verification"],
-      "not_applicable_dimensions": ["New competitor and keyword research when the approved brief is fresh"],
-      "required_evidence": ["Approved brief, portfolio row, owner, intent, and protected winners","Landing Page-owned message, proof, CTA, design, and preview approval","Preserved canonical, index, internal-link, and measurement posture","Read-only seo-stack receipt or documented fallback only when live evidence is material","Project and rendered gates","Monitor handoff without invented outcomes"],
-      "failure_if": ["Landing Page silently changes the page owner or intent","SEO Strategy dictates a visual design without preview approval","The CLI is installed into the target app","Missing provider access blocks a design-only page","An editorial asset is kept in Landing Page merely because it is SEO-targeted"]
+      "not_applicable_dimensions": ["Broad competitor and keyword discovery when the approved Foundation remains fresh"],
+      "required_evidence": ["Approved page opportunity, portfolio row, owner, intent, and protected winners","Exact-query and representative full-page benchmark","Requirement-strength classifications","Title and catalogue durability review","Landing Page-owned message, proof, CTA, design, and preview approval","Final PUBLISH verdict against the preview","Preserved canonical, index, internal-link, and measurement posture","Read-only seo-stack receipt or documented fallback only when live evidence is material","Project and rendered gates","Monitor handoff without invented outcomes"],
+      "failure_if": ["Landing Page silently changes the page owner or intent","SEO Strategy dictates a title, modules, or visual design without page-specific evidence and preview approval","Technical gates rescue a weak competitive verdict","The CLI is installed into the target app","Missing provider access blocks a design-only page","An editorial asset is kept in Landing Page merely because it is SEO-targeted"]
     },
     {
       "id": "prose-humanizer-seo-stack-fidelity",

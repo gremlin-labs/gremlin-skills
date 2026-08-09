@@ -8,7 +8,7 @@ Use this reference to define comparable scopes, judge maturity, protect winners,
 |---|---|---|
 | Setup | Schema-valid overall `VERIFIED`; current canonical, sitemap, provider, consent, and credential-source posture | `seo-setup` for prerequisite drift |
 | Foundation | Approved owners, clusters, intent boundaries, protected winners, markets/languages, source limits | `seo-foundation` when research is absent or stale |
-| Strategy | Approved actions, briefs, baselines, outcomes, guardrails, windows, rollback | `seo-strategy` for ownership or portfolio decisions |
+| Strategy | Approved actions, page opportunities, baselines, outcomes, guardrails, windows, rollback | `seo-strategy` for ownership or portfolio decisions; page specialist for benchmark and brief |
 | Content receipt | Exact target, published time/state, changed files/record, claims, baseline pointer, rollback | `seo-content` for incomplete bounded implementation evidence |
 | Current site | Route, response, canonical/index, sitemap, render, links, instrumentation | `INVESTIGATE` or `TECHNICAL FIX` |
 

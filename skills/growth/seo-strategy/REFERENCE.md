@@ -1,6 +1,6 @@
 # SEO Strategy reference
 
-Use this reference to validate prerequisites, choose portfolio actions and page types, define briefs, prevent cannibalization, prioritize work, and produce execution-ready handoffs.
+Use this reference to validate prerequisites, choose portfolio actions and candidate page roles, define page opportunities, prevent cannibalization, prioritize work, and produce bounded specialist or technical handoffs.
 
 ## Prerequisite validation
 
@@ -21,7 +21,7 @@ Require:
 
 - explicit user approval and revision/freshness record;
 - product, market, language, engine, and device/context scope;
-- source ledger with windows and limitations;
+- source and evidence ledgers with windows, evidence strength, and limitations;
 - current baseline, competitor classification, page analysis, and SERP samples;
 - normalized keyword demand;
 - clusters, owners, protected winners, exclusions, cannibalization rules, and unknowns.
@@ -62,6 +62,8 @@ reversibility
 priority_band
 dependencies
 recommended_executor
+benchmark_state
+evidence_gaps
 measurement_gate
 notes
 ```
@@ -84,9 +86,9 @@ Require all:
 
 1. distinct user intent/outcome;
 2. truthful product or editorial fulfilment;
-3. SERP evidence for the proposed page role;
+3. SERP evidence supporting investigation of the proposed page role;
 4. no appropriate existing owner;
-5. meaningful differentiated value and proof path;
+5. a credible differentiated-value hypothesis and proof path for the specialist to test;
 6. viable internal-link role and maintenance owner;
 7. explicit cannibalization and measurement plan.
 
@@ -115,23 +117,23 @@ Use when evidence, readiness, capacity, seasonality, traffic maturity, or risk m
 | Browser task or utility | Tool page | Working tool and utility-led SERP |
 | Explanation or definition | Hub/guide | Informational SERP and authoritative sources |
 | Procedure or troubleshooting | Guide/blog/support article | Distinct task, current product flow, recoverable steps |
-| Comparison or “best” evaluation | Editorial comparison/hub | Reproducible methodology, fair evidence, ownership distinct from product page |
+| Comparison or “best” evaluation | Editorial comparison/hub | Page-specialist benchmark; real evaluation evidence if comparative claims survive |
 | Recurring entities/items | Category/directory/detail | Unique value, inventory quality, lifecycle and rights/governance |
 | Query variant only | Existing owner | No distinct page warranted |
 
 Treat this as a hypothesis matrix, not a template. Direct SERP and user evidence wins.
 
-## Brief contract
+## Page-opportunity contract
 
-Each brief uses:
+Each entry in `PAGE-OPPORTUNITIES.md` uses:
 
 ```md
-## {brief ID}: {working title}
+## {item ID}: {cluster or user job}
 
-### Decision and ownership
+### Portfolio decision and ownership
 - Action:
 - Current/proposed URL:
-- Page role:
+- Candidate page-role hypothesis:
 - Cluster and primary owner:
 - Primary/supporting/excluded intent:
 - Market/language:
@@ -141,61 +143,41 @@ Each brief uses:
 - Audience and arrival intent:
 - Problem/job:
 - Desired outcome:
-- Product/content promise:
 - Conversion or next-step path:
 
-### Evidence and differentiation
+### Evidence strength and gaps
 - First-party evidence:
 - Demand/SERP evidence:
-- Competitor patterns to adapt:
-- Patterns/claims to reject:
-- Product/source proof required:
-- Allowed/prohibited claims:
+- Observed:
+- Inferred:
+- Hypotheses for page-specific testing:
+- Unsupported ideas to exclude:
+- Material evidence gaps:
 
-### Content and experience
-- Direct answer or value proposition:
-- Information hierarchy/outline:
-- Proof, visuals, demos, tables, tools, or examples:
-- Objections, safety, and limitations:
-- Accessibility and responsive needs:
-
-### Search and distribution
-- Working title/description/H1 hypotheses:
-- Index/canonical/hreflang posture:
-- Structured-data eligibility:
+### Portfolio relationship
 - Same-cluster links and anchor roles:
 - Optional bridge:
+- Protected assets:
+- Baseline and measurement gate:
 
-### Delivery and verification
+### Specialist route
 - Dependencies and owner:
 - Recommended executor:
-- Acceptance criteria:
-- Rollout/rollback:
-- Baseline and review windows:
+- Benchmark state:
 - Failure/invalidation signal:
 ```
 
-Working snippet/headline hypotheses are inputs to implementation and testing, not guaranteed search-result display.
+Do not include working titles, outlines, module lists, proof formats, testing or methodology requirements, final metadata, or page-content acceptance criteria. The specialist derives and challenges those only after applying [the page-quality contract](contracts/seo-page-quality.md).
 
-## Landing-page-specific requirements
+## Specialist boundary
 
-- Verified product callouts and feature-to-benefit framing.
-- Arrival intent and CTA ladder.
-- Proof and objection plan.
-- Product demonstration/visual evidence needs.
-- Conversion tracking already authorized or separately proposed.
-- Explicit handoff to `landing-page` when message, design, or preview decisions remain.
-- Strategy's page owner, cluster, prohibited overlap, and measurement contract remain binding inputs.
+- `landing-page` owns page-specific search benchmarking, message, title, proof, CTA, persuasion order, layout, preview, approval, and implementation.
+- `seo-content` owns page-specific search benchmarking, editorial position, title, catalogue durability, sources, structure, brief, approval, implementation, and comparative review.
+- Strategy's owner, cluster, prohibited overlap, protected winners, baseline, and measurement contract remain binding inputs.
+- A specialist may return `REVISE`, `NO PAGE`, or `BLOCKED`; Strategy does not override that verdict by restating its portfolio hypothesis.
+- Missing specialist availability is an operational blocker, not permission to substitute Goalpro or generic prose generation.
 
-## Editorial-specific requirements
-
-- Direct question/task and intended reader.
-- Primary sources and freshness requirements.
-- Author/tester/methodology disclosure where claims rely on testing or expertise.
-- Examples, screenshots, tables, tools, or original evidence that create value beyond paraphrase.
-- Fact, product, legal/safety, and citation review.
-- Clear distinction between editorial and transactional owners.
-- No target word count unless a minimum is tied to specific coverage obligations; competitor length is context, not a quota.
+Truth and competitiveness are independent downstream gates. Removing an unsupported comparison or “best” claim does not make bland, indistinguishable wording acceptable. Methodology, testing, authorship, tables, tools, examples, or other modules are required only when the specialist's actual page claims and benchmark support them.
 
 ## Internal-link map
 
@@ -249,7 +231,7 @@ For each priority state outcome, evidence, guardrail, effort, reversibility, dep
 Prefer vertical, measurable slices:
 
 1. Baseline and guardrails.
-2. One owner/brief intervention.
+2. One owner/page-benchmark intervention.
 3. Required internal-link/technical delivery.
 4. Build/render/release verification.
 5. Index/crawl/provider observation.
@@ -272,17 +254,19 @@ Record provider, property, query/page filters, market, language, device, request
 
 ## Goalpro handoff
 
-Create `GOALPRO-INPUT.md` only after explicit implementation approval. Follow [Goalpro's direct handoff contract](contracts/goalpro-handoff.md) and include:
+Create `GOALPRO-INPUT.md` only after explicit implementation approval for bounded technical work that does not create or rewrite page content. Follow [Goalpro's direct handoff contract](contracts/goalpro-handoff.md) and include:
 
 - approved strategy revision and exact portfolio item IDs;
 - source Foundation and Setup artifacts;
 - ordered reversible slices;
-- “Done when …” criteria per brief and shared infrastructure;
+- “Done when …” criteria for redirects, canonicals, index directives, sitemaps, internal links, or other approved technical items;
 - protected assets and prohibited changes;
 - project gates and representative browser/runtime checks;
 - quality applicability from [Goalpro's quality contract](contracts/execution-quality.md);
 - release, monitoring, rollback, external/manual, and sensitive-data boundaries;
 - material post-approval deltas and honest readiness state.
+
+Never use Strategy's Goalpro handoff to implement editorial copy, titles, page modules, landing-page persuasion, or page structures. Those require the owning page specialist's benchmark, approval, and execution contract.
 
 ## `SEO-STRATEGY.md` consumption index
 
@@ -295,8 +279,8 @@ Required sections:
 ## Product and search outcomes
 ## Prerequisite sources and freshness
 ## Portfolio decisions and protected assets
-## Landing-page plan
-## Editorial plan
+## Landing-page opportunities
+## Editorial opportunities
 ## Internal-link and technical plan
 ## Prioritized roadmap
 ## Measurement, rollout, and rollback
