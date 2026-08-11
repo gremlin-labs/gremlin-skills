@@ -123,6 +123,8 @@
         {"path":"PAGE-BENCHMARK.md","required":false,"condition":"Required for an explicitly search-targeted page or when same-slug SEO Strategy artifacts govern the request.","headings":["Scope and freshness","Current owner","Representative pages","Observed page roles","Competitive patterns and gaps","Counterevidence and limitations"]},
         {"path":"PAGE-REQUIREMENTS.md","required":false,"condition":"Required whenever PAGE-BENCHMARK.md is required.","headings":["Must","Optional","Test","Rejected","Invalidation conditions"]},
         {"path":"EDITORIAL-REVIEW.md","required":false,"condition":"Required whenever PAGE-BENCHMARK.md is required.","headings":["Truth and competitiveness","Title and snippet review","Evergreen and catalogue test","Comparative page review","Verdict and approval"]},
+        {"path":"SEO-CHANGE-LEDGER.json","required":false,"condition":"Required before source mutation for any user-facing SEO change; always required for shared-template, multi-route, deletion, suppression, title, description, FAQ, schema, CTA, module-visibility, or link-copy changes.","headings":["schema_version","page_families","changes","approval_requirement"]},
+        {"path":"SEO-CHANGE-APPROVAL.json","required":false,"condition":"Required after exact approval and before implementing any change recorded in SEO-CHANGE-LEDGER.json.","headings":["schema_version","ledger_sha256","approved_change_ids","approval_statement","approved_by","approved_at","explicit_exclusions"]},
         {"path":"PAGE-DIRECTIONS.md","required":true,"headings":["Adaptive mode","Shared approved message","Directions","Recommendation","Trade-offs and experiments","Revision history","Approval"]},
         {"path":"LANDING-PAGE-PREVIEW.html","required":true,"headings":["message","cta","product","proof","objections","responsive","motion","seo","tradeoffs"]},
         {"path":"previews/LANDING-PAGE-PREVIEW-R{n}.html","required":true,"headings":["message","cta","product","proof","objections","responsive","motion","seo","tradeoffs"]},
@@ -239,7 +241,7 @@
       "skill": "goalpro",
       "output_root": "agent-work/{slug}/goalpro/",
       "files": [
-        {"path":"CRITERIA.md","required":true,"headings":["Goal","Acceptance criteria","Out of scope"]},
+        {"path":"CRITERIA.md","required":true,"headings":["Goal","Acceptance criteria","Out of scope","Change control and authority"]},
         {"path":"PROGRESS.md","required":true,"headings":["Progress"]},
         {"path":"QUALITY-REPORT.md","required":true,"headings":["Quality report","Final integrated verification"]},
         {"path":"NOTES.md","required":false,"condition":"Only when decisions, research, or external links need durable notes.","headings":["Notes"]},
@@ -366,6 +368,7 @@
         {"path":"SEO-ROADMAP.md","required":true,"headings":["Priorities","Dependencies","Reversible slices","Rollout","Rollback"]},
         {"path":"SEO-STRATEGY.md","required":true,"headings":["Approval, revision, and scope","Portfolio decisions and protected assets","Landing-page opportunities","Editorial opportunities","Internal-link and technical plan","Prioritized roadmap","Measurement, rollout, and rollback"]},
         {"path":"GOALPRO-INPUT.md","required":false,"condition":"Only when the user explicitly approves bounded technical implementation that does not create or rewrite page content.","headings":["Goal and product outcome","Approval provenance","Implementation slices","Acceptance criteria","Quality applicability","Project gates","Manual and external actions","Readiness"]},
+        {"path":"SEO-TECHNICAL-SCOPE.json","required":false,"condition":"Required whenever GOALPRO-INPUT.md hands technical SEO work to Goalpro.","headings":["schema_version","slug","strategy_revision","portfolio_item_ids","allowed_change_classes","allowed_targets","user_facing_changes","editorial_change_ids","prohibited_change_classes","approval","gates","rollout_boundary","rollback_boundary"]},
         {"path":"NOTES.md","required":false,"condition":"Only when sanitized research or decisions need separate durable notes.","headings":["Notes"]}
       ]
     },
@@ -381,9 +384,11 @@
         {"path":"CONTENT-PLAN.md","required":true,"headings":["Brief, revision, and approval","Benchmark and editorial verdict","Owner, intent, and protected winners","Target and authority","Source and claim plan","Implementation","Verification gates","Publish or deployment path","Rollout and rollback"]},
         {"path":"SOURCE-LEDGER.md","required":true,"headings":["Sources","Claims supported","Limitations","Citation destinations"]},
         {"path":"CLAIM-LEDGER.md","required":true,"headings":["Verified","User-approved","Attributed","Unknown","Rejected"]},
+        {"path":"SEO-CHANGE-LEDGER.json","required":false,"condition":"Required before source mutation for any user-facing SEO change; always required for shared-template, multi-route, deletion, suppression, title, description, FAQ, schema, CTA, module-visibility, or link-copy changes.","headings":["schema_version","page_families","changes","approval_requirement"]},
+        {"path":"SEO-CHANGE-APPROVAL.json","required":false,"condition":"Required after exact approval and before implementing any change recorded in SEO-CHANGE-LEDGER.json.","headings":["schema_version","ledger_sha256","approved_change_ids","approval_statement","approved_by","approved_at","explicit_exclusions"]},
         {"path":"CONTENT-DRAFT.md","required":false,"condition":"Required when exact copy review is needed or the project does not own the final content source.","headings":["Content draft"]},
         {"path":"PROGRESS.md","required":true,"headings":["Progress"]},
-        {"path":"CONTENT-RECEIPT.md","required":true,"headings":["Brief and approval provenance","Benchmark and editorial verdict","Final target and status","Owner, cluster, intent, and action","Changed files or records","Claims, sources, and rejected claims","Search and internal-link posture","Published-target evidence","Indexing handoff","Baseline and monitor windows","Rollback"]},
+        {"path":"CONTENT-RECEIPT.md","required":true,"headings":["Brief and approval provenance","Benchmark and editorial verdict","Final target and status","Owner, cluster, intent, and action","Changed files or records","Claims, sources, and rejected claims","Approved SEO change IDs and rendered before/after","Terms, persuasion cues, and visible utility gained or lost","Search and internal-link posture","Published-target evidence","Indexing handoff","Baseline and monitor windows","Canary, rollout, and independent editorial/technical rollback","Rollback"]},
         {"path":"QUALITY-REPORT.md","required":true,"headings":["Quality report","Editorial competitiveness","Final comparative verification","Final integrated verification"]},
         {"path":"NOTES.md","required":false,"condition":"Only when sanitized research or decisions need separate durable notes.","headings":["Notes"]}
       ]
@@ -411,13 +416,13 @@
       "skill": "seo-monitor",
       "output_root": "agent-work/{slug}/seo-monitor/",
       "files": [
-        {"path":"MONITOR-BRIEF.md","required":true,"headings":["Decision and scope","Owners and protected winners","Sources and windows","Maturity rule","Privacy and retention","Cadence and approval"]},
+        {"path":"MONITOR-BRIEF.md","required":true,"headings":["Decision and scope","Owners and protected winners","Release layers and approved changes","Sources and windows","Maturity rule","Privacy and retention","Cadence and approval"]},
         {"path":"SEO-MONITOR.md","required":true,"headings":["Current status","Latest run","Baseline","Comparable runs","Open actions","Next observation"]},
         {"path":"MONITOR-HISTORY.md","required":true,"headings":["Monitor history"]},
         {"path":"ACTION-QUEUE.md","required":true,"headings":["Open","Waiting","Resolved","Rejected or superseded"]},
         {"path":"runs/{run-id}/DATA-INVENTORY.md","required":true,"headings":["Sources, properties, and freshness","Scope and windows","Completeness","Limitations","Redactions"]},
         {"path":"runs/{run-id}/SNAPSHOT.csv","required":true,"headings":["source_provider","window_start","window_end","metric_name","metric_value","metric_precision"]},
-        {"path":"runs/{run-id}/MONITOR-REPORT.md","required":true,"headings":["Decision and scope","Baseline and comparison compatibility","Maturity judgment","Protected winners and guardrails","Findings and competing explanations","Recommendations, confidence, and routes","Next observation"]},
+        {"path":"runs/{run-id}/MONITOR-REPORT.md","required":true,"headings":["Decision and scope","Baseline and comparison compatibility","Maturity judgment","Protected winners and guardrails","Release layers, approved change IDs, and expected mechanisms","Findings and competing explanations","Recommendations, confidence, and routes","Independent rollback boundary","Next observation"]},
         {"path":"AUTOMATION-PLAN.md","required":false,"condition":"Only when recurring automation is explicitly requested.","headings":["Objective and prompt","Target and schedule","Sources and credentials","Artifacts and notifications","Failure policy","Disable path","Approval"]},
         {"path":"AUTOMATION-RECEIPT.md","required":false,"condition":"Only after the approved automation is actually created.","headings":["Created automation","Schedule and target","Credential posture","First-run status","Disable path"]},
         {"path":"NOTES.md","required":false,"condition":"Only when sanitized research or decisions need separate durable notes.","headings":["Notes"]}

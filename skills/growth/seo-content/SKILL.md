@@ -50,7 +50,7 @@ digraph seo_content {
 }
 ```
 
-Resolve the owning work root and maintain `agent-work/{slug}/WORK.md` using [the canonical work-artifact contract](contracts/work-artifacts.md). Write this stage under `agent-work/{slug}/seo-content/`. Read [REFERENCE.md](REFERENCE.md) and apply [the SEO page-quality contract](contracts/seo-page-quality.md) before accepting a page direction, researching claims, or changing content.
+Resolve the owning work root and maintain `agent-work/{slug}/WORK.md` using [the canonical work-artifact contract](contracts/work-artifacts.md). Write this stage under `agent-work/{slug}/seo-content/`. Read [REFERENCE.md](REFERENCE.md), apply [the SEO page-quality contract](contracts/seo-page-quality.md), and apply [the SEO change-control contract](contracts/seo-change-control.md) before accepting a page direction, researching claims, or changing content.
 
 ## Boundaries
 
@@ -64,6 +64,9 @@ Resolve the owning work root and maintain `agent-work/{slug}/WORK.md` using [the
 - Inspect, benchmark, and draft artifacts freely. Source mutation begins only after the exact `EDITORIAL-BRIEF.md` revision and `PUBLISH` verdict are approved. High-stakes claims, external CMS publication, production deployment, material brief deltas, redirects, analytics changes, and external configuration require the applicable explicit approval.
 - Never weaken a citation qualifier, privacy/consent behavior, canonical/index posture, redirect, protected route, or existing winning page merely to fit a draft.
 - Truthfulness is a floor, not the editorial bar. A technically correct page with a bland title, brittle catalogue, wrong SERP role, no information advantage, or no reason to choose it cannot pass.
+- Do not treat persuasive or navigational language as unsupported merely because it is not a literal database field. Classify factual, derived, comparative, persuasive, and navigational wording separately.
+- Improve before removing. Inspect available facts, traits, aliases, descriptions, measurements, relationships, taxonomy, media, and product actions before deleting, hiding, or neutralizing useful content.
+- Treat visible FAQ utility separately from FAQ-schema eligibility, and repeated shared framing separately from harmful page-level duplication.
 
 ## 1. Validate and challenge the upstream opportunity
 
@@ -92,6 +95,8 @@ Compare the proposed page with the current owner and benchmark pages. Ask: Does 
 
 Obtain explicit approval of the exact `EDITORIAL-BRIEF.md` revision before source mutation. A prior Strategy approval authorizes portfolio investigation, not this page implementation.
 
+For any existing user-facing change, write `SEO-CHANGE-LEDGER.json` with exact representative before/after, page family and route count, term gains/losses, intent/CTR/persuasion/conversion mechanisms, evidence, disposition, canary, rollout, and rollback. Shared-template, multi-route, removal, title, description, FAQ, module-visibility, structured-data, CTA, and link-copy changes require an `SEO-CHANGE-APPROVAL.json` whose digest and approved IDs validate before mutation.
+
 ## 4. Resolve authority and implementation target
 
 Inspect project instructions, content architecture, CMS or repository ownership, route generation, metadata, schema, author/byline rules, asset pipeline, localization, preview/deployment path, and project gates. Confirm whether the requested target is draft-only, local implementation, preview deployment, CMS publication, or production.
@@ -108,6 +113,8 @@ Write:
 - `CLAIM-LEDGER.md` with each material factual/product claim labelled `VERIFIED`, `USER-APPROVED`, `ATTRIBUTED`, `UNKNOWN`, or `REJECTED`;
 - the asset's specific information gain: decision aid, verified product workflow, comparison dimension, original synthesis, example, diagram, checklist, or answer unavailable from the current owner.
 
+Classify each changed phrase `FACTUAL`, `DERIVED`, `COMPARATIVE`, `PERSUASIVE`, or `NAVIGATIONAL`. Preserve supported high-intent terminology and record every term gained or lost. A truthful replacement that becomes vague, generic, or less actionable returns to `REVISE`.
+
 Unsupported material claims are removed, narrowed, clearly attributed, or returned for user evidence. Do not cite search-result snippets as sources. Respect copyright and quotation limits.
 
 ## 6. Draft for the user job
@@ -116,6 +123,8 @@ Draft `CONTENT-DRAFT.md` when review is required or useful; otherwise implement 
 
 Do not keyword-stuff titles, headings, anchors, alt text, or body copy. Use related terms only where they improve precision. Do not force FAQ sections, fixed lengths, formulaic introductions, fake personal anecdotes, or empty “ultimate guide” positioning.
 
+Do not remove a useful visible FAQ because FAQ schema is unavailable or ineligible. Do not call repeated orientation or CTA copy harmful duplication without evaluating the complete page's unique value and attempting an entity-specific improvement from available data.
+
 Discover `prose-humanizer` through the host registry or sibling `../prose-humanizer/SKILL.md`. When found, read it and use embedded mode with the claim ledger, audience, purpose, approved terminology, protected citations, and markup. Keep artifacts here. Humanization must not change facts, certainty, intent, or source boundaries.
 
 Before implementation, repeat the comparative editorial review against the complete draft. Artifact completeness, truthful claims, and clean prose cannot change a `REVISE`, `NO PAGE`, or `BLOCKED` verdict into `PUBLISH`.
@@ -123,6 +132,8 @@ Before implementation, repeat the comparative editorial review against the compl
 ## 7. Implement the approved asset
 
 Use project-native content collections, routes, MD/MDX, CMS fields, components, metadata helpers, images, author rules, and tests. Preserve unrelated work and existing content ownership.
+
+Before mutation, run `python3 scripts/validate_seo_change_control.py --ledger SEO-CHANGE-LEDGER.json --approval SEO-CHANGE-APPROVAL.json` when a ledger is required. Implement only approved change IDs. Any changed after-value, transformation, route count, scope, rollout, or rollback invalidates approval.
 
 Execute each implementation slice through Plan -> Do -> Verify. Keep the asset shippable between slices and recheck ownership, claims, and rendered behavior after integration.
 
@@ -152,10 +163,11 @@ Run project-specific format, parse, schema, type, lint, test, content, link, bui
 - mobile, desktop, 200% zoom, keyboard, content extremes, and supported themes/locales behave intentionally;
 - performance and bundle behavior remain proportionate to the content value;
 - the approved target—local, preview, CMS, or production—shows the expected asset and no unrelated change.
+- representative rendered before/after matches approved change IDs, preserves reviewed terms and specificity, and exposes no unapproved user-facing delta;
 
 Apply [Goalpro's quality contract](contracts/execution-quality.md) proportionally. Product truth, correctness, security/privacy, content and accessibility, compatibility, performance, maintainability, rollback, and machine plus rendered verification are presumptively applicable.
 
-Technical, schema, build, link, accessibility, and rendering success are necessary but never substitute for the page-quality verdict. Update `EDITORIAL-REVIEW.md` with the final comparative review and any material delta from the approved brief.
+Technical, schema, build, link, accessibility, and rendering success are necessary but never substitute for the page-quality verdict. A test authored from the same editorial opinion is conformance evidence only. Update `EDITORIAL-REVIEW.md` with the final comparative review and any material delta from the approved brief or change ledger.
 
 When the same gate fails after three substantive fixes, classify local versus external blockage. Continue independent verification when safe; otherwise preserve resumable state and ask one focused question.
 
@@ -175,6 +187,7 @@ Update `WORK.md`. When an approved canonical production page is newly published 
 - `CONTENT-PLAN.md` — exact asset target, authority, research, implementation, gates, target environment, rollout, and rollback.
 - `SOURCE-LEDGER.md` — primary/secondary source roles, dates, claim coverage, limitations, and citation destinations.
 - `CLAIM-LEDGER.md` — material claims, status, evidence, wording constraints, and final locations.
+- `SEO-CHANGE-LEDGER.json` and `SEO-CHANGE-APPROVAL.json` — conditional exact before/after, route scope, term effects, disposition, canary, rollback, approved IDs, and digest.
 - `CONTENT-DRAFT.md` — conditional review candidate or retained final copy when the project does not own the content source.
 - `PROGRESS.md` — append-only implementation and verification log.
 - `CONTENT-RECEIPT.md` — final ownership, changed target, published/rendered evidence, indexing eligibility, baseline pointer, and downstream handoffs.
@@ -183,7 +196,7 @@ Update `WORK.md`. When an approved canonical production page is newly published 
 
 ## Done
 
-Finish only when one approved page opportunity has one verified owner; a current page-specific benchmark exists; every requirement has an evidence strength; the exact specialist brief and `PUBLISH` verdict are approved; the title is truthful, compelling, durable, and catalogue-safe; the page is demonstrably competitive and worth publishing; material claims and citations pass; copy is useful, specific, human, and non-derivative; implementation matches project conventions; protected winners and upstream intent are unchanged; comparative, search, metadata, structured data, links, accessibility, project, rendering, and authorized-target checks pass; rollback and receipt exist; and no required approval or user-only publish step remains.
+Finish only when one approved page opportunity has one verified owner; a current page-specific benchmark exists; every requirement has an evidence strength; the exact specialist brief and `PUBLISH` verdict are approved; required change-ledger bytes and IDs are approved and match the rendered result; the title is truthful, compelling, durable, and catalogue-safe; the page is demonstrably competitive and worth publishing; material claims and citations pass; copy is useful, specific, human, and non-derivative; implementation matches project conventions; protected winners and upstream intent are unchanged; comparative, search, metadata, structured data, links, accessibility, project, rendering, and authorized-target checks pass; rollback and receipt exist; and no required approval or user-only publish step remains.
 
 State: “I am satisfied this SEO content asset is complete because …” with the benchmark, approved specialist brief, editorial verdict, claim audit, changed target, comparative and technical gates, rendered/published evidence, and remaining waivers. If deployment or external publication was not authorized or observed, report the exact incomplete state instead of calling the asset production-verified.
 

@@ -1,6 +1,6 @@
 {
   "name": "gremlin-skills",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "description": "A very particular set of agent skills for planning, designing, testing, and shipping software.",
   "license": "MIT",

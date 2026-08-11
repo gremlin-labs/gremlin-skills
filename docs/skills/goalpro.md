@@ -12,7 +12,7 @@ Start with the project, evidence, approval state, and same-slug artifacts named 
 
 ## Authority and safety
 
-It may edit the in-scope project when the user’s request authorizes execution. The canonical skill instructions remain authoritative when a request has narrower limits.
+It may edit the in-scope project when the user’s request authorizes execution. For SEO handoffs, Goalpro accepts only a validated technical scope that forbids user-facing changes; generic continuation does not authorize new titles, metadata, FAQs, modules, CTAs, or copy. The canonical skill instructions remain authoritative when a request has narrower limits.
 
 ## Outputs
 
@@ -30,7 +30,7 @@ Yes. Its archive has no required sibling-skill dependency; optional integrations
 
 ## Visible success
 
-The required artifacts exist at the declared output root, claims are backed by the evidence level the skill requires, applicable verification gates pass, and the skill stops at its documented authority boundary. Structural validation alone is not treated as proof of product judgment.
+The required artifacts exist at the declared output root, claims are backed by the evidence level the skill requires, the final diff reconciles to approved criteria and conditional SEO change IDs or technical classes, tests are not used to invent product decisions, applicable verification gates pass, and the skill stops at its documented authority boundary. Structural validation alone is not treated as proof of product judgment.
 
 ## Adjacent Gremlin skills
 
@@ -51,4 +51,3 @@ The required artifacts exist at the declared output root, claims are backed by t
 | Skill-local tests | No skill-local suite declared |
 | Stable distributions | standalone_archive, stable_plugin, public_install |
 <!-- END GENERATED:REGISTRY-CONTRACT -->
-

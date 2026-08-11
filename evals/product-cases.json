@@ -350,6 +350,46 @@
       "expected_outputs": ["One focused question resolves the material trust boundary","Options expose rather than hide commitment and data differences","Generated value includes loading failure cancellation and fallback","Web and mobile share activation meaning without forced screen parity","Humanized copy preserves factual qualifiers","A named validated preview revision precedes the final blueprint","Implementation routes to Planpro unless the handoff becomes concrete"],
       "material_question": "What anonymous generation and data-use boundary is approved before the product asks the user to create an account?",
       "failure_if": ["The skill delays signup by generic best practice despite unresolved authorization","AI output quality or latency is invented","Privacy language becomes smoother but less accurate","Preview approval is treated as implementation authority"]
+    },
+    {
+      "id": "product-seo-content-entity-catalogue-preservation",
+      "skill": "seo-content",
+      "prompt": "Improve a game catalogue whose current pages have strong venue and collection language, repeated orientation copy, sparse fallback descriptions, and no eligible FAQ rich result.",
+      "relevant_dimensions": ["Search intent","Specificity and click appeal","Persuasion and conversion","Entity data and taxonomy","Visible FAQ utility","Structured-data eligibility","Shared-template rollout","Approval and rollback"],
+      "not_applicable_dimensions": ["Portfolio ownership changes","Immediate provider mutation"],
+      "expected_outputs": ["Persuasive and navigational wording is not misclassified as unsupported fact","Available entity data is used to strengthen sparse pages before suppression","Visible FAQs are judged separately from schema","Repeated orientation is evaluated at complete-page level","Exact before and after ledger with query terms and canary","Digest-bound approval before mutation"],
+      "material_question": "Which exact user-facing transformations and route-family canary does the owner approve after seeing terms and persuasive mechanisms gained and lost?",
+      "failure_if": ["Truth is optimized into vague neutrality","Schema eligibility controls visible FAQ existence","All routes change before a canary","A new validator is treated as proof of competitiveness"]
+    },
+    {
+      "id": "product-seo-strategy-bounded-technical-handoff",
+      "skill": "seo-strategy",
+      "prompt": "Turn an approved portfolio into a technical implementation handoff for canonical, sitemap, pagination, and relationship fixes while page titles and visible modules are still under editorial review.",
+      "relevant_dimensions": ["Portfolio ownership","Technical classes and targets","Editorial authority","Approval provenance","Verification","Rollout and rollback"],
+      "not_applicable_dimensions": ["Page title decisions","Visible module decisions"],
+      "expected_outputs": ["Technical scope permits only enumerated classes and targets","User-facing changes are forbidden","Editorial change IDs are empty","Title and module work routes to a page specialist","Technical and editorial rollback remain independent","Validator passes before READY"],
+      "material_question": "Are the exact technical targets approved independently of the still-unresolved editorial changes?",
+      "failure_if": ["The handoff embeds title or FAQ instructions","Strategy uses broad implementation approval to decide page copy","Goalpro receives a mixed scope"]
+    },
+    {
+      "id": "product-landing-page-preview-ledger-authority",
+      "skill": "landing-page",
+      "prompt": "Redesign and implement an existing search landing page, including new titles, FAQs, CTA language, and fallback sections across its shared regional template.",
+      "relevant_dimensions": ["Product truth","Search intent","Message and persuasion","Preview fidelity","Language classification","Shared-template rollout","Approval and rollback"],
+      "not_applicable_dimensions": ["Unapproved production mutation"],
+      "expected_outputs": ["Page benchmark and PUBLISH verdict","Exact change ledger presented with the preview","Terms and persuasion cues gained and lost","Named regional canary","Digest-matching approval before implementation","Rendered before and after evidence","Independent technical and editorial rollback"],
+      "material_question": "Does approval cover the exact ledger digest and change IDs as well as the named visual preview revision?",
+      "failure_if": ["Visual preview approval silently authorizes unlisted template-wide copy changes","Schema eligibility removes visible FAQ content","The implementation broadens beyond the approved route count"]
+    },
+    {
+      "id": "product-seo-monitor-divergent-release-layers",
+      "skill": "seo-monitor",
+      "prompt": "Review a mixed SEO release where crawl and canonical health improved, CTR fell, and specific query language disappeared from titles and fallback copy.",
+      "relevant_dimensions": ["Baseline compatibility","Maturity","Technical health","Query and CTR signals","Persuasion and conversion","Approved change mechanisms","Layered rollback","Protected winners"],
+      "not_applicable_dimensions": ["Direct source mutation","Guaranteed causality"],
+      "expected_outputs": ["Technical and editorial layers remain distinct","Ledger predictions and lost terms are compared","Competing explanations and maturity limits are explicit","Verified technical repair is retained when independently sound","Editorial restore rewrite or canary hold routes to the owning specialist","Next observation and rollback triggers are concrete"],
+      "material_question": "Is the window mature and compatible enough to act on the editorial layer without discarding the independently verified technical repair?",
+      "failure_if": ["The monitor calls the whole release successful from crawl health","The monitor reverts everything without layer analysis","CTR correlation becomes certainty","The monitor rewrites titles directly"]
     }
   ]
 }

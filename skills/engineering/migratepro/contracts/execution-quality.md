@@ -1,15 +1,15 @@
 <!-- GENERATED CONTRACT SNAPSHOT
 contract: quality
 source: contracts/execution-quality.md
-source-version: 1
+source-version: 2
 semantic-owner: goalpro
-source-sha256: 39bb3f0dcebd82c30732d7a687667a3af22b69e496785a6541b138626342a920
+source-sha256: 3c6669de4614ec91d9ce91e374f441984a68cb487a51ab7005becf0877bb25c3
 DO NOT EDIT: run python3 scripts/materialize_contracts.py --write
 -->
 
 <!-- contract-metadata
 id: execution-quality
-version: 1
+version: 2
 semantic-owner: goalpro
 -->
 
@@ -22,6 +22,7 @@ Apply this contract proportionally to every execution skill. It sharpens judgmen
 - [Classify applicability](#classify-applicability)
 - [Per-step review](#per-step-review)
 - [Final integrated review](#final-integrated-review)
+- [Decision validity and validation independence](#decision-validity-and-validation-independence)
 - [Evidence statuses](#evidence-statuses)
 - [Quality report](#quality-report)
 - [Specialized defaults](#specialized-defaults)
@@ -100,6 +101,18 @@ Review applicable dimensions before logging a step `DONE`:
 - Inspect the diff and representative callers after gates pass.
 - Treat a narrow green check as evidence only for the behavior it actually covers.
 
+## Decision validity and validation independence
+
+Machine checks can prove implementation behavior, schema conformance, or the absence of a named regression. They cannot establish that a newly invented product, editorial, UX, policy, or SEO decision is desirable.
+
+- Trace every user-facing acceptance criterion to an approved source, observed user/market evidence, protected baseline, or named product policy.
+- Label a test authored from the same new decision `CONFORMANCE`; do not cite it as independent validation of that decision.
+- Compare representative before/after behavior for user-facing changes, including what information, terminology, action, or persuasive value was lost as well as gained.
+- When a diff introduces a material decision outside the approved criteria, stop and expose the delta even if all tests pass.
+- Seek independent evidence proportional to risk: owner approval, a separate specialist verdict, a current benchmark, user evidence, canary observation, or production measurement.
+
+Self-judgment is required but is not independent evidence. “I am satisfied” cannot expand authority or turn a proxy metric into the product outcome.
+
 ## Final integrated review
 
 Before declaring the goal complete:
@@ -110,6 +123,7 @@ Before declaring the goal complete:
 4. Inspect for temporary flags, migration debris, debug paths, stale compatibility code, and undocumented manual actions.
 5. Verify applicable rollout, rollback, user-visible behavior, and operational signals.
 6. Reconcile every quality dimension in `QUALITY-REPORT.md`.
+7. Reconcile the final diff against approved scope and label tests by what they actually prove.
 
 Per-step success does not substitute for this integrated gate.
 

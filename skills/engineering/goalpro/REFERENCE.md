@@ -9,8 +9,10 @@ Use [QUALITY.md](contracts/execution-quality.md) for cross-cutting product, corr
 Before any tool, logically verify:
 - Re-read the diff. Does it actually achieve the step's stated intent?
 - Did you touch anything the step didn't ask for? Revert unrelated hunks.
+- Does every user-facing or authority-sensitive hunk map to an approved criterion and conditional change-control ID? Stop on an unmatched delta.
 - Does the change interact with neighbors? Mental-trace one representative call site.
 - Is there a test for the new behavior?
+- Does the test prove approved behavior, or merely enforce a decision you just invented? Label the latter conformance-only and obtain independent evidence.
 
 ## Self-judgment (always)
 
@@ -51,4 +53,4 @@ When a step touches public interfaces, also:
 
 ## Final gate
 
-At the final worktree state, rerun every configured project gate and the representative end-to-end scenario recorded in `QUALITY-REPORT.md`. A collection of earlier per-step green outputs is not proof that the integrated result remains green.
+At the final worktree state, rerun every configured project gate and the representative end-to-end scenario recorded in `QUALITY-REPORT.md`. Compare the final diff with exact approved criteria and conditional change-control artifacts. A collection of earlier per-step green outputs is not proof that the integrated result remains green or that the underlying product/editorial decision was valid.

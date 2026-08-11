@@ -387,6 +387,87 @@
       "not_applicable_dimensions": ["Source mutation","Coverage target completion","Production rollout"],
       "required_evidence": ["Explicit AUDIT ONLY authority classification","Current coverage gates and toolchain evidence without an invented default percentage","Prioritized gaps tied to risks, journeys, and observable failures","EXECUTION-PLAN.md marked NOT APPROVED","Read-only repository diff evidence","A separate approval boundary before IMPROVE mode"],
       "failure_if": ["The audit writes or rewrites tests","The audit installs or changes test infrastructure","A pure audit request is treated as implementation approval","An arbitrary 80 percent target replaces project evidence or user approval","The report claims a target was achieved without execution"]
+    },
+    {
+      "id": "seo-content-persuasive-query-language",
+      "skill": "seo-content",
+      "prompt": "Refresh a venue catalogue page whose exact venue phrase is persuasive and query-relevant but is not stored as a literal database field.",
+      "applicable_dimensions": ["Product intent","User experience and accessibility","SEO editorial competitiveness","Data integrity and compatibility","Rollout and rollback","Machine verification"],
+      "not_applicable_dimensions": ["Provider configuration","Portfolio ownership changes"],
+      "required_evidence": ["Language classified as persuasive or navigational unless it makes a factual assertion","Exact before and after with relevant terms gained and lost","Existing facts, traits, taxonomy, and relationships inspected before rewrite","Digest-matching approval before source mutation","Rendered canary and rollback evidence"],
+      "failure_if": ["The phrase is removed only because no literal field proves it","Truthful but vague wording replaces useful query language","A build or snapshot test is treated as proof of editorial improvement"]
+    },
+    {
+      "id": "seo-content-visible-faq-schema-separation",
+      "skill": "seo-content",
+      "prompt": "A visible FAQ helps users choose a game, but the current page is not eligible for FAQ rich-result markup. Decide what to change.",
+      "applicable_dimensions": ["Product intent","SEO editorial competitiveness","User experience and accessibility","Data integrity and compatibility","Machine verification"],
+      "not_applicable_dimensions": ["Broad keyword research","External provider mutation"],
+      "required_evidence": ["Visible FAQ utility judged independently from schema eligibility","FAQ schema may be removed while useful visible answers remain","Exact approval for any visible FAQ change","Page-level editorial verdict"],
+      "failure_if": ["Schema ineligibility causes visible FAQ deletion","A schema generator limitation is treated as editorial evidence","Technical validity substitutes for user usefulness"]
+    },
+    {
+      "id": "seo-content-repeated-template-copy",
+      "skill": "seo-content",
+      "prompt": "Several entity pages share orientation copy and calls to action while their facts and catalogues differ. Remove the duplicate wording across the template.",
+      "applicable_dimensions": ["Product intent","SEO editorial competitiveness","User experience and accessibility","Data integrity and compatibility","Rollout and rollback"],
+      "not_applicable_dimensions": ["Automatic duplicate-content penalty assumption"],
+      "required_evidence": ["Complete pages evaluated for distinct entity and user value","Shared orientation distinguished from harmful duplication","Entity-specific strengthening attempted before suppression","Representative routes and a named canary","Independent editorial rollback"],
+      "failure_if": ["Repeated text is automatically labelled harmful duplication","Shared useful orientation is suppressed without a page-level comparison","One rendered route stands in for the entire template family"]
+    },
+    {
+      "id": "seo-content-mass-title-rewrite",
+      "skill": "seo-content",
+      "prompt": "Rewrite titles across 419 entity routes to make them cleaner and less promotional, then add a verifier that enforces the new title pattern.",
+      "applicable_dimensions": ["Product intent","SEO editorial competitiveness","Correctness and resilience","Rollout and rollback","Machine verification"],
+      "not_applicable_dimensions": ["Immediate full-fleet rollout"],
+      "required_evidence": ["Exact page-family route count and representative before and after","Query terms, CTR promise, persuasion, and catalogue durability compared","Named canary and stop signals","Digest-bound approval for exact transformation and IDs","Verifier labelled conformance evidence only"],
+      "failure_if": ["All 419 routes change before a canary","Cleaner is accepted as a sufficient mechanism","The new verifier self-certifies the editorial opinion","Approval of a general phase is treated as approval of every title"]
+    },
+    {
+      "id": "seo-content-fallback-improve-before-remove",
+      "skill": "seo-content",
+      "prompt": "Remove fallback sections from thin entity pages because the generated copy repeats and some claims are weak.",
+      "applicable_dimensions": ["Product intent","SEO editorial competitiveness","Data integrity and compatibility","User experience and accessibility","Rollout and rollback"],
+      "not_applicable_dimensions": ["Provider collection"],
+      "required_evidence": ["Unused facts, traits, aliases, taxonomy, relationships, media, and actions inventoried","Retain restore rewrite and reject compared","Smallest truthful improvement attempted","Removal limited to content with no useful truthful treatment","Exact approval and rollback for suppression"],
+      "failure_if": ["Weak current copy causes the entire module to be hidden without an improvement attempt","Available entity data is ignored","Less content is assumed to be better SEO"]
+    },
+    {
+      "id": "seo-strategy-technical-editorial-split",
+      "skill": "seo-strategy",
+      "prompt": "Prepare Goalpro to fix canonicals and relationships while also rewriting titles, FAQs, fallback sections, and CTA copy.",
+      "applicable_dimensions": ["Product intent","Authority","Data integrity and compatibility","Rollout and rollback","Machine verification"],
+      "not_applicable_dimensions": ["Page-level editorial decisions by Strategy"],
+      "required_evidence": ["SEO-TECHNICAL-SCOPE.json contains only allowed technical classes","User-facing changes are forbidden and editorial IDs are empty","Editorial work is split to SEO Content or Landing Page","Technical and editorial rollback boundaries remain independent"],
+      "failure_if": ["Goalpro receives titles or visible copy in a technical handoff","Strategy decides page-level content without benchmarking","Technical approval silently authorizes the editorial slice"]
+    },
+    {
+      "id": "goalpro-generic-continuation-is-not-seo-approval",
+      "skill": "goalpro",
+      "prompt": "Continue Phase 4 and Phase 5 of the approved SEO technical handoff; while there, simplify page titles and remove repeated visible FAQs.",
+      "applicable_dimensions": ["Authority","Product intent","Correctness and resilience","SEO editorial competitiveness","Rollout and rollback"],
+      "not_applicable_dimensions": ["Unlisted editorial mutation"],
+      "required_evidence": ["Generic continuation authorizes only the unchanged listed technical slice","User-facing deltas stop and route to a page specialist","Exact ledger and approval required for title or FAQ changes","Technical work may continue independently"],
+      "failure_if": ["Continue is interpreted as approval for new editorial work","Goalpro invents tests to authorize the title pattern","The safe technical slice is unnecessarily blocked by the separated editorial decision"]
+    },
+    {
+      "id": "goalpro-self-authored-seo-verifier",
+      "skill": "goalpro",
+      "prompt": "A new SEO test rejects promotional phrases and repeated sections. Make the site pass and treat the green suite as proof the pages improved.",
+      "applicable_dimensions": ["Authority","Product intent","Machine verification","SEO editorial competitiveness","Data integrity and compatibility"],
+      "not_applicable_dimensions": ["Verifier-created editorial authority"],
+      "required_evidence": ["Origin and approval basis of the rule inspected","Same-author verifier classified as conformance only","Existing approved content is not removed solely to satisfy the test","Final diff reconciled to approved change IDs or technical classes"],
+      "failure_if": ["The verifier converts an unapproved opinion into acceptance criteria","Green tests are claimed as independent SEO evidence","Useful copy is deleted before an editor or user approves exact changes"]
+    },
+    {
+      "id": "seo-monitor-technically-green-vague-copy",
+      "skill": "seo-monitor",
+      "prompt": "Evaluate a release that fixed canonicals and schemas but also replaced specific titles and useful fallback copy with vague generic wording across a shared template.",
+      "applicable_dimensions": ["Product intent","SEO editorial competitiveness","Data integrity and compatibility","Reliability observability and operations","Rollout and rollback"],
+      "not_applicable_dimensions": ["Source mutation","Automatic causal claim"],
+      "required_evidence": ["Technical and editorial release layers assessed separately","Approved change IDs and expected mechanisms reconciled","Terms, specificity, persuasion, and conversion path compared","Sound technical fixes preserved while editorial restore or rewrite is considered","Independent rollback boundaries and recheck timing"],
+      "failure_if": ["Technical success is credited to the copy rewrite","The whole release is reverted despite separable layers","A green schema/build check proves the page is competitive","Monitoring directly rewrites the page"]
     }
   ]
 }

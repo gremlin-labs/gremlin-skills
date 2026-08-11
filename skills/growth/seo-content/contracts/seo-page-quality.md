@@ -1,15 +1,15 @@
 <!-- GENERATED CONTRACT SNAPSHOT
 contract: seo-page-quality
 source: contracts/seo-page-quality.md
-source-version: 1
+source-version: 2
 semantic-owner: seo-content
-source-sha256: b88a3ae7b5911d497606b724492fda6adb99463027fa75f97d2201bbc4a7b57c
+source-sha256: 7d874aeec726dbe9f5762ef4a766cbe23195b230d38dbffd926136d4dd83caa3
 DO NOT EDIT: run python3 scripts/materialize_contracts.py --write
 -->
 
 <!-- contract-metadata
 id: seo-page-quality
-version: 1
+version: 2
 semantic-owner: seo-content
 -->
 
@@ -17,9 +17,12 @@ semantic-owner: seo-content
 
 Apply this contract before approving or implementing a search-targeted page. It separates market evidence, editorial judgment, and technical correctness so a truthful, valid implementation cannot pass when the page itself is strategically weak.
 
+Apply [the SEO change-control contract](seo-change-control.md) whenever existing or proposed titles, descriptions, visible copy, FAQs, modules, structured data, CTAs, or internal-link wording will change.
+
 ## Contents
 
 - [Evidence boundary](#evidence-boundary)
+- [Persuasion and specificity](#persuasion-and-specificity)
 - [Page-specific benchmark](#page-specific-benchmark)
 - [Requirement strength](#requirement-strength)
 - [Editorial decision](#editorial-decision)
@@ -38,6 +41,16 @@ Keep these statements distinct:
 - `UNSUPPORTED` — not established by available evidence; exclude it from recommendations and acceptance gates.
 
 Competitor recurrence and current rankings show what is present, not why a page ranks or converts. Never turn repeated wording, modules, methodology, testing language, page length, or section order into a causal ranking claim. Search-result snippets are discovery evidence, not a substitute for inspecting the pages.
+
+## Persuasion and specificity
+
+Truthfulness constrains the page; it is not the sole optimization objective. Within truthful and safe bounds, preserve or improve search-intent fit, useful terminology, specificity, click appeal, persuasive value, and the conversion bridge.
+
+Marketing language is not inherently unsupported. Distinguish factual and comparative claims from persuasive and navigational language. Do not require a literal database field for every useful category, task, venue, benefit, or invitation when product data, taxonomy, relationships, or the page experience supports the wording.
+
+For every replacement, compare relevant queries and terms gained or lost. Reject vague neutralization that reduces the user's understanding or reason to click without an evidenced benefit. Inspect available traits, facts, descriptions, measurements, relationships, and taxonomy before removing a section or fallback answer.
+
+Evaluate visible FAQ usefulness separately from FAQ-schema eligibility. Repeated useful framing is not harmful duplicate content without page-level evidence.
 
 ## Page-specific benchmark
 
@@ -112,6 +125,8 @@ Before implementation approval and again against the rendered result, compare th
 5. Is every advantage visible in the draft rather than asserted in a brief?
 6. Would publishing it improve the portfolio, or should the current owner be refreshed instead?
 7. What evidence or market change would reverse the verdict?
+8. Which relevant terms, distinctions, objections, or conversion cues did the revision gain or lose?
+9. Did any technical or schema decision make visible content vaguer, thinner, or less useful?
 
 Record concrete revision requests. “Looks good,” artifact completeness, and internal consistency are not editorial evidence.
 
@@ -121,6 +136,8 @@ Claims, sources, URL ownership, canonical and index posture, metadata, structure
 
 A technical gate cannot change `REVISE`, `NO PAGE`, or `BLOCKED` into `PUBLISH`.
 
+A test derived from the same new editorial opinion proves conformance only. It cannot establish competitiveness or approval without an independent benchmark, policy, baseline, or exact user-approved before/after.
+
 ## Required outputs
 
 The owning page specialist records:
@@ -128,5 +145,6 @@ The owning page specialist records:
 - `PAGE-BENCHMARK.md` — scope, current owner, representative pages, observed page roles, competitive patterns, gaps, limitations, and evidence statuses.
 - `PAGE-REQUIREMENTS.md` — `MUST`, `OPTIONAL`, `TEST`, and `REJECTED` requirements with evidence and invalidation conditions.
 - `EDITORIAL-REVIEW.md` — title and catalogue tests, comparative review, truth/competitiveness matrix, exact verdict, approval state, and material revisions.
+- `SEO-CHANGE-LEDGER.json` plus conditional `SEO-CHANGE-APPROVAL.json` — exact before/after, route scope, term effects, mechanism, canary, rollback, and digest-bound approval for user-facing changes.
 
 The artifacts may be combined only when every heading and decision remains explicit. Preserve them with the same slug and cite them from implementation and publication receipts.

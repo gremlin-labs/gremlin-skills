@@ -28,6 +28,11 @@ class PackageValidatorTests(unittest.TestCase):
         fixture = Path(__file__).resolve().parent / "fixtures" / "valid-repo"
         shutil.copytree(fixture, root)
         shutil.copytree(ROOT / "contracts", root / "contracts")
+        (root / "scripts").mkdir(exist_ok=True)
+        shutil.copy2(
+            ROOT / "scripts" / "validate_seo_change_control.py",
+            root / "scripts" / "validate_seo_change_control.py",
+        )
         registry = load_registry(root)
         write_materialized(root, registry)
         package_skills(root / "skills", package_dir, validate=False)

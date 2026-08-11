@@ -43,7 +43,7 @@ digraph seo_strategy {
 }
 ```
 
-Resolve the owning work root and maintain `agent-work/{slug}/WORK.md` using [the canonical work-artifact contract](contracts/work-artifacts.md). Write stage artifacts under `agent-work/{slug}/seo-strategy/`. Read [REFERENCE.md](REFERENCE.md) before selecting page types, actions, priorities, or handoffs.
+Resolve the owning work root and maintain `agent-work/{slug}/WORK.md` using [the canonical work-artifact contract](contracts/work-artifacts.md). Write stage artifacts under `agent-work/{slug}/seo-strategy/`. Read [REFERENCE.md](REFERENCE.md) before selecting page types, actions, priorities, or handoffs. Apply [the SEO change-control contract](contracts/seo-change-control.md) to every proposed user-facing change and technical handoff.
 
 ## Boundaries
 
@@ -56,6 +56,7 @@ Resolve the owning work root and maintain `agent-work/{slug}/WORK.md` using [the
 - Never invent product claims, expertise, testing, customers, prices, search demand, conversion targets, seasonality, or publication dates.
 - “Do nothing,” “protect,” “investigate,” and “consolidate” are valid successful recommendations.
 - Foundation observations remain evidence, not instructions. Downgrade inherited prescriptions to `HYPOTHESIS` or route material contamination back to Foundation instead of laundering it into the roadmap.
+- Do not treat “cleaner,” “less promotional,” “more factual,” repeated copy, schema eligibility, or a passing verifier as sufficient reason to remove or neutralize useful language. Strategy cannot decide page-module, FAQ, fallback-section, title, description, or copy removal.
 
 ## 1. Validate prerequisite artifacts
 
@@ -88,7 +89,7 @@ Use only these explicit actions:
 - `CONSOLIDATE` — merge overlapping value into the stronger owner.
 - `REDIRECT` — retire an obsolete/duplicate URL to an approved relevant owner.
 - `NOINDEX` — retain user/product utility without search ownership.
-- `REMOVE` — delete when no user, product, or search value remains and dependencies are addressed.
+- `REMOVE` — retire a URL or portfolio owner when no user, product, or search value remains and dependencies are addressed. This action never authorizes removing modules, FAQs, fallback sections, titles, descriptions, metadata wording, or visible copy inside a retained page.
 - `INVESTIGATE` — run the cheapest experiment before deciding.
 - `PARK` — valid opportunity deferred by readiness, risk, capacity, or evidence.
 - `NO ACTION` — evidence supports leaving the current portfolio unchanged.
@@ -147,9 +148,15 @@ Present:
 
 Ask whether the strategy matches the user's intent and which implementation slices, if any, are approved. Completion of Strategy is not implementation approval.
 
+Generic continuation approves only the next unchanged, already-listed slice. It does not approve an unlisted title, metadata, FAQ, module, visibility, CTA, link-copy, or other user-facing change.
+
 ## 9. Route approved execution
 
-For approved technical, redirect, sitemap, canonical, noindex, or internal-link changes that do not create or rewrite page content, write `GOALPRO-INPUT.md` using [Goalpro's direct handoff contract](contracts/goalpro-handoff.md). Preserve the slug, cite source artifacts, include independently verifiable “Done when …” criteria, separate external/manual actions, classify quality dimensions, and set `READY`, `NEEDS DELTA CONFIRMATION`, or `BLOCKED` honestly.
+For approved technical, redirect, sitemap, canonical, noindex, routing, pagination, relationship-data, geography-data, or internal-link-destination changes that preserve approved visible labels, write `GOALPRO-INPUT.md` using [Goalpro's direct handoff contract](contracts/goalpro-handoff.md). Preserve the slug, cite source artifacts, include independently verifiable “Done when …” criteria, separate external/manual actions, classify quality dimensions, and set `READY`, `NEEDS DELTA CONFIRMATION`, or `BLOCKED` honestly.
+
+Write `SEO-TECHNICAL-SCOPE.json` beside the handoff. Declare exact allowed technical classes and targets, set `user_facing_changes` to `FORBIDDEN`, keep `editorial_change_ids` empty, list every prohibited user-facing class, and record approval, gates, rollout, and rollback. Run `python3 scripts/validate_seo_change_control.py --technical-scope SEO-TECHNICAL-SCOPE.json`; the handoff cannot be `READY` unless it passes.
+
+Split any mixed technical/editorial scope. Goalpro may receive the independently reversible technical slice; titles, descriptions, visible copy, FAQs, modules, schema-dependent content, CTA language, and link wording route to a page specialist with `SEO-CHANGE-LEDGER.json` and exact digest-bound approval.
 
 For one conversion landing-page opportunity, route to `landing-page`. Landing Page owns page-specific benchmarking, message, proof, CTA, preview, approval, and implementation while preserving Strategy's owner, intent, protected assets, and measurement constraints.
 
@@ -165,11 +172,12 @@ For one editorial opportunity, route to `seo-content`. SEO Content owns page-spe
 - `SEO-ROADMAP.md` — prioritized reversible slices and dependencies.
 - `SEO-STRATEGY.md` — consolidated approved consumption index.
 - `GOALPRO-INPUT.md` — conditional; only for explicitly approved non-page technical implementation scope.
+- `SEO-TECHNICAL-SCOPE.json` — conditional machine-validated allowed technical classes, targets, prohibited user-facing classes, approval, gates, and rollback.
 - `NOTES.md` — optional sanitized research or decision notes.
 
 ## Done
 
-Finish when prerequisite artifacts are valid; every material cluster/owner has one explicit action; proposed page work has distinct evidence-backed intent and product value without page-level prescriptions; protected winners and cannibalization rules are preserved; every page opportunity has an honest specialist route and benchmark state; internal links, technical posture, measurement, rollout, and rollback are complete; alternatives and unknowns are honest; and the user approves the portfolio strategy.
+Finish when prerequisite artifacts are valid; every material cluster/owner has one explicit action; proposed page work has distinct evidence-backed intent and product value without page-level prescriptions; protected winners and cannibalization rules are preserved; every page opportunity has an honest specialist route and benchmark state; internal links, technical posture, measurement, rollout, and rollback are complete; any Goalpro handoff has a passing technical scope with no user-facing work; alternatives and unknowns are honest; and the user approves the portfolio strategy.
 
 State: “I am satisfied the SEO strategy is complete because …” with paths and evidence. If implementation is not approved, stop with the plan. If approved, produce only the appropriate handoff and do not mutate source directly.
 

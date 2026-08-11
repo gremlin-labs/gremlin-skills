@@ -54,7 +54,7 @@ Ownership, intent, portfolio-action, and protected-winner conflicts are `BLOCKED
 | Landing page with unresolved message, CTA, proof, persuasion, layout, visual direction, or preview | `landing-page` |
 | Cluster, intent, owner, URL, portfolio action, or cannibalization is unresolved | `seo-strategy` |
 | Only humanize existing approved copy without SEO/content implementation | `prose-humanizer` |
-| Implement several heterogeneous approved source/config slices | Goalpro |
+| Implement several heterogeneous approved technical source/config slices with `user_facing_changes: FORBIDDEN` | Goalpro |
 | Research the broad competitor, demand, cluster, or ownership market | `seo-foundation` |
 | Benchmark the exact editorial query and representative pages | `seo-content` |
 | Verify and optionally request indexing for an approved published canonical URL | `seo-indexing` |
@@ -67,7 +67,7 @@ When routing to Landing Page, provide the page opportunity, primary cluster, int
 |---|---|
 | Read repository, public pages, approved artifacts, and primary sources | Inspection; allowed |
 | Benchmark and draft inside `agent-work/{slug}/seo-content/` | Allowed after a valid page opportunity |
-| Reversible source edit implementing an exact approved specialist brief with `PUBLISH` verdict | Allowed only after exact brief approval and implementation authority |
+| Reversible source edit implementing an exact approved specialist brief with `PUBLISH` verdict | Allowed only after exact brief approval, digest-matching SEO change approval, and implementation authority |
 | Material claim, target URL, ownership, index/canonical, redirect, analytics, privacy, or strategy delta | Exact renewed approval |
 | High-stakes medical, legal, financial, safety, or policy claim | Exact draft approval before publication |
 | External CMS mutation or production deployment | Explicit target/publish authorization |
@@ -120,6 +120,29 @@ Rules:
 - `REJECTED` records a useful prevented error, not content to smuggle into softer prose.
 - Competitor claims require current public evidence and neutral framing. Do not imply private knowledge or endorse unsupported comparison tables.
 - Statistics retain population, geography, sample, window, unit, and uncertainty needed to interpret them.
+
+## SEO editorial change control
+
+Apply [the SEO change-control contract](contracts/seo-change-control.md) to every user-facing SEO change. Product truth is a constraint, not permission to replace useful search and conversion language with vague neutrality.
+
+- Classify affected wording as `FACTUAL`, `DERIVED`, `COMPARATIVE`, `PERSUASIVE`, or `NAVIGATIONAL`; use evidence requirements appropriate to the actual class.
+- Record exact representative before/after values, templated transformations, relevant queries, and every material term or persuasion cue gained or lost.
+- Inspect available facts, traits, aliases, measurements, relationships, taxonomy, media, and product actions before deletion or suppression. Compare retain, restore, rewrite, and reject.
+- Judge visible FAQ usefulness separately from FAQ schema eligibility.
+- Treat repeated framing as a page-level question, not automatic harmful duplication; attempt entity-specific strengthening before suppression.
+- Require a canary for shared-template or multi-route changes and preserve independent editorial and technical rollback boundaries.
+
+Write `SEO-CHANGE-LEDGER.json` before source mutation. After the exact ledger is presented and approved, write `SEO-CHANGE-APPROVAL.json` with the SHA-256 of the exact ledger bytes and approved change IDs. Generic continuation, phase approval, a green verifier, or approval of a different brief revision does not substitute for this receipt.
+
+Run:
+
+```bash
+python3 {seo-content-skill-root}/scripts/validate_seo_change_control.py \
+  --ledger agent-work/{slug}/seo-content/SEO-CHANGE-LEDGER.json \
+  --approval agent-work/{slug}/seo-content/SEO-CHANGE-APPROVAL.json
+```
+
+A passing validator proves schema and approval conformance only. The benchmark, editorial review, user-approved before/after, and post-release measurement supply the independent editorial judgment.
 
 ## Page benchmark and editorial brief
 
@@ -285,12 +308,15 @@ No rung substitutes for another. A successful build cannot rescue a weak editori
 ## Owner, cluster, intent, and action
 ## Changed files or records
 ## Claims, sources, and rejected claims
+## Approved SEO change IDs and rendered before/after
+## Terms, persuasion cues, and visible utility gained or lost
 ## Search and internal-link posture
 ## Project and rendered verification
 ## Published-target evidence
 ## Indexing handoff
 ## Baseline and monitor windows
 ## Rollback
+## Canary, rollout, and independent editorial/technical rollback
 ## Limitations and follow-up
 ```
 

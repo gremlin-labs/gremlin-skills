@@ -13,6 +13,7 @@ sys.path.insert(0, str(SCRIPTS))
 
 from materialize_contracts import (  # noqa: E402
     GENERATED_PREFIX,
+    GENERATED_RESOURCE_PREFIX,
     check_materialized,
     expected_snapshots,
     write_materialized,
@@ -27,6 +28,11 @@ class ContractMaterializationTests(unittest.TestCase):
         fixture = Path(__file__).resolve().parent / "fixtures" / "valid-repo"
         shutil.copytree(fixture, root, dirs_exist_ok=True)
         shutil.copytree(ROOT / "contracts", root / "contracts")
+        (root / "scripts").mkdir(exist_ok=True)
+        shutil.copy2(
+            ROOT / "scripts" / "validate_seo_change_control.py",
+            root / "scripts" / "validate_seo_change_control.py",
+        )
         return temporary, root
 
     def assert_has_error(self, errors: list[str], phrase: str) -> None:
@@ -34,8 +40,13 @@ class ContractMaterializationTests(unittest.TestCase):
 
     def test_current_repository_snapshots_are_exact(self) -> None:
         registry = load_registry(ROOT)
-        self.assertEqual(117, len(expected_snapshots(ROOT, registry)))
+        self.assertEqual(127, len(expected_snapshots(ROOT, registry)))
         self.assertEqual([], check_materialized(ROOT, registry))
+        for skill in ("goalpro", "landing-page", "seo-content", "seo-monitor", "seo-strategy"):
+            validator = next(
+                ROOT.glob(f"skills/*/{skill}/scripts/validate_seo_change_control.py")
+            )
+            self.assertIn(GENERATED_RESOURCE_PREFIX, validator.read_text(encoding="utf-8"))
 
     def test_write_then_check_materializes_digest_stamped_snapshot(self) -> None:
         temporary, root = self.make_repo()

@@ -9,6 +9,8 @@ Drive a goal to completion through a self-correcting loop with explicit acceptan
 
 Resolve the owning work root, same-slug upstream stages, and shared index using [the canonical work-artifact contract](contracts/work-artifacts.md).
 
+When a handoff is SEO-related, apply [the SEO change-control contract](contracts/seo-change-control.md) before mutation. Validate either its exact editorial ledger and approval or its technical-only scope; never infer that generic continuation authorizes an unlisted user-facing change.
+
 ## Decision tree
 
 ```dot
@@ -53,7 +55,7 @@ digraph goalpro {
 
 Set up or reconcile the goal folder and write the criteria **before** doing any work.
 
-1. **Inspect the input.** If `GOALPRO-INPUT.md` is supplied, validate it against [HANDOFF.md](contracts/goalpro-handoff.md) and classify it `READY`, `NEEDS DELTA CONFIRMATION`, or `BLOCKED`. Otherwise treat the request as a raw goal or unapproved plan.
+1. **Inspect the input.** If `GOALPRO-INPUT.md` is supplied, validate it against [HANDOFF.md](contracts/goalpro-handoff.md) and classify it `READY`, `NEEDS DELTA CONFIRMATION`, or `BLOCKED`. For SEO, require and validate `SEO-TECHNICAL-SCOPE.json`; a Goalpro SEO handoff with user-facing work is not `READY`. Otherwise treat the request as a raw goal or unapproved plan.
    When approved criteria include a named or derived theme, consult the independently discovered `theme-library` skill as embedded evidence. Preserve the approved interpretation mode and anchors while implementing product-specific semantic ramps; do not silently switch to exact fidelity or literal catalog role copying.
 2. **Slug the goal.** Preserve the handoff's kebab-case slug. For a raw goal, derive a human-readable slug such as `add-rate-limit-retries`.
 3. **Reconcile existing state.** If `agent-work/{slug}/goalpro/` exists, read its criteria, sources, and progress. Resume when it is the same goal; reconcile source changes as a visible delta; stop on a conflicting goal. Never overwrite or silently suffix the slug.
@@ -62,17 +64,18 @@ Set up or reconcile the goal folder and write the criteria **before** doing any 
    - **Sources and approval:** handoff/source paths, approval status, and any post-approval delta.
    - **Acceptance criteria:** a checklist. Each item must be independently verifiable — by a test, a command exit code, a file existing, or a concrete observable. Phrase each as "Done when …".
    - **Out of scope:** explicit non-goals.
+   - **Change control and authority:** conditional scope/ledger paths, validated digest or allowed classes, and prohibited user-facing deltas.
    - **Quality applicability:** classify every dimension in [QUALITY.md](contracts/execution-quality.md) as `APPLICABLE`, `NOT APPLICABLE`, or `UNKNOWN`, with the evidence expected for applicable dimensions.
    - Optionally a **Plan** section with ordered steps, or a path to an external plan file the user supplied.
 5. **Apply the right confirmation gate.** A `READY`, explicitly approved handoff begins without re-approving unchanged criteria. For `NEEDS DELTA CONFIRMATION`, show only the material delta and ask one focused question. For `BLOCKED`, stop before mutation. For a raw goal or unapproved plan, show the full criteria and require explicit approval.
 
-Never infer approval merely because an upstream skill completed. If a written source is stale or contradictory, expose the delta rather than barreling through.
+Never infer approval merely because an upstream skill completed. “Continue” authorizes only the next unchanged listed slice. If a written source is stale, contradictory, or silent about a user-facing change, expose the delta rather than barreling through.
 
 ## The loop (each iteration)
 
 1. **Plan** — Re-read `CRITERIA.md` and `PROGRESS.md`. Pick the next unfinished step or the next unmet criterion. If the plan is stale, revise it before proceeding.
-2. **Do** — Implement the step. Own the toolchain: write tests for the behavior, make the change, keep the diff scoped to the step.
-3. **Verify** — Run project-appropriate checks (see REFERENCE.md) and the applicable per-step review in [QUALITY.md](contracts/execution-quality.md). Must include: the new tests pass, plus the project-wide gate (typecheck/lint/build). For compiled code: compile and run the binary. Do logical sanity checks: re-read your diff, confirm it actually achieves the step's intent, confirm no regressions in neighbors. Never advance on a failing gate.
+2. **Do** — Validate conditional change-control artifacts immediately before mutation. Implement the step, keep the diff scoped to approved criteria, and write tests for approved behavior—not for a new decision invented during implementation.
+3. **Verify** — Run project-appropriate checks (see REFERENCE.md) and the applicable per-step review in [QUALITY.md](contracts/execution-quality.md). Must include: the new tests pass, plus the project-wide gate (typecheck/lint/build). For compiled code: compile and run the binary. Re-read the actual diff against criteria, out-of-scope rules, allowed classes/IDs, and representative behavior. Label same-author policy tests `CONFORMANCE` evidence only. Never advance on a failing gate or unmatched material delta.
 4. **Self-judge** — In addition to machine gates, state explicitly: "I am satisfied that this step is completed because …". Cite the criterion and materially exercised quality dimensions. Both must hold: gates green **and** self-judgment satisfied. If gates pass but you're not satisfied, the step isn't done — say what's missing and keep working it.
 5. **Log** — Append to `agent-work/{slug}/goalpro/PROGRESS.md`:
    ```
@@ -85,7 +88,7 @@ Never infer approval merely because an upstream skill completed. If a written so
 
 ## Stopping
 
-- **Goal met**: every acceptance criterion passes its machine gate where one exists, **and** you are satisfied each is met. Run the final integrated review in [QUALITY.md](contracts/execution-quality.md), write `QUALITY-REPORT.md`, and reconcile every dimension to `VERIFIED`, `NOT APPLICABLE`, or explicitly approved `WAIVED`. Summarize what was done, show the final verify output, mark the goal complete in `PROGRESS.md`. Stop.
+- **Goal met**: every acceptance criterion passes its machine gate where one exists, **and** you are satisfied each is met. Run the final integrated review in [QUALITY.md](contracts/execution-quality.md), reconcile the final diff with approval and conditional change control, write `QUALITY-REPORT.md`, and reconcile every dimension to `VERIFIED`, `NOT APPLICABLE`, or explicitly approved `WAIVED`. Summarize what was done, show the final verify output, mark the goal complete in `PROGRESS.md`. Stop.
 - **User interrupts**: stop immediately, note where you left off in `PROGRESS.md`.
 - A failing gate counts as "not met" — keep it in the loop, not a stop.
 

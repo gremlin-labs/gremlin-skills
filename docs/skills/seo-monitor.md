@@ -12,11 +12,11 @@ Start with the project, evidence, approval state, and same-slug artifacts named 
 
 ## Authority and safety
 
-It may inspect project and external evidence and write only its skill-scoped work artifacts. It does not edit project source or mutate external systems. The canonical skill instructions remain authoritative when a request has narrower limits.
+It may inspect project and external evidence and write only its skill-scoped work artifacts. It does not edit project source or mutate external systems. It evaluates technical and editorial release layers separately, so a sound canonical or crawl fix cannot self-certify an accompanying copy rewrite. The canonical skill instructions remain authoritative when a request has narrower limits.
 
 ## Outputs
 
-Work is owned at `agent-work/{slug}/seo-monitor/`. Required contract artifacts currently include `MONITOR-BRIEF.md`, `SEO-MONITOR.md`, `MONITOR-HISTORY.md`, `ACTION-QUEUE.md`, `runs/{run-id}/DATA-INVENTORY.md`, `runs/{run-id}/SNAPSHOT.csv`, `runs/{run-id}/MONITOR-REPORT.md`. Conditional files are emitted only when their documented condition applies.
+Work is owned at `agent-work/{slug}/seo-monitor/`. Required contract artifacts currently include `MONITOR-BRIEF.md`, `SEO-MONITOR.md`, `MONITOR-HISTORY.md`, `ACTION-QUEUE.md`, `runs/{run-id}/DATA-INVENTORY.md`, `runs/{run-id}/SNAPSHOT.csv`, `runs/{run-id}/MONITOR-REPORT.md`. Evaluated releases are reconciled to approved editorial change IDs or technical classes and their independent rollback boundaries. Conditional files are emitted only when their documented condition applies.
 
 ## Common questions
 
@@ -30,7 +30,7 @@ Yes. Its archive has no required sibling-skill dependency; optional integrations
 
 ## Visible success
 
-The required artifacts exist at the declared output root, claims are backed by the evidence level the skill requires, applicable verification gates pass, and the skill stops at its documented authority boundary. Structural validation alone is not treated as proof of product judgment.
+The required artifacts exist at the declared output root, claims are backed by the evidence level the skill requires, release layers and expected mechanisms are reconciled, terms and persuasion cues gained or lost are visible, technical and editorial rollback remain separable, applicable verification gates pass, and the skill stops at its documented authority boundary. Structural validation alone is not treated as proof of product judgment.
 
 ## Adjacent Gremlin skills
 
@@ -51,4 +51,3 @@ The required artifacts exist at the declared output root, claims are backed by t
 | Skill-local tests | No skill-local suite declared |
 | Stable distributions | standalone_archive, stable_plugin, public_install |
 <!-- END GENERATED:REGISTRY-CONTRACT -->
-

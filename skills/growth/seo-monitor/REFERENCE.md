@@ -10,6 +10,7 @@ Use this reference to define comparable scopes, judge maturity, protect winners,
 | Foundation | Approved owners, clusters, intent boundaries, protected winners, markets/languages, source limits | `seo-foundation` when research is absent or stale |
 | Strategy | Approved actions, page opportunities, baselines, outcomes, guardrails, windows, rollback | `seo-strategy` for ownership or portfolio decisions; page specialist for benchmark and brief |
 | Content receipt | Exact target, published time/state, changed files/record, claims, baseline pointer, rollback | `seo-content` for incomplete bounded implementation evidence |
+| Change control | Digest-matching editorial ledger and approval, or technical-only scope; actual change IDs/classes; canary and separate rollback boundaries | Owning page specialist for editorial gaps; Strategy/Goalpro for technical-scope gaps |
 | Current site | Route, response, canonical/index, sitemap, render, links, instrumentation | `INVESTIGATE` or `TECHNICAL FIX` |
 
 A monitor can run before Content exists for whole-site health, but it must not pretend there is a change-specific baseline or receipt.
@@ -126,6 +127,14 @@ Prefer a baseline captured before implementation. If absent:
 
 Keep page and query baselines joined to the Foundation owner map. When a redirect or consolidation changes URLs, preserve the old/new relationship instead of treating the new URL as a fresh unrelated page.
 
+## Change-layer attribution
+
+Reconcile each evaluated release to `SEO-CHANGE-LEDGER.json` plus `SEO-CHANGE-APPROVAL.json`, or to `SEO-TECHNICAL-SCOPE.json`. Report deployed editorial change IDs and technical classes separately. A missing or digest-mismatched approval is a process exception; it does not become valid because the release already shipped.
+
+For editorial changes, compare the ledger's expected mechanism with observed and rendered evidence: relevant queries, terms gained and lost, specificity, click appeal, visible utility, persuasion, and conversion path. For technical changes, inspect canonical, redirect, sitemap, crawl, index, routing, pagination, relationship data, render, and measurement behavior without crediting them for an unrelated copy outcome.
+
+When a mixed release has divergent results, preserve the layer that has independent support. A sound technical repair can remain while an approved editorial layer is restored, rewritten, or held at its canary. Do not recommend reverting the whole release merely because its original implementation coupled the layers.
+
 ## Metric interpretation guardrails
 
 ### Search Console and Bing
@@ -206,6 +215,7 @@ Every exception also carries `confidence: HIGH | MEDIUM | LOW`, competing explan
 ## Maturity judgment
 ## Outcome and leading-signal deltas
 ## Protected winners and guardrails
+## Release layers, approved change IDs, and expected mechanisms
 ## Crawl, index, render, and measurement health
 ## Ownership and cannibalization
 ## Findings and competing explanations
@@ -224,12 +234,15 @@ recommendation
 owner_or_page
 cluster
 protected_winner_impact
+release_layer: EDITORIAL | TECHNICAL | MIXED
+change_ids_or_technical_classes
 evidence_and_confidence
 smallest_next_step
 routed_skill_or_owner
 approval_status
 success_signal
 rollback_or_stop_signal
+independent_rollback_boundary
 recheck_at
 state: OPEN | WAITING | APPROVED | IN_PROGRESS | RESOLVED | REJECTED | SUPERSEDED
 resolution_run_id

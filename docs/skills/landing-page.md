@@ -12,11 +12,11 @@ Start with the project, evidence, approval state, and same-slug artifacts named 
 
 ## Authority and safety
 
-It begins without project-source mutation. Source mutation is allowed only after the skill’s explicit approval or execution gate. The canonical skill instructions remain authoritative when a request has narrower limits.
+It begins without project-source mutation. Source mutation is allowed only after the skill’s explicit approval or execution gate. Search-targeted pages additionally require digest-bound approval of exact user-facing changes; a visual preview approval does not silently approve unlisted template-wide copy changes. The canonical skill instructions remain authoritative when a request has narrower limits.
 
 ## Outputs
 
-Work is owned at `agent-work/{slug}/landing-page/`. Required contract artifacts currently include `RESEARCH.md`, `MESSAGE-MAP.md`, `COPY-DECK.md`, `SEO-PLAN.md`, `PAGE-DIRECTIONS.md`, `LANDING-PAGE-PREVIEW.html`, `previews/LANDING-PAGE-PREVIEW-R{n}.html`, `PROGRESS.md`, `QUALITY-REPORT.md`. Search-targeted work also requires `PAGE-BENCHMARK.md`, `PAGE-REQUIREMENTS.md`, and `EDITORIAL-REVIEW.md` before message approval. Conditional files are emitted only when their documented condition applies.
+Work is owned at `agent-work/{slug}/landing-page/`. Required contract artifacts currently include `RESEARCH.md`, `MESSAGE-MAP.md`, `COPY-DECK.md`, `SEO-PLAN.md`, `PAGE-DIRECTIONS.md`, `LANDING-PAGE-PREVIEW.html`, `previews/LANDING-PAGE-PREVIEW-R{n}.html`, `PROGRESS.md`, `QUALITY-REPORT.md`. Search-targeted work also requires `PAGE-BENCHMARK.md`, `PAGE-REQUIREMENTS.md`, and `EDITORIAL-REVIEW.md` before message approval. User-facing SEO changes conditionally add `SEO-CHANGE-LEDGER.json` and `SEO-CHANGE-APPROVAL.json`. Conditional files are emitted only when their documented condition applies.
 
 ## Common questions
 
@@ -30,7 +30,7 @@ Its standalone package must include the declared dependency closure (`prose-huma
 
 ## Visible success
 
-The required artifacts exist at the declared output root, claims are backed by the evidence level the skill requires, search-targeted pages pass page-specific competitive, title, catalogue, and editorial gates, applicable verification gates pass, and the skill stops at its documented authority boundary. Structural validation alone is not treated as proof of product judgment.
+The required artifacts exist at the declared output root, claims are backed by the evidence level the skill requires, search-targeted pages pass page-specific competitive, title, catalogue, and editorial gates, useful query and persuasion language survives truth correction, exact approved change IDs match rendered before/after evidence, applicable verification gates pass, and the skill stops at its documented authority boundary. Structural validation alone is not treated as proof of product judgment.
 
 ## Adjacent Gremlin skills
 

@@ -10,6 +10,7 @@
 - [Copy humanization](#copy-humanization)
 - [Visual and interaction craft](#visual-and-interaction-craft)
 - [SEO Stack composition](#seo-stack-composition)
+- [SEO editorial change control](#seo-editorial-change-control)
 - [SEO GEO and AEO](#seo-geo-and-aeo)
 - [TurbulenceJS motion](#turbulencejs-motion)
 - [Implementation and quality](#implementation-and-quality)
@@ -35,7 +36,7 @@ Create a claims ledger in `MESSAGE-MAP.md`:
 | Teams can replay failed imports | Capability | `src/...` runtime and docs | High | Product demo | Emphasize |
 | Saves hours every week | Outcome claim | None | Low | None | Exclude |
 
-Classify capabilities, outcomes, comparisons, superlatives, numbers, customer statements, guarantees, pricing, availability, and urgency separately. “Best,” “fastest,” “trusted,” “secure,” and “effortless” require evidence just as numbers do.
+Classify capabilities, outcomes, comparisons, superlatives, numbers, customer statements, guarantees, pricing, availability, and urgency separately. Literal comparative claims such as “best” or “fastest” need a supported comparison basis. Words such as “trusted,” “secure,” or “effortless” can still imply factual or outcome claims in context, so classify the actual sentence rather than banning vocabulary mechanically. Truthful persuasive and navigational language does not become a factual claim merely because it is promotional.
 
 If a desired benefit is plausible but unverified, frame the mechanism rather than inventing the result. “Review failed imports in one place” is safer than “cut debugging time by 80%” when no measurement exists.
 
@@ -248,6 +249,22 @@ The optional `seo-stack` CLI is owned by `seo-setup`. Resolve it through the reg
 
 If the CLI is absent or incompatible, use browser/project inspection and current official provider interfaces where required. Record the fallback; do not silently skip a material verification.
 
+## SEO editorial change control
+
+For a search-targeted page, apply [the SEO change-control contract](contracts/seo-change-control.md) before source mutation. For a new page, record `NO EXISTING PAGE` as the baseline rather than inventing prior copy. Keep product truth as a constraint while preserving specificity, query coverage, click appeal, persuasive usefulness, and a credible next step.
+
+Classify changed language as `FACTUAL`, `DERIVED`, `COMPARATIVE`, `PERSUASIVE`, or `NAVIGATIONAL`. For every affected page family, record representative exact before/after text, the transformation rule, relevant queries, terms gained and lost, and the search-intent, CTR, persuasion, and conversion mechanism. A phrase does not need a literal database field to be useful and truthful; a factual or comparative assertion still needs support.
+
+Before removing or hiding content, inventory unused facts, traits, aliases, measurements, relationships, taxonomy, media, and product actions. Compare `RETAIN`, `RESTORE`, `REWRITE`, and `REJECT`. “Cleaner,” “less promotional,” repeated across routes, or technically unverifiable are not sufficient removal reasons.
+
+Keep these judgments separate:
+
+- a visible FAQ can help users even when FAQ schema is ineligible or unlikely to receive a rich result;
+- repeated framing can provide useful orientation while each complete entity page remains distinct;
+- a technically valid schema, build, or snapshot proves conformance only, not that the proposed wording improves search or conversion performance.
+
+Shared-template or multi-route changes require a named canary and independent editorial and technical rollback boundaries. A generic “continue” or approval of a visual preview does not approve an unlisted editorial transformation. `SEO-CHANGE-APPROVAL.json` must reference the SHA-256 of the exact ledger bytes and the approved change IDs.
+
 ## SEO GEO and AEO
 
 Start with an explicit disposition:
@@ -345,6 +362,10 @@ The humanization record notes voice evidence, pattern clusters changed, delibera
 ### SEO-PLAN.md
 
 Headings: `Disposition`, `Upstream SEO Stack contract`, `Traffic and query intent`, `Ownership and protected winners`, `Information architecture`, `Metadata`, `Canonical crawl and links`, `Entities and structured data`, `Performance`, `Measurement`, `Unknowns`.
+
+### SEO-CHANGE-LEDGER.json and SEO-CHANGE-APPROVAL.json
+
+Use the exact schema and approval semantics in [the SEO change-control contract](contracts/seo-change-control.md). Validate them with `scripts/validate_seo_change_control.py` before implementation. Preserve the approval receipt next to the ledger; never rewrite it to match a later mutation.
 
 ### PAGE-DIRECTIONS.md
 

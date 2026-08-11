@@ -43,7 +43,7 @@ digraph seo_monitor {
 }
 ```
 
-Resolve the owning work root and maintain `agent-work/{slug}/WORK.md` using [the canonical work-artifact contract](contracts/work-artifacts.md). Write stable artifacts under `agent-work/{slug}/seo-monitor/` and immutable run evidence under `runs/{run-id}/`. Read [REFERENCE.md](REFERENCE.md) before collecting or comparing data.
+Resolve the owning work root and maintain `agent-work/{slug}/WORK.md` using [the canonical work-artifact contract](contracts/work-artifacts.md). Write stable artifacts under `agent-work/{slug}/seo-monitor/` and immutable run evidence under `runs/{run-id}/`. Read [REFERENCE.md](REFERENCE.md) before collecting or comparing data. When evaluating an SEO release, apply [the SEO change-control contract](contracts/seo-change-control.md).
 
 ## Boundaries
 
@@ -51,6 +51,8 @@ Resolve the owning work root and maintain `agent-work/{slug}/WORK.md` using [the
 - Do not combine Google, Bing, GA4, crawl, rank-check, or third-party metrics as if they were interchangeable. Preserve provider, property, retrieval date, available/final date, window, market, language, device/context, query, and page.
 - Do not infer causality from correlation, claim an indexing state from rank movement, call paid competition organic difficulty, or promise traffic/ranking outcomes.
 - Protect current winners. Short-term volatility, an immature window, a reporting delay, seasonality, or one noisy query does not authorize a rewrite.
+- Keep technical and editorial release layers separate. A beneficial canonical, routing, sitemap, or relationship-data fix does not prove that accompanying title, metadata, FAQ, visible-copy, CTA, or module changes were beneficial.
+- Treat a build, schema check, snapshot, or verifier written from the same editorial assumption as conformance evidence only. It cannot establish competitiveness, click appeal, persuasion, or causality.
 - Define a cadence when useful, but create or change an automation only when the user explicitly requests it and the exact scope, recipients/destination, credential posture, schedule, timezone, cost, and stop behavior are approved.
 - Never store credentials, raw provider bodies, unnecessary personal/event-level data, or unredacted query exports in durable artifacts. Aggregate to the minimum useful scope and follow project privacy/retention policy.
 
@@ -62,13 +64,15 @@ Use the pipeline slug or an explicitly linked monitoring slug. Validate:
 - approved `SEO-FOUNDATION.md` ownership, protected winners, market/language, and source limitations;
 - approved `SEO-STRATEGY.md`, `MEASUREMENT-PLAN.md`, and relevant portfolio rows;
 - `CONTENT-RECEIPT.md` for each evaluated implementation, including final target, baseline pointer, publication time, rollback, and intended monitoring windows;
+- `SEO-CHANGE-LEDGER.json` plus its digest-matching `SEO-CHANGE-APPROVAL.json` for user-facing changes, or `SEO-TECHNICAL-SCOPE.json` for a technical-only release;
+- the actual deployed change IDs or technical classes, representative rendered before/after evidence, canary result, and separate editorial/technical rollback boundaries;
 - current route, deployment, sitemap, canonical/index, analytics event, and data-retention reality.
 
 Do not trust filenames. If a required prerequisite is invalid, stale, missing, or materially contradicted by current state, record the exact data gap and route it to the owning stage.
 
 ## 2. Lock scope before collection
 
-Write `MONITOR-BRIEF.md` with the decision this run must support, site/property, owners/pages/clusters, protected winners, conversion/outcome, providers, market, language, device/context, requested and available windows, comparison method, maturity rule, cadence, privacy/retention, and approved automation scope.
+Write `MONITOR-BRIEF.md` with the decision this run must support, site/property, owners/pages/clusters, protected winners, release layer, approved change IDs or technical classes, expected mechanism, conversion/outcome, providers, market, language, device/context, requested and available windows, comparison method, maturity rule, cadence, privacy/retention, and approved automation scope.
 
 Prefer Strategy's baseline and 7/14/28-day gates when still valid; these are checkpoints, not universal statistical guarantees. Choose comparison windows that respect data availability, weekday/seasonal effects, launches, migrations, outages, campaigns, and known product changes. Record why the comparison is fair enough—or why no judgment is yet warranted.
 
@@ -83,6 +87,7 @@ Collect only what the decision needs:
 - Bing query/page and crawl/index evidence as a separate source;
 - live HTTP, robots, canonical, sitemap, structured-data, status, performance, and representative render/crawl evidence;
 - current page ownership, portfolio action, content receipt, deployment, and internal-link state;
+- the approved change ledger or technical scope, actual rendered output, and release receipt needed to distinguish the technical and editorial layers;
 - material external context such as release, outage, migration, seasonality, or known campaign dates.
 
 Write an immutable `runs/{run-id}/DATA-INVENTORY.md`, normalized `SNAPSHOT.csv` or `SNAPSHOT.json`, and sanitized provider receipts. Record missing rows and unavailable precision explicitly.
@@ -102,9 +107,10 @@ Compare against the approved pre-change baseline and relevant prior snapshots. E
 - query-to-page alignment, new cannibalization, page substitution, and cluster coverage;
 - crawl/index/sitemap/redirect/structured-data regressions;
 - content freshness, factual/product drift, broken links, and deployment divergence;
+- ledger-predicted query terms, specificity, click appeal, persuasion, visible utility, and conversion path, including every material term or cue gained or lost;
 - measurement integrity and data gaps.
 
-Report absolute and relative deltas with denominators and scope. Show small samples and withheld/rounded values honestly. Describe associations and competing explanations; do not claim the content caused the result unless the design supports that claim.
+Report absolute and relative deltas with denominators and scope. Show small samples and withheld/rounded values honestly. Describe associations and competing explanations; do not claim the content caused the result unless the design supports that claim. If a mixed release improves technical health while weakening the user-facing layer, recommend retaining the verified technical fix and independently restoring or rewriting the approved editorial change set when rollback boundaries permit.
 
 ## 6. Classify the smallest next action
 
@@ -118,7 +124,7 @@ Assign one primary recommendation per measured exception:
 - `TECHNICAL FIX` — crawl, index, canonical, redirect, sitemap, render, metadata, performance, instrumentation, or deployment behavior is broken.
 - `NEW STRATEGY` — user intent, market, competition, product truth, ownership, or portfolio assumptions materially changed.
 
-Every recommendation includes evidence, confidence, competing explanations, affected owner/protected winner, smallest reversible next step, route, success/failure signal, and recheck timing. A report may contain only `NO CHANGE`; activity is not a success criterion.
+Every recommendation includes evidence, confidence, competing explanations, affected owner/protected winner, release layer, related change IDs or technical classes, smallest reversible next step, route, success/failure signal, independent rollback boundary, and recheck timing. A report may contain only `NO CHANGE`; activity is not a success criterion.
 
 Route bounded approved refresh work to `seo-content`, material landing-page work to `landing-page`, eligible individual URL requests to `seo-indexing`, ownership/portfolio changes to `seo-strategy`, prerequisite drift to `seo-setup`, and known approved technical implementation to Goalpro. Unknown technical failures require diagnosis or planning before mutation. Monitor supplies evidence only; `INDEXING ASSIST` never authorizes a submission.
 
@@ -141,13 +147,13 @@ If the user explicitly requests automation, use the host's supported automation 
 - `ACTION-QUEUE.md` — measured exceptions, protected-winner impact, routes, approval, and recheck state.
 - `runs/{run-id}/DATA-INVENTORY.md` — exact sources, properties, scopes, windows, completeness, and limitations.
 - `runs/{run-id}/SNAPSHOT.csv` or `SNAPSHOT.json` — normalized, minimized, source-labelled evidence.
-- `runs/{run-id}/MONITOR-REPORT.md` — compatibility judgment, deltas, guardrails, findings, recommendation, confidence, and next observation.
+- `runs/{run-id}/MONITOR-REPORT.md` — compatibility judgment, release layers and change IDs, deltas, guardrails, findings, recommendation, confidence, independent rollback boundary, and next observation.
 - `AUTOMATION-PLAN.md` and `AUTOMATION-RECEIPT.md` — conditional; only when recurring automation is explicitly requested and created.
 - `NOTES.md` — optional sanitized research or decision notes.
 
 ## Done
 
-Finish a run when prerequisite and data freshness are explicit; requested sources are collected or honestly marked unavailable; all comparisons are scope-compatible; maturity is judged; protected winners and technical guardrails are checked; each exception has one evidence-backed recommendation or an explicit data gap; no mutation occurred; stable and immutable artifacts are updated; and the next observation or route is clear.
+Finish a run when prerequisite and data freshness are explicit; requested sources are collected or honestly marked unavailable; all comparisons are scope-compatible; maturity is judged; protected winners and technical guardrails are checked; evaluated releases are reconciled to approved change IDs or technical classes; technical and editorial effects and rollback boundaries remain distinct; each exception has one evidence-backed recommendation or an explicit data gap; no mutation occurred; stable and immutable artifacts are updated; and the next observation or route is clear.
 
 State: “I am satisfied this SEO monitoring run is complete because …” with source/window compatibility, baseline, protected-winner checks, recommendation evidence, and next timing. Do not say monitoring is automated unless creation succeeded, and do not say recurring monitoring is healthy until an actual scheduled run is observed.
 

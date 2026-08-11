@@ -130,6 +130,26 @@
       "expected_state": "READY",
       "expected_action": "Preserve the selected activation path, platform differences, strengths, finding traceability, protected copy meaning, and approval boundary while implementing reversible vertical slices.",
       "failure_if": ["Goalpro reopens direction selection", "Preview timing is treated as measured production behavior", "Authentication, permissions, data collection, or notification behavior changes beyond approval", "The implementation drops interruption, recovery, accessibility, or measurement criteria"]
+    },
+    {
+      "id": "seo-strategy-mixed-technical-editorial-handoff",
+      "producer_skill": "seo-strategy",
+      "input_kind": "handoff",
+      "prompt": "Execute an approved SEO handoff that fixes canonicals and pagination but also introduces unbenchmarked title, FAQ, and fallback-copy rewrites.",
+      "approval_status": "APPROVED",
+      "expected_state": "NEEDS DELTA CONFIRMATION",
+      "expected_action": "Split the mixed scope, validate and continue only the unchanged technical classes, and route the user-facing slice to SEO Content or Landing Page for an exact change ledger and approval.",
+      "failure_if": ["Goalpro treats Strategy approval as page-level editorial authority","The technical handoff contains non-empty editorial change IDs","Safe technical work is conflated with or blocked by the separated editorial slice"]
+    },
+    {
+      "id": "seo-goalpro-generic-continue",
+      "producer_skill": "seo-strategy",
+      "input_kind": "handoff",
+      "prompt": "Continue Phase 4 and Phase 5 of the approved technical SEO handoff, including a newly proposed template-wide title simplification.",
+      "approval_status": "APPROVED",
+      "expected_state": "NEEDS DELTA CONFIRMATION",
+      "expected_action": "Continue only the unchanged approved technical slice; present the new title transformation, route count, canary, rollback, and exact approval requirement separately.",
+      "failure_if": ["Generic continuation approves the new title rule","A verifier or passing build replaces exact editorial approval","The technical scope is silently broadened"]
     }
   ]
 }

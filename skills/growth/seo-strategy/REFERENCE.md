@@ -102,7 +102,7 @@ Use when the surface has product/user value but lacks unique search value, is pr
 
 ### Remove
 
-Require no remaining user/product/search value, no needed inbound/internal dependency, an appropriate 404/410/redirect decision, sitemap/link cleanup, and rollback/archive policy.
+Use only for a URL or portfolio owner. Require no remaining user/product/search value, no needed inbound/internal dependency, an appropriate 404/410/redirect decision, sitemap/link cleanup, and rollback/archive policy. Never use Strategy's `REMOVE` action for a module, FAQ, fallback section, title, description, metadata phrase, or visible copy inside a retained owner.
 
 ### Investigate, park, or no action
 
@@ -267,6 +267,34 @@ Create `GOALPRO-INPUT.md` only after explicit implementation approval for bounde
 - material post-approval deltas and honest readiness state.
 
 Never use Strategy's Goalpro handoff to implement editorial copy, titles, page modules, landing-page persuasion, or page structures. Those require the owning page specialist's benchmark, approval, and execution contract.
+
+Write `SEO-TECHNICAL-SCOPE.json` with this shape and validate it through the bundled change-control validator:
+
+```json
+{
+  "schema_version": 1,
+  "slug": "{slug}",
+  "strategy_revision": "{revision}",
+  "portfolio_item_ids": ["{item-id}"],
+  "allowed_change_classes": ["CANONICAL", "PAGINATION"],
+  "allowed_targets": ["{path-or-route}"],
+  "user_facing_changes": "FORBIDDEN",
+  "editorial_change_ids": [],
+  "prohibited_change_classes": ["TITLE", "DESCRIPTION", "VISIBLE_COPY", "FAQ_VISIBLE", "FAQ_SCHEMA", "MODULE_VISIBILITY", "STRUCTURED_DATA", "CTA", "INTERNAL_LINK_COPY", "INTERNAL_LINK_DESTINATION"],
+  "approval": {
+    "status": "APPROVED",
+    "statement": "{exact-technical-scope-approval}",
+    "approved_by": "{approver}",
+    "approved_at": "{timestamp}",
+    "approved_artifact": "agent-work/{slug}/seo-strategy/GOALPRO-INPUT.md"
+  },
+  "gates": ["{representative-check}"],
+  "rollout_boundary": "{bounded-technical-rollout}",
+  "rollback_boundary": "{independent-technical-rollback}"
+}
+```
+
+Do not mark the handoff `READY` when the scope omits a prohibited class, includes an editorial change ID, or uses a user-facing class as technical work. An internal-link destination is technical only when existing approved visible labels remain unchanged.
 
 ## `SEO-STRATEGY.md` consumption index
 

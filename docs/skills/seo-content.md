@@ -12,11 +12,11 @@ Start with the project, evidence, approval state, and same-slug artifacts named 
 
 ## Authority and safety
 
-It begins with read-only page benchmarking and editorial judgment. It may edit the in-scope project only after the exact specialist brief and `PUBLISH` verdict are approved. External actions retain a separate exact-action approval. The canonical skill instructions remain authoritative when a request has narrower limits.
+It begins with read-only page benchmarking and editorial judgment. It may edit the in-scope project only after the exact specialist brief and `PUBLISH` verdict are approved. User-facing SEO changes also require a digest-matching `SEO-CHANGE-LEDGER.json` and `SEO-CHANGE-APPROVAL.json`; shared templates require a canary and separate editorial rollback. External actions retain a separate exact-action approval. The canonical skill instructions remain authoritative when a request has narrower limits.
 
 ## Outputs
 
-Work is owned at `agent-work/{slug}/seo-content/`. Required contract artifacts currently include `BRIEF-VALIDATION.md`, `PAGE-BENCHMARK.md`, `PAGE-REQUIREMENTS.md`, `EDITORIAL-BRIEF.md`, `EDITORIAL-REVIEW.md`, `CONTENT-PLAN.md`, `SOURCE-LEDGER.md`, `CLAIM-LEDGER.md`, `PROGRESS.md`, `CONTENT-RECEIPT.md`, `QUALITY-REPORT.md`. Conditional files are emitted only when their documented condition applies.
+Work is owned at `agent-work/{slug}/seo-content/`. Required contract artifacts currently include `BRIEF-VALIDATION.md`, `PAGE-BENCHMARK.md`, `PAGE-REQUIREMENTS.md`, `EDITORIAL-BRIEF.md`, `EDITORIAL-REVIEW.md`, `CONTENT-PLAN.md`, `SOURCE-LEDGER.md`, `CLAIM-LEDGER.md`, `PROGRESS.md`, `CONTENT-RECEIPT.md`, `QUALITY-REPORT.md`. `SEO-CHANGE-LEDGER.json` and `SEO-CHANGE-APPROVAL.json` are conditional implementation artifacts for user-facing changes. Conditional files are emitted only when their documented condition applies.
 
 ## Common questions
 
@@ -30,7 +30,7 @@ Its standalone package must include the declared dependency closure (`prose-huma
 
 ## Visible success
 
-The required artifacts exist at the declared output root, the exact query and representative pages were benchmarked, truth and competitiveness passed independently, the title is compelling and durable, the planned catalogue fits, the final page earns a documented `PUBLISH` verdict, applicable verification gates pass, and the skill stops at its documented authority boundary.
+The required artifacts exist at the declared output root, the exact query and representative pages were benchmarked, truth and competitiveness passed independently, useful persuasive and navigational language was not neutralized mechanically, FAQ utility remains separate from schema eligibility, the title is compelling and durable, the planned catalogue fits, exact approved changes match rendered output, applicable verification gates pass, and the skill stops at its documented authority boundary.
 
 ## Adjacent Gremlin skills
 

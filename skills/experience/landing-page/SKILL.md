@@ -50,7 +50,7 @@ digraph landing_page {
 
 Resolve the owning work root and maintain `agent-work/{slug}/WORK.md` using [the canonical work-artifact contract](contracts/work-artifacts.md) when present, otherwise use the bundled [portable contract](contracts/work-artifacts.md). Write stage artifacts under `agent-work/{slug}/landing-page/`.
 
-Read [REFERENCE.md](REFERENCE.md) before shaping the message, page, SEO, or implementation. Read [PREVIEW.md](PREVIEW.md) completely before generating HTML. For a search-targeted page, also apply [the SEO page-quality contract](contracts/seo-page-quality.md).
+Read [REFERENCE.md](REFERENCE.md) before shaping the message, page, SEO, or implementation. Read [PREVIEW.md](PREVIEW.md) completely before generating HTML. For a search-targeted page, also apply [the SEO page-quality contract](contracts/seo-page-quality.md) and [the SEO change-control contract](contracts/seo-change-control.md).
 
 ## Boundaries
 
@@ -61,6 +61,9 @@ Read [REFERENCE.md](REFERENCE.md) before shaping the message, page, SEO, or impl
 - Keep preview code inside the skill stage. It is a decision artifact, not production code.
 - Do not change live analytics, advertising, domains, production configuration, CMS content, or external services without separate authorization.
 - When an approved SEO Stack opportunity exists, preserve its primary owner, search intent, protected winners, internal-link responsibilities, and measurement guardrails. Treat any upstream title, outline, modules, proof format, or page brief as a hypothesis. Landing Page owns page-specific benchmarking, persuasion, CTA, visual direction, preview, approval, and bounded page implementation—not SEO portfolio strategy.
+- Classify search-facing language as factual, derived, comparative, persuasive, or navigational. Do not treat truthful persuasion or useful query language as an unsupported factual claim, and do not disguise a factual or comparative claim as persuasion.
+- Improve before removing visible copy, FAQs, fallback sections, titles, descriptions, CTAs, or modules. Inspect available product facts, traits, taxonomy, relationships, and actions; compare retain, restore, rewrite, and reject options.
+- Evaluate visible FAQ usefulness independently from FAQ structured-data eligibility. Repeated template framing is not automatically harmful duplication; judge the complete page and attempt an entity-specific improvement first.
 - When a search-targeted canonical production page is newly published or materially updated, emit exact publication evidence for `seo-indexing`; do not request indexing inside Landing Page or claim the page is indexed.
 - Do not invoke Goalpro. This skill owns its approved implementation loop.
 
@@ -85,6 +88,8 @@ Discover `prose-humanizer` through the host skill registry or as the sibling `..
 Write `SEO-PLAN.md` with an explicit `INDEX`, `NOINDEX`, or `UNRESOLVED` disposition; upstream opportunity and owner when applicable; benchmark and editorial verdict; traffic/query intent; protected winners and overlap exclusions; title and description; canonical and crawl behavior; heading and information architecture; internal links; entities and structured data; social metadata; performance implications; and post-launch measurement. SEO must serve the visitor and never distort the approved message or silently change an upstream ownership decision.
 
 For a search-targeted page, test the title for truth, appeal, differentiation, evergreen durability, and catalogue scalability. Removing an unsupported superlative is only a truth correction; the replacement must still give the user a concrete reason to choose the page.
+
+For every proposed user-facing SEO change, write `SEO-CHANGE-LEDGER.json` from the shared change-control contract. For a new page, use an explicit `NO EXISTING PAGE` baseline rather than inventing prior copy. The ledger is mandatory for a shared template, more than one route, any deletion or suppression, and every title, description, FAQ, structured-data, CTA, module-visibility, or link-copy change. Record exact representative before/after values, terms gained and lost, persuasion and conversion mechanisms, unused evidence considered, canary, rollout, and rollback. The ledger is part of the proposed preview package, not evidence that the proposal is good.
 
 ## 3. Choose directions adaptively
 
@@ -112,7 +117,7 @@ Present the clickable preview only after validation. Accept three outcomes:
 
 1. `REFINE` — update the selected concept or targeted variant.
 2. `NEW SET` — preserve rejection reasons and create genuinely different directions.
-3. `APPROVE` — record the exact revision and approved scope.
+3. `APPROVE` — record the exact revision and approved scope. For a search-targeted page, approval covers production editorial changes only when the exact ledger revision, digest, and change IDs were presented; then record `SEO-CHANGE-APPROVAL.json`. A preview approval without that exact scope remains preview approval only.
 
 Never implement while the preview remains provisional.
 
@@ -121,6 +126,16 @@ When the requested outcome is preview or direction only, approval of a named rev
 ## 5. Plan the approved implementation
 
 Inspect the target toolchain and write `IMPLEMENTATION-PLAN.md` with source targets, component boundaries, content/assets, SEO, analytics events already authorized, TurbulenceJS target map, test plan, performance budget, rollout, and rollback.
+
+Before source mutation, validate the exact approved SEO ledger when one is required:
+
+```bash
+python3 {landing-page-skill-root}/scripts/validate_seo_change_control.py \
+  --ledger agent-work/{slug}/landing-page/SEO-CHANGE-LEDGER.json \
+  --approval agent-work/{slug}/landing-page/SEO-CHANGE-APPROVAL.json
+```
+
+Implement only approved change IDs. Any altered after-value, transformation rule, route count, rollout, or rollback invalidates the approval and returns to preview and exact approval.
 
 Classify the dimensions in [Goalpro's quality contract](contracts/execution-quality.md) when available. If it is absent, use the quality matrix in `REFERENCE.md`. Product truth, conversion clarity, copy fidelity, accessibility, responsive behavior, SEO, performance, motion, maintainability, and final runtime behavior are presumptively applicable.
 
@@ -145,6 +160,7 @@ Run the target project's full applicable tests, types, lint, build, and browser 
 - metadata, canonical/index posture, structured data validity, crawlable content, internal links, and social cards when applicable;
 - approved SEO Stack owner, intent boundary, protected winners, internal-link map, and measurement baseline when applicable;
 - dated page benchmark, title and catalogue durability, visible information advantage, and final `PUBLISH` verdict when search-targeted;
+- exact approved SEO change IDs, rendered before/after values, terms and persuasion cues gained or lost, canary result, and absence of unapproved user-facing deltas when change control applies;
 - performance budgets, image/font behavior, layout stability, hydration, console, and network failures;
 - TurbulenceJS normal endpoint, reduced motion, rapid interruption, retargeting, cleanup, idle behavior, and absence of competing ownership;
 - authorized analytics only, with consent and privacy behavior preserved.
@@ -158,6 +174,7 @@ Write `QUALITY-REPORT.md`, update `WORK.md`, and extract durable reader-facing d
 - `COPY-DECK.md` — approved page and microcopy plus embedded humanization evidence.
 - `SEO-PLAN.md` — index posture, search intent, semantics, entities, metadata, links, structured data, performance, measurement.
 - `PAGE-BENCHMARK.md`, `PAGE-REQUIREMENTS.md`, and `EDITORIAL-REVIEW.md` — conditional search-targeted competitive evidence, requirement strength, title/catalogue review, verdict, and approval.
+- `SEO-CHANGE-LEDGER.json` and `SEO-CHANGE-APPROVAL.json` — conditional exact before/after change set, digest-bound approval, canary, rollout, and rollback for search-targeted pages.
 - `PAGE-DIRECTIONS.md` — adaptive options, recommendation, revisions, feedback, and approval.
 - `LANDING-PAGE-PREVIEW.html` and `previews/` — validated current alias and immutable revisions.
 - `IMPLEMENTATION-PLAN.md` — approved target map, slices, gates, motion, rollout, and rollback.
@@ -170,7 +187,7 @@ Use the examples and schemas in [REFERENCE.md](REFERENCE.md). Templates are star
 ## Done
 
 - **Preview-only complete:** product truth and framing are approved; a named immutable preview revision passes structural and manual preview gates; copy remains human and factual; CTA intent and destinations are explicit; any search-targeted page retains an approved `PUBLISH` verdict against a current benchmark; production mutation is absent; `QUALITY-REPORT.md`, `PROGRESS.md`, and `WORK.md` point to the preview evidence and pending implementation boundary. State: “I am satisfied this landing-page preview is complete because …”.
-- **Implementation complete:** the preview criteria remain met; production matches the approved revision; applicable project, browser, SEO, accessibility, responsive, performance, and TurbulenceJS gates pass; all quality dimensions end `VERIFIED`, `NOT APPLICABLE`, or explicitly `WAIVED`; and `WORK.md` points to final evidence. State: “I am satisfied this landing page is complete because …”.
+- **Implementation complete:** the preview criteria remain met; production matches the approved revision; any required SEO change ledger and approval validate and match the final rendered diff; applicable project, browser, SEO, accessibility, responsive, performance, and TurbulenceJS gates pass; all quality dimensions end `VERIFIED`, `NOT APPLICABLE`, or explicitly `WAIVED`; and `WORK.md` points to final evidence. State: “I am satisfied this landing page is complete because …”.
 
 ## Optional SEO Stack consultation
 

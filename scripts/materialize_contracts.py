@@ -14,6 +14,7 @@ from skill_registry import RegistryError, SkillRegistry, load_registry
 
 
 GENERATED_PREFIX = "<!-- GENERATED CONTRACT SNAPSHOT\n"
+GENERATED_RESOURCE_PREFIX = "# GENERATED CONTRACT RESOURCE\n"
 METADATA_RE = re.compile(
     r"\A<!-- contract-metadata\nid: ([a-z0-9-]+)\nversion: ([1-9][0-9]*)\nsemantic-owner: ([a-z0-9-]+)\n-->\n",
 )
@@ -25,6 +26,7 @@ class ContractDefinition:
     source: str
     snapshot: str
     required_contracts: tuple[str, ...] = ()
+    companion_resources: tuple[tuple[str, str], ...] = ()
 
 
 CONTRACTS = {
@@ -49,6 +51,13 @@ CONTRACTS = {
             "contracts/seo-page-quality.md",
             "seo-page-quality.md",
             ("product-research",),
+        ),
+        ContractDefinition(
+            "seo-change-control",
+            "contracts/seo-change-control.md",
+            "seo-change-control.md",
+            ("quality",),
+            (("scripts/validate_seo_change_control.py", "scripts/validate_seo_change_control.py"),),
         ),
     )
 }
@@ -90,10 +99,32 @@ def snapshot_bytes(repo_root: Path, definition: ContractDefinition) -> bytes:
     return header + source_bytes
 
 
+def companion_resource_bytes(repo_root: Path, definition: ContractDefinition, source_name: str) -> bytes:
+    source = repo_root / source_name
+    source_bytes = source.read_bytes()
+    digest = hashlib.sha256(source_bytes).hexdigest()
+    header = (
+        GENERATED_RESOURCE_PREFIX
+        + f"# contract: {definition.registry_id}\n"
+        + f"# source: {source_name}\n"
+        + f"# source-sha256: {digest}\n"
+        + "# DO NOT EDIT: run python3 scripts/materialize_contracts.py --write\n"
+    ).encode("utf-8")
+    shebang = b"#!/usr/bin/env python3\n"
+    if source_bytes.startswith(shebang):
+        return shebang + header + source_bytes[len(shebang) :]
+    return header + source_bytes
+
+
 def expected_snapshots(repo_root: Path, registry: SkillRegistry) -> dict[Path, bytes]:
     repo_root = repo_root.resolve()
     expected: dict[Path, bytes] = {}
     payloads = {name: snapshot_bytes(repo_root, definition) for name, definition in CONTRACTS.items()}
+    resource_payloads = {
+        (name, source): companion_resource_bytes(repo_root, definition, source)
+        for name, definition in CONTRACTS.items()
+        for source, _target in definition.companion_resources
+    }
     for record in registry.records:
         declared = set(record["contracts"])
         unknown = sorted(declared - CONTRACTS.keys())
@@ -110,6 +141,9 @@ def expected_snapshots(repo_root: Path, registry: SkillRegistry) -> dict[Path, b
                 )
             target = registry.skill_path(record) / "contracts" / definition.snapshot
             expected[target] = payloads[contract_id]
+            for source, relative_target in definition.companion_resources:
+                resource_target = registry.skill_path(record) / relative_target
+                expected[resource_target] = resource_payloads[(contract_id, source)]
     return expected
 
 
@@ -122,6 +156,11 @@ def generated_snapshot_paths(registry: SkillRegistry) -> set[Path]:
         for path in directory.glob("*.md"):
             if path.read_bytes().startswith(GENERATED_PREFIX.encode("utf-8")):
                 paths.add(path)
+        scripts = registry.skill_path(record) / "scripts"
+        if scripts.is_dir():
+            for path in scripts.glob("*.py"):
+                if GENERATED_RESOURCE_PREFIX.encode("utf-8") in path.read_bytes()[:256]:
+                    paths.add(path)
     return paths
 
 
@@ -156,6 +195,8 @@ def write_materialized(repo_root: Path, registry: SkillRegistry) -> tuple[int, i
         temporary = path.with_name(f".{path.name}.tmp")
         temporary.write_bytes(payload)
         temporary.replace(path)
+        if path.suffix == ".py":
+            path.chmod(0o755)
         written += 1
     for path in sorted(actual_generated - expected.keys()):
         path.unlink()
@@ -178,7 +219,7 @@ def main(argv: list[str] | None = None) -> int:
         registry = load_registry(repo_root)
         if args.write:
             written, removed = write_materialized(repo_root, registry)
-            print(f"Materialized {written} contract snapshot(s); removed {removed} stale generated snapshot(s).")
+            print(f"Materialized {written} contract artifact(s); removed {removed} stale generated artifact(s).")
             return 0
         errors = check_materialized(repo_root, registry)
     except (RegistryError, ContractMaterializationError, OSError) as error:
@@ -190,7 +231,7 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Contract materialization check failed: {len(errors)} error(s).", file=sys.stderr)
         return 1
     count = len(expected_snapshots(repo_root, registry))
-    print(f"Validated {count} generated contract snapshot(s) for {len(registry.records)} skills.")
+    print(f"Validated {count} generated contract artifact(s) for {len(registry.records)} skills.")
     return 0
 
 

@@ -2,6 +2,14 @@
 
 All notable changes to Gremlin Skills are documented here. A version entry describes a release candidate; it does not imply that a Git tag, hosted release, plugin listing, or marketplace publication exists.
 
+## 0.3.0 — 2026-08-11
+
+- Added a shared SEO change-control contract and portable validator requiring exact representative before/after values, query terms gained or lost, digest-bound approval, canaries for shared templates, and independent rollout and rollback boundaries.
+- Distinguished factual, derived, comparative, persuasive, and navigational language so truth remains a constraint without mechanically neutralizing useful query language, click appeal, persuasion, or conversion paths.
+- Required improve-before-remove evidence, separated visible FAQ utility from structured-data eligibility, and prevented repeated template framing from being treated as harmful duplication without page-level evidence and an improvement attempt.
+- Restricted SEO Strategy-to-Goalpro handoffs to validated technical-only scopes, made generic continuation insufficient authority for new editorial work, and classified self-authored policy tests as conformance evidence rather than proof of SEO quality.
+- Updated SEO Content, Landing Page, Goalpro, SEO Monitor, shared execution and handoff contracts, public documentation, standalone payloads, and beta-derived regression coverage for mass-title rewrites, fallback deletion, FAQ/schema conflation, mixed release layers, and technically valid but weaker pages.
+
 ## 0.2.0 — 2026-08-09
 
 - Refactored the SEO workflow so Foundation preserves evidence strength and Strategy stops at portfolio-level page opportunities instead of turning unproven observations into implementation briefs.

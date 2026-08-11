@@ -850,6 +850,7 @@
       "contracts": [
         "goalpro-handoff",
         "quality",
+        "seo-change-control",
         "work-artifacts"
       ],
       "dependencies": {
@@ -909,6 +910,7 @@
       "contracts": [
         "product-research",
         "quality",
+        "seo-change-control",
         "seo-page-quality",
         "work-artifacts"
       ],
@@ -1531,6 +1533,7 @@
       "contracts": [
         "product-research",
         "quality",
+        "seo-change-control",
         "seo-page-quality",
         "work-artifacts"
       ],
@@ -1716,6 +1719,7 @@
       "contracts": [
         "product-research",
         "quality",
+        "seo-change-control",
         "work-artifacts"
       ],
       "dependencies": {
@@ -1830,7 +1834,7 @@
         "work_artifacts": true,
         "readme_registration": true,
         "theme_library_discovery": true,
-        "goalpro_handoff": false,
+        "goalpro_handoff": true,
         "quality_report": true,
         "product_research": true
       },
@@ -1838,6 +1842,7 @@
         "goalpro-handoff",
         "product-research",
         "quality",
+        "seo-change-control",
         "seo-page-quality",
         "work-artifacts"
       ],
@@ -1854,6 +1859,7 @@
         "trigger",
         "artifact",
         "quality",
+        "handoff",
         "product"
       ],
       "tests": [],
