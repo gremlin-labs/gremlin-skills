@@ -58,6 +58,7 @@ The block below is generated from `skills/registry.json`.
 | `audit-compare` | engineering | read-only | `agent-work/{slug}/audit-compare/` | [docs/skills/audit-compare.md](docs/skills/audit-compare.md) |
 | `audit-plan` | engineering | read-only | `agent-work/{slug}/audit-plan/` | [docs/skills/audit-plan.md](docs/skills/audit-plan.md) |
 | `brainstormpro` | engineering | read-only | `agent-work/{slug}/brainstormpro/` | [docs/skills/brainstormpro.md](docs/skills/brainstormpro.md) |
+| `brandstorm` | experience | read-only | `agent-work/{slug}/brandstorm/` | [docs/skills/brandstorm.md](docs/skills/brandstorm.md) |
 | `compact-history` | engineering | executor | `agent-work/• compact-history/` | [docs/skills/compact-history.md](docs/skills/compact-history.md) |
 | `design-direction` | experience | read-only | `agent-work/{slug}/design-direction/` | [docs/skills/design-direction.md](docs/skills/design-direction.md) |
 | `design-review` | experience | read-only | `agent-work/{slug}/design-review/` | [docs/skills/design-review.md](docs/skills/design-review.md) |

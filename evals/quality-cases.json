@@ -200,6 +200,15 @@
       "failure_if": ["Source surface and border roles are copied as mandatory", "Every family receives the same semantic mapping", "New colors are forbidden despite a product or accessibility need", "Raw palette values are prescribed directly in components"]
     },
     {
+      "id": "brandstorm-complete-browser-clearance",
+      "skill": "brandstorm",
+      "prompt": "Name a cross-platform productivity app, incorporate my feedback into 20 finalists, and research them before I choose, with exact .com availability required.",
+      "applicable_dimensions": ["Product intent", "Correctness and resilience", "Security, privacy, and abuse", "Data integrity and compatibility", "Reliability, observability, and operations", "Maintainability and documentation", "Machine verification"],
+      "not_applicable_dimensions": ["Production rollout and rollback", "User interface accessibility"],
+      "required_evidence": ["Codebase or idea audit tied to user and product truth", "Broad competitor discovery followed by user-confirmed scoped research", "Exactly 20 user-approved finalists with a frozen digest", "Browser-only research across trademark, patent, Steam, iOS App Store, Google Play, Mac App Store, Google Search, and Porkbun", "Complete candidate-by-surface coverage with no unverified cell presented as viable", "Timestamped Porkbun exact-domain observations", "Preliminary legal wording and professional-review boundary", "Explicit final user selection and no external mutation"],
+      "failure_if": ["Shell networking, search connectors, direct APIs, or scraping replace the permitted browser surfaces", "Candidate availability is claimed before targeted research", "Patent results are presented as trademark clearance", "A Porkbun result is treated as a reservation or guarantee", "The model chooses the final name", "A browser-access failure is misclassified as a failed candidate round"]
+    },
+    {
       "id": "motion-audit-interruption-under-load",
       "skill": "motion-audit",
       "prompt": "Audit a frequently used command menu whose transitions restart during rapid input and stutter while the page loads.",

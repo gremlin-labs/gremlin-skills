@@ -201,6 +201,63 @@
       "deprecation": null
     },
     {
+      "name": "brandstorm",
+      "aliases": [],
+      "category": "experience",
+      "maturity": "promoted",
+      "path": "skills/experience/brandstorm",
+      "public_docs": {
+        "path": "docs/skills/brandstorm.md",
+        "status": "published"
+      },
+      "invocation": {
+        "mode": "model-visible",
+        "claude": "model-visible",
+        "codex": "model-visible"
+      },
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "output_root": "agent-work/{slug}/brandstorm/",
+      "capabilities": {
+        "decision_tree": true,
+        "work_artifacts": true,
+        "readme_registration": true,
+        "theme_library_discovery": false,
+        "goalpro_handoff": false,
+        "quality_report": true,
+        "product_research": true
+      },
+      "contracts": [
+        "product-research",
+        "quality",
+        "work-artifacts"
+      ],
+      "dependencies": {
+        "required_skills": [],
+        "optional_skills": []
+      },
+      "evals": [
+        "trigger",
+        "artifact",
+        "quality",
+        "product"
+      ],
+      "tests": [],
+      "distribution": {
+        "standalone_archive": true,
+        "stable_plugin": true,
+        "public_install": true
+      },
+      "provenance": {
+        "origin": "gremlin-skills",
+        "acknowledgements": []
+      },
+      "deprecation": null
+    },
+    {
       "name": "compact-history",
       "aliases": [],
       "category": "engineering",

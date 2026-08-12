@@ -9,20 +9,20 @@
   "evidence": [
     "invocation=implicit",
     "selected_skill=motion-audit",
-    "response_sha256=8b100011c118fc3b9ff4c8152ed53a4a68963547385ec631327191204c49542f",
+    "response_sha256=c179c95fbd54ff4f0398f93561feff1fee4f322e4fbd4b29be62e02e6c46de78",
     "process_exit_code=0",
-    "payload_sha256=57e5f5c43f1e82794fc8168e6b211de815e295fa7d79b41d01d55d508cbcf262",
-    "plan_sha256=ede02df76f0d8c45ea7ecd72bf96dc7d6164b18883755f063f98c57791a27ffe",
+    "payload_sha256=208a9f2b1522280c01e757c2b693867de54ba9c6cb8fa86d6e4eb496acac8b6d",
+    "plan_sha256=026f1672da440d52c49920b55a9423e4b8c4f0ad325dc81d7f28fc3d3ad3994f",
     "harness_sha256=9a06970430fc59bfdb3485ac37de590bc5668c1f864813a246bacdb6cd004068"
   ],
   "fresh_context": true,
-  "host": "codex-cli 0.146.0",
+  "host": "codex-cli 0.147.0",
   "model": "gpt-5.6-terra",
   "notes": "",
   "result": "PASS",
   "reviewed_by": "forward-routing-harness-v1",
-  "run_id": "5ecfca61-4c1d-4b5e-951d-738210982a2c",
+  "run_id": "2a0e2bc5-92a0-43b0-b091-5073b76a0cb5",
   "schema_version": 1,
   "skill": "motion-direction",
-  "started_at": "2026-08-09T16:53:49Z"
+  "started_at": "2026-08-11T21:47:37Z"
 }

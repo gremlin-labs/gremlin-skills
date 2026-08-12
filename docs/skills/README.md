@@ -26,6 +26,7 @@ These pages explain when each promoted skill is useful, what authority it has, w
 
 | Skill | Purpose | Authority |
 |---|---|---|
+| [brandstorm](brandstorm.md) | Audits product evidence, develops user-directed naming territories and 20-name candidate rounds, and browser-researches competitors, trademark and patent signals, app-store collisions, Google results, and Porkbun domain availability before a user chooses a product brand. | read-only |
 | [design-direction](design-direction.md) | Defines and documents an evidence-backed visual and interaction direction for a new product, major new surface, or intentional redesign before implementation. | read-only |
 | [design-review](design-review.md) | Reviews a bounded UI or motion change—such as a diff, pull request, route, component, or completed implementation slice—against approved design intent, semantic tokens, component recipes, accessibility, responsive behavior, and perceptual motion quality, then returns an evidence-backed verdict. | read-only |
 | [designpro](designpro.md) | Audits a web application's visual craft, design-system consistency, accessibility, token architecture, component usage, themes, and automated enforcement, then produces a detailed Goalpro-ready remediation plan. | read-only |

@@ -131,6 +131,43 @@
       "fresh_context_required": true
     },
     {
+      "id": "brandstorm--routing-positive",
+      "skill": "brandstorm",
+      "kind": "routing-positive",
+      "source_case_id": "brandstorm-positive-1",
+      "prompt": "Name this new iOS and macOS app from our interview notes, give me 20 options, iterate on my feedback, then browser-check the finalists across competitors, trademarks, patents, app stores, Google, and Porkbun before I choose.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "brandstorm",
+        "must_not_win": [
+          "brainstormpro",
+          "design-direction"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
+      "id": "brandstorm--routing-near-miss",
+      "skill": "brandstorm",
+      "kind": "routing-near-miss",
+      "source_case_id": "brandstorm-near-1",
+      "prompt": "Art direct our already named product across typography, layout, imagery, materials, interaction, motion, and themes.",
+      "invocation": {
+        "mode": "implicit",
+        "skill": null
+      },
+      "expected": {
+        "winner": "design-direction",
+        "must_not_win": [
+          "brandstorm"
+        ]
+      },
+      "fresh_context_required": true
+    },
+    {
       "id": "compact-history--routing-positive",
       "skill": "compact-history",
       "kind": "routing-explicit",

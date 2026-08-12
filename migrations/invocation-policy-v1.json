@@ -67,6 +67,18 @@
       "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
     },
     {
+      "name": "brandstorm",
+      "proposed_mode": "model-visible",
+      "authority": {
+        "mode": "read-only",
+        "source_mutation": "never",
+        "external_actions": "none"
+      },
+      "required_composition": [],
+      "optional_complements": [],
+      "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
+    },
+    {
       "name": "compact-history",
       "proposed_mode": "user-only",
       "authority": {
@@ -615,5 +627,5 @@
       "rationale": "Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action."
     }
   ],
-  "proposal_sha256": "0b1ac09e7a4674ca56ed4138df2735a01084d952480ba98f6a5fc61b78036e88"
+  "proposal_sha256": "b9b0d9863c5a8674520478acb71d78660f5326ed9ac1e54b815c83e8b6ccd8b0"
 }

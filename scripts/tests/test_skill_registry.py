@@ -23,7 +23,7 @@ class SkillRegistryTests(unittest.TestCase):
 
     def test_repository_registry_loads_in_sorted_order(self) -> None:
         registry = load_registry(ROOT)
-        self.assertEqual(36, len(registry.records))
+        self.assertEqual(37, len(registry.records))
         self.assertEqual(tuple(sorted(registry.names)), registry.names)
         self.assertEqual("audit-compare", registry.identities()["audit-compare"])
 

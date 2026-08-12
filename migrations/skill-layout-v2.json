@@ -57,6 +57,19 @@
       "destination_files": 6
     },
     {
+      "name": "brandstorm",
+      "category": "experience",
+      "maturity": "promoted",
+      "source": "skills/brandstorm",
+      "destination": "skills/experience/brandstorm",
+      "installed_name": "brandstorm",
+      "output_root": "agent-work/{slug}/brandstorm/",
+      "source_tree_sha256": "1e3a4b912161d52010532d196faf5974f72488ac207d2573ddc7ff05fdbde597",
+      "source_files": 6,
+      "destination_tree_sha256": "1e3a4b912161d52010532d196faf5974f72488ac207d2573ddc7ff05fdbde597",
+      "destination_files": 6
+    },
+    {
       "name": "compact-history",
       "category": "engineering",
       "maturity": "promoted",
@@ -487,5 +500,5 @@
     }
   ],
   "markdown_link_rewrites": [],
-  "proposal_sha256": "5a4b25ea5801aa0f3d7b609958dbb394245309ba508d3ee4e90b9d7bb34b89fb"
+  "proposal_sha256": "b43e618e15860372ffca5d02c41d836dc861073df42b04b79c5880ee3d094a83"
 }

@@ -37,6 +37,21 @@
       ]
     },
     {
+      "skill": "brandstorm",
+      "output_root": "agent-work/{slug}/brandstorm/",
+      "files": [
+        {"path":"BRAND-BRIEF.md","required":true,"headings":["Product and naming object","Users problem and promise","Product evidence","Brand direction","Naming criteria","Market language and legal scope","Domain policy","Unknowns and exclusions"]},
+        {"path":"COMPETITOR-LANDSCAPE.md","required":true,"headings":["Broad discovery","Classification","Proposed scope","User scope decision","Scoped analysis","Naming implications","Sources and limitations"]},
+        {"path":"CANDIDATES.md","required":true,"headings":["Brand criteria","Naming territories","Candidate rounds","User feedback","Approved finalists","Approval provenance","Finalist digest"]},
+        {"path":"CLEARANCE-MATRIX.md","required":true,"headings":["Clearance scope","Coverage","Candidate dispositions","Trademark","Patent","Steam","iOS App Store","Google Play","Mac App Store","Google Search","Porkbun","Missing or blocked checks"]},
+        {"path":"EVIDENCE-LEDGER.md","required":true,"headings":["Source policy","Evidence index","Queries and observations","Counterevidence","Freshness and limitations"]},
+        {"path":"QUALITY-REPORT.md","required":true,"headings":["Quality report","Coverage and browser compliance","Decision integrity","Risk and uncertainty","Final integrated verification"]},
+        {"path":"DECISION.md","required":true,"headings":["Selected name","Decision provenance","Brand rationale","Domain observation","Clearance evidence","Unresolved review","Rejected finalists","External action boundary"]},
+        {"path":"PROGRESS.md","required":false,"condition":"Only when the Brandstorm initiative is interrupted, paused, or blocked before the final decision.","headings":["Progress"]},
+        {"path":"NOTES.md","required":false,"condition":"Only when sanitized research notes add durable context beyond the evidence ledger.","headings":["Notes"]}
+      ]
+    },
+    {
       "skill": "documentation-audit",
       "output_root": "agent-work/{slug}/documentation-audit/",
       "files": [

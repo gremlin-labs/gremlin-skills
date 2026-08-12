@@ -82,6 +82,16 @@
       "failure_if": ["Idea count is padded", "Novelty outranks user evidence"]
     },
     {
+      "id": "brandstorm-feedback-to-clearance",
+      "skill": "brandstorm",
+      "prompt": "Develop a product name from our beta feedback, let me shape the naming direction and 20-name list, then investigate the approved finalists in our US launch market and on Porkbun before I decide.",
+      "relevant_dimensions": ["User and problem", "Desired outcome", "Current journey", "Alternatives", "Localization", "Risk and compliance", "Decision authority"],
+      "not_applicable_dimensions": ["Source implementation", "Production data migration"],
+      "expected_outputs": ["Product and brand brief grounded in feedback", "Broad and scoped competitor landscape", "Twenty candidates per round with feedback history", "Explicit approval of twenty finalists", "Complete preliminary collision and Porkbun evidence", "Final user decision record"],
+      "material_question": "Which launch jurisdictions, goods or services scope, languages, stores, and exact-domain policy govern the targeted research?",
+      "failure_if": ["The product is named from repository vocabulary alone", "Competitors are scoped before broad discovery", "The domain policy is silently relaxed", "Research starts before the exact finalist set is approved", "The model's ranking becomes the final gate"]
+    },
+    {
       "id": "product-reference-conflicts-simplicity",
       "skill": "audit-compare",
       "prompt": "Compare a sophisticated distributed scheduler with our intentionally simple single-node tool.",

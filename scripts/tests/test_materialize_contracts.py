@@ -40,7 +40,7 @@ class ContractMaterializationTests(unittest.TestCase):
 
     def test_current_repository_snapshots_are_exact(self) -> None:
         registry = load_registry(ROOT)
-        self.assertEqual(127, len(expected_snapshots(ROOT, registry)))
+        self.assertEqual(130, len(expected_snapshots(ROOT, registry)))
         self.assertEqual([], check_materialized(ROOT, registry))
         for skill in ("goalpro", "landing-page", "seo-content", "seo-monitor", "seo-strategy"):
             validator = next(

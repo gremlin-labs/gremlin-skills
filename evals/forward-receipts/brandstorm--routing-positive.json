@@ -1,0 +1,28 @@
+{
+  "artifacts": [],
+  "case_id": "brandstorm--routing-positive",
+  "context_sources": [
+    "fixture-repository",
+    "installed-skill",
+    "user-prompt"
+  ],
+  "evidence": [
+    "invocation=implicit",
+    "selected_skill=brandstorm",
+    "response_sha256=c93bf61b6d45ce25b5800208f9aed852dae06b1a2dee6f81e4a8b9a1eb9d19f3",
+    "process_exit_code=0",
+    "payload_sha256=208a9f2b1522280c01e757c2b693867de54ba9c6cb8fa86d6e4eb496acac8b6d",
+    "plan_sha256=026f1672da440d52c49920b55a9423e4b8c4f0ad325dc81d7f28fc3d3ad3994f",
+    "harness_sha256=9a06970430fc59bfdb3485ac37de590bc5668c1f864813a246bacdb6cd004068"
+  ],
+  "fresh_context": true,
+  "host": "codex-cli 0.147.0",
+  "model": "gpt-5.6-terra",
+  "notes": "",
+  "result": "PASS",
+  "reviewed_by": "forward-routing-harness-v1",
+  "run_id": "7bdad4a3-7df0-4728-8b4b-aa17450300e2",
+  "schema_version": 1,
+  "skill": "brandstorm",
+  "started_at": "2026-08-11T21:46:42Z"
+}

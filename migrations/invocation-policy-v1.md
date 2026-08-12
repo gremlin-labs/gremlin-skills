@@ -1,8 +1,8 @@
 # Invocation policy owner review
 
 - Status: `approved`
-- Proposal SHA-256: `0b1ac09e7a4674ca56ed4138df2735a01084d952480ba98f6a5fc61b78036e88`
-- Recommendation: 24 model-visible; 12 user-only
+- Proposal SHA-256: `b9b0d9863c5a8674520478acb71d78660f5326ed9ac1e54b815c83e8b6ccd8b0`
+- Recommendation: 25 model-visible; 12 user-only
 - Public registry and host metadata match this approved matrix.
 - Invocation does not grant authority; every existing approval and external-action gate remains in force.
 
@@ -13,6 +13,7 @@
 | `audit-compare` | **model-visible** | read-only; source never; external none | — | goalpro, theme-library | Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action. |
 | `audit-plan` | **model-visible** | read-only; source never; external none | audit-compare (reference, model-visible) | goalpro, theme-library | Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action. |
 | `brainstormpro` | **model-visible** | read-only; source never; external none | planpro (handoff, model-visible) | goalpro, theme-library | Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action. |
+| `brandstorm` | **model-visible** | read-only; source never; external none | — | — | Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action. |
 | `compact-history` | **user-only** | executor; source never; external none | — | theme-library | Housekeeping executor can relocate managed artifacts after confirmation, so the human must name it. |
 | `design-direction` | **model-visible** | read-only; source never; external none | — | goalpro, planpro, theme-library | Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action. |
 | `design-review` | **model-visible** | read-only; source never; external none | — | goalpro, theme-library | Read-only source workflow with routing fixtures; implicit selection grants no source mutation or external action. |
