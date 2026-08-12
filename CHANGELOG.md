@@ -2,6 +2,13 @@
 
 All notable changes to Gremlin Skills are documented here. A version entry describes a release candidate; it does not imply that a Git tag, hosted release, plugin listing, or marketplace publication exists.
 
+## 0.4.0 — 2026-08-11
+
+- Added Brandstorm, a read-only product-branding workflow that audits an implemented codebase or undeveloped product idea, captures user-directed naming criteria, and researches competitors broadly before a user-confirmed scoped pass.
+- Added iterative, exactly 20-name candidate rounds with preserved feedback and rejection history, an explicit finalist-approval gate, and the user's final name selection as the terminal decision.
+- Added browser-only preliminary collision research across official trademark and patent sources, Steam, the iOS and Mac App Stores, Google Play, Google Search, and mandatory timestamped Porkbun domain-availability checks.
+- Added complete candidate-by-surface evidence and quality contracts, safe retry behavior when no candidates remain viable, explicit blocked handling for unavailable browser evidence, standalone packaging, public documentation, and fresh-context routing coverage.
+
 ## 0.3.0 — 2026-08-11
 
 - Added a shared SEO change-control contract and portable validator requiring exact representative before/after values, query terms gained or lost, digest-bound approval, canaries for shared templates, and independent rollout and rollback boundaries.
