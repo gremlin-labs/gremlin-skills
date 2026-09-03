@@ -2,6 +2,15 @@
 
 All notable changes to Gremlin Skills are documented here. A version entry describes a release candidate; it does not imply that a Git tag, hosted release, plugin listing, or marketplace publication exists.
 
+## 0.5.0 — 2026-09-03
+
+- Added visitor-mode classification (Persuade, Operate, Read, Experience) so Design Direction, Designpro, and Design Review judge craft from the requested surface rather than a generic product mood.
+- Added a compact post-selection direction contract (Thesis, Own-world, Story, First viewport, Form, Finish) that Design Review cites, and remains UNVERIFIED when that contract is missing.
+- Required anti-convergence setup during option generation (category rut, color strategy, habit-face and AI-cluster self-checks) so intensity-only or category-default options fail the option-quality test.
+- Extended Designpro with UX-copy and production-hardening checklists, scoped amplify/quiet/distill refine lenses, and browser-chrome/skeleton/first-viewport craft checks, while routing copy rewrites to Prose Humanizer.
+- Extended Design Review with a conditional task-critique pass on tasked surfaces without expanding into a whole-app audit.
+- Credited Impeccable as inspiration only and updated routing evals and public skill docs.
+
 ## 0.4.0 — 2026-08-11
 
 - Added Brandstorm, a read-only product-branding workflow that audits an implemented codebase or undeveloped product idea, captures user-directed naming criteria, and researches competitors broadly before a user-confirmed scoped pass.
