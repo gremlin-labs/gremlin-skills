@@ -1,6 +1,6 @@
 ---
 name: design-review
-description: Reviews a bounded UI or motion change—such as a diff, pull request, route, component, or completed implementation slice—against approved design intent, semantic tokens, component recipes, accessibility, responsive behavior, and perceptual motion quality, then returns an evidence-backed verdict. Use when the user asks to review a UI diff, check a route against its design system, review implemented animations, validate a completed Designpro or Motion Audit slice, or decide whether a focused design change is ready; do not use for broad codebase audits, setting a new visual direction, or implementing fixes.
+description: Reviews a bounded UI or motion change—such as a diff, pull request, route, component, or completed implementation slice—against approved design intent, semantic tokens, component recipes, accessibility, responsive behavior, and perceptual motion quality, then returns an evidence-backed verdict. Use when the user asks to review a UI diff, check a route against its design system, review implemented animations, validate a completed Designpro or Motion Audit slice, decide whether a focused design change is ready, or check a bounded change for cognitive load, first-timer task completion, or copy against an approved direction contract; do not use for broad codebase audits, setting a new visual direction, or implementing fixes.
 ---
 
 # Design Review
@@ -23,7 +23,7 @@ digraph design_review {
   runtime [shape=diamond, label="Rendered inspection\navailable?"];
   render [shape=box, label="Inspect themes, states, viewports,\ninputs, content, and motion"];
   mark [shape=box, label="Mark perceptual checks\nunverified"];
-  findings [shape=box, label="Keep only evidence-backed,\nuser-impacting findings"];
+  findings [shape=box, label="Task critique if needed;\nkeep consequential findings"];
   verdict [shape=diamond, label="Verdict"];
   approve [shape=doublecircle, label="APPROVE"];
   follow [shape=doublecircle, label="APPROVE WITH FOLLOW-UP"];
@@ -65,26 +65,34 @@ Record the exact diff, commit, PR, route, component, or Goalpro slice under revi
 
 Use this evidence precedence:
 
-1. Approved direction and product decisions.
-2. Applicable Theme Library interpretation, Designpro, Motion Audit, Motion Direction, Planpro, or feature criteria.
+1. Approved direction contract and product decisions.
+2. Approved direction package, Theme Library interpretation, Designpro, Motion Audit, Motion Direction, Planpro, or feature criteria.
 3. Canonical semantic tokens, components, and style guide.
 4. Acceptance tests and documented accessibility/performance requirements.
 5. Rendered behavior.
 6. Repeated implementation as weak evidence only.
 
+If `DIRECTION-CONTRACT.md` (or an equivalent six-block contract) is missing, mark contract checks `UNVERIFIED`. Do not invent a contract. Classify visitor mode from the contract, or infer it from the surface and label `ASSUMPTION`.
+
 ## 2. Run two passes
 
 ### Static pass
 
-Inspect changed source and representative callers for semantic-token usage, theme-name branches, raw or arbitrary design values, primitive bypasses, component recipes, variants/states, markup semantics, focus behavior, responsive/localization behavior, motion roles, reduced-motion handling, tests, and documentation.
+Inspect changed source and representative callers for semantic-token usage, theme-name branches, raw or arbitrary design values, primitive bypasses, component recipes, variants/states, markup semantics, focus behavior, responsive/localization behavior, motion roles, reduced-motion handling, tests, documentation, and UX copy (labels, errors, empty states) using the message hierarchy in [REFERENCE.md](REFERENCE.md).
 
 When a Theme Library family informed the work, review against its approved palette DNA and documented creative transformations—not literal equality with catalog hex values unless fidelity was explicitly required.
 
 ### Rendered pass
 
-When safely available, inspect affected happy, loading, empty, validation, error, disabled, degraded, and recovery states; relevant themes and viewports; keyboard/focus; zoom and content expansion; touch/pointer modes; reduced motion; representative content; and animation at normal speed. Use slow motion only to diagnose sequencing, origin, interruption, or frame behavior.
+When safely available, inspect affected happy, loading, empty, validation, error, disabled, degraded, and recovery states; relevant themes and viewports; keyboard/focus; zoom and content expansion; touch/pointer modes; reduced motion; representative content; and animation at normal speed. Use slow motion only to diagnose sequencing, origin, interruption, or frame behavior. Batch viewports in one inspection round; one confirm pass is enough if later fixes are claimed. Invalid, blank, or mislabeled captures do not bind a verdict.
+
+If the change touches theming, check browser chrome (selection, caret, scrollbar, focus, underline, tabular nums). If it is a marketing or first-run surface, check first-viewport thesis and copy-stripped skeleton.
 
 Mark checks `UNVERIFIED` when runtime evidence is unavailable. A green build, scan, or screenshot alone cannot prove design quality.
+
+### Task critique
+
+Run only when the bounded surface has a primary user task. Follow [REFERENCE.md](REFERENCE.md): design-specificity verdict; eight-item cognitive-load checklist; at most two personas (prefer project-derived; otherwise first-timer plus the mode-relevant specialist). Optional Nielsen 0–4 scoring may mark heuristics 7 and 10 `n/a` on Persuade or Experience and must renormalize the denominator. Do not fail a landing page for missing power-user shortcuts. Do not expand into a whole-app critique.
 
 ## 3. Keep findings consequential
 
@@ -101,13 +109,15 @@ Each finding includes priority, status, exact evidence, governing source, observ
 
 Follow [REFERENCE.md](REFERENCE.md) for severity and output schema.
 
+`DESIGN-REVIEW.md` always includes **Visitor mode**, **Direction contract**, and **Task critique**. When the slice has no primary user task, Task critique is `Not applicable` with one sentence why.
+
 ## Correction routing
 
 If the reviewed work belongs to an active same-slug Goalpro initiative, cite the affected criterion and append no new implementation scope. Goalpro performs and verifies corrections, then Design Review may re-review. If the issue is broader than the bounded change, recommend Designpro or Motion Audit with a new or reconciled slug; never hide scope expansion inside review notes. If the implemented result lacks an approved creative motion language rather than merely violating one, route that choice to Motion Direction.
 
 ## Done
 
-Finish when scope and authority are explicit, static and rendered passes are complete or honestly unverified, every finding has user/system impact and correction evidence, the verdict follows the contract, and correction routing preserves Goalpro ownership.
+Finish when scope and authority are explicit, static and rendered passes are complete or honestly unverified, task critique ran only when a primary task exists, every finding has user/system impact and correction evidence, the verdict follows the contract, and correction routing preserves Goalpro ownership.
 
 State: “I am satisfied this design review is complete because …” and cite the bounded evidence and verdict basis.
 

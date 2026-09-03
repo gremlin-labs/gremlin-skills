@@ -147,9 +147,9 @@
       "prompt": "Define a distinctive direction for a new consumer finance app whose users need calm credibility, dense comparisons, localization, and accessible themes.",
       "relevant_dimensions": ["Users and trust", "Visual identity", "Information density", "Accessibility", "Localization", "Theme readiness", "Delivery"],
       "not_applicable_dimensions": ["Existing component drift"],
-      "expected_outputs": ["Distinct options with trust and density tradeoffs", "A self-contained HTML preview compares the same realistic finance slice across every direction", "The user may refine one option or reject the set before approval", "Selected qualities map to semantic roles", "Familiar finance patterns are preserved when they improve comprehension"],
+      "expected_outputs": ["Visitor mode classified as Operate for dense comparisons unless the named surface is marketing", "Distinct options with trust and density tradeoffs", "Anti-convergence setup names the category rut and color strategy", "A self-contained HTML preview compares the same realistic finance slice across every direction", "The user may refine one option or reject the set before approval", "Selected qualities map to a compact direction contract and semantic roles", "Familiar finance patterns are preserved when they improve comprehension"],
       "material_question": "Which trust posture and brand qualities are approved when evidence supports more than one direction?",
-      "failure_if": ["The skill chooses a fashionable aesthetic without approval", "The final system map is written before a preview revision is approved", "Direction becomes raw component colors instead of system roles"]
+      "failure_if": ["The skill chooses a fashionable aesthetic without approval", "The final system map is written before a preview revision is approved", "Direction becomes raw component colors instead of system roles", "All options share one AI cluster or habit-face pairing without a unique reason", "Operate surfaces are scored as failed Persuade"]
     },
     {
       "id": "product-theme-library-interpretive-dashboard",
@@ -187,9 +187,9 @@
       "prompt": "Review a redesigned checkout diff when the style guide and approved mockup contradict each other.",
       "relevant_dimensions": ["Product intent", "Design authority", "Accessibility", "User journey", "Release decision"],
       "not_applicable_dimensions": ["Repository-wide token migration"],
-      "expected_outputs": ["The contradiction is reported", "The reviewer does not invent a preferred aesthetic", "Verdict remains UNVERIFIED until authority is resolved"],
+      "expected_outputs": ["The contradiction is reported", "The reviewer does not invent a preferred aesthetic", "Missing or contradictory direction contract is marked UNVERIFIED", "Verdict remains UNVERIFIED until authority is resolved"],
       "material_question": "Which approved source governs the checkout's visual direction?",
-      "failure_if": ["The reviewer silently picks the prettier source", "Preference-only findings block release"]
+      "failure_if": ["The reviewer silently picks the prettier source", "Preference-only findings block release", "A missing contract is invented from reviewer taste"]
     },
     {
       "id": "product-gamepro-playable-first-mvp",

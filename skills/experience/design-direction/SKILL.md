@@ -1,6 +1,6 @@
 ---
 name: design-direction
-description: Defines and documents an evidence-backed visual and interaction direction for a new product, major new surface, or intentional redesign before implementation. Use when the user asks to art-direct an interface, establish a visual language, explore distinct design directions, avoid generic AI aesthetics in a greenfield UI, or turn brand and product intent into a theme-ready design-system map; do not use for auditing an existing implemented system, ordinary feature planning, image-only generation, or source implementation.
+description: Defines and documents an evidence-backed visual and interaction direction for a new product, major new surface, or intentional redesign before implementation. Use when the user asks to art-direct an interface, establish a visual language, explore distinct design directions, avoid generic AI aesthetics in a greenfield UI, turn brand and product intent into a theme-ready design-system map, or when visitor success (persuade, operate, read, or experience) should change the visual logic; do not use for auditing an existing implemented system, ordinary feature planning, image-only generation, scoped amplify/quiet/distill of shipped UI, or source implementation.
 ---
 
 # Design Direction
@@ -17,14 +17,14 @@ digraph design_direction {
   intent [shape=box, label="Research product, users,\nbrand, and constraints"];
   clarity [shape=diamond, label="Material intent\nclear enough?"];
   ask [shape=box, label="Ask one focused\nproduct question"];
-  read [shape=box, label="State evidence-labeled\ndesign read"];
-  options [shape=box, label="Develop 2-3 distinct\ndirection options"];
+  read [shape=box, label="State evidence-labeled\ndesign read and visitor mode"];
+  options [shape=box, label="Develop 2-3 distinct\nanti-convergent options"];
   inventory [shape=box, label="Inventory representative\ncomponents and states"];
   preview [shape=box, label="Build complete interactive\nHTML comparison"];
   choose [shape=diamond, label="User response?"];
   refine [shape=box, label="Apply requested tweaks\nand regenerate preview"];
   regenerate [shape=box, label="Record rejected set and\ncreate new directions"];
-  map [shape=box, label="Map selected direction\nto semantic system"];
+  map [shape=box, label="Write direction contract\nand semantic system map"];
   ready [shape=diamond, label="Implementation scope\nalready concrete?"];
   goalpro [shape=doublecircle, label="Approved Goalpro handoff"];
   planpro [shape=doublecircle, label="Planpro handoff"];
@@ -65,21 +65,29 @@ digraph design_direction {
 
 Apply [Planpro's product-research lens](contracts/product-research.md). Read product, brand, audience, workflow, content, accessibility, platform, device, localization, theme, performance, and delivery evidence. Identify the job, emotion, trust posture, information density, existing identity assets, and qualities that must be preserved.
 
-Write a one-line **design read** covering product, audience, job, personality, density, layout, material or imagery, and motion. Mark every statement `EVIDENCE`, `ASSUMPTION`, or `USER DECISION`. Ask one focused question only when a material direction cannot be discovered safely.
+Write a one-line **design read** covering product, audience, job, personality, density, layout, material or imagery, and motion. Classify **visitor mode** from the requested surface, not the product: `Persuade` (decide and act), `Operate` (complete a task), `Read` (understand), or `Experience` (the work itself leads). A tool's landing page is still Persuade; documentation is still Read; settings are Operate. Mark every statement `EVIDENCE`, `ASSUMPTION`, or `USER DECISION`. Persist the mode in `RESEARCH.md` and every option. Ask one focused question only when a material direction cannot be discovered safely. Mode changes type, color, motion, and critique posture — see [REFERENCE.md](REFERENCE.md). Do not treat an Operate surface as failed Persuade.
 
 ## 2. Develop distinct options
 
-Create two or three directions that differ in design logic, not merely palette. Each option must specify:
+Before writing options, record the **anti-convergence setup** in `DIRECTION-OPTIONS.md`:
+
+1. **Category rut** — one sentence naming the page this category always ships and its predictable opposite; keep both out of the option list.
+2. **Color strategy** — choose Restrained, Committed, Full palette, or Drenched before picking colors. Operate and Read default to Restrained; Persuade and Experience may take the bolder strategies when the brief allows.
+3. **Habit-face self-check** — choose faces from the subject's world. Naming a listed habit face in [REFERENCE.md](REFERENCE.md) requires a reason no other face could satisfy; a subject association is never that reason.
+4. **AI-cluster self-check** — if someone could guess the aesthetic from the category alone, or the options land on cream+serif+terracotta, near-black+neon, or broadsheet hairline+italic serif+tracked mono without a unique product reason, rewrite them.
+
+Create two or three directions that differ in design logic, not merely palette or intensity. Each option must specify:
 
 - Product rationale and intended user response.
 - Hierarchy, composition, density, typography, imagery, material, iconography, content voice, and motion posture.
 - Accessibility, localization, responsive, theme, performance, and implementation implications.
 - What it preserves, what it changes, failure modes, reversibility, and a cheap validation experiment.
-- Anti-default choices justified by product fit, plus familiar patterns deliberately retained for learnability or task speed.
+- Visitor mode, color strategy, and the category rut it refuses.
+- Anti-default choices justified by product fit, plus familiar patterns deliberately retained for learnability or task speed. Amplify or quiet may be option *axes* only when hierarchy, composition, or material also change; “same layout but bolder” is not a distinct direction.
 
 Recommend one option with evidence, but do not ask for selection until the interactive preview is complete and validated. Do not silently blend incompatible options.
 
-Research and option artifacts may be written before selection so the decision is durable. Do not finalize `VISUAL-LANGUAGE.md`, `SYSTEM-MAP.md`, `PLAN.md`, or `GOALPRO-INPUT.md` until the user selects a direction. When the only evidence is the user's brief, a recommendation may still be useful, but label it provisional, expose every material assumption, and propose the cheapest validation experiment; do not present it as researched product truth.
+Research and option artifacts may be written before selection so the decision is durable. Do not finalize `VISUAL-LANGUAGE.md`, `DIRECTION-CONTRACT.md`, `SYSTEM-MAP.md`, `PLAN.md`, or `GOALPRO-INPUT.md` until the user selects a direction. When the only evidence is the user's brief, a recommendation may still be useful, but label it provisional, expose every material assumption, and propose the cheapest validation experiment; do not present it as researched product truth.
 
 ## 3. Build the interactive direction preview
 
@@ -87,7 +95,7 @@ For every non-trivial visual-direction decision, create `DIRECTION-PREVIEW.html`
 
 Inventory the target project's real components, surfaces, states, content density, and route patterns first, and preserve that inventory in `RESEARCH.md` under `Representative component and state inventory`. The preview must visualize the most representative set available: application shell/navigation; typography hierarchy; palette and semantic roles; nested surfaces; buttons and links; inputs and validation; cards or equivalent groupings; tables/lists/timelines/charts where present; status, loading, empty, error, disabled, and success states; responsive behavior; and motion posture. When no implementation exists, label inferred components and derive them from the proposed experience matrix.
 
-Place all directions in one self-contained, responsive HTML file with an accessible keyboard-operable switcher. Use no remote scripts, stylesheets, fonts, or tracking. Include normal and reduced-motion behavior, representative realistic content, palette swatches, token-role labels, and a concise rationale/tradeoff panel. When themes are relevant, include light/dark or alternative family selectors that preserve the same semantic capabilities rather than showing palette-only recolors.
+Place all directions in one self-contained, responsive HTML file with an accessible keyboard-operable switcher. Use no remote scripts, stylesheets, fonts, or tracking. Include normal and reduced-motion behavior, representative realistic content, palette swatches, token-role labels, and a concise rationale/tradeoff panel. Each `direction-summary` must show visitor mode, color strategy, and the rut it refuses. The first viewport of the representative slice is a thesis — the product mechanism at scale — not a generic hero. In tradeoffs, note whether a copy-stripped skeleton still communicates the section's job. When themes are relevant, include light/dark or alternative family selectors that preserve the same semantic capabilities rather than showing palette-only recolors.
 
 Read [PREVIEW.md](PREVIEW.md) completely before generating the preview. Run `python3 {design-direction-skill-root}/scripts/validate_direction_preview.py agent-work/{slug}/design-direction/DIRECTION-PREVIEW.html` and fix every failure before presenting it.
 
@@ -116,6 +124,17 @@ Translate qualities into:
 
 The map specifies roles and relationships. Avoid inventing exact values without evidence; mark experiments and user decisions explicitly.
 
+Write `DIRECTION-CONTRACT.md` in the same step: six short blocks, 150 words at most.
+
+- **Thesis** — the one idea this surface owns and the category default it refuses.
+- **Own-world** — palette and component language recognizable with content removed.
+- **Story** — what the visitor understands, believes, and does.
+- **First viewport** — exact composition, scale, and where the primary action sits.
+- **Form** — the chosen form and its position on the option list.
+- **Finish** — this contract is what Design Review audits; unreviewed implementation is unfinished.
+
+If a block reads like a mood, the direction is not decided. Never copy the contract into product source or any browser-delivered artifact.
+
 ## 6. Produce artifacts
 
 Create:
@@ -124,9 +143,10 @@ Create:
 - `DIRECTION-OPTIONS.md` — distinct options, recommendation, tradeoffs, experiments, and decision status.
 - `DIRECTION-PREVIEW.html` — required self-contained interactive comparison for non-trivial direction decisions, aliasing the latest immutable `previews/DIRECTION-PREVIEW-R{n}.html` snapshot.
 - `PALETTE-SHORTLIST.md` — conditional family/variant comparison when palettes or multiple themes materially shape the direction.
-- `VISUAL-LANGUAGE.md` — selected direction, design read, preservation rules, and craft posture.
+- `VISUAL-LANGUAGE.md` — selected direction, visitor mode, design read, preservation rules, and craft posture.
+- `DIRECTION-CONTRACT.md` — compact six-block review authority after selection; do not finalize before approval.
 - `SYSTEM-MAP.md` — semantic roles, token layers, recipes, themes, assets, content, motion, and enforcement targets.
-- `EXPERIENCE-MATRIX.md` — routes or surfaces, states, viewports, inputs, accessibility, localization, content extremes, and intended behavior.
+- `EXPERIENCE-MATRIX.md` — routes or surfaces, states, viewports, inputs, accessibility, localization, content extremes, hardening, and intended behavior.
 - `PLAN.md` — implementation slices when the direction can be planned without further architecture work.
 - `GOALPRO-INPUT.md` — conditional direct handoff only when scope and criteria are concrete and approved.
 - `REFERENCE-BOARD-SPEC.md` — optional image-generation brief.
@@ -142,9 +162,9 @@ Follow [REFERENCE.md](REFERENCE.md) for schemas, option tests, and handoff selec
 
 ## Done
 
-Finish when evidence and assumptions are separated; options are genuinely distinct and visually compared in a validated HTML preview; requested refinements or rejected sets are durably recorded; the selected preview revision has explicit user approval; every quality maps to semantic roles and verification; accessibility, localization, states, themes, and performance are classified; implementation shortcuts are prohibited; and the correct handoff is ready without rediscovering direction.
+Finish when evidence and assumptions are separated; visitor mode is classified from the surface; options are genuinely distinct, anti-convergent, and visually compared in a validated HTML preview; requested refinements or rejected sets are durably recorded; the selected preview revision has explicit user approval; the direction contract is complete and under 150 words; every quality maps to semantic roles and verification; accessibility, localization, states, themes, and performance are classified; implementation shortcuts are prohibited; and the correct handoff is ready without rediscovering direction.
 
-State: “I am satisfied this design direction is complete because …” and cite the selection, system map, and unresolved decisions.
+State: “I am satisfied this design direction is complete because …” and cite the selection, visitor mode, direction contract, system map, and unresolved decisions.
 
 
 ## Optional shared Theme Library

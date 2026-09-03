@@ -85,9 +85,9 @@
       "skill": "designpro",
       "output_root": "agent-work/{slug}/designpro/",
       "files": [
-        {"path":"RESEARCH.md","required":true,"headings":["Stack","Product context","User journey","Design intent","Quality attributes","Delivery constraints","Alternatives","Risks and unknowns"]},
+        {"path":"RESEARCH.md","required":true,"headings":["Stack","Product context","User journey","Visitor mode","Design intent","Quality attributes","Delivery constraints","Alternatives","Risks and unknowns"]},
         {"path":"DESIGN-AUDIT.md","required":true,"headings":["Product intent","Scope","Methodology","Evidence coverage","Verified strengths","Contradictions","Prioritized findings","Unverified checks"]},
-        {"path":"CRAFT-MATRIX.md","required":true,"headings":["Design read","Preservation and change budget","Hierarchy and composition","Typography and content","Imagery and materiality","Interaction feedback","Coherence","Responsive and localization behavior","Anti-default findings","System landing points","Runtime evidence","Unverified checks"]},
+        {"path":"CRAFT-MATRIX.md","required":true,"headings":["Design read","Visitor mode","Preservation and change budget","Hierarchy and composition","Typography and content","Copy","Hardening","Imagery and materiality","Interaction feedback","Coherence","Browser chrome and first viewport","Responsive and localization behavior","Anti-default findings","System landing points","Runtime evidence","Unverified checks"]},
         {"path":"VISUAL-DIRECTION.md","required":false,"condition":"When direction is absent, contradictory, or materially changing.","headings":["Selected direction","Approval provenance","Rejected alternatives","Identity qualities","Preservation rules","Semantic system mapping","Prohibited shortcuts","Validation criteria"]},
         {"path":"TOKEN-INVENTORY.md","required":true,"headings":["Source locations","Token architecture","Normalized inventory","Alias graph","Raw and arbitrary values","Semantic gaps","Theme readiness"]},
         {"path":"COMPONENT-MATRIX.md","required":true,"headings":["Inventory and ownership","Size and variant matrix","State matrix","Contextual spacing","Typography and geometry","Responsive behavior","Theme parity","Accessibility","Drift"]},
@@ -104,13 +104,14 @@
       "skill": "design-direction",
       "output_root": "agent-work/{slug}/design-direction/",
       "files": [
-        {"path":"RESEARCH.md","required":true,"headings":["Users and product outcome","Intent sources","Current or proposed journey","Representative component and state inventory","Quality attributes","Delivery constraints","Alternatives","Risks and unknowns"]},
-        {"path":"DIRECTION-OPTIONS.md","required":true,"headings":["Design read","Option comparison","Direction options","Recommendation","Experiments","Preview revisions","Selected preview revision","User decision","Approval provenance"]},
+        {"path":"RESEARCH.md","required":true,"headings":["Users and product outcome","Intent sources","Current or proposed journey","Visitor mode","Representative component and state inventory","Quality attributes","Delivery constraints","Alternatives","Risks and unknowns"]},
+        {"path":"DIRECTION-OPTIONS.md","required":true,"headings":["Design read","Visitor mode","Option comparison","Direction options","Recommendation","Experiments","Preview revisions","Selected preview revision","User decision","Approval provenance"]},
         {"path":"DIRECTION-PREVIEW.html","required":false,"condition":"Required for every non-trivial direction decision; omitted only when the user explicitly declines or the work is too small to benefit.","headings":["direction-summary","typography","palette","surfaces","components","states","responsive","motion","tradeoffs"]},
         {"path":"PALETTE-SHORTLIST.md","required":false,"condition":"When palette families or multi-theme behavior materially influence the decision.","headings":["Palette shortlist","Interpretation mode","Palette DNA","Preserve evolve add avoid","Derived system hypotheses","Theme parity","Rejected families"]},
-        {"path":"VISUAL-LANGUAGE.md","required":true,"headings":["Selected direction","Product outcome","Identity qualities","Preservation and change budget","Hierarchy and composition","Typography and content","Imagery and materiality","Interaction and motion","Accessibility","Responsive and localization posture","Anti-default rationale"]},
+        {"path":"VISUAL-LANGUAGE.md","required":true,"headings":["Selected direction","Visitor mode","Product outcome","Identity qualities","Preservation and change budget","Hierarchy and composition","Typography and content","Imagery and materiality","Interaction and motion","Accessibility","Responsive and localization posture","Anti-default rationale"]},
+        {"path":"DIRECTION-CONTRACT.md","required":true,"headings":["Thesis","Own-world","Story","First viewport","Form","Finish","Visitor mode"]},
         {"path":"SYSTEM-MAP.md","required":true,"headings":["Source of truth","Token layers","Semantic roles","Component recipes","Themes","Assets and content","Motion","Prohibited patterns","Exception process","Enforcement targets","Validation"]},
-        {"path":"EXPERIENCE-MATRIX.md","required":true,"headings":["Surfaces and goals","States","Viewports","Inputs","Themes","Accessibility","Localization and content extremes","Intended behavior"]},
+        {"path":"EXPERIENCE-MATRIX.md","required":true,"headings":["Surfaces and goals","States","Viewports","Inputs","Themes","Accessibility","Localization and content extremes","Hardening","Intended behavior"]},
         {"path":"PLAN.md","required":false,"condition":"When implementation can be planned without unresolved architecture.","headings":["Feature","Product outcome","Quality attributes and delivery constraints","Phases","Open questions","Final acceptance"]},
         {"path":"GOALPRO-INPUT.md","required":false,"condition":"Only when selected direction and implementation scope are approved and concrete.","headings":["Goal and product outcome","Approval provenance","Implementation slices","Acceptance criteria","Non-goals and boundaries","Quality applicability","Project gates","Readiness"]},
         {"path":"REFERENCE-BOARD-SPEC.md","required":false,"condition":"When generated reference imagery would reduce material uncertainty.","headings":["Purpose","Frames","Design constraints","Accessibility and content","Evaluation criteria"]},
@@ -174,7 +175,7 @@
       "skill": "design-review",
       "output_root": "agent-work/{slug}/design-review/",
       "files": [
-        {"path":"DESIGN-REVIEW.md","required":true,"headings":["Scope and revision","Governing intent and system sources","Evidence coverage","Verified strengths","Findings","Unverified checks","Verdict","Correction routing","Re-review conditions","Self-judgment"]},
+        {"path":"DESIGN-REVIEW.md","required":true,"headings":["Scope and revision","Governing intent and system sources","Visitor mode","Direction contract","Evidence coverage","Verified strengths","Task critique","Findings","Unverified checks","Verdict","Correction routing","Re-review conditions","Self-judgment"]},
         {"path":"NOTES.md","required":false,"condition":"Only when sanitized evidence or decisions add durable context.","headings":["Notes"]}
       ]
     },

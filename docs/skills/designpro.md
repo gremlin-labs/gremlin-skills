@@ -4,7 +4,10 @@ Audits a web application's visual craft, design-system consistency, accessibilit
 
 ## When to reach for it
 
-Use when the user asks to audit or standardize an existing UI, improve a generic or incoherent design, enforce a style guide, eliminate inline or arbitrary styling, improve accessibility, establish design linting, add theme-ready architecture or multiple color themes, or plan a design-system refactor in a Next.js, React, Tailwind, CSS, or comparable web application.
+- Audit or standardize an existing UI, enforce a style guide, or plan token and theme remediation.
+- Run a scoped amplify, quiet, or distill pass on shipped UI without restyling the app.
+- Harden forms for overflow, localization, errors, and concurrency; audit labels, errors, and empty states without rewriting them.
+- Do not use for greenfield art direction or to rewrite interface copy in place.
 
 ## Prerequisites
 
@@ -34,6 +37,9 @@ The required artifacts exist at the declared output root, claims are backed by t
 
 ## Adjacent Gremlin skills
 
+- `design-direction` owns quieter-than-category art direction for a new product.
+- `prose-humanizer` owns rewriting existing labels, errors, and empty states.
+- `design-review` returns a bounded approve/block verdict after implementation.
 - Optional complements: `goalpro`, `theme-library`.
 
 ## Registry contract

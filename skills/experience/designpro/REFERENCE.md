@@ -43,7 +43,7 @@ Always include where present:
 - Global shell, navigation, page header, authentication, onboarding, settings, billing, destructive actions, and the primary product journey.
 - Buttons, links, forms, validation, tables or lists, cards, dialogs, menus, tooltips, notifications, empty states, loading states, and error recovery.
 - The smallest and largest supported viewports, one intermediate viewport, 200% zoom, keyboard-only navigation, reduced motion, and every supported theme.
-- Long localized strings, large user content, zero data, maximal data, slow loading, permission loss, and recoverable failure where applicable.
+- Long localized strings, large user content, zero data, maximal data, slow loading, permission loss, recoverable failure, overflow, double-submit, and offline or throttled network where applicable.
 
 Record why the sample is representative. Do not claim application-wide compliance from a single route. If the app cannot run, perform static inspection and mark computed style, interaction, and rendered contrast checks `UNVERIFIED`.
 
@@ -132,7 +132,7 @@ Use contextual judgment, then make it inspectable and enforceable.
 
 ### Design read
 
-Record product, audience, primary job, personality, density, layout posture, material or imagery posture, and motion posture. Mark each statement `EVIDENCE`, `ASSUMPTION`, or `USER DECISION`, with its source. A reference product is evidence for a quality or relationship, not permission to copy its surface treatment.
+Record product, audience, primary job, personality, density, layout posture, material or imagery posture, motion posture, and visitor mode (`Persuade`, `Operate`, `Read`, or `Experience`) chosen from the requested surface. Mark each statement `EVIDENCE`, `ASSUMPTION`, or `USER DECISION`, with its source. A reference product is evidence for a quality or relationship, not permission to copy its surface treatment. Operate surfaces may correctly stay dense and familiar.
 
 ### Preservation and change budget
 
@@ -140,11 +140,43 @@ Classify identity-bearing elements and workflows as `PRESERVE`, coherent underde
 
 ### Craft matrix
 
-For hierarchy, composition, typography, content authenticity, imagery, materiality, interaction feedback, coherence, responsive behavior, localization, and strategic omissions, record the intended quality, evidence, representative routes/states/themes/content, current status, user impact, system landing point, runtime verification, and remaining uncertainty.
+For hierarchy, composition, typography, content authenticity, copy, hardening, imagery, materiality, interaction feedback, coherence, browser chrome and first viewport, responsive behavior, localization, and strategic omissions, record the intended quality, evidence, representative routes/states/themes/content, current status, user impact, system landing point, runtime verification, and remaining uncertainty.
 
 ### Anti-default method
 
 Do not use a static “AI slop” ban list as findings. Test whether a pattern is repeated without intent, conflicts with the design read, harms comprehension or credibility, or erases product identity. Include counterevidence: when the familiar pattern improves learnability, density, accessibility, or task speed, preserve it.
+
+### Copy checklist
+
+Audit the interaction path, not isolated strings:
+
+1. One fact the user needs now; 2. the next action; 3. supporting context; 4. tone for the moment.
+- Actions use a specific verb and object. Destructive actions name the object and consequence.
+- Errors answer what failed, why when useful, and how to recover. Do not lead with internal codes.
+- Empty states distinguish first-use, no results, filters, permissions, and failure, each with a next action.
+- Placeholders are examples, not labels. Helper text answers an implicit question.
+- Record findings and a system landing point. Route rewrites to `prose-humanizer`.
+
+### Hardening checklist
+
+Sample representative forms, tables, and lists for:
+
+- Overflow: shrinking flex/grid items, ellipsis vs wrap, long names and CJK/emoji.
+- Localization: 30–40% expansion budget, logical properties, RTL when locales exist, pluralization that is not English-concatenated.
+- Resilience: offline, slow, timeout, 401/403/404/429/500, permission, double-submit, race.
+- Input floor: 16px body/controls on mobile web so iOS Safari does not force-zoom focused fields.
+
+### Refine lenses
+
+Use only when the user names amplify, quiet, or distill and a target.
+
+- **Amplify:** the flat section opted out of the system's strongest moves. Raise it in that vocabulary. Skeleton-test without copy. No new primitives.
+- **Quiet:** Persuade/Experience means more air and restraint; Operate/Read means less noise. Quiet without intent collapses to generic.
+- **Distill:** one primary goal and action; remove unearned cards and repeated copy.
+
+### Browser chrome and first viewport
+
+Theme selection, caret, scrollbars, focus rings, underline offset, and tabular numerals from the palette. On Persuade or first-run surfaces, the first viewport demonstrates the mechanism. A skeleton that only works after the words return is a copy finding, not a structure finding.
 
 ### Direction-to-system bridge
 
@@ -240,7 +272,7 @@ Include product intent, scope, methodology, evidence coverage, verified strength
 
 ### CRAFT-MATRIX.md
 
-Include the design read, evidence and assumption labels, preservation and change budget, craft-dimension matrix, anti-default findings and counterevidence, system landing points, runtime coverage, and unverified feel checks.
+Include the design read, visitor mode, evidence and assumption labels, preservation and change budget, craft-dimension matrix, copy, hardening, browser chrome and first viewport, anti-default findings and counterevidence, system landing points, runtime coverage, and unverified feel checks.
 
 ### VISUAL-DIRECTION.md
 
@@ -316,5 +348,6 @@ Consult current official sources applicable to the detected stack and record acc
 - Storybook UI testing: https://storybook.js.org/docs/writing-tests
 - Taste Skill by Leonxlnx (inspiration for brief inference, anti-default analysis, and redesign preservation): https://github.com/Leonxlnx/taste-skill
 - Emil Kowalski's design engineering skills (inspiration for motion judgment and perceptual review): https://github.com/emilkowalski/skills
+- Impeccable (inspiration for visitor-mode craft, UX copy and harden checklists, scoped refine lenses, and browser-chrome/first-viewport verify checks): https://github.com/pbakaus/impeccable
 
 Prefer official framework, browser, standards, and tool documentation for additional capabilities. Clearly label inferences and do not treat automated tooling as a conformance certification.

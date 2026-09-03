@@ -4,7 +4,10 @@ Defines and documents an evidence-backed visual and interaction direction for a 
 
 ## When to reach for it
 
-Use when the user asks to art-direct an interface, establish a visual language, explore distinct design directions, avoid generic AI aesthetics in a greenfield UI, or turn brand and product intent into a theme-ready design-system map; do not use for auditing an existing implemented system, ordinary feature planning, image-only generation, or source implementation.
+- Art-direct a new product, major surface, or intentional redesign before implementation.
+- Visitor success (persuade, operate, read, or experience) should change type, color, or motion posture.
+- Greenfield work must refuse category-default AI aesthetics and emit a compact direction contract after selection.
+- Do not use to audit shipped UI, run a scoped amplify/quiet/distill pass, or implement source.
 
 ## Prerequisites
 
@@ -16,7 +19,7 @@ It may inspect project and external evidence and write only its skill-scoped wor
 
 ## Outputs
 
-Work is owned at `agent-work/{slug}/design-direction/`. Required contract artifacts currently include `RESEARCH.md`, `DIRECTION-OPTIONS.md`, `VISUAL-LANGUAGE.md`, `SYSTEM-MAP.md`, `EXPERIENCE-MATRIX.md`. Conditional files are emitted only when their documented condition applies.
+Work is owned at `agent-work/{slug}/design-direction/`. Required contract artifacts currently include `RESEARCH.md`, `DIRECTION-OPTIONS.md`, `VISUAL-LANGUAGE.md`, `DIRECTION-CONTRACT.md`, `SYSTEM-MAP.md`, `EXPERIENCE-MATRIX.md`. Conditional files are emitted only when their documented condition applies.
 
 ## Common questions
 
@@ -34,6 +37,8 @@ The required artifacts exist at the declared output root, claims are backed by t
 
 ## Adjacent Gremlin skills
 
+- `designpro` owns scoped amplify/quiet/distill of shipped UI and existing-system audits.
+- `design-review` cites the approved direction contract on a bounded change.
 - Optional complements: `goalpro`, `planpro`, `theme-library`.
 
 ## Registry contract

@@ -1,6 +1,6 @@
 ---
 name: designpro
-description: Audits a web application's visual craft, design-system consistency, accessibility, token architecture, component usage, themes, and automated enforcement, then produces a detailed Goalpro-ready remediation plan. Use when the user asks to audit or standardize an existing UI, improve a generic or incoherent design, enforce a style guide, eliminate inline or arbitrary styling, improve accessibility, establish design linting, add theme-ready architecture or multiple color themes, or plan a design-system refactor in a Next.js, React, Tailwind, CSS, or comparable web application.
+description: Audits a web application's visual craft, design-system consistency, accessibility, token architecture, component usage, themes, and automated enforcement, then produces a detailed Goalpro-ready remediation plan. Use when the user asks to audit or standardize an existing UI, improve a generic or incoherent design, enforce a style guide, eliminate inline or arbitrary styling, improve accessibility, establish design linting, add theme-ready architecture or multiple color themes, plan a design-system refactor, run a scoped amplify/quiet/distill pass on shipped UI, harden forms for overflow, localization, or errors, or audit labels/errors/empty states without rewriting them; do not use for greenfield art direction or to rewrite interface copy in place.
 ---
 
 # Designpro
@@ -17,7 +17,9 @@ Be strict about consistency, accessibility, token discipline, documentation, the
 digraph designpro {
   start [shape=doublecircle, label="Design audit requested"];
   intent [shape=box, label="Discover product identity,\ndesign intent, and users"];
-  design_read [shape=box, label="State contextual design read\nand preservation budget"];
+  design_read [shape=box, label="State design read,\nvisitor mode, preservation"];
+  scoped [shape=diamond, label="Named refine target\nand amplify/quiet/distill?"];
+  refine [shape=box, label="Scoped refine lens\non named target only"];
   guide [shape=diamond, label="Usable style guide\nexists?"];
   audit_guide [shape=box, label="Audit guide against\nimplementation and requirements"];
   derive_guide [shape=box, label="Derive enforceable\nstyle-guide requirements"];
@@ -38,7 +40,10 @@ digraph designpro {
 
   start -> intent;
   intent -> design_read;
-  design_read -> guide;
+  design_read -> scoped;
+  scoped -> refine [label="yes"];
+  refine -> tokens;
+  scoped -> guide [label="no"];
   guide -> audit_guide [label="yes"];
   guide -> derive_guide [label="no"];
   audit_guide -> tokens;
@@ -82,7 +87,9 @@ digraph designpro {
 
 When the user requests a named palette or a new family from the shared catalog, consult the independently discovered `theme-library` skill in embedded mode. Treat its catalog as creative evidence, not a rigid surface/border recipe, unless exact fidelity is explicitly required. Preserve the resulting interpretation as approved intent or a clearly labeled hypothesis before auditing implementation against it.
 
-Before judging aesthetics, write a one-line **design read** that states the product, audience, job, personality, density, layout posture, material or imagery posture, and motion posture. Label each part `EVIDENCE`, `ASSUMPTION`, or `USER DECISION`. This makes taste reviewable rather than an unspoken model default.
+Before judging aesthetics, write a one-line **design read** that states the product, audience, job, personality, density, layout posture, material or imagery posture, and motion posture. Classify **visitor mode** from the requested surface (`Persuade`, `Operate`, `Read`, or `Experience`). Mode changes craft judgment: Operate may correctly be dense and familiar. Label each part `EVIDENCE`, `ASSUMPTION`, or `USER DECISION`. This makes taste reviewable rather than an unspoken model default.
+
+If the user named a refine intent (`amplify`, `quiet`, or `distill`) and a target, take the **scoped refine** branch: inventory only that target and its neighbors, apply the matching lens in [REFERENCE.md](REFERENCE.md), and still run accessibility and contrast on the touched surface. Do not restyle the rest of the product. A greenfield “make the new product quieter than SaaS” request belongs to Design Direction.
 
 For redesigns, define a preservation and change budget:
 
@@ -153,6 +160,26 @@ Flag a generic pattern only when evidence shows it weakens hierarchy, comprehens
 
 For each craft recommendation, define its **system landing point**: an existing or new semantic token, component recipe or variant, asset or content rule, motion token, documentation rule, automated check, or narrow governed exception. A taste finding that can only be implemented as scattered bespoke component styling is incomplete.
 
+### Copy
+
+Audit labels, errors, empty states, and helper text with the message hierarchy in [REFERENCE.md](REFERENCE.md): one fact, next action, supporting context, tone. Controls name the action; errors name the problem and the recovery; empty states distinguish first-use, no results, filters, permissions, and failure. Placeholders are not labels. Record findings here; route rewrites to `prose-humanizer`.
+
+### Hardening
+
+On representative forms and lists, check overflow and wrapping, a 30–40% translation budget, logical properties or RTL when locales exist, extreme content, network/permission/concurrency/offline, and the 16px web input floor that prevents iOS Safari focus-zoom. Expand sampling rather than inventing a new artifact.
+
+### Scoped refine lenses
+
+- **Amplify** — raise the named target to the system's own strongest moves. No new color, font, or primitive unless asked. Skeleton-test the structure without copy.
+- **Quiet** — reduce intensity by visitor mode. Never collapse to generic grayscale. Preserve hierarchy.
+- **Distill** — one primary action; remove unearned containers and repeated information.
+
+Scope is sovereign: everything outside the named target stays.
+
+### Browser chrome, skeleton, and first viewport
+
+Verify theme-aware text selection, caret, scrollbars, focus rings, underline offset, and tabular numerals where the product owns them. On marketing or first-run surfaces, the first viewport is a thesis. Note whether a copy-stripped skeleton still communicates the section's job. These are craft-matrix rows, not automatic bans.
+
 ### Layout and spacing
 
 Check page and viewport padding, gutters, content widths, space around headers, header/action alignment, card exterior and interior spacing, sections, grids, lists, forms, fields, dialogs, drawers, menus, tooltips, conditional elements, safe areas, and responsive collapse, wrapping, ordering, and overflow. A spacing token is compliant only when its contextual role is correct.
@@ -205,9 +232,9 @@ Plan concise README links to the guide, AGENTS instructions, source-of-truth fil
 
 Create:
 
-- `RESEARCH.md` — stack, intent, users, journey, outcome, quality, constraints, alternatives, unknowns, and current primary sources.
+- `RESEARCH.md` — stack, intent, users, journey, visitor mode, outcome, quality, constraints, alternatives, unknowns, and current primary sources.
 - `DESIGN-AUDIT.md` — methodology, strengths, contradictions, prioritized findings, and evidence.
-- `CRAFT-MATRIX.md` — design read, preservation budget, hierarchy, composition, typography, content, imagery, materiality, interaction feedback, coherence, responsive and localization behavior, and anti-default findings.
+- `CRAFT-MATRIX.md` — design read, visitor mode, preservation budget, hierarchy, composition, typography, content, copy, hardening, imagery, materiality, interaction feedback, coherence, browser chrome and first viewport, responsive and localization behavior, and anti-default findings.
 - `VISUAL-DIRECTION.md` — conditional approved or derived direction when the current direction is absent, contradictory, or materially changing.
 - `TOKEN-INVENTORY.md` — normalized tokens, aliases, themes, raw values, duplication, omissions, and locations.
 - `COMPONENT-MATRIX.md` — sizes, variants, states, spacing, typography, geometry, responsiveness, and drift.

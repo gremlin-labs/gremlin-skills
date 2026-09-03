@@ -34,8 +34,8 @@
       "prompt": "Audit a Tailwind application with dark, light, and branded themes whose components contain raw colors and inconsistent spacing.",
       "applicable_dimensions": ["Product intent", "Correctness and resilience", "User experience and accessibility", "Data integrity and compatibility", "Rollout and rollback", "Maintainability and documentation", "Machine verification"],
       "not_applicable_dimensions": ["Production data migration"],
-      "required_evidence": ["Resolved token and alias inventory", "Alpha-composited contrast matrix for every theme", "Component and state parity matrix", "Rule-to-enforcement mapping", "Baseline removal and rollback plan", "AGENTS.md, style guide, and README specifications"],
-      "failure_if": ["Only the default theme is audited", "Scanner matches are treated as proven defects without context", "The plan relies on visual review without deterministic gates"]
+      "required_evidence": ["Resolved token and alias inventory", "Alpha-composited contrast matrix for every theme", "Component and state parity matrix", "Rule-to-enforcement mapping", "Baseline removal and rollback plan", "AGENTS.md, style guide, and README specifications", "Visitor mode on the design read", "Copy and hardening sampling on representative forms when those surfaces exist"],
+      "failure_if": ["Only the default theme is audited", "Scanner matches are treated as proven defects without context", "The plan relies on visual review without deterministic gates", "A named refine request expands into an unsolicited whole-app restyle"]
     },
     {
       "id": "workspacepro-multi-repo-safety-quality",
@@ -187,8 +187,8 @@
       "prompt": "Create a high-craft direction for a localized multi-theme product without permitting bespoke theme styling in components.",
       "applicable_dimensions": ["Product intent", "User experience and accessibility", "Data integrity and compatibility", "Performance and resources", "Maintainability and documentation", "Machine verification"],
       "not_applicable_dimensions": ["Production data migration"],
-      "required_evidence": ["Self-contained accessible HTML comparison using representative project components and states", "Preview revision history and explicit approval provenance", "Selected direction maps to semantic roles and recipes", "Shared Theme Library is consulted in embedded mode when palettes are material", "Palette DNA may evolve creatively before mapping through semantic roles", "Theme parity and localization states", "Prohibited component theme branches"],
-      "failure_if": ["Taste guidance bypasses token architecture", "The preview depends on remote assets or canned components unrelated to the product", "Palette access requires an external repository or local filesystem path", "Only the default theme and English content are considered"]
+      "required_evidence": ["Self-contained accessible HTML comparison using representative project components and states", "Visitor mode classified from the surface", "Compact direction contract after selection", "Preview revision history and explicit approval provenance", "Selected direction maps to semantic roles and recipes", "Shared Theme Library is consulted in embedded mode when palettes are material", "Palette DNA may evolve creatively before mapping through semantic roles", "Theme parity and localization states", "Prohibited component theme branches", "Anti-convergence setup with category rut, color strategy, and habit-face self-check"],
+      "failure_if": ["Taste guidance bypasses token architecture", "The preview depends on remote assets or canned components unrelated to the product", "Palette access requires an external repository or local filesystem path", "Only the default theme and English content are considered", "Visitor mode is missing or a contract block is only a mood", "Every option shares one AI cluster or habit-face pairing without a unique reason"]
     },
     {
       "id": "theme-library-creative-interpretation",
@@ -232,8 +232,8 @@
       "prompt": "Review a completed settings route across themes, errors, responsive layouts, keyboard navigation, and reduced motion.",
       "applicable_dimensions": ["Product intent", "Correctness and resilience", "User experience and accessibility", "Performance and resources", "Maintainability and documentation", "Machine verification"],
       "not_applicable_dimensions": ["Production data migration"],
-      "required_evidence": ["Governing sources", "Static and rendered coverage", "Consequential findings only", "Contract verdict and correction routing"],
-      "failure_if": ["The review expands into a whole-app remediation plan", "Personal preference is treated as a blocker"]
+      "required_evidence": ["Governing sources", "Direction contract citation or UNVERIFIED if missing", "Visitor mode from the contract or an ASSUMPTION", "Static and rendered coverage", "Task critique for the settings route", "Consequential findings only", "Contract verdict and correction routing"],
+      "failure_if": ["The review expands into a whole-app remediation plan", "Personal preference is treated as a blocker", "A missing contract is invented", "The settings review expands into a Nielsen-scored whole-app critique"]
     },
     {
       "id": "gamepro-external-engine-honesty",

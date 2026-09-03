@@ -89,7 +89,7 @@
       "approval_status": "APPROVED",
       "expected_state": "READY",
       "expected_action": "Preserve the selected direction and rejected alternatives, then implement semantic roles and vertical slices without re-opening visual selection.",
-      "failure_if": ["Goalpro invents a fourth direction", "Components branch on theme names", "Unchanged direction is sent back for full approval"]
+      "failure_if": ["Goalpro invents a fourth direction", "Components branch on theme names", "Unchanged direction is sent back for full approval", "The direction contract is dropped or rewritten"]
     },
     {
       "id": "motion-audit-approved-handoff",

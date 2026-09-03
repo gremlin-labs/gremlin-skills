@@ -4,7 +4,10 @@ Reviews a bounded UI or motion change—such as a diff, pull request, route, com
 
 ## When to reach for it
 
-Use when the user asks to review a UI diff, check a route against its design system, review implemented animations, validate a completed Designpro or Motion Audit slice, or decide whether a focused design change is ready; do not use for broad codebase audits, setting a new visual direction, or implementing fixes.
+- Review a bounded UI or motion change against approved intent and return an approve or block verdict.
+- Check cognitive load, first-timer task completion, or copy against an approved direction contract.
+- Validate a completed Designpro or Motion Audit slice before release.
+- Do not use for whole-app audits, new visual direction, or implementing fixes.
 
 ## Prerequisites
 
@@ -34,6 +37,8 @@ The required artifacts exist at the declared output root, claims are backed by t
 
 ## Adjacent Gremlin skills
 
+- `designpro` owns whole-app generic-feel and token/craft audits.
+- `prose-humanizer` owns rewriting the copy that review only critiques.
 - Optional complements: `goalpro`, `theme-library`.
 
 ## Registry contract

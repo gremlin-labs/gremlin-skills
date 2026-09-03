@@ -6,6 +6,7 @@ Additional open-source work informed specific Gremlin skills:
 
 - [Taste Skill by Leonxlnx](https://github.com/Leonxlnx/taste-skill) informed brief inference, preservation-aware redesign, and contextual anti-default review.
 - [Emil Kowalski's design engineering skills](https://github.com/emilkowalski/skills) informed purpose- and frequency-aware motion judgment, interruption, gesture, and perceptual review.
+- [Impeccable](https://github.com/pbakaus/impeccable) informed visitor-mode craft, compact direction contracts, anti-convergence generation, and UX/copy/harden critique. Gremlin Skills is independently authored; this acknowledgement does not imply endorsement.
 - [Humanizer by Siqi Chen](https://github.com/blader/humanizer) is substantially adapted by Prose Humanizer; its MIT notice remains bundled with that skill.
 - [Claude Code Game Studios by Donchitos](https://github.com/Donchitos/claude-code-game-studios) informed Gamepro's playable-first milestone posture; its MIT notice remains bundled with that skill.
 

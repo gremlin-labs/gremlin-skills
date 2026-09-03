@@ -19,9 +19,31 @@
 - `EXPERIMENT` — cheapest prototype, reference comparison, or user test that reduces uncertainty.
 - `NOT APPLICABLE` — demonstrably irrelevant, with reason.
 
+## Visitor modes
+
+Classify from the requested surface. Persist the mode; do not treat Operate as failed Persuade.
+
+| Mode | Visitor success | Default craft posture |
+|---|---|---|
+| Persuade | Decides and acts | Design is the product. Color may be Committed, Full, or Drenched. Display type may carry voice. One authored first-viewport moment. |
+| Operate | Completes a task | Restrained color. One workhorse family and a fixed rem scale are often right. Motion is 150–250ms state feedback, not page-load choreography. Familiar affordances outrank expression. |
+| Read | Understands something | Restrained color. Measure, hierarchy, and wayfinding first. System or workhorse faces are acceptable. |
+| Experience | Is inside the work | The artifact leads; chrome recedes. Bolder color and display type are permitted when the brief allows. |
+
+## Anti-convergence
+
+Record before options:
+
+- **Category rut** and its predictable opposite — both stay off the option list.
+- **Color strategy** before hex values: Restrained (neutrals plus one accent), Committed (one saturated color owns 30–60% of the surface), Full palette (3–4 named roles), Drenched (the surface is the color).
+- **Habit faces** that require a unique reason: Fraunces, Playfair Display, Cormorant, Lora, Crimson, Newsreader, Syne, Space Grotesk, Space Mono, IBM Plex, Inter used as display, DM Sans, DM Serif, Outfit, Plus Jakarta Sans, Instrument Sans. A book wanting a serif or tech wanting a mono is not that reason.
+- **AI clusters** to refuse unless the brief uniquely earns them: warm cream ground + high-contrast serif display + terracotta/signal-red accent; near-black with one neon accent and glowing edges; broadsheet-editorial hairlines + italic display serif + small tracked mono labels.
+
+These are generation self-checks, not review findings. Familiar patterns remain correct when they improve task speed, density, or accessibility.
+
 ## Option quality test
 
-Options are distinct only when they change at least three consequential relationships such as hierarchy, information density, composition, typography role, imagery/material logic, interaction posture, or content voice. Palette swaps, radius swaps, and “same layout but bolder” are not distinct directions.
+Options are distinct only when they change at least three consequential relationships such as hierarchy, information density, composition, typography role, imagery/material logic, interaction posture, or content voice. Palette swaps, radius swaps, and “same layout but bolder” are not distinct directions. Intensity-only amplify/quiet variants fail this test.
 
 For each option record:
 
@@ -68,21 +90,21 @@ Preserve rejected concepts and reasons. A new set must change design logic acros
 
 ## Experience matrix
 
-Cover every applicable combination of surface, user goal, loading/empty/error/degraded/recovery state, viewport, input, theme, localization/text expansion, reduced motion, content extreme, and accessibility behavior. Mark absent combinations with evidence instead of assuming them away.
+Cover every applicable combination of surface, user goal, loading/empty/error/degraded/recovery state, viewport, input, theme, localization/text expansion, reduced motion, content extreme, and accessibility behavior. When classifying localization and content extremes, also mark overflow strategy, a 30–40% translation budget, logical properties or RTL when locales require them, empty vs permission vs failure, network/offline/concurrency, and extreme string/item counts. Mark absent combinations with evidence instead of assuming them away.
 
 ## Artifact schemas
 
+### RESEARCH.md
+
+Include a `Visitor mode` heading with the surface classification and evidence label, then a `Representative component and state inventory` section with source path or evidence, ownership/status (`IMPLEMENTED`, `PROPOSED`, or `INFERRED`), importance, states, content extremes, responsive behavior, and whether/how each item appears in the preview.
+
 ### DIRECTION-OPTIONS.md
 
-Include design read, option comparison, detailed options, recommendation, rejected blends, experiments, append-only preview revisions, user decision, selected preview revision, and approval provenance.
+Include design read, visitor mode, anti-convergence setup, option comparison, detailed options, recommendation, rejected blends, experiments, append-only preview revisions, user decision, selected preview revision, and approval provenance.
 
 ### DIRECTION-PREVIEW.html
 
 Include the complete contract in `PREVIEW.md`: accessible direction/theme controls, representative project components and states, realistic content, typography, palette roles, surfaces, responsiveness, reduced motion, rationale/tradeoffs, and embedded provenance/revision metadata. Preserve each validated revision under `previews/`; keep this root file as the latest alias.
-
-### RESEARCH.md
-
-Include a `Representative component and state inventory` section with source path or evidence, ownership/status (`IMPLEMENTED`, `PROPOSED`, or `INFERRED`), importance, states, content extremes, responsive behavior, and whether/how each item appears in the preview.
 
 ### PALETTE-SHORTLIST.md
 
@@ -90,7 +112,11 @@ When applicable include product/theme intent, Theme Library family candidates, i
 
 ### VISUAL-LANGUAGE.md
 
-Include selected direction, user outcome, identity qualities, preservation/change budget, hierarchy, composition, typography, content, imagery, materiality, interaction and motion, accessibility, responsive/localization posture, and anti-default rationale.
+Include selected direction, visitor mode, user outcome, identity qualities, preservation/change budget, hierarchy, composition, typography, content, imagery, materiality, interaction and motion, accessibility, responsive/localization posture, and anti-default rationale.
+
+### DIRECTION-CONTRACT.md
+
+After selection, write six blocks totaling 150 words or fewer: Thesis, Own-world, Story, First viewport, Form, Finish, plus Visitor mode. Finish names Design Review as the later auditor. A mood-only block means the direction is not decided. Never copy this file into product source.
 
 ### SYSTEM-MAP.md
 
@@ -102,4 +128,4 @@ Use Planpro's phase rules: working vertical slices, concrete files discovered fr
 
 ## Attribution and references
 
-This skill's brief inference, option variance, and anti-default discipline were inspired by [Taste Skill by Leonxlnx](https://github.com/Leonxlnx/taste-skill). Its motion posture also draws inspiration from [Emil Kowalski's design engineering skills](https://github.com/emilkowalski/skills). Use original, product-specific reasoning; these sources do not define universal aesthetics and do not imply endorsement.
+This skill's brief inference, option variance, and anti-default discipline were inspired by [Taste Skill by Leonxlnx](https://github.com/Leonxlnx/taste-skill). Its motion posture also draws inspiration from [Emil Kowalski's design engineering skills](https://github.com/emilkowalski/skills). Visitor-mode craft, compact direction contracts, and anti-convergence generation were inspired by [Impeccable](https://github.com/pbakaus/impeccable). Use original, product-specific reasoning; these sources do not define universal aesthetics and do not imply endorsement.

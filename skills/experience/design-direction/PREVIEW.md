@@ -32,7 +32,7 @@ Record which preview elements are `IMPLEMENTED`, `PROPOSED`, or `INFERRED`. Pref
 
 Every direction panel must render the same representative product slice so differences are comparable. Each panel—not merely the page as a whole—must include these sections with `data-preview-section` attributes:
 
-1. `direction-summary` — name, design read, intended feeling, strongest tradeoff, evidence/assumptions.
+1. `direction-summary` — name, visitor mode, color strategy, category rut refused, design read, intended feeling, strongest tradeoff, evidence/assumptions. The representative first viewport must show the product mechanism at scale, not a generic hero.
 2. `typography` — display, page title, section title, body, label, metadata, numeric/code roles where relevant.
 3. `palette` — primitive swatches plus semantic surface, foreground, border, accent, focus, success, warning, danger, and info roles.
 4. `surfaces` — canvas, shell, base, raised, overlay, nested boundaries, elevation/material behavior.
@@ -40,7 +40,7 @@ Every direction panel must render the same representative product slice so diffe
 6. `states` — applicable loading, empty, validation, error, disabled, success, degraded, recovery, hover/focus/active/selected states.
 7. `responsive` — a visible narrow-layout specimen or viewport control, with wrapping, ordering, density, and overflow behavior.
 8. `motion` — purpose, frequency, durations/curves/springs as hypotheses, reduced-motion alternative, and at least one safe illustrative interaction when motion is applicable.
-9. `tradeoffs` — product fit, accessibility/performance risk, system implications, preservation/change budget, and invalidation signal.
+9. `tradeoffs` — product fit, accessibility/performance risk, system implications, preservation/change budget, invalidation signal, and whether a copy-stripped skeleton still communicates the section's job.
 
 Use the project's actual component vocabulary. A marketing site, operations console, editor, and social feed should not share a canned dashboard preview.
 
